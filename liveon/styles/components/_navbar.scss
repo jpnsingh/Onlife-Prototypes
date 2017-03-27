@@ -1,0 +1,148 @@
+
+.hamburger {
+	width: 45px;
+	height: 45px;
+	position: relative;
+	margin: 15px auto;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	span {
+		display: block;
+		position: absolute;
+		height: 7px;
+		width: 100%;
+		background: $light_gray;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .25s ease-in-out;
+		-moz-transition: .25s ease-in-out;
+		-o-transition: .25s ease-in-out;
+		transition: .25s ease-in-out;
+		&:nth-child(1) {
+			top: 0px;
+		}
+		&:nth-child(2) {
+			top: 15px;
+		}
+		&:nth-child(3) {
+			top: 30px;
+		}
+	}
+	&.open {
+		span {
+			&:nth-child(1) {
+				top: 18px;
+				-webkit-transform: rotate(135deg);
+				-moz-transform: rotate(135deg);
+				-o-transform: rotate(135deg);
+				transform: rotate(135deg);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+				left: -60px;
+			}
+			&:nth-child(3) {
+				top: 18px;
+				-webkit-transform: rotate(-135deg);
+				-moz-transform: rotate(-135deg);
+				-o-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+			}
+		}
+	}
+}
+.header {
+	background: $white;
+	@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.25));
+	position: relative;
+	z-index: 10; // sidebar should be less than header z-index
+	.logo {
+		max-width: 140px;
+		margin: 5px;
+		display: inline-block;
+	}
+	.top-nav {
+		float: right;
+		display: flex;
+		> li {
+			display: inline-block;
+			padding: 1em;
+		}
+		li {
+			.dropdown-menu {
+				.dropdown-item {
+					padding: 0.5em;
+					display: block;
+					&:hover {
+						text-decoration: none;
+						background: $light_gray;
+						color: $white;
+					}
+				}
+			}
+		}
+		.top-nav-icon {
+			font-size: 3em;
+			padding-top: 0.1em;
+			display: inline-block;
+			color: $dark_gray_menu;
+			opacity: 0.8;
+			position: relative;
+			&:hover {
+				opacity: 1;	
+			}
+			.notification-count {
+				min-width: 30px;
+				min-height: 30px;
+				background: $magenta;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				right: -10px;
+				border-radius: 50%;
+				color: $white;
+				font-size: 0.4em;
+				font-weight: bold;
+				text-align: center;
+				line-height: 30px;
+			}
+		}
+		.login-candet {
+			position: relative;
+			.user-login {
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				overflow: hidden;
+				display: inline-block;
+			}
+		}
+	}
+	.dropdown-menu {
+		left: inherit;
+		right: 15px;
+		padding: 0.5em;
+	}
+}
+
+
+
+
+
+
+
+
+
+

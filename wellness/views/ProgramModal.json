@@ -1,0 +1,226 @@
+{
+    "list": [
+	            {
+	               "name":"Goals", 
+	               "id":1,
+	               "active": "active",
+	               "nextId":2,
+	               "communicationDate": true,
+	               "conditionDef": false,
+	               "activityList": [
+						{
+							"name": "Lost two pounds a week",
+							"id":1,
+							"scope": [
+								"Weight Reduction"
+							]
+						},
+						{
+							"name":"track daily calories",
+							"id":2,
+							"scope": [
+							  "Weight Reduction"
+							  ]
+						},
+						{
+							"name":"10 minutes of meditation everyday.",
+							"id":3,
+							"scope": [
+							  "Stress Reduction"
+							  ]
+						},
+						{
+							"name":"Do something you enjoy.",
+							"id":4,
+							"scope": [
+							  "Stress Reduction"
+							  ]
+						},
+                  		{
+		                    "name":"Identify stress contributors",
+		                    "id":5,
+		                    "scope": [
+		                      "Stress Reduction"
+		                      ]
+	                  	},
+                  		{
+		                    "name":"Get eight(8) hours of sleep.",
+		                    "id":6,
+		                    "scope": [
+		                      "Stress Reduction"
+		                      ]
+	                  	},
+              			{
+		                    "name":"Meditation walk.",
+		                    "id":7,
+		                    "scope": [
+		                      "Stress Reduction"
+		                      ]
+	                  	}		                  	                  
+	                ],
+	               "activitySelect":{
+							"name": "Lost two pounds a week",
+							"id":1,
+							"scope": [
+								"Weight Reduction"
+							]
+						}
+	            },
+                {
+                  "name":"Activity Trackers",
+                  "id":2,
+                  "active": false,
+                  "nextId":3,
+                  "communicationDate": true,
+                  "conditionDef": false,
+                  "activityList": [
+                      {
+                      	"name": "Meditate for 15 minutes",
+                      	"id":1,
+                      	"scope": [
+                      		"Physical Activity",
+                      		"Stress Reduction"
+                      	]
+                      },
+                      {
+                      	"name": "Two minute breathing exercise",
+                      	"id":2,
+                      	"scope": [
+                      		"Stress Reduction"
+                      	]
+                      },
+                      {
+                      	"name": "Laugh out Loud",
+                      	"id":3,
+                      	"scope": [
+                      		"Stress Reduction"
+                      	]
+                      },
+                      {
+                      	"name": "Get Moving",
+                      	"id":4,
+                      	"scope": [
+                      		"Stress Reduction"
+                      	]
+                      }
+                    ],
+                    "programSelect":{"name": "Meditate for 15 minutes daily", "id":1}
+                },
+                {
+                  "name":"Articles",
+                  "id":3,
+                  "active": false,
+                  "nextId":4,
+                  "communicationDate": false,
+                  "conditionDef": true,
+                  "activityList": [
+	              		{
+	                      	"name": "www.helpguide.org/articles/stress/stress-management.htm",
+	                      	"id":1,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+                      	},
+	              		{
+	                      	"name": "medlineplus.gov/ency/article/001942.htm",
+	                      	"id":2,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+                      	},
+	              		{
+	                      	"name": "www.ulifeline.org/articles/427-managing-stress",
+	                      	"id":3,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+                      	},
+                      {"name": "45 minutes of vigorous activity", "id":4}
+                    ],
+                    "programSelect":{"name": "30 minutes of moderate activity", "id":1}   
+                },
+                {
+                  "name":"Self Directed Courses",
+                  "id":4,
+                  "active": false,
+                  "nextId":5,
+                  "communicationDate": false,
+                  "conditionDef": true,
+                  "activityList": [
+	              		{
+	                      	"name": "Healing Mind and Body | 30 min | 4 sections",
+	                      	"id":1,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+	                    },
+	              		{
+	                      	"name": "Progressive Muscle Relaxation | 15 min | 3 sections",
+	                      	"id":2,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+	                    },
+	              		{
+	                      	"name": "Yoga to Relax| 20 min | 3 sections",
+	                      	"id":3,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+	                    }
+                    ],
+                   "activitySelect":{"name": "Lost two pounds a week", "id":1}
+                },
+                {
+                  "name": "Videos",
+                  "id":5,
+                  "active": false,
+                  "nextId":null,
+                  "communicationDate": false,
+                  "conditionDef": true,
+                  "activityList": [
+	              		{
+	                      	"name": "90 Seconds to Lowering Your Stress | (Onlife Health)",
+	                      	"id":1,
+	                      	"scope": [
+	                      		"Stress Reduction"
+	                      	]
+	                    },
+	      				{
+		                  	"name": "Coaching Moment: Holiday Stress with Barbara | (Onlife Health)",
+		                  	"id":2,
+		                  	"scope": [
+		                  		"Stress Reduction"
+		                  	]
+		                },
+		   				{
+		                  	"name": "How to make stress your friend | Kelly McGonigal | TED Talks",
+		                  	"id":3,
+		                  	"scope": [
+		                  		"Stress Reduction"
+		                  	]
+		                },
+		   				{
+		                  	"name": "Stress Management Playlist | TED Talks",
+		                  	"id":4,
+		                  	"scope": [
+		                  		"Stress Reduction"
+		                  	]
+		                }
+                    ],
+                   "activitySelect":{"name": "Lost two pounds a week", "id":1}
+                }
+              
+            ],
+    "programSelect":  {
+        "name":"Goals", "id":1,
+        "communicationDate": true,
+        "conditionDef": false,
+        "activityList": [
+            {"name": "Lost two pounds a week", "id":1},
+            {"name": "track daily calories", "id":2},
+            {"name": "eat more servings of vegetables", "id":3}
+        ],
+           "activitySelect":{"name": "Lost two pounds a week", "id":1}
+    }
+}

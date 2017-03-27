@@ -1,0 +1,290 @@
+
+@import "../../../styles/master";
+
+.view-profile {
+	background: url(../../../assets/images/Onlife_View_Profile_Banner.jpg) no-repeat;
+	background-size: 100%;
+	height: 220px;
+	position: relative;
+	.footer-profile {
+		background: rgba(0,0,0, 0.3);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 1em 2em;
+		width: 100%;
+		color: $white;
+		.view-image {
+			width: 100px;
+			height:100px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-top: -60px;
+			position: absolute;
+			border: 2px solid $white;
+			img {
+				width: 100%;
+			}
+		}
+		.block-info {
+			padding: 0.5em 0;
+			border-right: 2px solid $white;
+			h1 {
+				font-size: 2em;
+				font-weight: bold;
+			}
+			.minutes {
+				font-size: 0.4em;
+			}
+		}
+	}
+}
+.profile-name {
+	color: $white;
+	.profile-heading {
+		font-size: 2em;
+		margin: 0 0 0.5em 0;
+	}
+}
+.block-area {
+	padding: 0.5em 2em;
+	background: #eaeaea;
+	h2 {
+		margin: 1em 0;
+		font-size: 1.4em;
+	}
+	.panel {
+		margin-bottom: 13px;
+		background-color: $white;
+		box-shadow: 0 0 2px $white;
+		padding: 15px;
+		text-align: center;
+		color: $light_gray;
+		border: 1px solid $light_gray;
+		border-left: 0;
+		border-right: 0;
+		border-top: 4px solid $light_gray;
+		@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.1));
+		.panel-heading {
+			font-size: 2em;
+			font-weight: bold;
+			color: #555d59;
+			.heading-lbl {
+				font-size: 0.6em;
+			}
+		}
+		.panel-footer {
+			font-weight: bold;
+			text-transform: uppercase;
+			border: 0;
+			color: $dark_gray;
+		}
+		&.panel-red {
+			border-top-color: $red_border;
+		}
+		&.panel-green {
+			border-top-color: $green_border;
+		}
+		&.panel-yellow {
+			border-top-color: $yellow_border;
+		}
+		&.panel-blue {
+			border-top-color: $blue_border;
+		}
+	}
+}
+.goals-container {
+	padding: 1em; 
+	@include box-shadow(0, 0, 6px, 3px, rgba(0, 0, 0, 0.20));
+	.item-icon {
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+	}
+	h4 {
+		margin: 0 0 0.5em 0;
+		font-weight: bold;
+		font-size: 1.1em;
+		color: $dark_blue;
+	}
+	.goal-item {
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #CCC;
+		margin-bottom: 0.5em;
+		&.last {
+			border: 0;
+		}
+		&.single-item {
+			maring: 0;
+			padding: 0;
+			border: 0;
+		}
+	}
+	.progress-wrap {
+		padding: 1.5em 0 0 0;
+		.progress {
+			margin: 0;
+			border-radius: 10px;
+		}
+		.progress-bar {
+			animation-duration: 3s;
+			animation-name: width;
+			background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+			background-size: 24em 0.25em;
+			height: 20px;
+			position: relative;
+		}
+		.progress-shadow {
+			background-image: linear-gradient(to bottom, #eaecee, transparent);
+			height: 4em;
+			position: absolute;
+			top: 100%;
+			transform: skew(45deg);
+			transform-origin: 0 0;
+			width: 100%;
+		}
+		p {
+			margin: 0.1em 0 0 0;
+			font-size: 0.8em;
+		}
+	}
+	.goal-item-container {
+		padding: 0.5em 0;
+	}
+}
+.status-message {
+	font-weight: bold;
+	.edit {
+		padding: 0.2em 1em;
+		background: rgba(204, 204, 204, 0.77);
+		font-size: 12px;
+		text-decoration: none;
+	}
+}
+
+.gray-block {
+	margin: 0.4em;
+	background: $light_gray;
+}
+
+.interest-areas {
+	h4 {
+		font-size: 1.4em;
+		border-bottom: 3px solid #CCC;
+		padding: 0.5em 0;
+		.heading-icon {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+	}
+	p {
+		line-height: 28px;
+	}
+	.first-section {
+		border-bottom-color: $purple;
+		.heading-icon {
+			color: $purple;
+		}
+	}
+	.second-section {
+		border-bottom-color: $light_orange;
+		.heading-icon {
+			color: $light_orange;
+		}
+	}
+	.third-section {
+		border-bottom-color: $magenta;
+		.heading-icon {
+			color: $magenta;
+		}
+	}
+}
+.scrollable-area {
+	position: relative;
+    height: 300px;
+    padding: 1.5em;
+    background: $white;
+	@include box-shadow(0, 0, 6px, 3px, rgba(0, 0, 0, 0.20));
+	&.small-area {
+		height: 129px;
+	}
+}
+//Interests Buttons
+.interest-1, .interest-2, .interest-3, .interest-4, .interest-5 {
+	.con_down {
+		color: $white;
+	}
+}
+.interest-1 {
+	.con_down {
+		background: $color_matisse_approx;
+		background: linear-gradient(to bottom, $color_matisse_approx 0, $color_curious_blue_approx 50%, $color_mariner_approx 51%, $color_jordy_blue_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_matisse_approx;
+		background: linear-gradient(to bottom, $color_matisse_approx 0, $color_curious_blue_approx 50%, $color_mariner_approx 51%, $color_jordy_blue_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 );
+	}
+}
+.interest-2 {
+	.con_down {
+		background: $color_oyster_pink_approx;
+		background: linear-gradient(to bottom, $color_oyster_pink_approx 0, $color_chestnut_rose_approx 50%, $color_cardinal_approx 51%, $color_sea_pink_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_oyster_pink_approx;
+		background: linear-gradient(to bottom, $color_oyster_pink_approx 0, $color_chestnut_rose_approx 50%, $color_cardinal_approx 51%, $color_sea_pink_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 );
+	}
+}
+.interest-3 {
+	.con_down {
+		background: $color_apricot_peach_approx;
+		background: linear-gradient(to bottom, $color_apricot_peach_approx 0, $color_crusta_approx 50%, $color_trinidad_approx 51%, $color_tan_hide_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_apricot_peach_approx;
+		background: linear-gradient(to bottom, $color_apricot_peach_approx 0, $color_crusta_approx 50%, $color_trinidad_approx 51%, $color_tan_hide_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 );
+	}
+}
+.interest-4 {
+	.con_down {
+		background: $color_celery_approx;
+		background: linear-gradient(to bottom, $color_celery_approx 0, $color_sushi_approx 50%, $color_limeade_approx 51%, $color_atlantis_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 );
+		color: $white;
+	}
+	.times_abs {
+		background: $color_celery_approx;
+		background: linear-gradient(to bottom, $color_celery_approx 0, $color_sushi_approx 50%, $color_limeade_approx 51%, $color_atlantis_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 );
+	}
+}
+.interest-5 {
+	.con_down {
+		background: $color_sail_approx;
+		background: linear-gradient(to bottom, $color_sail_approx 0, $color_regent_st_blue_approx 10%, $color_jordy_blue_approx 25%, $color_jordy_blue_approx 37%, $color_jordy_blue_approx 50%, $color_cornflower_blue_approx 51%, $color_blizzard_blue_approx 83%, $color_french_pass_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_sail_approx;
+		background: linear-gradient(to bottom, $color_sail_approx 0, $color_regent_st_blue_approx 10%, $color_jordy_blue_approx 25%, $color_jordy_blue_approx 37%, $color_jordy_blue_approx 50%, $color_cornflower_blue_approx 51%, $color_blizzard_blue_approx 83%, $color_french_pass_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 );
+	}
+}
+//Keyframes
+@keyframes width {
+  0%, 100% {
+    transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
+  }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

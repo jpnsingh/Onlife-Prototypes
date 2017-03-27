@@ -1,0 +1,169 @@
+
+@import "../../../styles/master";
+
+.profile-tile {
+	@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.25));
+	padding: 1em;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	margin-bottom: 1em;
+	.profile-image {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		display: inline-block;
+		overflow: hidden;
+		margin-bottom: -120px;
+		position: relative;
+		z-index: 2;
+		border: 2px solid #afafaf;
+		img {
+			width: 100%;
+		}
+	}
+	.invite-more {
+		text-align: right;
+		padding: 0.8em 0 0 0;
+		font-size: 1.2em;
+		.invite {
+			font-size: 2.5em;
+			color: $dark_blue;
+		}
+	}
+	.profile-details {
+		margin: 1% 0 0 0;
+		h3 {
+			font-size: 2em;
+			margin: 0;
+			span {
+				font-weight: bold;	
+			}
+			.admin {
+				color: $dark_blue;
+				font-weight: bold;
+				font-size: 0.5em;
+			}
+		}
+		p {
+			margin: 0.8em 0 0 0;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	.other-details {
+		margin: 16% 0 0 0;
+		.radio {
+			font-size: 0.9em;
+			font-weight: bold;
+			line-height: 19px;
+			margin: 0;
+		}
+		.administered {
+			font-size: 0.9em;
+			font-weight: bold;
+			color: rgba(33, 33, 33, 0.91);
+			margin: 0 0 0.5em 0;
+		}
+	}
+	.profile-footer {
+		background: $light_gray_bg;
+		margin: 0.8em 0 0 0;
+		padding: 1em;
+		.fa {
+			margin: 0;
+			font-size: 1.5em;
+		}
+	}
+}
+.chat-box {
+	font-size: 2.6em;
+    padding: 0.2em 0;
+	.notify {
+		position: relative;
+		.notify-msg {
+			background: $green;
+			color: $white;
+			width: 20px;
+			height: 20px;
+			font-size: 12px;
+			border-radius: 50%;
+			position: absolute;
+			font-weight: bold;
+			line-height: 18px;
+			right: -6px;
+			top: 0;
+			text-align: center;
+		}
+	}
+	.button {
+		font-size: 1em;
+	}
+}
+.disconnect {
+	font-size: 1.8em;
+    border: 2px solid $dark_blue;
+    padding: 0.4em;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+}
+.progress-button {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em;
+	outline: none;
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 12px;
+	z-index: 50;
+	line-height: 2;
+	overflow: hidden;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.2);
+	.content {
+		position: relative;
+		display: block;
+		z-index: 10;
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	.progress {
+		position: absolute;
+		left: 0;
+		background: rgba(0,0,0,0.2);
+		top: 0;
+		width: 0%;
+		opacity: 0;
+		height: 100%;
+		z-index: 0;
+		-webkit-transition: width 0s 0.3s, opacity 0.3s;
+		transition: width 0s 0.3s, opacity 0.3s;
+		&.active .progress {
+			opacity: 1;
+			width: 100%;
+			-webkit-transition: width 1.2s;
+			transition: width 1.2s;
+		}
+	}
+}
+.auth {
+	margin-left: -9px;
+	label {
+		font-size: 1.2em;
+		margin-bottom: 0.3em;
+	}
+	p {
+		font-size: 0.9em;
+	}
+}
+
+

@@ -1,0 +1,67 @@
+/* General styles for all menus */
+.cbp-spmenu {
+	background: $white;
+	position: fixed;
+	@include box-shadow(6px, 6px, 6px, 0px, rgba(0, 0, 0, 0.25));
+	ul {
+		li {
+			a {
+				display: block;
+				color: $dark_gray_menu;
+				font-weight: 300;
+				&:hover {
+					background: $dark_gray_menu;
+					text-decoration: none;
+					color: $white;
+				}
+				&:active {
+					background: #afdefa;
+					color: #47a3da;
+				}
+				.menu-icon {
+					font-size: 1.2em;
+					padding-right: 1em;
+				}
+				.menu-label {
+					font-size: 0.9em;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 9;
+	a {
+		border-top: 1px solid $light_gray_border;
+		padding: 1em;
+	}
+}
+
+/* Vertical menu that slides from the top to bottom */
+
+.cbp-spmenu-left {
+	top: -101%;
+	&.cbp-spmenu-open {
+		top: 77px;
+	}
+}
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+

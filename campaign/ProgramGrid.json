@@ -1,0 +1,105 @@
+[
+	{
+		"SettingValue": {
+			"Disabled": false,
+			"EndDate": null,
+			"StartDate": null
+		},
+		"SettingName": {
+			"MetaData": {
+				"ClassType": "SettingName",
+				"MenuTitle": "Program Modules",
+				"DisplayName": "New Program",
+				"ProgramDescription": "Add new program",
+				"ProgramScope": "New Program",
+				"ProgramActivities": [
+				]
+			}
+		}
+	},
+	{
+	"SettingValue": {
+		"Disabled": false,
+		"EndDate": null,
+		"StartDate": null
+	},
+	"SettingName": {
+		"MetaData": {
+			"ClassType": "SettingName",
+			"MenuTitle": "Program Modules",
+			"DisplayName": "Americans Need to lose weight!",
+			"ProgramDescription": "Your weight loss plan",
+			"ProgramScope": "Weight Loss",
+			"ProgramActivities": [
+				"Goals",
+				"Trackers",
+				"Articles"
+			]
+		}
+	}
+},
+{
+	"SettingValue": {
+		"Disabled": false,
+		"EndDate": null,
+		"StartDate": null
+	},
+	"SettingName": {
+		"MetaData": {
+			"ClassType": "SettingName",
+			"MenuTitle": "Program Modules",
+			"DisplayName": "Stress it Loss",
+			"ProgramDescription": "Your stress Reduction Plan",
+			"ProgramScope": "Stress Reduction",
+			"ProgramActivities": [
+				"Goals",
+				"Trackers",
+				"Articles"
+			]
+		}
+	}
+},
+{
+	"SettingValue": {
+		"Disabled": false,
+		"EndDate": null,
+		"StartDate": null
+	},
+	"SettingName": {
+		"MetaData": {
+			"ClassType": "SettingName",
+			"MenuTitle": "Program Modules",
+			"DisplayName": "Getting Physical",
+			"ProgramDescription": "What are you doing for physical activity?",
+			"ProgramScope": "Physical Activity",
+			"ProgramActivities": [
+				"Goals",
+				"Trackers",
+				"Videos"
+			]
+		}
+	}
+		
+},
+{
+	"SettingValue": {
+		"Disabled": false,
+		"EndDate": null,
+		"StartDate": null
+	},
+	"SettingName": {
+		"MetaData": {
+			"ClassType": "SettingName",
+			"MenuTitle": "Program Modules",
+			"DisplayName": "Under Pressure",
+			"ProgramDescription": "Checking your blood pressure",
+			"ProgramScope": "Blood Pressure",
+			"ProgramActivities": [
+				"Goals",
+				"Trackers",
+				"Articles"
+			]
+		}
+	}
+}
+]

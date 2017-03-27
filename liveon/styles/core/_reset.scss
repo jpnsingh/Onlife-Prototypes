@@ -1,0 +1,144 @@
+
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('../../../styles/core/fonts/helvetica/HelveticaNeue-Light.eot');
+	src: url('../../../styles/core/fonts/helvetica/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../../../styles/core/fonts/helvetica/HelveticaNeue-Light.woff2') format('woff2'),
+		 url('../../../styles/core/fonts/helvetica/HelveticaNeue-Light.woff') format('woff'),
+		 url('../../../styles/core/fonts/helvetica/HelveticaNeue-Light.ttf') format('truetype'),
+		 url('../../../styles/core/fonts/helvetica/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'OnlifeFont';
+    src: url('../../../styles/core/fonts/onlife-font/OnlifeFont.eot');
+    src: url('../../../styles/core/fonts/onlife-font/OnlifeFont.eot?#iefix') format('embedded-opentype'),
+         url('../../../styles/core/fonts/onlife-font/OnlifeFont.woff') format('woff'),
+         url('../../../styles/core/fonts/onlife-font/OnlifeFont.ttf') format('truetype'),
+         url('../../../styles/core/fonts/onlife-font/OnlifeFont.svg#OnlifeFont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+    display: inline-block;
+    font-family: 'OnlifeFont';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.icon-Onlife_Minutes:before{content:'\0041';}
+.icon-Onlife_Sleep:before{content:'\0042';}
+.icon-onlife_fitness_dumbell:before{content:'\0043';}
+.icon-onlife_active:before{content:'\0044';}
+.icon-onlife_bp:before{content:'\0045';}
+.icon-onlife_calorie:before{content:'\0046';}
+.icon-onlife_challenge:before{content:'\0047';}
+.icon-onlife_chat:before{content:'\0048';}
+.icon-onlife_cholesterol:before{content:'\0049';}
+.icon-onlife_close:before{content:'\004a';}
+.icon-onlife_coach:before{content:'\004b';}
+.icon-onlife_courses:before{content:'\004c';}
+.icon-onlife_decrease_weight:before{content:'\004d';}
+.icon-onlife_devices:before{content:'\004e';}
+.icon-onlife_diet:before{content:'\004f';}
+.icon-onlife_dollars:before{content:'\0050';}
+.icon-onlife_financial:before{content:'\0051';}
+.icon-onlife_fitness:before{content:'\0052';}
+.icon-onlife_friends:before{content:'\0053';}
+.icon-onlife_goals:before{content:'\0054';}
+.icon-onlife_greens:before{content:'\0055';}
+.icon-onlife_hdl:before{content:'\0056';}
+.icon-onlife_ldl:before{content:'\0057';}
+.icon-onlife_left_arrow:before{content:'\0058';}
+.icon-onlife_location:before{content:'\0059';}
+.icon-onlife_lungs:before{content:'\005a';}
+.icon-onlife_manage_stress:before{content:'\0061';}
+.icon-onlife_medilife:before{content:'\0062';}
+.icon-onlife_member:before{content:'\0063';}
+.icon-onlife_messages:before{content:'\0064';}
+.icon-onlife_mobile:before{content:'\0065';}
+.icon-onlife_monitor:before{content:'\0066';}
+.icon-onlife_myhealth:before{content:'\0067';}
+.icon-onlife_notepad:before{content:'\0068';}
+.icon-onlife_notes:before{content:'\0069';}
+.icon-onlife_notification:before{content:'\006a';}
+.icon-onlife_photo:before{content:'\006b';}
+.icon-onlife_physical_activity:before{content:'\006c';}
+.icon-onlife_plus:before{content:'\006d';}
+.icon-onlife_points:before{content:'\006e';}
+.icon-onlife_quit_tobacco:before{content:'\006f';}
+.icon-onlife_reports:before{content:'\0070';}
+.icon-onlife_resources:before{content:'\0071';}
+.icon-onlife_right_arrow:before{content:'\0072';}
+.icon-onlife_rounded_coach:before{content:'\0073';}
+.icon-onlife_rounded_notepad:before{content:'\0074';}
+.icon-onlife_rounded_notes:before{content:'\0075';}
+.icon-onlife_search:before{content:'\0076';}
+.icon-onlife_smoker:before{content:'\0077';}
+.icon-onlife_tick_mark:before{content:'\0078';}
+.icon-onlife_tracker:before{content:'\0079';}
+.icon-onlife_trackers:before{content:'\007a';}
+.icon-onlife_walk:before{content:'\0030';}
+.icon-onlife_water:before{content:'\0031';}
+.icon-onlife_weight:before{content:'\0032';}
+
+
+/* RESETS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: 600;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: $portal_font;
+    font-size: $base_font_size;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, 
+blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:focus {
+    outline: 0;
+}
+input[type="file"]:focus, 
+input[type="radio"]:focus, 
+input[type="checkbox"]:focus {
+	outline: 0;
+}

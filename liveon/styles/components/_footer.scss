@@ -1,0 +1,44 @@
+//Footer class properties 
+.footer {
+	padding: 2em 1em;
+	-webkit-box-shadow: 0px -6px 6px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px -6px 6px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px -6px 6px 0px rgba(0,0,0,0.25);
+	h3 {
+		color: $light_gray;
+	}
+	.contact-text {
+		color: $light_blue;
+		margin: 5px 0;
+		font-size: 2em;
+	}
+	.contact-number {
+		color: $light_gray;
+		font-size: 1.7em;
+	}
+	.footer-nav {
+		margin-bottom: 30px;
+		li {
+			display: inline-block;
+			a {
+				padding: 0 10px;
+				color: $dark_gray;
+				border-right: 1px solid $light_gray;
+				font-size: 0.9em;
+				font-weight: bold;
+			}
+			&:last-child {
+				a {
+					border-right: 0;
+				}
+			}
+		}
+	}
+}	
+.copyrights {
+	p {
+		font-size: 0.8em;
+		font-weight: bold;
+		padding: 0.5em;
+	}
+}

@@ -1,0 +1,130 @@
+
+@import "../../../styles/master";
+
+.view-header {
+	background: $purple;
+	padding: 1em 0;
+	.main-heading {
+		color: $white;
+		font-size: 2em;
+	}
+}
+.content-area {
+	padding: 2em 0;
+	.blue-header {
+		color: $dark_blue;
+		font-size: 1.6em;
+		margin: 0.5em 0;
+	}
+	.points-wrapper {
+		p {
+			line-height: 20px;
+			font-size: 1.2em;
+			color: #545759;
+		}
+	}
+}
+.panel-box {
+	background: $white;
+	min-height: 275px;
+	margin-bottom: 1.5em;
+	@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.1));
+	.block-tile {
+		min-height: 275px;
+		padding: 4.6em 1em;
+		color: $white;
+		.block-icon {
+			font-size: 5em;
+		}
+		h2 {
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+	}
+	.points-section {
+		padding: 1em 1em 2em 1em;
+		border-bottom: 1px solid $light_gray_border;
+		margin-bottom: 2em;
+		line-height: 30px;
+		color: $dark_blue;
+		.point-value {
+			font-size: 3.5em;
+			margin: 1em 0 0.1em 0;
+		}
+		.point-label {
+			font-size: 1.2em;
+		}
+	}
+	.values-month {
+		color: $dark_blue;
+		line-height: 26px;
+		font-size: 1.2em;
+	}
+	.tile-content {
+		padding: 2.5em;
+		min-height: 275px;
+		border-left: 1px solid $light_gray_border;
+		font-size: 1.3em;
+		line-height: 23px;
+		position: relative;
+		.tile-button {
+			border-radius: 0;
+			color: $white;
+		}
+		.tile-footer {
+			position: absolute;
+			bottom: 30px;
+			right: 60px;
+		}
+	}
+	//Blue Box
+	&.blue-box {
+		.block-tile, .tile-button {
+			background: $dark_blue;
+			background-image: linear-gradient(to left, transparent, transparent 50%, $dark_blue 50%, $light_blue);
+			@include bg-prop;
+		}
+	}
+	//Orange Box
+	&.orange-box {
+		.block-tile, .tile-button {
+			background: $orange;
+			background-image: linear-gradient(to left, transparent, transparent 50%, $orange 50%, $light_orange);
+			@include bg-prop;
+		}
+	}
+	//Green Box
+	&.green-box {
+		.block-tile, .tile-button {
+			background: $green;
+			background-image: linear-gradient(to left, transparent, transparent 50%, $green 50%, $light_green);
+			@include bg-prop;
+		}
+	}
+	//Purple Box 
+	&.purple-box {
+		.block-tile, .tile-button {
+			background: $purple;
+			background-image: linear-gradient(to left, transparent, transparent 50%, $purple 50%, $light_purple);
+			@include bg-prop;
+		}
+	}
+	//Purple Box 
+	&.magenta-box {
+		.block-tile, .tile-button {
+			background: $magenta;
+			background-image: linear-gradient(to left, transparent, transparent 50%, $magenta 50%, $light_magenta);
+			@include bg-prop;
+		}
+	}
+	//Hover Transitions of Blocks
+	&:hover {
+		&.blue-box, &.orange-box, &.green-box, &.purple-box, &.magenta-box {
+			.block-tile, .tile-button {
+				background-position: 0 0;
+			}
+		}
+		@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.25));
+	}
+	
+}

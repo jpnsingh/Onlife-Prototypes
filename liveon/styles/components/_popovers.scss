@@ -1,0 +1,18 @@
+.popover {
+	max-width: inherit;
+	width: 350px;
+	.question {
+		font-weight: bold;
+		margin: 0.8em 0 0.4em 0;
+		font-size: 1.1em;
+	}
+	.answer {
+		font-size: 0.9em;
+	}
+}
+.small-pop {
+	.popover {
+		width: 210px;
+		text-align: center;
+	}
+}

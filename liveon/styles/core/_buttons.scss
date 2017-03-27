@@ -1,0 +1,124 @@
+
+// Default class
+.#{$btn-name} {
+	padding: .5em 2em;
+	color: $white;
+	transition: background .15s;
+	box-shadow: inset 0 1px rgba(255, 255, 255, .2);
+	border-radius: 20px;
+	border: if($btn-border != false, 1px solid, none); // 1
+	// Modifiers
+	&--large { // 2
+		font-size: 1em * $btn-size-ratio;
+	}
+	&--small { // 3
+		font-size: 1em / $btn-size-ratio;
+	}
+	&--bold { // 4
+		font-weight: bold;
+	}
+	&--block { // 5
+		display: block;
+		width: 100%;
+	}  
+	&--upper { // 6
+		text-transform: uppercase;
+	}
+	@each $key, $value in $btn-schemes { // 7
+		&--#{$key} {
+			@include button-color($value);
+		}
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&--secondary {
+		background: none;
+		border: 1px solid $secondary_color;
+		color: $secondary_color;
+	}
+	&--white {
+		border-radius: 0;
+		color: $black;
+		-webkit-box-shadow: inset 3px 3px 5px 4px rgba(222,222,222,.3);
+		box-shadow: inset 3px 3px 5px 4px rgba(222,222,222,.3);
+		background: $white;
+		&:hover {
+			background: #0d6ea4;
+			color: $white;
+			-webkit-box-shadow: inset 3px 3px 5px 4px rgba(222,222,222,.0);
+			box-shadow: inset 3px 3px 5px 4px rgba(222,222,222,.0);
+			-webkit-box-shadow: 0px 0px 5px 4px rgba(111,111,111,.1);
+			box-shadow: 0px 0px 5px 4px rgba(111,111,111,.1);
+		}
+	}
+	&--orange {
+		border-radius: 3px;
+		padding: 1em;
+		font-size: 1.1em;
+	}
+}
+.int-btns {
+	padding: 0.5em 0;
+}
+//Custom Buttons 
+.fancy-button {
+	width: 118px;
+	display: block;
+	position: relative;
+}
+.con_down {
+	display: block;
+	transition: .5s all ease;
+	cursor: pointer;
+	width: 118px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	position: relative;
+	padding: 10px 0 10px 20px;
+    text-align: center;
+	z-index: 1;
+}
+.times {
+	background-color: #E3E3E3;
+	width: 75px;
+	margin-left: 42px;
+	z-index: 0;
+	border: 1px solid #AAA9A9;
+	position: absolute;
+	transition: .5s all ease-in-out;
+	top: 0;
+}
+
+.time {
+	line-height: 33px;
+	text-align: right;
+	color: #4B4B4B;
+	padding-right: 9px;
+}
+
+.times_abs {
+	background-color: #F6EB96;
+	cursor: pointer;
+	width: 20px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	height: 34px;
+	position: absolute;
+	top: 0;
+	margin-left: 115px;
+	transition: .5s all ease-in-out;
+	z-index: 2;
+}
+.fancy-button:hover .times {
+	margin-left: 75px;
+}
+
+.fancy-button:hover .con_down {
+	background-color: #F1DD5E;
+}
+
+.fancy-button:hover .times_abs {
+	margin-left: 148px;
+	background-color: #F1DD5E;
+}

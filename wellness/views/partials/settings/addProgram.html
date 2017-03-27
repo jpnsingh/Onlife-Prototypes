@@ -1,0 +1,141 @@
+<div id=" programmodal">
+    <div class="modal-header ng-cloak">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <h3 class="modal-title">Adding {{myCompanyCtrl.programParam}} Program</h3>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body ng-cloak program-modal-body">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="form-group">
+                    <label class="control-label" for="programName">Program Name:</label>
+                    <input type="text" class="form-control" id="programName" placeholder="Name" data-ng-model="myCompanyCtrl.programParam.programName">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="form-group">
+                    <label class="control-label" for="programDescription">Program Description:</label>
+                    <input type="text" class="form-control" id="myCompanyName" placeholder="Description" data-ng-model="myCompanyCtrl.programParam.programName">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <ul class="nav nav-tabs" >
+                <li ng-repeat="activities in programProp.list" class={{activities.active}}>
+                    <a href="#program{{activities.id}}" data-toggle="tab" >{{activities.name}}</a>
+                </li>   
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class ="tab-pane fade in {{scopes.active}}" id="program{{scopes.id}}" ng-repeat="scopes in programProp.list">
+                <div class="row">
+                        <div class="col-md-4" ng-repeat='activities in scopes.activityList | filter:myCompanyCtrl.programParam'>
+                            <label class="control-label visibility-hidden col-xs-12" for="settingValue">xyz</label>
+                            <div class="checkbox checkbox-primary">
+                                <input id="custom-checkbox{{scopes.nextId}}" class="styled" type="checkbox" >
+                                <label for="custom-checkbox{{scopes.nextId}}">{{activities.name}}</label>
+                            </div>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group text-right button-holder">
+                                    <span>
+                                      <button type="button"
+                                              class="btn btn-primary custom-btn next-btn"
+                                              id="first-tab"
+                                              data-toggle="tab"
+                                              data-ng-click="myCompanyCtrl.nextTab(scopes.nextId)">Skip</button>
+                                    </span>
+                                    <span>
+                                       <button type="button"
+                                          class="btn btn-primary custom-btn next-btn"
+                                          id="first-tab"
+                                          data-toggle="tab"
+                                          data-ng-click="myCompanyCtrl.nextTab(scopes.nextId)">Add Goals &amp; Next</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>                 
+        </div> 
+    <!-- div class="styled-select blue semi-square">
+        <label for="programSelection">Program Activities</label>
+        <select ng-model="programProp.programSelect" ng-options = "option.name for option in programProp.list track by option.id" id="programSelection"></select>
+    </div>
+        <div class="row">
+            <div ng-if="programProp.programSelect.name!==''">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">Program Options</label>
+                           <select ng-model="programActList.programSelect" ng-options = "option.name for option in programActList.activityList track by option.id" id="programSelection"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-sm-4 col-xs-6">
+                <div ng-if="programProp.programSelect.conditionDef === true">
+                    <label class="control-label  col-xs-12" for="custom-disabled-checkbox-[settingIndex]">Conditions</label>
+                    <div class="checkbox checkbox-primary">
+                        <input id="custom-disabled-checkbox-[settingIndex]" class="styled" type="checkbox">
+                        <label for="custom-disabled-checkbox-[settingIndex]">Goal Setup</label>
+                    </div>
+                    <div class="checkbox checkbox-primary">
+                        <input id="custom-disabled-checkbox-[settingIndex]" class="styled" type="checkbox" >
+                        <label for="custom-disabled-checkbox-[settingIndex]">Tracker Setup</label>
+                    </div>
+                        <label for="min-days">Minimum Check In Days:</label>
+                        <input type="text" id="min-days">
+                </div>
+            </div>
+
+        </div>
+        <div class = "row" ng-if="programProp.programSelect.name ==='Videos' || programProp.programSelect.name === 'Articles'">
+            <label for="add-text">Add a Link</label>
+            <textarea></textarea>
+        </div>
+        <div class = "row">
+            <div class="col-sm-4 col-xs-6" ng-if="programProp.programSelect.communicationDate === true">
+                <div class="form-group">
+                  <label for="min-days">Reminder Day Interval:</label>
+                  <input type="text" id="min-days">
+                </div>
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-sm-6 col-md-4 enabled-program">
+                    <div class="checkbox checkbox-primary">
+                        <input id="custom-disabled-checkbox-[settingIndex]" class="styled" type="checkbox" checked>
+                        <label for="custom-disabled-checkbox-[settingIndex]">Enabled</label>
+                    </div>        
+            </div>
+        </div>      
+        <div class = "row">
+            <div class="col-sm-4 col-xs-6">
+                <div class="form-group">
+                    <label class="control-label">Start Date:</label>
+
+                    <div class="input-group" data-ng-click="myCompanyCtrl.openStartDatePicker($event)">
+                        <input type="text" is-open="myCompanyCtrl.openedStartDate" class="form-control calendar-form campaign-form-calendar-input" data-ng-model="myCompanyCtrl.myCompanyModel[myCompanyCtrl.myCompanyIndex].StartDate" datepicker-popup="MMMM dd, yyyy" show-button-bar="false" show-weeks="false" datepicker-options="myCompanyCtrl.dateOptions">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+</div>
+

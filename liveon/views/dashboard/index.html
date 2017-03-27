@@ -1,0 +1,859 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LiveOn Redesign</title>
+
+    <meta name="description" content="">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="../../assets/vendors/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../assets/vendors/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Only Dashboard -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Optional theme -->
+    <link href="../../assets/vendors/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="cbp-spmenu-push">
+
+    <div class="layout-wrapper">
+
+        <header class="header">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="hamburger" id="showMenus">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="logo">
+                                <img src="../../assets/images/onlife-logo.png" alt="onlife logo" class="img-responsive" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <ul class="top-nav">
+                        <li>
+                            <a href="#" class="top-nav-icon">
+                                <span class="icon-onlife_tracker"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../family-friends" class="top-nav-icon">
+                                <span class="icon-onlife_friends"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-icon">
+                                <span class="icon-onlife_notification"></span>
+                                <span class="notification-count">1</span>
+                            </a>
+                        </li>
+                        <li class="login-candet">
+                            <a class="dropdown-toggle user-login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../../assets/images/Onlife_Mary_Dp.png" alt="" class="img-responsive" />
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>
+                                        <a class="dropdown-item" href="../view-profile">View Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../dashboard">First Login</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../second-login">Completed HA</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Log out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+        <!-- Navigation Starts -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <ul>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_points"></span> <span class="menu-label">My Points</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_devices"></span> <span class="menu-label">Devices</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_goals"></span> <span class="menu-label">Goals</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_courses"></span> <span class="menu-label">Courses</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_trackers"></span> <span class="menu-label">Trackers</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_financial"></span> <span class="menu-label">Financial</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="menu-icon icon-onlife_reports"></span> <span class="menu-label">Reports</span></a>
+                </li>
+            </ul>
+        </nav><!-- Navigation Ends -->
+
+        <section class="content-area">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="health-steps">
+                        My Health Steps
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <section class="slider slide-display">
+                        <div class="flexslider carousel">
+                            <ul class="slides">
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_rounded_notepad"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Assess Your Health</h3>
+                                                <p>Complete by 03/28/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_rounded_notes"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Biometric Screening</h3>
+                                                <p>Complete by 04/20/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_rounded_coach"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Contact Coach</h3>
+                                                <p>Complete by 04/25/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_devices"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Download App</h3>
+                                                <p>Complete by 04/30/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_challenge"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Start a Challenge</h3>
+                                                <p>Complete by 05/10/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_friends"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Invite Friends</h3>
+                                                <p>Complete by 05/20/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-xs-4 bottom-right">
+                            <div class="points-count text-center">
+                                <div class="value">0</div>
+                                <div class="label-txt">Points</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="points-count text-center">
+                                <a href="../point-matrix" class="value">2000</a>
+                                <div class="label-txt">Possible</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tiles Area -->
+        <section class="tiles-area">
+            <div class="tiles-screen">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <figure class="view view-first most-big-box">
+                            <img src="../../assets/images/tiles/Onlife_Health_Assessment.jpg" alt="Health Assessment" class="img-responsive" />
+                            <div class="ha-wrapper">
+                                <div class="description">
+                                    <div class="col-sm-9 text-center">
+                                        <span class="tile-icon icon-onlife_notepad"></span>
+                                        <h2>Complete Your Health Assessment Today <i class="fa fa-info-circle health-assessment" aria-hidden="true" data-toggle="popover"></i></h2>
+
+                                    </div>
+                                    <div class="col-sm-3 text-right">
+                                        <a href="#" class="button button--large button--block text-center button--default button-go">Go</a>
+                                        <br />
+                                        <button class="button button--small button--secondary remind-later">Not Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="next-recommendation second none">
+                                <div class="health-assess-info remind-wrapper">
+                                    <h3 class="header-tile">Remind Me</h3>
+                                    <div class="col-sm-7 col-sm-offset-5">
+                                        <div class="radio radio-primary first-item">
+                                            <input type="radio" id="aDay" value="option0" name="remindMe">
+                                            <label for="aDay">in a day</label>
+                                        </div>
+
+                                        <div class="radio radio-primary">
+                                            <input type="radio" id="aWeek" value="option1" name="remindMe">
+                                            <label for="aWeek">in a week</label>
+                                        </div>
+
+                                        <div class="radio radio-primary">
+                                            <input type="radio" id="aMonth" value="option2" name="remindMe">
+                                            <label for="aMonth">in a month</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7 col-sm-offset-5">
+                                        <div>
+                                            <label class="control-label remind-ques">By the way, do you smoke ?</label>
+                                        </div>
+                                        <div class="single-break"></div>
+                                        <div class="radio radio-primary radio-inline">
+                                            <input type="radio" id="doSmoking" value="option3" name="smoking">
+                                            <label for="doSmoking">Yes</label>
+                                        </div>
+                                        <div class="radio radio-primary radio-inline">
+                                            <input type="radio" id="dontSmoke" value="option3" name="smoking">
+                                            <label for="dontSmoke">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="row">
+                                        <div class="col-sm-12 button-wrapper">
+                                            <button class="button button--small button--secondary remind-not-now">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="next-recommendation third none">
+                                <div class="health-assess-info">
+                                    <h3 class="header-tile">Did you know?</h3>
+                                    <div class="col-sm-6">
+                                        <div class="form-group text-center slide-display">
+                                            <span class="indicate icon-onlife_devices"></span>
+                                            <h3 class="connect-device">Connect Device(s)</h3>
+                                        </div>
+                                        <p>
+                                            You can connect your wearable devices to our system and we will provide you with insights and recommendations on your daily activities.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group text-center slide-display">
+                                            <span class="indicate icon-onlife_mobile"></span>
+                                            <h3 class="connect-device">Call a Coach</h3>
+                                        </div>
+                                        <p>
+                                            You can also get in touch with a coach who will help you in your journey to a happy and healthy life!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="row">
+                                        <div class="col-sm-12 button-wrapper">
+                                            <button class="button button--small button--secondary device-not-now" role="button">Not Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="next-recommendation forth none">
+                                <div class="health-assess-info">
+                                    <h3 class="header-tile">Have you tried our mobile app?</h3>
+                                    <div class="col-sm-12">
+                                        <p>
+                                            Go mobile with your wellness journey! Download AlwaysOn&reg; for your Apple or Android device and be on your way to a healthy and happy life all on your portable device.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <div class="form-group">
+                                            <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-sm-offset-5 text-center">
+                                        <img src="../../assets/images/tiles/Onlife_QR_Code.jpg" class="img-responsive qa-code" alt="QR Code" />
+                                    </div>
+                                    <div class="col-sm-12 text-center">
+                                        <p>Scan QR code to download the App</p>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="button-wrapper">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <button class="button button--small button--secondary app-btn">Not Now</button>
+                                                <button class="button button--small button--secondary more-info">Tell me more</button>
+
+                                                <button class="button button--large text-center button--default lets-go">Go</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-recommendation fifth none">
+                                <div class="health-assess-info">
+                                    <h3 class="header-tile">Challenges program</h3>
+                                    <div class="col-sm-12">
+                                        <p>
+                                            Well, there are a lot more tools that are available for your wellbeing. We have Challenges program which you can enroll in and benefit from.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="button-wrapper">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <button class="button button--small button--secondary cp-btn">Not Now</button>
+                                                <button class="button button--small button--secondary more-info">Tell me more</button>
+
+                                                <button class="button button--large text-center button--default lets-go">Register</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-recommendation sixth none">
+                                <div class="health-assess-info">
+                                    <h3 class="header-tile">Recommendation</h3>
+                                    <div class="col-sm-12">
+                                        <p>
+                                            Okay, we urge you to complete the Health Assessment soon as it will help us understand you and your health better. While you take time for this, we recommend you to go over the following useful articles on wellness. Please feel free to talk to a Coach to understand the benefits you can get.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="button-wrapper">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <button class="button button--small button--secondary recommend-btn">OK</button>
+                                                <button class="button button--small button--secondary more-info">Talk to a coach</button>
+                                                <button class="button button--large text-center button--default lets-go">Articles</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="points-btm">
+                                100 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Mary_Mother.jpg" alt="Onlife Blood Pressure" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_mobile"></span>
+                                </div>
+                                <span class="text-white">Today: 9:42 am</span>
+                                <h2>Update from Shirley</h2>
+                            </div>
+                            <div class="mask">
+                                <p>"My knees are killing me"</p>
+                                <a href="#" class="button button--large button--default">Message Shirley</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Arthritis.jpg" alt="Start Challenge" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_fitness"></span>
+                                </div>
+                                <h2>Understanding Arthritis</h2>
+                            </div>
+                            <div class="mask">
+                                <h2 class="mask-head"></h2>
+                                <p>Osteoarthritis is the most common form of “wear-and-tear” arthritis.</p>
+                                <a href="#" class="button button--large button--default">Read More</a>
+                            </div>
+                            <div class="points-btm">
+                                10 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Coach.jpg" alt="Mary's Coach" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_coach"></span>
+                                </div>
+                                <h2>Reach out to a Coach</h2>
+                            </div>
+                            <div class="mask">
+                                <p>Working with a coach is another to way to use the power of a support system to help you realize your wellness goals. </p>
+                                <div class="col-sm-3 col-sm-offset-1">
+                                    <i class="icon-onlife_chat text-white chat-icon"></i>
+                                </div>
+                                <div class="col-sm-8 text-left">
+                                    <button class="button button--large button--default" data-toggle="modal" data-target="#schedule-appointment">Schedule</button>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Start_Challenge.jpg" alt="Start Challenge" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_challenge"></span>
+                                </div>
+                                <h2>Challenge Yourself!</h2>
+                            </div>
+                            <div class="mask">
+                                <p>We offer a number of fun and exciting challenges to keep you working toward your wellness goals. Challenge yourself or invite friends to join. </p>
+                                <a href="#" class="button button--large button--default">Enroll</a>
+                            </div>
+                            <div class="points-btm">
+                                100 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <figure class="view view-first view-second-box">
+                            <img src="../../assets/images/tiles/Onlife_Nashville_Cooking.jpg" alt="Onlife Mary Doctor" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_greens"></span>
+                                </div>
+                                <h2>Nashua Healthy Cooking Club!</h2>
+                            </div>
+                            <div class="mask">
+                                <p>Do your taste buds a flavor and meet up other folks in your area who are working on healthier food choices. Healthy food doesn’t have to be boring food. </p>
+                                <a href="#" class="button button--large button--default">Join</a>
+                            </div>
+                            <div class="points-btm">
+                                50 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-sm-6">
+                        <figure class="view view-first view-second-box">
+                            <img src="../../assets/images/tiles/Onlife_Family_Friends.jpg" alt="Family Friends" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_friends"></span>
+                                </div>
+                                <h2>Family and Friends Updates</h2>
+                            </div>
+                            <div class="mask">
+                                <p>Check out what’s going on with your friends and family members. Send a message of encouragement or give ‘em a virtual High Five.</p>
+                                <a href="#" class="button button--large button--default">View Updates</a>
+                            </div>
+                            <div class="points-btm">
+                                100 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Connect_Device.jpg" alt="Connect Device" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_devices"></span>
+                                </div>
+                                <h2>Connect Your Device</h2>
+                            </div>
+                            <div class="mask">
+                                <p>Most of the top wearable fitness devices can be connected up to your wellness program for easy tracking. </p>
+                                <a href="#" class="button button--large button--default">Connect</a>
+                            </div>
+                            <div class="points-btm">
+                                100 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Connect_App.jpg" alt="Connect App" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_mobile"></span>
+                                </div>
+                                <h2>Take Your Wellness With You</h2>
+                            </div>
+                            <div class="mask">
+                                <p>With AlwaysOn you can check your challenge status, update your trackers and see the fitness data we gather from all of your connected devices. </p>
+                                <a href="#" class="button button--large button--default">Download</a>
+                            </div>
+                            <div class="points-btm">
+                                100 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Mary_Friends.jpg" alt="Mary Friends" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_friends"></span>
+                                </div>
+                                <h2>Invite Friends</h2>
+                            </div>
+                            <div class="mask">
+                                <p>Expand your connection by bringing your family & friends  </p>
+                                <a href="#" class="button button--large button--default">Invite</a>
+                            </div>
+                            <div class="points-btm">
+                                50 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                        <article class="article">
+                            <p>Expand your connection by bringing your family & friends. Your own fans will recommend you, what guarantees new fans better quality. </p>
+                        </article>
+                    </div>
+                    <div class="col-sm-6">
+                        <figure class="view view-first view-second-box">
+                            <img src="../../assets/images/tiles/Onlife_Question_Day.jpg" alt="Onlife Mary Doctor" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_reports"></span>
+                                </div>
+                                <h2>Question of the day</h2>
+                            </div>
+                            <div class="mask">
+                                <p>How many alcoholic drinks did you consume last week (Monday-Sunday)?</p>
+                                <div class="btn-group">
+                                    <a href="#" class="button btn btn-primary">0</a>
+                                    <a href="#" class="button btn btn-primary">1-3</a>
+                                    <a href="#" class="button btn btn-primary">4-7</a>
+                                    <a href="#" class="button btn btn-primary">More than 7</a>
+                                </div>
+                            </div>
+                            <div class="points-btm">
+                                5 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-sm-3">
+                        <figure class="view view-first view-third-box">
+                            <img src="../../assets/images/tiles/Onlife_Stress_Management.jpg" alt="Stress Management" class="img-responsive" />
+                            <div class="description">
+                                <div class="col-sm-12 text-center">
+                                    <span class="tile-icon icon-onlife_manage_stress"></span>
+                                </div>
+                                <h2>Reduce your stress</h2>
+                            </div>
+                            <div class="mask">
+                                <p>Yoga is considered a mind-body type of complementary and alternative medicine practice.</p>
+                                <a href="#" class="button button--large button--default">Read More</a>
+                            </div>
+                            <div class="points-btm">
+                                100 <span class="pts-lbl">pts</span>
+                            </div>
+                        </figure>
+                        <article class="article">
+                            <p>Yoga is considered a mind-body type of complementary and alternative medicine practice. Yoga brings together physical and mental disciplines to achieve peacefulness of body and mind.</p>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-1">
+                    <h3>We're Here to Help</h3>
+                    <p class="contact-text">Contact Us</p>
+                    <p class="contact-number">1-800-123-4567</p>
+                </div>
+                <div class="col-sm-9">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="">Dashboard</a></li>
+                            <li><a href="">Trackers</a></li>
+                            <li><a href="">MyHealth</a></li>
+                            <li><a href="">Certificates</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
+                    </nav>
+                    <div class="copyrights">
+                        <p>&copy; 1998-2015 BlueCross BlueShield of Tennessee, Inc</p>
+                        <p>An Independent Licensee of the BlueCross BlueShield Association</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- Schedule Appointment -->
+    <div class="modal fade" id="schedule-appointment" tabindex="-1" role="dialog" aria-labelledby="scheduleAppointmentLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Schedule Appointment</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="col-sm-6">
+                        <div class="schedule-box">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="schedule-header text-center">
+                                        Wayne (Free), Mary (Free)
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="schedule-content">
+                                        <p><span class="days">Tomorrow</span><span class="time">11.00 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Tomorrow</span><span class="time">3:00 p.m </span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Day After</span><span class="time">2:00 p.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Thursday</span><span class="time">11.00 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Friday</span><span class="time">9.00 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="schedule-box">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="schedule-header second-app text-center">
+                                        Wayne (Free), Mary (Tentative)
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="schedule-content">
+                                        <p><span class="days">Tomorrow</span><span class="time">11.30 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Day After</span><span class="time">9.30 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Thursday</span><span class="time">2.00 p.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Friday</span><span class="time">10.00 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+                                    <div class="schedule-content">
+                                        <p><span class="days">Friday</span><span class="time">10.30 a.m</span></p>
+                                        <button class="button button--block button--small button--white">Schedule</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-ha none">
+        <div class="health-assess-info">
+            <h4 class="question">What is Health Assessment (HA)?</h4>
+            <p class="answer">It is a comprehensive questionnaire that aims to capture specifics of various aspects of your health such as your BMI, physical activity, tobacco status, lifestyle and diet, social and emotional health and your medical history.</p>
+            <h4 class="question">Why should I take the Health Assessment?</h4>
+            <p class="answer">The answers you provide in the HA helps us gain insight into each aspect of your health. We use this information to identify personalized recommendations for your well-being. You will get 2500 points for this activity.</p>
+            <h4 class="question">How long will this take?</h4>
+            <p class="answer">This would take no more than 15 minutes of your time.</p>
+        </div>
+    </div>
+    <div class="loading-overlay">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+
+    <!-- Jquery Version -->
+    <script src="../../assets/js/jquery-1.11.3.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../../js/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../../assets/js/modernizr.custom.js"></script>
+    <script src="../../assets/js/classie.js"></script>
+    <script src="../../assets/js/jquery.flexslider.js"></script>
+    <script src="../../js/scripts.js"></script>
+    <script>
+        $(window).load(function () {
+            //Loading Icon
+            setTimeout(function () {
+                $('.loading-overlay').hide();
+            }, 2000);
+        });
+        $(document).ready(function () {
+
+            $('.description').each(function () {
+                $(this).on('mouseenter', function () {
+                    $(this).next().addClass('hovered');
+                });
+                $(this).on('mouseleave', function () {
+                    $(this).next().removeClass('hovered');
+                });
+            });
+
+            $('.health-assessment').popover({
+                placement: 'top',
+                trigger: 'hover',
+                html: true,
+                container: 'body',
+                content: function () {
+                    return $('.content-ha').html();
+                }
+            });
+
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    itemWidth: 298,
+                    itemMargin: 0,
+                    controlNav: false,
+                    animationLoop: true,
+                    minItems: 3
+                });
+            });
+
+            $('.ha-not-now').click(function () {
+                $('.next-recommendation.first').hide();
+                $('.next-recommendation.second').show();
+            });
+            $('.remind-later').click(function () {
+                $('.ha-wrapper').hide();
+                $('.next-recommendation.second').show();
+            });
+            $('.remind-not-now').click(function () {
+                $('.next-recommendation.second').hide();
+                $('.next-recommendation.third').show();
+            });
+            $('.device-not-now').click(function () {
+                $('.next-recommendation.third').hide();
+                $('.next-recommendation.forth').show();
+            });
+            $('.app-btn').click(function () {
+                $('.next-recommendation.forth').hide();
+                $('.next-recommendation.fifth').show();
+            });
+            $('.cp-btn').click(function () {
+                $('.next-recommendation.fifth').hide();
+                $('.next-recommendation.sixth').show();
+            });
+            $('.recommend-btn').click(function () {
+                $('.next-recommendation.sixth').hide();
+                $('.ha-wrapper').show();
+            });
+
+        });
+
+        $(window).on('load', function (e) {
+            windowResize();
+        });
+        $(window).on('resize', function (e) {
+            windowResize();
+        });
+
+        function windowResize() {
+            $('.view-second-box, .view-third-box').css('height', ($('.most-big-box').height() / 2) - (29 / 2));
+        }
+
+    </script>
+</body>
+</html>

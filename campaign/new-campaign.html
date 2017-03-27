@@ -1,0 +1,1161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Campaign Management - New Campaign</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/onlife.min.css">
+    <!-- Onlife Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+    <link href="../dist/css/custom.css" rel="stylesheet"/>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse campaign-dashboard" data-ng-app="olh-lps-campaign">
+<div class="wrapper" data-ng-cloak="">
+
+    <header class="main-header">
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top">
+            <div class="row">
+                <div class="col-sm-5">
+                    <section class="content-header">
+                        <h1>
+                            Onlife
+                        </h1>
+                        <h3 class="text-uppercase">
+                            Campaign Management
+                        </h3>
+                    </section>
+                </div>
+                <div class="col-sm-6">
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- Tasks-->
+
+                            <!-- User Account -->
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="../dist/img/catherine_dust.jpg" class="user-image" alt="User Image">
+                                    <span class="hidden-xs username"><strong>Catherine Dunst</strong>
+                                    <span class="single-break"></span>
+                                        Wellness Manager
+                                    <span class="single-break"></span>
+                                    <span class="sign-out">Signout</span>
+                                </span>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- Menu Body -->
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Sales</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Friends</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Control Sidebar Toggle Button -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar-->
+        <section class="sidebar">
+
+            <!-- sidebar menu -->
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="icon-dashboard"></i>
+                    </a>
+                    <span class="arrow-right"></span>
+                </li>
+                <li>
+                    <a href="segment.html">
+                        <i class="icon-calendar"></i>
+                        <span class="">Persona</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="icon-wellness"></i>
+                        <span class="">Programs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-reports"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <section class="content" data-ng-controller="CampaignController">
+            <div class="content-section">
+                <div class="tab-wrapper">
+                    <div class="campaign-container container">
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#campaignInfo" data-toggle="tab">Campaign Details</a>
+                                    <span class="tab-confirmed"> &#10004; </span>
+                                    <span class="tab-number"> 1 </span>
+                                </li>
+                                <li>
+                                    <a href="#campaignPersonas" class="contact-pref" data-toggle="tab">Personas</a>
+                                    <span class="tab-confirmed"> &#10004; </span>
+                                    <span class="tab-number"> 2 </span>
+                                </li>
+                                <li>
+                                    <a href="#campaignSegments" data-toggle="tab">Segments</a>
+                                    <span class="tab-confirmed"> &#10004; </span>
+                                    <span class="tab-number"> 3 </span>
+                                </li>
+                            </ul>
+                            <div class="tab-content campaign-content">
+                                <div class="active tab-pane" id="campaignInfo">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#brandNewCampaign" data-toggle="tab">New Campaign</a>
+                                        </li>
+                                        <li><a data-toggle="tab" href="#cloneCampaign">Campaign History</a>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="brandNewCampaign" class="tab-pane fade active in" >
+                                            <div class = "row">
+                                                <div class="col-xs-12">
+                                                    <h2 class="page-header">1. Campaign Information</h2>
+                                                    <p>Define the Campaign details</p>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="campaignName">Name</label>
+                                                            <input type="email" class="form-control" id="campaignName"
+                                                                   placeholder="Campaign Name"
+                                                                   value="Campaign Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="campaignDescription">Description</label>
+                                                            <textarea class="form-control" id="campaignDescription"
+                                                                      placeholder="Description"></textarea>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="form-group text-right button-holder">
+                                                        <span>
+                                                          <button type="button"
+                                                                  class="btn btn-primary custom-btn next-btn"
+                                                                  id="first-tab"
+                                                                  data-toggle="tab"
+                                                                  data-ng-click="nextTab('campaignPersonas')">Next</button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="cloneCampaign" class="tab-pane fade">
+                                            <div class="row">
+                                                <div id="clonegrid" ui-grid ="settingsGrid" class="grid"></div>
+                                                <div class="col-xs-12">
+                                                    <div class="form-group text-right button-holder">
+                                                        <span>
+                                                          <button type="button"
+                                                                  class="btn btn-primary custom-btn next-btn"
+                                                                  id="first-tab"
+                                                                  data-toggle="tab"
+                                                                  data-ng-click="nextTab('campaignPersonas')">Next</button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="campaignPersonas">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h2 class="page-header">2. Personas</h2>
+                                            <p>Select the Personas for the Campaign</p>
+                                        </div>
+                                        <div class="col-xs-12 m-t-15">
+                                            <form>
+                                                <div class="row p-x-0">
+                                                    <div class="col-xs-12">
+                                                        <div class="row p-x-0" data-ng-repeat="segment in segments">
+
+                                                            <div class="row">
+                                                                <div class="col-xs-11">
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input id="{{segment.$index}}" class="styled"
+                                                                               type="checkbox">
+                                                                        <label class="label-persona-checkbox"
+                                                                               for="{{segment.$index}}">
+                                                                            <strong>{{segment.category}}
+                                                                                ({{segment.users.count}}k
+                                                                                Members)</strong>
+
+                                                                            <p>
+                                                                                {{segment.behavior}},
+                                                                                {{segment.lifestyle}}
+                                                                            </p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="form-group text-right button-holder">
+                                                <span>
+                                                  <button type="button"
+                                                          class="btn btn-primary custom-btn back-btn contact-pref-back"
+                                                          data-ng-click="nextTab('campaignInfo')">Back</button>
+                                                  <button type="button"
+                                                          class="btn btn-primary custom-btn next-btn contact-pref-next"
+                                                          data-toggle="tab"
+                                                          data-ng-click="nextTab('campaignSegments')">Next</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="campaignSegments">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h2 class="page-header">3. Segments</h2>
+                                            <p>Select the Segments for this Campaign</p>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <label class="control-label">Geographic</label>
+                                                            </div>
+                                                            <div class="col-sm-10">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="countryContinent"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="countryContinent">
+                                                                                        Country/continent
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>United States Of
+                                                                                            America
+                                                                                        </option>
+                                                                                        <option>England</option>
+                                                                                        <option>UK</option>
+                                                                                        <option>Europe</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="regionArea"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="regionArea">
+                                                                                        Region/area of the country
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>Central</option>
+                                                                                        <option>North</option>
+                                                                                        <option>East</option>
+                                                                                        <option>South</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="cityGeo" class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="cityGeo">
+                                                                                        City
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Nashville</option>
+                                                                                        <option>Memphis</option>
+                                                                                        <option>Chattanooga</option>
+                                                                                        <option>New York</option>
+                                                                                        <option>Los Angeles</option>
+                                                                                        <option>Dallas</option>
+                                                                                        <option>Chicago</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="urbanRural"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="urbanRural">
+                                                                                        Urban/rural
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Urban</option>
+                                                                                        <option>Rural</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <label class="control-label">Demographic</label>
+                                                            </div>
+                                                            <div class="col-sm-10">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="generationGeo"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="generationGeo">
+                                                                                        Generation
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Milleniel Generation (1980-2000)
+                                                                                        </option>
+                                                                                        <option>Generation X (1961-1979)</option>
+                                                                                        <option>Baby Boomer Generation (1945-1964)
+                                                                                        </option>
+                                                                                        <option>The Silent Generation (1923-1944)
+                                                                                        </option>
+                                                                                        <option>The Greatest
+                                                                                            Generation (1910-1925)
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="genderGeo" class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="genderGeo">
+                                                                                        Gender
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Male</option>
+                                                                                        <option>Female</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="maritalStatus"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="maritalStatus">
+                                                                                        Marital status
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Married</option>
+                                                                                        <option>single</option>
+                                                                                        <option>widowed</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="familyLifeCycle"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="familyLifeCycle">
+                                                                                        Family life cycle
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Young Married no kids
+                                                                                        </option>
+                                                                                        <option>Married Young kids
+                                                                                        </option>
+                                                                                        <option>Not Married</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="familySize"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="familySize">
+                                                                                        Family size
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Couple only</option>
+                                                                                        <option>Large family</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="occupation"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="occupation">
+                                                                                        Occupation
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Professional</option>
+                                                                                        <option>Trade</option>
+                                                                                        <option>Unskilled</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="educationGeo"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="educationGeo">
+                                                                                        Education
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>High school</option>
+                                                                                        <option>university</option>
+                                                                                        <option>vocational</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="ethnicBackground"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="ethnicBackground">
+                                                                                        Ethnic background
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>White</option>
+                                                                                        <option>African-American
+                                                                                        </option>
+                                                                                        <option>Hispanic</option>
+                                                                                        <option>Asian</option>
+                                                                                        <option>Cauccasian</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="incomeLevel"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="incomeLevel">
+                                                                                        Income Level
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>$0 - $30000</option>
+                                                                                        <option>$30000 - $50000</option>
+                                                                                        <option>$50000 - $80000</option>
+                                                                                        <option>$80000 - $100000
+                                                                                        </option>
+                                                                                        <option>Above $100000</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <label class="control-label">Psychographic</label>
+                                                            </div>
+                                                            <div class="col-sm-10">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="lifestyleGeo"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="lifestyleGeo">
+                                                                                        Lifestyle
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Family</option>
+                                                                                        <option>Social</option>
+                                                                                        <option>Sporty</option>
+                                                                                        <option>Travel</option>
+                                                                                        <option>Education</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="selfConcept"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="selfConcept">
+                                                                                        Personality/self-concept
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Ongoing</option>
+                                                                                        <option>Creative</option>
+                                                                                        <option>Innovator</option>
+                                                                                        <option>Serious</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <label class="control-label">Behavioral</label>
+                                                            </div>
+                                                            <div class="col-sm-10">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="occasion" class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="occasion">
+                                                                                        Occasion
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Birthday</option>
+                                                                                        <option>anniversary</option>
+                                                                                        <option>Valentine’s Day</option>
+                                                                                        <option>Mother's Day</option>
+                                                                                        <option>Father's Day</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="userStatus"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="userStatus">
+                                                                                        User status
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>All</option>
+                                                                                        <option>Regular</option>
+                                                                                        <option>Occasional</option>
+                                                                                        <option>Never</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="checkbox checkbox-primary">
+                                                                                    <input id="involvementLevel"
+                                                                                           class="styled"
+                                                                                           type="checkbox"
+                                                                                           checked="checked">
+                                                                                    <label for="involvementLevel">
+                                                                                        Involvement level
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                        <option>Beginner</option>
+                                                                                        <option>Participant</option>
+                                                                                        <option>Influencer</option>
+                                                                                        <option>Coach</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="customHr">.</div>
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <label class="control-label">Interests</label>
+                                                            </div>
+                                                             <div class="col-sm-10">
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input id="Healthy_cooking" class="styled"
+                                                                                   type="checkbox">
+                                                                            <label for="Healthy_cooking">
+                                                                                Healthy Cooking
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input id="Yoga"
+                                                                                   class="styled"
+                                                                                   type="checkbox">
+                                                                            <label for="Yoga">
+                                                                                Yoga
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input id="Meditation"
+                                                                                   class="styled"
+                                                                                   type="checkbox">
+                                                                            <label for="Meditation">
+                                                                                Meditation
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input id="Crossfit"
+                                                                                   class="styled"
+                                                                                   type="checkbox">
+                                                                            <label for="Crossfit">
+                                                                                Cross Fit
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input id="Running"
+                                                                                   class="styled"
+                                                                                   type="checkbox">
+                                                                            <label for="Running">
+                                                                                Running
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input id="Group_wellness"
+                                                                                   class="styled"
+                                                                                   type="checkbox">
+                                                                            <label for="Group_wellness">
+                                                                                Group Wellness
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <button type="button" class="btn btn-xs btn-primary">More Topics</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <label class="control-label">Programs</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="campaignProgram"></label>
+                                                                <select id="campaignProgram" class="form-control"
+                                                                        data-ng-model="selectedProgram"
+                                                                        data-ng-options="program as program.SettingName.MetaData.DisplayName for program in programs">
+                                                                    <option value="">Select a Program</option>
+                                                                </select>
+                                                            </div>                                                                                 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <br />
+                                        <div class="col-xs-12">
+                                            <div class="checkbox checkbox-primary p-l-5">
+                                                <input id="newSegmentCheck"
+                                                       class="styled"
+                                                       type="checkbox"
+                                                       checked="checked">
+                                                <label for="newSegmentCheck">
+                                                    Create a new segment when parameters changed.
+                                                </label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <input type="text" class="save-text" placeholder="Enter saved campaign name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                           <div class="col-xs-4">
+                                                <div class="form-group">
+                                                    <label for="dateStart">Start Date:</label>
+                                                    <div class="input-group" data-ng-click="pointsMatrixCtrl.openStartDatePicker($event)">
+                                                        <input type="datetime" is-open="pointsMatrixCtrl.openedStartDate" class="form-control calendar-form campaign-form-calendar-input"  datepicker-popup="MMMM dd, yyyy" show-button-bar="false" show-weeks="true" id="dateStart">
+                                                                <span class="input-group-addon">
+                                                                    <span class="fa fa-calendar"></span>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                           <div class="col-xs-4 ">
+                                                <div class="form-group">
+                                                    <label class="control-label">End Date:</label>
+                                                     <div class="input-group" data-ng-click="pointsMatrixCtrl.openStartDatePicker($event)">
+                                                        <input type="datetime" is-open="pointsMatrixCtrl.openedStartDate" class="form-control calendar-form campaign-form-calendar-input"  datepicker-popup="MMMM dd, yyyy" show-button-bar="false" show-weeks="true">
+                                                                <span class="input-group-addon">
+                                                                    <span class="fa fa-calendar"></span>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                            <div class="col-xs-4 ">
+                                                <div class="form-group">
+                                                    <label class="control-label">Channel Notifications:</label>
+                                                     <div class="input-group" data-ng-click="pointsMatrixCtrl.openStartDatePicker($event)">
+                                                        <input type="datetime" is-open="pointsMatrixCtrl.openedStartDate" class="form-control calendar-form campaign-form-calendar-input"  datepicker-popup="MMMM dd, yyyy" show-button-bar="false" show-weeks="true">
+                                                                <span class="input-group-addon">
+                                                                    <span class="fa fa-calendar"></span>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                           </div>               
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="form-group text-right button-holder">
+                                                <span>
+                                                  <button type="button"
+                                                          class="btn btn-primary custom-btn back-btn prog-pref-back"
+                                                          data-ng-click="nextTab('campaignPersonas')">Back</button>
+                                                        <a href="../campaign/index.html"
+                                                           class="btn btn-primary custom-btn next-btn">Save & Done</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.tab-pane -->
+                                <div class="tab-pane" id="campaignSummary">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="col-sm-12">
+                                                <h2 class="page-header"></h2>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="col-xs-12 m-b-10">
+                                                    <strong>Persona/Segment</strong>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div data-ng-repeat="segment in selectedSegments">
+                                                        {{segment.category}}
+                                                        <p>
+                                                            <small>(Default)</small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="col-xs-12 m-b-10">
+                                                    <strong>Filters</strong>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="form-group">
+                                                        <div class="checkbox checkbox-primary p-l-5">
+                                                            <input id="personaAll" class="styled" type="checkbox"
+                                                                   checked="checked">
+                                                            <label for="personaAll">
+                                                                Beginner - 100
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary p-l-5">
+                                                            <input id="personaActive" class="styled"
+                                                                   type="checkbox">
+                                                            <label for="personaActive">
+                                                                Participant - 410
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary p-l-5">
+                                                            <input id="personaInactive" class="styled"
+                                                                   type="checkbox">
+                                                            <label for="personaInactive">
+                                                                Influencer - 320
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-primary p-l-5">
+                                                            <input id="personaModerate" class="styled"
+                                                                   type="checkbox">
+                                                            <label for="personaModerate">
+                                                                Coach - 170
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="col-xs-12 m-b-10">
+                                                    <strong>Mode</strong>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="row">
+                                                        <div class="col-xs-1">
+                                                        <span class="text-primary">
+                                                            <i class="fa fa-envelope-o" title="Physical Mail"></i>
+                                                        </span>
+                                                        </div>
+                                                        <div class="col-xs-4">
+                                                            <label>3.1K</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="row">
+                                                        <div class="col-xs-1">
+                                                        <span class="text-primary">
+                                                            <i class="fa fa-envelope" title="Email"></i>
+                                                        </span>
+                                                        </div>
+                                                        <div class="col-xs-4">
+                                                            <label>1.6K</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="row">
+                                                        <div class="col-xs-1">
+                                                        <span class="text-primary">
+                                                            <i class="fa fa-phone" title="Phone"></i>
+                                                        </span>
+                                                        </div>
+                                                        <div class="col-xs-4">
+                                                            <label>1.2K</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="row">
+                                                        <div class="col-xs-1">
+                                                        <span class="text-danger">
+                                                            <i class="fa fa-phone" title="Do Not Disturb"></i>
+                                                        </span>
+                                                        </div>
+                                                        <div class="col-xs-4">
+                                                            <label>284</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="row">
+                                                    <div class="col-xs-12 m-b-10">
+                                                        <strong>Program</strong>
+                                                    </div>
+                                                    <label for="campaignProgram"></label>
+                                                    <select id="campaignProgram"
+                                                            data-ng-model="selectedProgram"
+                                                            data-ng-options="program as program.SettingName.MetaData.DisplayName for program in programs">
+                                                        <option value="">Select a Program</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="form-group text-right button-holder">
+                                                <div class="form-group text-right button-holder">
+                                                    <span>
+                                                        <button type="button"
+                                                                class="btn btn-primary custom-btn back-btn prog-pref-back"
+                                                                data-ng-click="nextTab('campaignSegments')">Back</button>
+                                                        <a href="../campaign/index.html"
+                                                           class="btn btn-primary custom-btn next-btn">Done</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+        <strong> &copy; Copyright Onlife.</strong> All rights
+        reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="../plugins/angular/angular.min.js"></script>
+<script src="../plugins/morris/morris.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+
+<!-- Sparkline -->
+<script src="../plugins/sparkline/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/knob/jquery.knob.js"></script>
+<!-- daterangepicker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.9/ui-grid.min.js"></script>
+
+          <!--UI Grid -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.9/ui-grid.min.css" rel="stylesheet" />
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../plugins/fastclick/fastclick.js"></script>
+<!-- Onlife App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- Onlife dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>
+<script src="../dist/js/angular/campaign/app.js"></script>
+<script src="../dist/js/angular/campaign/services/segmentService.js"></script>
+<script src="../dist/js/angular/campaign/services/programService.js"></script>
+<script src="../dist/js/angular/campaign/controllers/campaignController.js"></script>
+<script src="../dist/js/angular/campaign/controllers/programController.js"></script>
+<!-- Onlife for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+</body>
+</html>
