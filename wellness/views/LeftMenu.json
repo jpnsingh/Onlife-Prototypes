@@ -39,6 +39,14 @@
             ],
             "MenuIdentifier": "Programs",
             "Category": null
+        },
+        {
+            "DisplayName": "Recommendations",
+            "ClassType": [
+                "Recommendations"
+            ],
+            "MenuIdentifier": "Recommendations",
+            "Category": null
         }
     ]
 }

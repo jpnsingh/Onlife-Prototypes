@@ -38,7 +38,7 @@
                     <h3>Stress Reduction</h3>
                   </div>
                 </div>
-              </div>              
+              </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" ng-click="settingListCtrl.createAddProgramScreen('Physical Activity')">
                   <img src="../public/styles/img/program/Physical_activity.png" alt="Stress Reduction image" style="width: 200px; height: 200px">
@@ -46,7 +46,7 @@
                     <h3>Physical Activity</h3>
                   </div>
                 </div>
-              </div>              
+              </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" ng-click="settingListCtrl.createAddProgramScreen('Blood Pressure')">
                   <img src="../public/styles/img/program/Blood_Pressure.png" alt="Blood Pressure image" style="width: 200px; height: 200px">
@@ -54,7 +54,7 @@
                     <h3>Blood Pressure</h3>
                   </div>
                 </div>
-              </div>              
+              </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" ng-click="settingListCtrl.createAddProgramScreen('Cholesterol')">
                   <img src="../public/styles/img/program/Cholesterol.png" alt="Cholesterol image" style="width: 200px; height: 200px">
@@ -62,7 +62,7 @@
                     <h3>Cholesterol</h3>
 
                   </div>
-                </div>            
+                </div>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" ng-click="settingListCtrl.createAddProgramScreen('Dietary Habits')">
@@ -70,7 +70,7 @@
                   <div class="caption">
                     <h3>Dietary Habits</h3>
                   </div>
-                </div>            
+                </div>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" ng-click="settingListCtrl.createAddProgramScreen('Fitness Level')">
@@ -78,8 +78,8 @@
                   <div class="caption">
                     <h3>Fitness Level</h3>
                   </div>
-                </div>             
-            </div>             
+                </div>
+            </div>
             </div>
           </div>
         </div>
@@ -110,6 +110,160 @@
         <div ui-grid="settingListCtrl.programsGrid" ui-grid-selection ui-grid-auto-resize class="myGrid" data-ng-cloak>
         </div>
     </div>
+</div>
+<div role="tabpanel" id="Recommendations" data-ng-class="settingMenuData.ClassType[0] === 'Recommendations' ? 'tab-pane active' : 'tab-pane fade'">
+    <header class="col-sm-12">
+        <p>Here is a snapshot of different types of recommendation readily available for you to create a journey. These recommendations are predeficed by Onlife and come handy while creating Journeys.</p>
+    </header>
+
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area">
+                    <span class="input-group-addon" id="search-area"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+            <div class="col-sm-5 text-right">
+                <span>
+                    <button class="btn btn-primary"
+                            type="button"
+                            data-toggle="modal"
+                            data-target="#createRecommendationModal"
+                            data-ng-click="settingListCtrl.creating = true">
+                        Create Recommendation
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="scroll-area">
+            <div class="recommended-content-wrap">
+                <div class="recommended-item" data-ng-repeat="recommendation in settingListCtrl.recommendations">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <div class="recommended-icon">
+                                <img class="img-responsive"
+                                     data-ng-src="../public/styles/img/recommendations/icon/{{recommendation.icon}}"
+                                     alt="recommendationIcon">
+                            </div>
+                        </div>
+                        <div class="col-xs-11">
+                            <div class="recommended-content">
+                                <h3 class="recommended-header">
+                                    <a href="javascript:void(0)"
+                                       data-toggle="modal"
+                                       data-target="#createRecommendationModal"
+                                       data-ng-click="settingListCtrl.creating = false; settingListCtrl.selectedRecommendation = recommendation;">
+                                        {{recommendation.title}}
+                                    </a>
+                                </h3>
+                                <p>
+                                    {{recommendation.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="createRecommendationModal" tabindex="-1" role="dialog" aria-labelledby="createRecommendationModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="createRecommendationModalLabel">
+                        {{settingListCtrl.creating ? 'Create New Recommendation' : 'Recommendation: ' + settingListCtrl.selectedRecommendation.title}}
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="p-x-15">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="recommendationTitle" class="control-label">Title</label>
+                                    <input type="text" class="form-control" id="recommendationTitle" data-ng-model="settingListCtrl.selectedRecommendation.title">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="recommendationDescription" class="control-label">Description</label>
+                                            <textarea class="form-control"
+                                                      id="recommendationDescription"
+                                                      data-ng-model="settingListCtrl.selectedRecommendation.description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="recommendationImage" class="control-label">{{settingListCtrl.creating ? 'Select Image' : 'Image'}}</label>
+                                            <img id="recommendationImage"
+                                                 data-ng-if="!settingListCtrl.creating"
+                                                 data-ng-src="../public/styles/img/recommendations/image/{{settingListCtrl.selectedRecommendation.image}}">
+                                            <input type="button" data-ng-if="settingListCtrl.creating" value="Select Image" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="radio-inline">
+                                                <input type="radio"
+                                                       name="recommendationStatus"
+                                                       data-ng-model="settingListCtrl.selectedRecommendation.status"
+                                                       data-ng-value="true">Active</label>
+
+                                            <label class="radio-inline">
+                                                <input type="radio"
+                                                       name="recommendationStatus"
+                                                       data-ng-model="settingListCtrl.selectedRecommendation.status"
+                                                       data-ng-value="false">Inactive</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="recommendationActiveFrom" class="control-label">Active From</label>
+                                            <input type="date"
+                                                   class="form-control"
+                                                   id="recommendationActiveFrom"
+                                                   data-ng-model="settingListCtrl.selectedRecommendation.activeFrom">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recommendationIcon" class="control-label">{{settingListCtrl.creating ? 'Select Icon' : 'Icon'}}</label>
+                                    <img id="recommendationIcon"
+                                         data-ng-if="!settingListCtrl.creating"
+                                         data-ng-src="../public/styles/img/recommendations/icon/{{settingListCtrl.selectedRecommendation.icon}}">
+                                    <input type="button" data-ng-if="settingListCtrl.creating" value="Select Icon" class="btn btn-primary">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 <div role="tabpanel" id="Announcements" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'Announcements' ? 'tab-pane active': 'tab-pane fade'">
     <div class="tabs-container push-top-small">

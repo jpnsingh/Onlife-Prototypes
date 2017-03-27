@@ -599,7 +599,25 @@ input[type="radio"] .styled:checked + label::after {
     border: 1px solid black;
 }
 
-
 .enabled-program {
     padding-top:10px;
+}
+
+.recommended-content-wrap {
+    margin: 1em 0;
+}
+
+.recommended-content-wrap .recommended-item {
+    padding: 0.6em 0;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 5px;
+}
+
+.recommended-content-wrap .recommended-item .recommended-header {
+    color: #00528a;
+}
+
+.p-x-15 {
+    padding-left: 15px;
+    padding-right: 15px;
 }
