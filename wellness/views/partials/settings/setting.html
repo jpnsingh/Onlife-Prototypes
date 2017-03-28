@@ -120,7 +120,7 @@
         <div class="row">
             <div class="col-sm-7">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area">
+                    <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area" data-ng-model="searchText">
                     <span class="input-group-addon" id="search-area"><i class="fa fa-search"></i></span>
                 </div>
             </div>
@@ -130,8 +130,8 @@
                             type="button"
                             data-toggle="modal"
                             data-target="#createRecommendationModal"
-                            data-ng-click="settingListCtrl.creating = true">
-                        Create Recommendation
+                            data-ng-click="settingListCtrl.creating = true; settingListCtrl.selectedRecommendation = {}">
+                        Add Recommendation
                     </button>
                 </span>
             </div>
@@ -141,7 +141,7 @@
     <div class="col-sm-12">
         <div class="scroll-area">
             <div class="recommended-content-wrap">
-                <div class="recommended-item" data-ng-repeat="recommendation in settingListCtrl.recommendations">
+                <div class="recommended-item" data-ng-repeat="recommendation in settingListCtrl.recommendations | filter:searchText">
                     <div class="row">
                         <div class="col-xs-1">
                             <div class="recommended-icon">
@@ -161,7 +161,7 @@
                                     </a>
                                 </h3>
                                 <p>
-                                    {{recommendation.description}}
+                                    {{recommendation.descriptionWhy}}
                                 </p>
                             </div>
                         </div>
@@ -193,12 +193,28 @@
 
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="recommendationDescription" class="control-label">Description</label>
-                                            <textarea class="form-control"
+                                            <label for="recommendationDescriptionWhy" class="control-label">Why ?</label>
+                                            <textarea class="form-control" rows="6"
+                                                      id="recommendationDescriptionWhy"
+                                                      data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhy"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="recommendationDescriptionWhat" class="control-label">What ?</label>
+                                            <textarea class="form-control" rows="6"
+                                                      id="recommendationDescriptionWhat"
+                                                      data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhat"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="recommendationDescription" class="control-label">How ?</label>
+                                            <textarea class="form-control" rows="6"
                                                       id="recommendationDescription"
-                                                      data-ng-model="settingListCtrl.selectedRecommendation.description"></textarea>
+                                                      data-ng-model="settingListCtrl.selectedRecommendation.descriptionHow"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -208,57 +224,118 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="recommendationImage" class="control-label">{{settingListCtrl.creating ? 'Select Image' : 'Image'}}</label>
-                                            <img id="recommendationImage"
-                                                 data-ng-if="!settingListCtrl.creating"
-                                                 data-ng-src="../public/styles/img/recommendations/image/{{settingListCtrl.selectedRecommendation.image}}">
-                                            <input type="button" data-ng-if="settingListCtrl.creating" value="Select Image" class="btn btn-primary">
+                                            <div class="row">
+                                                <label for="recommendationImage" class="control-label col-xs-6">{{settingListCtrl.creating ? 'Select Image' : 'Image'}}</label>
+                                                <div class="col-xs-6 text-center">
+                                                    <img id="recommendationImage"
+                                                         data-ng-if="!settingListCtrl.creating"
+                                                         data-ng-src="../public/styles/img/recommendations/image/{{settingListCtrl.selectedRecommendation.image}}">
+                                                    <input type="button" data-ng-if="settingListCtrl.creating" value="Select Image" class="btn btn-primary">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label class="radio-inline">
-                                                <input type="radio"
-                                                       name="recommendationStatus"
-                                                       data-ng-model="settingListCtrl.selectedRecommendation.status"
-                                                       data-ng-value="true">Active</label>
-
-                                            <label class="radio-inline">
-                                                <input type="radio"
-                                                       name="recommendationStatus"
-                                                       data-ng-model="settingListCtrl.selectedRecommendation.status"
-                                                       data-ng-value="false">Inactive</label>
+                                            <div class="row">
+                                                <label for="recommendationIcon" class="control-label col-xs-6">{{settingListCtrl.creating ? 'Select Icon' : 'Icon'}}</label>
+                                                <div class="col-xs-6 text-center">
+                                                    <img id="recommendationIcon"
+                                                         data-ng-if="!settingListCtrl.creating"
+                                                         data-ng-src="../public/styles/img/recommendations/icon/{{settingListCtrl.selectedRecommendation.icon}}">
+                                                    <input type="button" data-ng-if="settingListCtrl.creating" value="Select Icon" class="btn btn-primary">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <div class="col-xs-5">
+                                                <label class="control-label">Status:</label>
+                                                <div class="form-group">
+                                                    <div class="radio">
+                                                        <input type="radio" id="activeRadio" value="Active" checked=""
+                                                               data-ng-model="settingListCtrl.selectedRecommendation.status"
+                                                               name="recommendationStatus"
+                                                               data-ng-value="true">
+                                                        <label for="activeRadio">
+                                                            Active
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <input type="radio" id="inActiveRadio" value="inActive" checked=""
+                                                               name="recommendationStatus"
+                                                               data-ng-model="settingListCtrl.selectedRecommendation.status"
+                                                               data-ng-value="false">
+                                                        <label for="inActiveRadio">
+                                                            Inactive
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-7">
+                                                <div class="form-group">
+                                                    <label for="recommendationActiveFrom" class="control-label">Active From</label>
+                                                    <input type="date"
+                                                           class="form-control"
+                                                           id="recommendationActiveFrom"
+                                                           data-ng-model="settingListCtrl.selectedRecommendation.activeFrom">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="recommendationActiveFrom" class="control-label">Active From</label>
-                                            <input type="date"
-                                                   class="form-control"
-                                                   id="recommendationActiveFrom"
-                                                   data-ng-model="settingListCtrl.selectedRecommendation.activeFrom">
+                                            <select class="form-control">
+                                                <option ng-repeat="row in recommendationsApplicable[&quot;'Architect'&quot;]" value="{{row}}">{{row}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <h4>Actions</h4>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table class="table table-striped table-bordered table-hover dataTables-example dataTable" aria-describedby="DataTables" role="grid">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th colspan="1" rowspan="1">Action Type</th>
+                                                            <th colspan="1" rowspan="1">Action Target</th>
+                                                            <th colspan="1" rowspan="1">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="elem in tableRow" class="gradeA odd" role="row">
+                                                            <td class="sorting_1">
+                                                                <select class="form-control">
+
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select ng-model="selectedTarget" class="form-control">
+                                                                    <option ng-repeat="targets in selectedTargets">{{targets}}</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="button" value="delete" ng-click="removeElement($index)">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="recommendationIcon" class="control-label">{{settingListCtrl.creating ? 'Select Icon' : 'Icon'}}</label>
-                                    <img id="recommendationIcon"
-                                         data-ng-if="!settingListCtrl.creating"
-                                         data-ng-src="../public/styles/img/recommendations/icon/{{settingListCtrl.selectedRecommendation.icon}}">
-                                    <input type="button" data-ng-if="settingListCtrl.creating" value="Select Icon" class="btn btn-primary">
-                                </div>
-                            </div>
 
-                            <div class="col-sm-12"></div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <span class="pull-left">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </span>
+                    <button type="button" class="btn btn-primary">Previous</button>
+                    <button type="button" class="btn btn-primary">Next</button>
                 </div>
             </div>
         </div>

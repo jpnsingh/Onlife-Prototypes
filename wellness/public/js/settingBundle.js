@@ -3388,7 +3388,7 @@
                                 });
                         }
                         else {
-                            if ($scope.settingMenuData.DisplayName === 'Programs') {
+                            if ($scope.settingMenuData.MenuIdentifier === 'Programs') {
                                 settingService.getSettingData($scope.settingMenuData.ClassType[0], $scope.group.groupId)
                                     .then(function (data) {
                                         self.constructSettingGrid(data, $scope.settingMenuData.ClassType[0]);
@@ -3397,66 +3397,144 @@
                                 self.hidePrograms = true;
                                 self.hideFilter = true;
 
+                                $scope.recommendationsApplicable = {
+                                    "'Architect'": [
+                                        "All",
+                                        "BCBST ASO",
+                                        "ACADIA"
+                                    ]
+                                };
+                                $scope.tableRow = [
+                                    { id: 1 },
+                                    { id: 2 }
+                                ];
+
+                                $scope.selectedTargets = [
+                                  "Target 1",
+                                  "Target 2",
+                                  "Target 3",
+                                  "Target 4",
+                                  "Target 5",
+                                  "Target 6",
+                                  "Target 7"
+                                ];
+                                $scope.selectedTarget = $scope.selectedTargets[0];
+
+                                $scope.addElement = function () {
+                                    var mock = { id: $scope.tableRow.length + 1 };
+                                    $scope.tableRow.push(mock)
+                                }
+                                $scope.removeElement = function (index) {
+                                    $scope.tableRow.splice(index, 1)
+                                }
+
+
                                 self.recommendations = [
                                     {
-                                        title: 'Health Assessment',
-                                        description: 'It is a comprehensive questionnaire that aims to capture specifics of various aspects of your health such as your BMI, physical activity, tobacco status, lifestyle and diet, social and emotional health and your medical history.',
+                                        title: 'Health Assessment: your first step towards a health lifestyle!',
+                                        descriptionWhy: 'Get control of your health. Knowing where you stand is important to know what you must change to get healthier.',
+                                        descriptionWhat: 'The health assessment is a set of questions about your health. Go ahead and select your responses. It should not take you more than 15 mins to get this done.  Oh and yes, you earn points for completing this!',
+                                        descriptionHow: '',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'health_assessment_icon.png'
                                     },
                                     {
-                                        title: 'Biometric Screening',
-                                        description: 'Schedule a biometric screening in the nearest location.',
+                                        title: 'Get your labs done!',
+                                        descriptionWhy: 'Yes, needles can be painful but getting your labs done will give you an accurate picture of your health. Once we know where you stand, we can design a program, best suited to your needs. So go ahead and schedule your labs today!',
+                                        descriptionWhat: '',
+                                        descriptionHow: '',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'biometric_screen_icon.png'
                                     },
                                     {
-                                        title: 'Contact a Coach',
-                                        description: 'Reach out to coach',
+                                        title: 'Time to bid Stress goodbye!',
+                                        descriptionWhy: 'Happiness is a choice. You can choose to be happy. There"s going to be stress in life, but it"s your choice whether you let it affect you or not.',
+                                        descriptionWhat: 'Being in control of your life and having realistic expectations about your day-to-day challenges are the keys to stress management, which is perhaps the most important ingredient to living a happy, healthy and rewarding life.',
+                                        descriptionHow: 'Set your stress goal. Watch a 5 min video on medidation  and Enroll in a Stress Management course',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'contact_coach_icon.png'
                                     },
                                     {
-                                        title: 'Connect a Device',
-                                        description: 'Connect a fitness device for even more ways to be active and reach your wellness goals.',
+                                        title: 'Track your mood',
+                                        descriptionWhy: 'Many psychologists and therapists suggest that keeping a mood tracker can be very therapeutic. It can help towards the first steps of treating symptoms of depression, bipolar disorders and even PMS.',
+                                        descriptionWhat: 'Keeping a mood tracker will help you track and monitor your mood. A benefit of this is that over time you can become more aware of your feelings, and the things that cause them.',
+                                        descriptionHow: '',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'connect_device_icon.png'
                                     },
                                     {
-                                        title: 'Download the AlwaysOn® App',
-                                        description: 'AlwaysOn® wellness app lets your smartphone connect with your plan, improve health, and stay inspired anytime, anywhere.',
+                                        title: 'Calm your mind',
+                                        descriptionWhy: 'A calm mind is your ultimate weapon against you daily challenges. The Answers which you seek will come by.',
+                                        descriptionWhat: 'Here is a Challenge to rest your mind and free your soul. Enroll today for your peace of mind.',
+                                        descriptionHow: '',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'mobile_app.png'
                                     },
                                     {
-                                        title: 'Invite Friends',
-                                        description: 'Expand your connection by bringing your family and friends also get rewarded for every new connection',
+                                        title: 'Kick the butt!',
+                                        descriptionWhy: 'Burn calories, not cigarettes. Exercise is one of the best ways for you to quit smoking. Quitting cigarettes might be the hardest thing to do in life, but at least you will have one. Quit today!',
+                                        descriptionWhat: '',
+                                        descriptionHow: '',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'invite_freinds_icon.png'
                                     },
                                     {
-                                        title: 'Tobacco Cessation Self Directed Course',
-                                        description: 'Quitting tobacco consumption one step at a time!',
+                                        title: 'Sweat is Fat Crying ;)',
+                                        descriptionWhy: 'Think of this while you"re sweating it out and you won"t be able to fight the laughter! There are many reasons to work out- fun, better health, a great body, invigoration - choose whichever works for you.',
+                                        descriptionWhat: 'Set your activity goal today. Sweat it out and get the "I feel amazing" rush!',
+                                        descriptionHow: '',
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
                                         icon: 'quit_tobacco_icon.png'
                                     },
                                     {
-                                        title: 'Five Minutes Meditation',
-                                        description: 'Meditation brings together physical and mental disciplines to achieve peacefulness of body and mind, helping you relax and manage stress and anxiety.',
+                                        title: 'Adieus Sodium!',
+                                        descriptionWhy: 'Shake that salt shaker generously and you have on your plate the extra salt you could have done without. The Sodium in salt increases your blood pressure. It is also known to increase cardiovascular risk.',
+                                        descriptionWhat: "Alternatively switching to Potassium based salts could help negate some the effects of sodium. Start with tracking you sodium intake and measuring your blood pressure. And while you are at it you could  watch a video to learn more about reducing salt intake to improve blood pressure.",
+                                        descriptionHow: "",
+                                        image: '',
+                                        status: true,
+                                        activeFrom: new Date(),
+                                        icon: 'meditation_icon.png'
+                                    },
+                                    {
+                                        title: 'Rainbow palate',
+                                        descriptionWhy: 'Make your dinner a kaliedoscope of colors - peppers, greens, beets and carrots, just to name a few. Not only will these be visually appealing, they will give you all the fibre and vitamins that your body will thank you for.',
+                                        descriptionWhat: "A balanced diet with all food groups - protien, vegies, dairy, fruit and carbs will keep you from craving the junk that tempts you often. Set a goal to eat health and here's an article that gives you a cheat sheet making quick, healthful, low effort meals.",
+                                        descriptionHow: "",
+                                        image: '',
+                                        status: true,
+                                        activeFrom: new Date(),
+                                        icon: 'meditation_icon.png'
+                                    },
+                                    {
+                                        title: 'Always on the Go? Download our mobile app!',
+                                        descriptionWhy: 'With easy to access to all the features, you are able to keep tabs on your health as you move. Reach out to coaches or track your goals. AlwaysOn is there for you!',
+                                        descriptionWhat: "",
+                                        descriptionHow: "",
+                                        image: '',
+                                        status: true,
+                                        activeFrom: new Date(),
+                                        icon: 'meditation_icon.png'
+                                    },
+                                    {
+                                        title: 'Invite you friends and family',
+                                        descriptionWhy: 'Its always easier to get to your goal when you have your people cheering for you. Invite your people who matter to you in your wellbeing journey.',
+                                        descriptionWhat: "",
+                                        descriptionHow: "",
                                         image: '',
                                         status: true,
                                         activeFrom: new Date(),
@@ -4085,7 +4163,7 @@
 
                     if (sss === '/setting/programs') {
                         var thisNameIsClearlyMinimized = {
-                            "DisplayName": "Programs",
+                            "DisplayName": "Journeys and Triggers",
                             "ClassType": [
                                 "Programs"
                             ],
