@@ -19,170 +19,185 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-Onlife_Minutes:before {
+.icon-onlife_rounded_stress:before {
   content: '\0041'; }
 
-.icon-Onlife_Sleep:before {
+.icon-onlife_rounded_app:before {
   content: '\0042'; }
 
-.icon-onlife_fitness_dumbell:before {
+.icon-onlife_rounded_connect:before {
   content: '\0043'; }
 
-.icon-onlife_active:before {
+.icon-onlife_rounded_invite:before {
   content: '\0044'; }
 
-.icon-onlife_bp:before {
+.icon-onlife_rounded_tobacco:before {
   content: '\0045'; }
 
-.icon-onlife_calorie:before {
+.icon-onlife_decrease_weight:before {
   content: '\0046'; }
 
-.icon-onlife_challenge:before {
+.icon-onlife_devices:before {
   content: '\0047'; }
 
-.icon-onlife_chat:before {
+.icon-onlife_diet:before {
   content: '\0048'; }
 
-.icon-onlife_cholesterol:before {
+.icon-onlife_dollars:before {
   content: '\0049'; }
 
-.icon-onlife_close:before {
+.icon-onlife_financial:before {
   content: '\004a'; }
 
-.icon-onlife_coach:before {
+.icon-onlife_fitness:before {
   content: '\004b'; }
 
-.icon-onlife_courses:before {
+.icon-onlife_fitness_dumbell:before {
   content: '\004c'; }
 
-.icon-onlife_decrease_weight:before {
+.icon-onlife_friends:before {
   content: '\004d'; }
 
-.icon-onlife_devices:before {
+.icon-onlife_goals:before {
   content: '\004e'; }
 
-.icon-onlife_diet:before {
+.icon-onlife_greens:before {
   content: '\004f'; }
 
-.icon-onlife_dollars:before {
+.icon-onlife_medilife:before {
   content: '\0050'; }
 
-.icon-onlife_financial:before {
+.icon-onlife_hdl:before {
   content: '\0051'; }
 
-.icon-onlife_fitness:before {
+.icon-onlife_ldl:before {
   content: '\0052'; }
 
-.icon-onlife_friends:before {
+.icon-onlife_left_arrow:before {
   content: '\0053'; }
 
-.icon-onlife_goals:before {
+.icon-onlife_location:before {
   content: '\0054'; }
 
-.icon-onlife_greens:before {
+.icon-onlife_lungs:before {
   content: '\0055'; }
 
-.icon-onlife_hdl:before {
+.icon-onlife_manage_stress:before {
   content: '\0056'; }
 
-.icon-onlife_ldl:before {
+.icon-onlife_member:before {
   content: '\0057'; }
 
-.icon-onlife_left_arrow:before {
+.icon-onlife_messages:before {
   content: '\0058'; }
 
-.icon-onlife_location:before {
+.icon-onlife_mobile:before {
   content: '\0059'; }
 
-.icon-onlife_lungs:before {
+.icon-onlife_monitor:before {
   content: '\005a'; }
 
-.icon-onlife_manage_stress:before {
+.icon-onlife_myhealth:before {
   content: '\0061'; }
 
-.icon-onlife_medilife:before {
+.icon-onlife_notepad:before {
   content: '\0062'; }
 
-.icon-onlife_member:before {
+.icon-onlife_notes:before {
   content: '\0063'; }
 
-.icon-onlife_messages:before {
+.icon-onlife_notification:before {
   content: '\0064'; }
 
-.icon-onlife_mobile:before {
+.icon-onlife_photo:before {
   content: '\0065'; }
 
-.icon-onlife_monitor:before {
+.icon-onlife_physical_activity:before {
   content: '\0066'; }
 
-.icon-onlife_myhealth:before {
+.icon-onlife_plus:before {
   content: '\0067'; }
 
-.icon-onlife_notepad:before {
+.icon-onlife_points:before {
   content: '\0068'; }
 
-.icon-onlife_notes:before {
+.icon-onlife_quit_tobacco:before {
   content: '\0069'; }
 
-.icon-onlife_notification:before {
+.icon-onlife_reports:before {
   content: '\006a'; }
 
-.icon-onlife_photo:before {
+.icon-onlife_resources:before {
   content: '\006b'; }
 
-.icon-onlife_physical_activity:before {
+.icon-onlife_right_arrow:before {
   content: '\006c'; }
 
-.icon-onlife_plus:before {
+.icon-onlife_rounded_coach:before {
   content: '\006d'; }
 
-.icon-onlife_points:before {
+.icon-onlife_rounded_notepad:before {
   content: '\006e'; }
 
-.icon-onlife_quit_tobacco:before {
+.icon-onlife_rounded_notes:before {
   content: '\006f'; }
 
-.icon-onlife_reports:before {
+.icon-onlife_search:before {
   content: '\0070'; }
 
-.icon-onlife_resources:before {
+.icon-onlife_smoker:before {
   content: '\0071'; }
 
-.icon-onlife_right_arrow:before {
+.icon-onlife_tick_mark:before {
   content: '\0072'; }
 
-.icon-onlife_rounded_coach:before {
+.icon-onlife_tracker:before {
   content: '\0073'; }
 
-.icon-onlife_rounded_notepad:before {
+.icon-onlife_trackers:before {
   content: '\0074'; }
 
-.icon-onlife_rounded_notes:before {
+.icon-onlife_walk:before {
   content: '\0075'; }
 
-.icon-onlife_search:before {
+.icon-onlife_water:before {
   content: '\0076'; }
 
-.icon-onlife_smoker:before {
+.icon-onlife_weight:before {
   content: '\0077'; }
 
-.icon-onlife_tick_mark:before {
+.icon-onlife_active:before {
   content: '\0078'; }
 
-.icon-onlife_tracker:before {
+.icon-onlife_bp:before {
   content: '\0079'; }
 
-.icon-onlife_trackers:before {
+.icon-onlife_calorie:before {
   content: '\007a'; }
 
-.icon-onlife_walk:before {
+.icon-onlife_challenge:before {
   content: '\0030'; }
 
-.icon-onlife_water:before {
+.icon-onlife_chat:before {
   content: '\0031'; }
 
-.icon-onlife_weight:before {
+.icon-onlife_cholesterol:before {
   content: '\0032'; }
+
+.icon-onlife_close:before {
+  content: '\0033'; }
+
+.icon-onlife_coach:before {
+  content: '\0034'; }
+
+.icon-onlife_courses:before {
+  content: '\0035'; }
+
+.icon-Onlife_Minutes:before {
+  content: '\0036'; }
+
+.icon-Onlife_Sleep:before {
+  content: '\0037'; }
 
 /* RESETS */
 html, body, div, span, applet, object, iframe,
@@ -1705,8 +1720,11 @@ input[type="radio"] .styled:checked + label::after {
 .white-bg {
   background: #FFFFFF; }
 
+.hidden-item {
+  visibility: hidden; }
+
 .tiles-area {
-  padding: 1.5em 5em;
+  padding: 1.5em 6.5em;
   background: #f5f5f5; }
   .tiles-area.white-bg {
     background: #FFFFFF; }
@@ -1748,7 +1766,7 @@ input[type="radio"] .styled:checked + label::after {
       font-size: 1.3em;
       position: relative;
       color: #5a5a5a;
-      padding: 2.2em 0 1em 0;
+      padding: 2.2em 0 0.8em 0;
       text-align: center;
       text-rendering: optimizeSpeed; }
     .tiles-area .view .remind-me {
@@ -1783,8 +1801,8 @@ input[type="radio"] .styled:checked + label::after {
       padding: 10px;
       background: rgba(0, 0, 0, 0.3); }
       .tiles-area .view .description h2 {
-        font-size: 2.3em;
-        margin-bottom: 15px; }
+        font-size: 2.2em;
+        margin-bottom: 0; }
       .tiles-area .view .description .tile-icon {
         font-size: 3em;
         line-height: 0; }
@@ -1797,7 +1815,7 @@ input[type="radio"] .styled:checked + label::after {
   .tiles-area .view-third-box .mask-head {
     font-size: 1.6em; }
   .tiles-area .view-third-box .description h2 {
-    font-size: 1.6em;
+    font-size: 1.3em;
     margin: 0; }
   .tiles-area .view-third-box .mask-head, .tiles-area .view-third-box .description {
     margin: 13% 0 0 0; }
@@ -1930,6 +1948,17 @@ input[type="radio"] .styled:checked + label::after {
 .health-assess-info.remind-wrapper label {
   font-weight: bold; }
 
+.scrollable-area {
+  position: relative;
+  height: 435px;
+  padding: 1.5em;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2); }
+  .scrollable-area.small-area {
+    height: 129px; }
+
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -1947,58 +1976,97 @@ input[type="radio"] .styled:checked + label::after {
   left: 50%;
   margin-left: -20px;
   margin-top: -20px; }
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    background-color: #009b48; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    background-color: #ffd500; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    background-color: #b71234; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    background-color: #ffd500; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    background-color: #d8d8d8; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    background-color: #ffd500; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    background-color: #b71234; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    background-color: #ffd500; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    background-color: #009b48; }
 
-.sk-cube-grid .sk-cube {
-  width: 33%;
-  height: 33%;
-  float: left;
-  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
+.interest-1 .con_down, .interest-2 .con_down, .interest-3 .con_down, .interest-4 .con_down, .interest-5 .con_down {
+  color: #FFFFFF; }
 
-.sk-cube-grid .sk-cube1 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-  background-color: #009b48; }
+.interest-1 .con_down {
+  background: #1e5799;
+  background: linear-gradient(to bottom, #1e5799 0, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 ); }
+.interest-1 .times_abs {
+  background: #1e5799;
+  background: linear-gradient(to bottom, #1e5799 0, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 ); }
 
-.sk-cube-grid .sk-cube2 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  background-color: #ffd500; }
+.interest-2 .con_down {
+  background: #efc5ca;
+  background: linear-gradient(to bottom, #ba2737, #f18e99);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 ); }
+.interest-2 .times_abs {
+  background: #efc5ca;
+  background: linear-gradient(to bottom, #ba2737, #f18e99);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 ); }
 
-.sk-cube-grid .sk-cube3 {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  background-color: #b71234; }
+.interest-3 .con_down {
+  background: #feccb1;
+  background: linear-gradient(to bottom, #feccb1 0, #f17432 50%, #ea5507 51%, #fb955e 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 ); }
+.interest-3 .times_abs {
+  background: #feccb1;
+  background: linear-gradient(to bottom, #feccb1 0, #f17432 50%, #ea5507 51%, #fb955e 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 ); }
 
-.sk-cube-grid .sk-cube4 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-  background-color: #ffd500; }
+.interest-4 .con_down {
+  background: #bfd255;
+  background: linear-gradient(to bottom, #bfd255 0, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 );
+  color: #FFFFFF; }
+.interest-4 .times_abs {
+  background: #bfd255;
+  background: linear-gradient(to bottom, #bfd255 0, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 ); }
 
-.sk-cube-grid .sk-cube5 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-  background-color: #d8d8d8; }
-
-.sk-cube-grid .sk-cube6 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  background-color: #ffd500; }
-
-.sk-cube-grid .sk-cube7 {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  background-color: #b71234; }
-
-.sk-cube-grid .sk-cube8 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-  background-color: #ffd500; }
-
-.sk-cube-grid .sk-cube9 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-  background-color: #009b48; }
+.interest-5 .con_down {
+  background: #b8e1fc;
+  background: linear-gradient(to bottom, #b8e1fc 0, #a9d2f3 10%, #7db9e8 25%, #7db9e8 37%, #7db9e8 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 ); }
+.interest-5 .times_abs {
+  background: #b8e1fc;
+  background: linear-gradient(to bottom, #b8e1fc 0, #a9d2f3 10%, #7db9e8 25%, #7db9e8 37%, #7db9e8 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 ); }
 
 @-webkit-keyframes sk-cubeGridScaleDelay {
   0%, 70%, 100% {
@@ -2014,6 +2082,13 @@ input[type="radio"] .styled:checked + label::after {
   35% {
     -webkit-transform: scale3D(0, 0, 1);
     transform: scale3D(0, 0, 1); } }
+@keyframes width {
+  0%, 100% {
+    transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85); }
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 /* ====================================================================================================================
  * RESETS
  * ====================================================================================================================*/
@@ -2425,71 +2500,5 @@ html[xmlns] .flexslider .slides {
   border-bottom-color: #b01f58; }
   .interest-areas .third-section .heading-icon {
     color: #b01f58; }
-
-.scrollable-area {
-  position: relative;
-  height: 300px;
-  padding: 1.5em;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2); }
-
-.interest-1 .con_down, .interest-2 .con_down, .interest-3 .con_down, .interest-4 .con_down, .interest-5 .con_down {
-  color: #FFFFFF; }
-
-.interest-1 .con_down {
-  background: #1e5799;
-  background: linear-gradient(to bottom, #1e5799 0, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 ); }
-.interest-1 .times_abs {
-  background: #1e5799;
-  background: linear-gradient(to bottom, #1e5799 0, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 ); }
-
-.interest-2 .con_down {
-  background: #efc5ca;
-  background: linear-gradient(to bottom, #ba2737, #f18e99);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 ); }
-.interest-2 .times_abs {
-  background: #efc5ca;
-  background: linear-gradient(to bottom, #ba2737, #f18e99);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 ); }
-
-.interest-3 .con_down {
-  background: #feccb1;
-  background: linear-gradient(to bottom, #feccb1 0, #f17432 50%, #ea5507 51%, #fb955e 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 ); }
-.interest-3 .times_abs {
-  background: #feccb1;
-  background: linear-gradient(to bottom, #feccb1 0, #f17432 50%, #ea5507 51%, #fb955e 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 ); }
-
-.interest-4 .con_down {
-  background: #bfd255;
-  background: linear-gradient(to bottom, #bfd255 0, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 );
-  color: #FFFFFF; }
-.interest-4 .times_abs {
-  background: #bfd255;
-  background: linear-gradient(to bottom, #bfd255 0, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 ); }
-
-.interest-5 .con_down {
-  background: #b8e1fc;
-  background: linear-gradient(to bottom, #b8e1fc 0, #a9d2f3 10%, #7db9e8 25%, #7db9e8 37%, #7db9e8 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 ); }
-.interest-5 .times_abs {
-  background: #b8e1fc;
-  background: linear-gradient(to bottom, #b8e1fc 0, #a9d2f3 10%, #7db9e8 25%, #7db9e8 37%, #7db9e8 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 ); }
-
-@keyframes width {
-  0%, 100% {
-    transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85); }
-  0% {
-    width: 0; }
-  100% {
-    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

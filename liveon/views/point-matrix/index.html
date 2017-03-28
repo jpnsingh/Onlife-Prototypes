@@ -569,6 +569,19 @@
     </div>
     <div style="overflow: hidden; opacity: 0; width: 0px; height:0px;"><img src="../../assets/images/Onlife_Tracy_User.jpg" /></div>
 
+    <div class="loading-overlay">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
 
     <!-- Jquery Version -->
     <script src="../../assets/js/jquery-1.11.3.js"></script>
@@ -579,86 +592,6 @@
     <script src="../../js/vendor/notification/classie.js"></script>
     <script src="../../js/vendor/notification/notificationFx.js"></script>
     <script src="../../js/scripts.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            $('.description').each(function () {
-                $(this).on('mouseenter', function () {
-                    $(this).next().addClass('hovered');
-                });
-                $(this).on('mouseleave', function () {
-                    $(this).next().removeClass('hovered');
-                });
-            });
-
-
-            $('[data-toggle="popover"]').popover({
-                placement: 'top',
-                trigger: 'hover'
-            });
-
-            $(window).load(function () {
-                $('.flexslider').flexslider({
-                    animation: "slide",
-                    animationLoop: false,
-                    itemWidth: 298,
-                    itemMargin: 0,
-                    controlNav: false,
-                    animationLoop: true,
-                    minItems: 3
-                });
-            });
-
-        });
-
-        $(window).on('load', function (e) {
-            windowResize();
-        });
-        $(window).on('resize', function (e) {
-            windowResize();
-        });
-
-        function windowResize() {
-            $('.view-second-box, .view-third-box').css('height', ($('.most-big-box').height() / 2) - (29 / 2));
-        }
-
-
-
-        (function () {
-            var bttn = document.getElementById('notification-trigger');
-
-            // make sure..
-            bttn.disabled = false;
-
-            bttn.addEventListener('click', function () {
-                // simulate loading (for demo purposes only)
-                classie.add(bttn, 'active');
-                setTimeout(function () {
-
-                    classie.remove(bttn, 'active');
-
-                    // create the notification
-                    var notification = new NotificationFx({
-                        message: '<div class="ns-thumb"><img src="../../assets/images/Onlife_Tracy_User.jpg"/></div><div class="ns-content"><p><a href="#">Tracy</a> accepted your invitation.</p></div>',
-                        layout: 'other',
-                        ttl: 6000,
-                        effect: 'thumbslider',
-                        type: 'notice', // notice, warning, error or success
-                        onClose: function () {
-                            bttn.disabled = false;
-                        }
-                    });
-
-                    // show the notification
-                    notification.show();
-
-                }, 1200);
-
-                // disable the button (for demo purposes only)
-                this.disabled = true;
-            });
-        })();
-
-    </script>
+    
 </body>
 </html>

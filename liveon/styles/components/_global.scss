@@ -17,8 +17,11 @@
 .white-bg {
 	background: $white;
 }
+.hidden-item {
+	visibility: hidden;
+}
 .tiles-area {
-	padding: 1.5em 5em;
+	padding: 1.5em 6.5em;
 	background: $light_white;
 	&.white-bg {
 		background: $white;
@@ -63,7 +66,7 @@
 			font-size: 1.3em;
 			position: relative;
 			color: $dark_gray_menu;
-			padding: 2.2em 0 1em 0;
+			padding: 2.2em 0 0.8em 0;
 			text-align: center;
 			text-rendering: optimizeSpeed;
 		}
@@ -98,8 +101,8 @@
 			padding: 10px;
 			background: rgba(0,0,0,0.3);
 			h2 {
-				font-size: 2.3em;
-				margin-bottom: 15px;
+				font-size: 2.2em;
+				margin-bottom: 0;
 			}
 			.tile-icon {
 				font-size: 3em;
@@ -131,7 +134,7 @@
 		}
 		.description {
 			h2 {
-				font-size: 1.6em;
+				font-size: 1.3em;
 				margin: 0;
 			}
 		}
@@ -314,6 +317,16 @@
 		}
 	}
 }
+.scrollable-area {
+	position: relative;
+    height: 435px;
+    padding: 1.5em;
+    background: $white;
+	@include box-shadow(0, 0, 6px, 3px, rgba(0, 0, 0, 0.20));
+	&.small-area {
+		height: 129px;
+	}
+}
 .loading-overlay {
 	position: fixed;
 	top: 0;
@@ -331,61 +344,130 @@
 	left: 50%;
 	margin-left: -20px;
 	margin-top: -20px;
+	.sk-cube {
+		width: 33%;
+		height: 33%;
+		float: left;
+		-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+				animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+	}
+	.sk-cube1 {
+	  -webkit-animation-delay: 0.2s;
+			  animation-delay: 0.2s; 
+			  background-color: $green_color;
+	}
+	.sk-cube2 {
+	  -webkit-animation-delay: 0.3s;
+			  animation-delay: 0.3s; 
+			  background-color: $yellow;
+	}
+	.sk-cube3 {
+	  -webkit-animation-delay: 0.4s;
+			  animation-delay: 0.4s; 
+			  background-color: $red;
+	}
+	.sk-cube4 {
+	  -webkit-animation-delay: 0.1s;
+			  animation-delay: 0.1s; 
+			background-color: $yellow;
+	}
+	.sk-cube5 {
+	  -webkit-animation-delay: 0.2s;
+			  animation-delay: 0.2s; 
+			  background-color: $light_gray_bg;
+	}
+	.sk-cube6 {
+	  -webkit-animation-delay: 0.3s;
+			  animation-delay: 0.3s; 
+			background-color: $yellow;
+	}
+	.sk-cube7 {
+	  -webkit-animation-delay: 0s;
+			  animation-delay: 0s; 
+			background-color: $red;
+	}
+	.sk-cube8 {
+	  -webkit-animation-delay: 0.1s;
+			  animation-delay: 0.1s; 
+			  background-color: $yellow;
+	}
+	.sk-cube9 {
+	  -webkit-animation-delay: 0.2s;
+			  animation-delay: 0.2s;
+			  background-color: $green_color;
+	}
 }
 
-.sk-cube-grid .sk-cube {
-	width: 33%;
-	height: 33%;
-	float: left;
-	-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-			animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+//Interests Buttons
+.interest-1, .interest-2, .interest-3, .interest-4, .interest-5 {
+	.con_down {
+		color: $white;
+	}
 }
-.sk-cube-grid .sk-cube1 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; 
-		  background-color: $green_color;
+.interest-1 {
+	.con_down {
+		background: $color_matisse_approx;
+		background: linear-gradient(to bottom, $color_matisse_approx 0, $color_curious_blue_approx 50%, $color_mariner_approx 51%, $color_jordy_blue_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_matisse_approx;
+		background: linear-gradient(to bottom, $color_matisse_approx 0, $color_curious_blue_approx 50%, $color_mariner_approx 51%, $color_jordy_blue_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 );
+	}
 }
-.sk-cube-grid .sk-cube2 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; 
-		  background-color: $yellow;
+.interest-2 {
+	.con_down {
+		background: $color_oyster_pink_approx;
+		background: linear-gradient(to bottom,  $color_cardinal_approx, $color_sea_pink_approx);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_oyster_pink_approx;
+		background: linear-gradient(to bottom, $color_cardinal_approx, $color_sea_pink_approx);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_oyster_pink_approx', endcolorstr='$color_sea_pink_approx',gradienttype=0 );
+	}
 }
-.sk-cube-grid .sk-cube3 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s; 
-		  background-color: $red;
+.interest-3 {
+	.con_down {
+		background: $color_apricot_peach_approx;
+		background: linear-gradient(to bottom, $color_apricot_peach_approx 0, $color_crusta_approx 50%, $color_trinidad_approx 51%, $color_tan_hide_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_apricot_peach_approx;
+		background: linear-gradient(to bottom, $color_apricot_peach_approx 0, $color_crusta_approx 50%, $color_trinidad_approx 51%, $color_tan_hide_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_apricot_peach_approx', endcolorstr='$color_tan_hide_approx',gradienttype=0 );
+	}
 }
-.sk-cube-grid .sk-cube4 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; 
-		background-color: $yellow;
+.interest-4 {
+	.con_down {
+		background: $color_celery_approx;
+		background: linear-gradient(to bottom, $color_celery_approx 0, $color_sushi_approx 50%, $color_limeade_approx 51%, $color_atlantis_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 );
+		color: $white;
+	}
+	.times_abs {
+		background: $color_celery_approx;
+		background: linear-gradient(to bottom, $color_celery_approx 0, $color_sushi_approx 50%, $color_limeade_approx 51%, $color_atlantis_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_celery_approx', endcolorstr='$color_atlantis_approx',gradienttype=0 );
+	}
 }
-.sk-cube-grid .sk-cube5 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; 
-		  background-color: $light_gray_bg;
-}
-.sk-cube-grid .sk-cube6 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; 
-		background-color: $yellow;
-}
-.sk-cube-grid .sk-cube7 {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s; 
-		background-color: $red;
-}
-.sk-cube-grid .sk-cube8 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; 
-		  background-color: $yellow;
-}
-.sk-cube-grid .sk-cube9 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-		  background-color: $green_color;
+.interest-5 {
+	.con_down {
+		background: $color_sail_approx;
+		background: linear-gradient(to bottom, $color_sail_approx 0, $color_regent_st_blue_approx 10%, $color_jordy_blue_approx 25%, $color_jordy_blue_approx 37%, $color_jordy_blue_approx 50%, $color_cornflower_blue_approx 51%, $color_blizzard_blue_approx 83%, $color_french_pass_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 );
+	}
+	.times_abs {
+		background: $color_sail_approx;
+		background: linear-gradient(to bottom, $color_sail_approx 0, $color_regent_st_blue_approx 10%, $color_jordy_blue_approx 25%, $color_jordy_blue_approx 37%, $color_jordy_blue_approx 50%, $color_cornflower_blue_approx 51%, $color_blizzard_blue_approx 83%, $color_french_pass_approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 );
+	}
 }
 
+
+//Keyframes 
 @-webkit-keyframes sk-cubeGridScaleDelay {
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
@@ -404,5 +486,17 @@
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1);
   } 
+}
+
+@keyframes width {
+  0%, 100% {
+    transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
+  }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
