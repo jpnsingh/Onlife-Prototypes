@@ -1,0 +1,212 @@
+[
+  {
+    "title": "Health Assessment: your first step towards a health lifestyle!",
+    "descriptionWhy": "Get control of your health. Knowing where you stand is important to know what you must change to get healthier.",
+    "descriptionWhat": "The health assessment is a set of questions about your health. Go ahead and select your responses. It should not take you more than 15 mins to get this done.  Oh and yes, you earn points for completing this!",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "health_assessment_icon.png",
+	"actions": [
+		{
+			"type": "Take HA",
+			"targets": [
+				{
+					"name": "Navigate to HA"
+				}
+			]
+		}
+	]
+  },
+  {
+    "title": "Get your Labs done!",
+    "descriptionWhy": "Yes, needles can be painful but getting your labs done will give you an accurate picture of your health. Once we know where you stand, we can design a program, best suited to your needs. So go ahead and schedule your labs today!",
+    "descriptionWhat": "Biometric screening will a quick visit to our one of the recommended clinics. The test results would help us serve you better!",
+    "descriptionHow": "Call our affiliated clinic at: XXX-XXX-XXXX",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "mobile_app.png",
+	"actions": [
+        {
+            "type": "Schedule",
+            "targets": [
+                {
+                    "name": "BMS Info Page"
+                }
+            ]
+
+        }
+    ]
+  },
+  {
+    "title": "Time to bid Stress goodbye!",
+    "descriptionWhy": "Happiness is a choice. You can choose to be happy. There's going to be stress in life, but it's your choice whether you let it affect you or not.",
+    "descriptionWhat": "Being in control of your life and having realistic expectations about your day-to-day challenges are the keys to stress management, which is perhaps the most important ingredient to living a happy, healthy and rewarding life.",
+    "descriptionHow": "Set your stress goal. Watch a 5 min video on medidation  and Enroll in a Stress Management course",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "meditation_icon.png",
+    "actions": [
+        {
+            "type": "Set a Goal",
+            "targets": [
+                {
+                    "name": "Manage Stress"
+                }
+            ]
+        },{
+            "type": "Watch a Video",
+            "targets": [
+                {
+                    "name" : "https://contentstore.onlifehealth.com/videos/stress/list/001"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "title": "Say bye to Tobacco!",
+    "descriptionWhy": "If you use tobacco, there are compelling reasons for you to quit. The rewards of quitting are tremendous, and they begin immediately. You’ll experience the benefits of not using tobacco within 20 minutes of quitting, and as your tobacco-free days accumulate, the benefits will accumulate, too. Quitting tobacco will improve your health, your finances, your self-esteem and your everyday life – immediately and over the long term – in ways you may never have imagined.",
+    "descriptionWhat": "This is an article detailing the various reasons of why one should quit tobacco",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "health_assessment_icon.png",
+    "actions": [
+        {
+            "type": "Read an Article",
+            "targets": [
+                {
+                    "name": "https://contentstore.onlifehealth.com/articles/tobacco/list/002"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "title": "Track your Mood",
+    "descriptionWhy": "Many psychologists and therapists suggest that keeping a mood tracker can be very therapeutic. It can help towards the first steps of treating symptoms of depression, bipolar disorders and even PMS.",
+    "descriptionWhat": "Keeping a mood tracker will help you track and monitor your mood. A benefit of this is that over time you can become more aware of your feelings, and the things that cause them.",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "biometric_screen_icon.png",
+    "actions": [
+        {
+            "type": "Track your Progress",
+            "targets": [
+                {
+                    "name": "Manage Stress"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "title": "Calm your Mind",
+    "descriptionWhy": "A calm mind is your ultimate weapon against you daily challenges. The Answers which you seek will come to you when you are calmn and your mind is uncluttered.",
+    "descriptionWhat": "Here is a Challenge to rest your mind and free your soul. Enroll today for your peace of mind.",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "meditation_icon.png",
+    "actions": [
+        {
+            "type": "Join a Challenge",
+            "targets": [
+                {
+                    "name": "Calm your Mind"
+                }
+            ]
+        }
+    ]  },
+  {
+    "title": "Kick the Butt!",
+    "descriptionWhy": "Burn calories, not cigarettes. Exercise is one of the best ways for you to quit smoking. Quitting cigarettes might be the hardest thing to do in life, but at least you will have one. Quit today!",
+    "descriptionWhat": "",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "mobile_app.png",
+	"actions": [
+        {
+            "type": "Set a Goal",
+            "targets": [
+                {
+                    "name": "Quit Tobacco"
+                }
+            ]
+        },
+        {
+            "type": "Join a Challenge",
+            "targets": [
+                {
+                    "name": "10K a day"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "title": "Sweat is Fat Crying ;)",
+    "descriptionWhy": "Think of this while you're sweating it out and you won't be able to fight the laughter! There are many reasons to work out- fun, better health, a great body, invigoration - choose whichever works for you.",
+    "descriptionWhat": "Set your activity goal today. Sweat it out and get the 'I feel amazing' rush!",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "contact_coach_icon.png",
+	"actions": []
+  },
+  {
+    "title": "Adieu Sodium!",
+    "descriptionWhy": "Shake that salt shaker generously and you have on your plate the extra salt you could have done without. The Sodium in salt increases your blood pressure. It is also known to increase cardiovascular risk.",
+    "descriptionWhat": "Alternatively switching to Potassium based salts could help negate some the effects of sodium. Start with tracking you sodium intake and measuring your blood pressure. And while you are at it you could  watch a video to learn more about reducing salt intake to improve blood pressure.",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "meditation_icon.png",
+	"actions": []
+  },
+  {
+    "title": "Rainbow Palate",
+    "descriptionWhy": "Make your dinner a kaliedoscope of colors - peppers, greens, beets and carrots, just to name a few. Not only will these be visually appealing, they will give you all the fibre and vitamins that your body will thank you for.",
+    "descriptionWhat": "A balanced diet with all food groups - protien, vegies, dairy, fruit and carbs will keep you from craving the junk that tempts you often. Set a goal to eat health and here's an article that gives you a cheat sheet making quick, healthful, low effort meals.",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "meditation_icon.png",
+	"actions": []
+  },
+  {
+    "title": "Always on the Go? Download our mobile app!",
+    "descriptionWhy": "With easy to access to all the features, you are able to keep tabs on your health as you move. Reach out to coaches or track your goals. AlwaysOn is there for you!",
+    "descriptionWhat": "",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "connect_device_icon.png",
+	"actions": []
+  },
+  {
+    "title": "Invite your Friends and Family",
+    "descriptionWhy": "Its always easier to get to your goal when you have people cheering for you. Invite people who matter to you in your wellbeing journey.",
+    "descriptionWhat": "",
+    "descriptionHow": "",
+    "image": "img-23.jpg",
+    "status": true,
+    "activeFrom": "new Date()",
+    "icon": "invite_freinds_icon.png",
+	"actions": []
+  }
+]
