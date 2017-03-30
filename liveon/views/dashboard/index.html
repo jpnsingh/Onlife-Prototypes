@@ -46,9 +46,20 @@
                 <div class="col-sm-8">
                     <ul class="top-nav">
                         <li>
-                            <a href="#" class="top-nav-icon">
-                                <span class="icon-onlife_tracker"></span>
-                            </a>
+                                <div class="row">
+                                    <div class="col-xs-4 bottom-right">
+                                        <div class="points-count-top text-center">
+                                            <div class="value">0</div>
+                                            <div class="label-txt">Points</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="points-count text-center">
+                                            <a href="../point-matrix" class="value">2000</a>
+                                            <div class="label-txt">Possible</div>
+                                        </div>
+                                    </div>
+                                </div>
                         </li>
                         <li>
                             <a href="../family-friends" class="top-nav-icon">
@@ -114,117 +125,115 @@
             </ul>
         </nav><!-- Navigation Ends -->
 
-        <section class="content-area">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="health-steps">
-                        My Health Steps
+<!--         <section class="content-area">
+            <div class="col-sm-2">
+                <div class="health-steps">
+                    My Health Steps
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <section class="slider slide-display">
+                    <div class="flexslider carousel">
+                        <ul class="slides">
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_notepad"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Assess Your Health</h3>
+                                            <p>Complete by 03/28/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_notes"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Biometric Screening</h3>
+                                            <p>Complete by 04/20/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_coach"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Contact Coach</h3>
+                                            <p>Complete by 04/25/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_app"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Download App</h3>
+                                            <p>Complete by 04/30/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_challenge"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Start a Challenge</h3>
+                                            <p>Complete by 05/10/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_invite"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Invite Friends</h3>
+                                            <p>Complete by 05/20/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-sm-8">
-                    <section class="slider slide-display">
-                        <div class="flexslider carousel">
-                            <ul class="slides">
-                                <li class="item-list">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <span class="indicate icon-onlife_rounded_notepad"></span>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="label-details">
-                                                <h3>Assess Your Health</h3>
-                                                <p>Complete by 03/28/2017</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item-list">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <span class="indicate icon-onlife_rounded_notes"></span>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="label-details">
-                                                <h3>Biometric Screening</h3>
-                                                <p>Complete by 04/20/2017</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item-list">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <span class="indicate icon-onlife_rounded_coach"></span>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="label-details">
-                                                <h3>Contact Coach</h3>
-                                                <p>Complete by 04/25/2017</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item-list">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <span class="indicate icon-onlife_rounded_app"></span>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="label-details">
-                                                <h3>Download App</h3>
-                                                <p>Complete by 04/30/2017</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item-list">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <span class="indicate icon-onlife_challenge"></span>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="label-details">
-                                                <h3>Start a Challenge</h3>
-                                                <p>Complete by 05/10/2017</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item-list">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <span class="indicate icon-onlife_rounded_invite"></span>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="label-details">
-                                                <h3>Invite Friends</h3>
-                                                <p>Complete by 05/20/2017</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                </section>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-xs-4 bottom-right">
+                        <div class="points-count text-center">
+                            <div class="value">0</div>
+                            <div class="label-txt">Points</div>
                         </div>
-                    </section>
-                </div>
-                <div class="col-sm-2">
-                    <div class="row">
-                        <div class="col-xs-4 bottom-right">
-                            <div class="points-count text-center">
-                                <div class="value">0</div>
-                                <div class="label-txt">Points</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-8">
-                            <div class="points-count text-center">
-                                <a href="../point-matrix" class="value">2000</a>
-                                <div class="label-txt">Possible</div>
-                            </div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="points-count text-center">
+                            <a href="../point-matrix" class="value">2000</a>
+                            <div class="label-txt">Possible</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Tiles Area -->
         <section class="tiles-area">
@@ -240,7 +249,7 @@
                                         <h2>Complete Your Health Assessment Today <i class="fa fa-info-circle health-assessment" aria-hidden="true" data-toggle="popover"></i></h2>
 
                                     </div>
-                                    <div class="col-sm-3 text-right">
+                                    <div class="col-sm-3 text-center">
                                         <a href="#" class="button button--large button--block text-center button--default button-go">Go</a>
                                         <br />
                                         <button class="button button--small button--secondary remind-later">Not Now</button>
@@ -333,25 +342,25 @@
                                     <h3 class="header-tile">Have you tried our mobile app?</h3>
                                     <div class="col-sm-12">
                                         <p>
-                                            Go mobile with your wellness journey! Download AlwaysOn&reg; for your Apple or Android device and be on your way to a healthy and happy life all on your portable device.
+                                            Go mobile with your wellness journey! Download AlwaysOn® for your Apple or Android device and be on your way to a healthy and happy life all on your portable device.
                                         </p>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <div class="form-group">
-                                            <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15" />
+                                            <a href="https://itunes.apple.com/us/app/alwayson-wellness/id927685764?mt=8" target="_blank">
+                                                <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15" />
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <a href="https://itunes.apple.com/us/app/alwayson-wellness/id927685764?mt=8" target="_blank">
-                                                <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15" />
-                                            </a>
+                                                <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
+                                                    <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15" />
+                                                </a>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 col-sm-offset-5 text-center">
-                                        <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
-                                            <img src="../../assets/images/tiles/Onlife_QR_Code.jpg" class="img-responsive qa-code" alt="QR Code" />
-                                        </a>
+                                          <img src="../../assets/images/tiles/Onlife_QR_Code.jpg" class="img-responsive qa-code" alt="QR Code" />
                                     </div>
                                     <div class="col-sm-12 text-center">
                                         <p>Scan QR code to download the App</p>
@@ -374,7 +383,7 @@
                                     <h3 class="header-tile">Challenges program</h3>
                                     <div class="col-sm-12">
                                         <p>
-                                            Well, there are a lot more tools that are available for your wellbeing. We have Challenges program which you can enroll in and benefit from.
+                                            Challenges are now available to compliment your wellness journey. Enroll in one of our built in challenges or create one of your own! 
                                         </p>
                                     </div>
                                 </div>
@@ -396,7 +405,7 @@
                                     <h3 class="header-tile">Recommendation</h3>
                                     <div class="col-sm-12">
                                         <p>
-                                            Okay, we urge you to complete the Health Assessment soon as it will help us understand you and your health better. While you take time for this, we recommend you to go over the following useful articles on wellness. Please feel free to talk to a Coach to understand the benefits you can get.
+                                            We encourage you to complete your Health Assesment as soon as possible. The information you provide personalizes your journey with focused content on the areas you want to work on. 
                                         </p>
                                     </div>
                                 </div>
@@ -415,10 +424,10 @@
 
                             <div class="next-recommendation seventh none">
                                 <div class="health-assess-info">
-                                    <h3 class="header-tile">Lorem ipsum mobile app</h3>
+                                    <h3 class="header-tile">AlwaysOn&reg; Wellness</h3>
                                     <div class="col-sm-12">
                                         <p>
-                                            Lorem ipsume dummy text...
+                                            With AlwaysOn&reg; you can check your challenge status, update your trackers and see the fitness data we gather from all of your connected devices. Check in with Friends and Family no matter where you are. Scan the QR Code below to get to your app store and get started on the go!  AlwaysOn is available for Android and iOS.
                                         </p>
                                     </div>
                                 </div>
@@ -434,10 +443,10 @@
                             </div>
                             <div class="next-recommendation eigth none">
                                 <div class="health-assess-info">
-                                    <h3 class="header-tile">Lorem ipsum challenges</h3>
+                                    <h3 class="header-tile">Challenge Yourself!</h3>
                                     <div class="col-sm-12">
                                         <p>
-                                            Lorem ipsume dummy text...
+                                            We offer a number of fun and exciting challenges to keep you working toward your wellness goals. Challenge yourself or invite friends to join. A little healthy competition can help push you to perform better than ever.
                                         </p>
                                     </div>
                                 </div>
@@ -452,8 +461,8 @@
                                 </div>
                             </div>
 
-                            <div class="points-btm">
-                                100 <span class="pts-lbl">pts</span>
+                            <div class="points-btm" >
+                                250 <span class="pts-lbl">pts</span>
                             </div>
                         </figure>
                     </div>
@@ -547,7 +556,7 @@
                                 <a href="#" class="button button--large button--default">Join</a>
                             </div>
                             <div class="points-btm">
-                                50 <span class="pts-lbl">pts</span>
+                                10 <span class="pts-lbl">pts</span>
                             </div>
                         </figure>
                     </div>
@@ -623,7 +632,7 @@
                             </div>
                         </figure>
                         <article class="article">
-                            <p>Expand your connection by bringing your family & friends. Your own fans will recommend you, what guarantees new fans better quality. </p>
+                            <p>Expand your connection by bringing your family & friends.  </p>
                         </article>
                     </div>
                     <div class="col-sm-6">
@@ -663,7 +672,7 @@
                                 <a href="#" class="button button--large button--default">Read More</a>
                             </div>
                             <div class="points-btm">
-                                100 <span class="pts-lbl">pts</span>
+                                10 <span class="pts-lbl">pts</span>
                             </div>
                         </figure>
                         <article class="article">
@@ -791,7 +800,7 @@
             <h4 class="question">What is Health Assessment (HA)?</h4>
             <p class="answer">It is a comprehensive questionnaire that aims to capture specifics of various aspects of your health such as your BMI, physical activity, tobacco status, lifestyle and diet, social and emotional health and your medical history.</p>
             <h4 class="question">Why should I take the Health Assessment?</h4>
-            <p class="answer">The answers you provide in the HA helps us gain insight into each aspect of your health. We use this information to identify personalized recommendations for your well-being. You will get 2500 points for this activity.</p>
+            <p class="answer">The answers you provide in the HA helps us gain insight into each aspect of your health. We use this information to identify personalized recommendations for your well-being. You will get 250 points for this activity.</p>
             <h4 class="question">How long will this take?</h4>
             <p class="answer">This would take no more than 15 minutes of your time.</p>
         </div>

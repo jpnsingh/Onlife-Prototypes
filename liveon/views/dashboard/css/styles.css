@@ -2366,6 +2366,16 @@ html[xmlns] .flexslider .slides {
     border-width: 21px;
     margin-top: -21px; }
 
+.points-count-top .value {
+    color: $dark_blue;
+    font-size: 2em;
+    font-weight: bold;
+  }
+.points-count-top .label-txt {
+    font-size: 0.8em;
+    color: $light_gray;
+  } 
+}
 .points-count {
   margin: 42px 0 0 0; }
   .points-count .value {

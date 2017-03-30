@@ -378,11 +378,11 @@ input[type="checkbox"]:focus {
   margin-left: 75px; }
 
 .fancy-button:hover .con_down {
-  background-color: #F1DD5E; }
+  background-color: #4775d1; }
 
 .fancy-button:hover .times_abs {
   margin-left: 148px;
-  background-color: #F1DD5E; }
+  background-color: #4775d1; }
 
 .hamburger {
   width: 45px;
@@ -2023,12 +2023,10 @@ input[type="radio"] .styled:checked + label::after {
   color: #FFFFFF; }
 
 .interest-1 .con_down {
-  background: #1e5799;
-  background: linear-gradient(to bottom, #1e5799 0, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  background: #026f8b;
   filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 ); }
 .interest-1 .times_abs {
-  background: #1e5799;
-  background: linear-gradient(to bottom, #1e5799 0, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  background: #026f8b;
   filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_matisse_approx', endcolorstr='$color_jordy_blue_approx',gradienttype=0 ); }
 
 .interest-2 .con_down {

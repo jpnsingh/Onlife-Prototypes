@@ -22,17 +22,16 @@ $(document).ready(function () {
     $('.hamburger').click(function () {
         $(this).toggleClass('open');
     });
-});
-//Popover
-$('[data-toggle="popover"]').popover({
-    placement: 'top',
-    trigger: 'hover'
+    //Popover
+    $('[data-toggle="popover"]').popover({
+        placement: 'top',
+        trigger: 'hover'
+    });
 });
 
+
 //Nano Scroller
-(function () {
-    $(".nano").nanoScroller({
-        flash: true
-    });
+$(function () {
+    $(".nano").nanoScroller();
 
 }).call(this);

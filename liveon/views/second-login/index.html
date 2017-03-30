@@ -46,9 +46,20 @@
                 <div class="col-sm-8">
                     <ul class="top-nav">
                         <li>
-                            <a href="#" class="top-nav-icon">
-                                <span class="icon-onlife_tracker"></span>
-                            </a>
+                            <div class="row">
+                                <div class="col-xs-4 bottom-right">
+                                    <div class="points-count-top text-center">
+                                        <div class="value">0</div>
+                                        <div class="label-txt">Points</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="points-count-top text-center">
+                                        <a href="../point-matrix" class="value">2000</a>
+                                        <div class="label-txt">Possible</div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <a href="../family-friends" class="top-nav-icon">
@@ -114,12 +125,12 @@
             </ul>
         </nav><!-- Navigation Ends -->
 
-        <section class="content-area">
+<!--         <section class="content-area">
             <div class="row">
                 <div class="col-sm-2">
-                    <div class="health-steps">
+<!--                     <div class="health-steps">
                         My Health Steps
-                    </div>
+                    </div> 
                 </div>
                 <div class="col-sm-8">
                     <section class="slider slide-display">
@@ -211,7 +222,7 @@
                     <div class="row">
                         <div class="col-xs-4 bottom-right">
                             <div class="points-count text-center">
-                                <div class="value">100</div>
+                                <div class="value">250</div>
                                 <div class="label-txt">Points</div>
                             </div>
                         </div>
@@ -224,7 +235,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Tiles Area -->
         <section class="tiles-area">
@@ -239,7 +250,7 @@
                                         <span class="tile-icon icon-onlife_monitor"></span>
                                         <h2>Schedule a Biometric Screening</h2>
                                     </div>
-                                    <div class="col-sm-3 text-right">
+                                    <div class="col-sm-3 text-center">
                                         <a href="#" class="button button--large button--block text-center button--default button-go">Go</a>
                                         <br />
                                         <button class="button button--small button--secondary remind-later">Not Now</button>
@@ -263,20 +274,6 @@
                                         <div class="radio radio-primary">
                                             <input type="radio" id="aMonth" value="option2" name="remindMe">
                                             <label for="aMonth">in a month</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-7 col-sm-offset-5">
-                                        <div>
-                                            <label class="control-label remind-ques">By the way, do you smoke ?</label>
-                                        </div>
-                                        <div class="single-break"></div>
-                                        <div class="radio radio-primary radio-inline">
-                                            <input type="radio" id="doSmoking" value="option3" name="smoking">
-                                            <label for="doSmoking">Yes</label>
-                                        </div>
-                                        <div class="radio radio-primary radio-inline">
-                                            <input type="radio" id="dontSmoke" value="option3" name="smoking">
-                                            <label for="dontSmoke">No</label>
                                         </div>
                                     </div>
                                 </div>
@@ -336,20 +333,20 @@
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <div class="form-group">
-                                            <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15" />
+                                            <a href="https://itunes.apple.com/us/app/alwayson-wellness/id927685764?mt=8" target="_blank">
+                                                <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15" />
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <a href="https://itunes.apple.com/us/app/alwayson-wellness/id927685764?mt=8" target="_blank">
+                                            <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
                                                 <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15" />
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 col-sm-offset-5 text-center">
-                                        <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
                                             <img src="../../assets/images/tiles/Onlife_QR_Code.jpg" class="img-responsive qa-code" alt="QR Code" />
-                                        </a>
                                     </div>
                                     <div class="col-sm-12 text-center">
                                         <p>Scan QR code to download the App</p>
@@ -529,19 +526,20 @@
 
                     <div class="col-sm-6">
                         <figure class="view view-first view-second-box">
-                            <img src="../../assets/images/tiles/Onlife_Nashville_Cooking.jpg" alt="Onlife Mary Doctor" class="img-responsive" />
+                            <img src="../../assets/images/tiles/Onlife_manage_tobacco.png" alt="Onlife Mary Doctor" class="img-responsive" />
                             <div class="description">
                                 <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_greens"></span>
+                                    <span class="tile-icon icon-onlife_smoker"></span>
                                 </div>
-                                <h2>Nashua Healthy Cooking Club!</h2>
+                                <h2>How to manage tobacco cravings</h2>
                             </div>
                             <div class="mask">
-                                <p>Do your taste buds a flavor and meet up other folks in your area who are working on healthier food choices. Healthy food doesn’t have to be boring food. </p>
-                                <a href="#" class="button button--large button--default">Join</a>
+                                <p>Learning how to deal with craving takes practice. So, when a craving is triggered, it’s important to have a plan to beat that urge to smoke.</p>
+                                <br/>
+                                <a href="#" class="button button--large button--default">Read Article</a>
                             </div>
                             <div class="points-btm">
-                                50 <span class="pts-lbl">pts</span>
+                                10 <span class="pts-lbl">pts</span>
                             </div>
                         </figure>
                     </div>

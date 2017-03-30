@@ -3354,8 +3354,8 @@
             ]
         ).controller('SettingListController',
             [
-                '$scope', 'settingService', '$location', 'primaryModal', 'settingSaveService', 'lookupService',
-                function ($scope, settingService, $location, primaryModal, settingSaveService, lookupService) {
+                '$scope', '$http', 'settingService', '$location', 'primaryModal', 'settingSaveService', 'lookupService',
+                function ($scope, $http, settingService, $location, primaryModal, settingSaveService, lookupService) {
                     var self = this;
                     self.lookupData = [];
                     self.pointMatrixData = [];
@@ -3393,154 +3393,44 @@
                                     .then(function (data) {
                                         self.constructSettingGrid(data, $scope.settingMenuData.ClassType[0]);
                                     });
-                            } else if ($scope.settingMenuData.MenuIdentifier === 'Recommendations') {
-                                self.hidePrograms = true;
-                                self.hideFilter = true;
 
-                                $scope.recommendationsApplicable = {
-                                    "'Architect'": [
-                                        "All",
-                                        "BCBST ASO",
-                                        "ACADIA"
+                                self.navigateToRecommendation = function () {
+                                    $('#programModal').modal('toggle');
+                                    $location.path('/setting/recommendations');
+                                    window.location.reload();
+                                }
+
+                                self.recommendationsApplicable = {
+                                    "Architect": [
+                                        "HealthTrust",
+                                        "Group 1",
+                                        "Group 2",
+                                        "Group 3"
                                     ]
                                 };
-                                $scope.tableRow = [
-                                    { id: 1 },
-                                    { id: 2 }
-                                ];
 
-                                $scope.selectedTargets = [
-                                  "Target 1",
-                                  "Target 2",
-                                  "Target 3",
-                                  "Target 4",
-                                  "Target 5",
-                                  "Target 6",
-                                  "Target 7"
-                                ];
-                                $scope.selectedTarget = $scope.selectedTargets[0];
+                                $http
+                                    .get('Recommendations.json')
+                                    .then(function (response) {
+                                        self.programRecommendations = response.data;
+                                    });
 
-                                $scope.addElement = function () {
-                                    var mock = { id: $scope.tableRow.length + 1 };
-                                    $scope.tableRow.push(mock)
-                                }
-                                $scope.removeElement = function (index) {
-                                    $scope.tableRow.splice(index, 1)
-                                }
+                                self.removeByAttr = function (arr, attr, value) {
+                                    var i = arr.length;
+                                    while (i--) {
+                                        if (arr[i]
+                                            && arr[i].hasOwnProperty(attr)
+                                            && (arguments.length > 2 && arr[i][attr] === value)) {
 
+                                            arr.splice(i, 1);
 
-                                self.recommendations = [
-                                    {
-                                        title: 'Health Assessment: your first step towards a health lifestyle!',
-                                        descriptionWhy: 'Get control of your health. Knowing where you stand is important to know what you must change to get healthier.',
-                                        descriptionWhat: 'The health assessment is a set of questions about your health. Go ahead and select your responses. It should not take you more than 15 mins to get this done.  Oh and yes, you earn points for completing this!',
-                                        descriptionHow: '',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'health_assessment_icon.png'
-                                    },
-                                    {
-                                        title: 'Get your labs done!',
-                                        descriptionWhy: 'Yes, needles can be painful but getting your labs done will give you an accurate picture of your health. Once we know where you stand, we can design a program, best suited to your needs. So go ahead and schedule your labs today!',
-                                        descriptionWhat: '',
-                                        descriptionHow: '',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'biometric_screen_icon.png'
-                                    },
-                                    {
-                                        title: 'Time to bid Stress goodbye!',
-                                        descriptionWhy: 'Happiness is a choice. You can choose to be happy. There"s going to be stress in life, but it"s your choice whether you let it affect you or not.',
-                                        descriptionWhat: 'Being in control of your life and having realistic expectations about your day-to-day challenges are the keys to stress management, which is perhaps the most important ingredient to living a happy, healthy and rewarding life.',
-                                        descriptionHow: 'Set your stress goal. Watch a 5 min video on medidation  and Enroll in a Stress Management course',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'contact_coach_icon.png'
-                                    },
-                                    {
-                                        title: 'Track your mood',
-                                        descriptionWhy: 'Many psychologists and therapists suggest that keeping a mood tracker can be very therapeutic. It can help towards the first steps of treating symptoms of depression, bipolar disorders and even PMS.',
-                                        descriptionWhat: 'Keeping a mood tracker will help you track and monitor your mood. A benefit of this is that over time you can become more aware of your feelings, and the things that cause them.',
-                                        descriptionHow: '',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'connect_device_icon.png'
-                                    },
-                                    {
-                                        title: 'Calm your mind',
-                                        descriptionWhy: 'A calm mind is your ultimate weapon against you daily challenges. The Answers which you seek will come by.',
-                                        descriptionWhat: 'Here is a Challenge to rest your mind and free your soul. Enroll today for your peace of mind.',
-                                        descriptionHow: '',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'mobile_app.png'
-                                    },
-                                    {
-                                        title: 'Kick the butt!',
-                                        descriptionWhy: 'Burn calories, not cigarettes. Exercise is one of the best ways for you to quit smoking. Quitting cigarettes might be the hardest thing to do in life, but at least you will have one. Quit today!',
-                                        descriptionWhat: '',
-                                        descriptionHow: '',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'invite_freinds_icon.png'
-                                    },
-                                    {
-                                        title: 'Sweat is Fat Crying ;)',
-                                        descriptionWhy: 'Think of this while you"re sweating it out and you won"t be able to fight the laughter! There are many reasons to work out- fun, better health, a great body, invigoration - choose whichever works for you.',
-                                        descriptionWhat: 'Set your activity goal today. Sweat it out and get the "I feel amazing" rush!',
-                                        descriptionHow: '',
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'quit_tobacco_icon.png'
-                                    },
-                                    {
-                                        title: 'Adieus Sodium!',
-                                        descriptionWhy: 'Shake that salt shaker generously and you have on your plate the extra salt you could have done without. The Sodium in salt increases your blood pressure. It is also known to increase cardiovascular risk.',
-                                        descriptionWhat: "Alternatively switching to Potassium based salts could help negate some the effects of sodium. Start with tracking you sodium intake and measuring your blood pressure. And while you are at it you could  watch a video to learn more about reducing salt intake to improve blood pressure.",
-                                        descriptionHow: "",
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'meditation_icon.png'
-                                    },
-                                    {
-                                        title: 'Rainbow palate',
-                                        descriptionWhy: 'Make your dinner a kaliedoscope of colors - peppers, greens, beets and carrots, just to name a few. Not only will these be visually appealing, they will give you all the fibre and vitamins that your body will thank you for.',
-                                        descriptionWhat: "A balanced diet with all food groups - protien, vegies, dairy, fruit and carbs will keep you from craving the junk that tempts you often. Set a goal to eat health and here's an article that gives you a cheat sheet making quick, healthful, low effort meals.",
-                                        descriptionHow: "",
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'meditation_icon.png'
-                                    },
-                                    {
-                                        title: 'Always on the Go? Download our mobile app!',
-                                        descriptionWhy: 'With easy to access to all the features, you are able to keep tabs on your health as you move. Reach out to coaches or track your goals. AlwaysOn is there for you!',
-                                        descriptionWhat: "",
-                                        descriptionHow: "",
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'meditation_icon.png'
-                                    },
-                                    {
-                                        title: 'Invite you friends and family',
-                                        descriptionWhy: 'Its always easier to get to your goal when you have your people cheering for you. Invite your people who matter to you in your wellbeing journey.',
-                                        descriptionWhat: "",
-                                        descriptionHow: "",
-                                        image: '',
-                                        status: true,
-                                        activeFrom: new Date(),
-                                        icon: 'meditation_icon.png'
+                                        }
                                     }
-                                ];
+                                    return arr;
+                                }
+
+                            } else if ($scope.settingMenuData.MenuIdentifier === 'Recommendations') {
+                                setRecommendationsView();
                             }
                             else {
                                 settingService.viewCurrentSetting($scope.settingMenuData, $scope.group.groupId)
@@ -3550,6 +3440,54 @@
                             }
                         }
                     };
+
+                    function setRecommendationsView() {
+                        self.hidePrograms = true;
+                        self.hideFilter = true;
+                        self.addAction = [];
+                        self.recommendationsApplicable = {
+                            "Architect": [
+                                "HealthTrust",
+                                "Group 1",
+                                "Group 2",
+                                "Group 3"
+                            ]
+                        };
+
+                        $scope.tableRow = [
+                            { id: 1 }
+                        ];
+
+                        $http
+                            .get('RecommendationActions.json')
+                            .then(function (response) {
+                                self.actions = response.data;
+                            });
+
+                        self.changeAction = function (selectedAction, index) {
+                            self.selectedTarget[index] = selectedAction[index].targets;
+                        }
+
+                        self.addRecommnedationAction = function () {
+                            self.addAction.push({type: '', targets: []})
+                            var mock = {
+                                id: $scope.tableRow.length + 1
+                            };
+
+                            $scope.tableRow.push(mock)
+                        }
+
+                        self.removeThisRow = function (index) {
+                            self.addAction.splice(index, 1)
+                        }
+
+                        $http
+                            .get('Recommendations.json')
+                            .then(function (response) {
+                                self.recommendations = response.data;
+                            });
+             
+                    }
 
                     self.getSettingData = function (settingName) {
                         if (settingName === 'SettingNameValueCollection') {
@@ -3812,52 +3750,34 @@
                     self.programsGrid =
                         {
                             enableSorting: true,
-                            enableGridMenu: true,
                             enableRowSelection: true,
                             enableRowHeaderSelection: false,
                             noUnselect: true,
                             multiSelect: false,
-                            enableFiltering: true,
-                            rowHeight: 50,
+                            enableFiltering: false,
+                            rowHeight: 40,
                             columnDefs: [
                                 {
-                                    name: 'Program Name', width: 300, field: 'SettingName.MetaData.DisplayName',
-                                    enableColumnResizing: true, cellTooltip: function (row) {
-                                    if (row.entity.SettingName) {
-                                        return row.entity.SettingName.MetaData.Description;
-                                    }
-                                }
-                                },
-                                {name: 'Program Description', field: 'SettingName.MetaData.ProgramDescription', cellTooltip: true},
-                                {name: 'Program Scope', field: 'SettingName.MetaData.ProgramScope', cellTooltip: true},
-                                {
-                                    name: 'Program Activities', field: 'SettingName.MetaData.ProgramActivities', cellTooltip: true,
-                                    cellTemplate: '<div ng-repeat="item in row.entity.SettingName.MetaData.ProgramActivities">{{item}}</div>'
+                                    name: 'Trigger', field: 'Trigger', cellTooltip: true
                                 },
                                 {
-                                    name: 'Edit Program', cellToolTip: true, enableFiltering: false,
-                                    cellTemplate: '<div class="ui-grid-cell-contents" ng-model="row.entity">' +
-                                    '<button type="button" class="btn btn-primary btn-sm" ' +
-                                    'ng-click="grid.appScope.getInfo(row)" style="border-radius: 8%; margin-left: 3px;' +
-                                    'padding: 0px 5px 0px 5px">Open/Edit</button></div>'
+                                    name: 'Journey Name', width: 300, field: 'JourneyName',
+                                    cellTemplate: '<div class="ui-grid-cell-contents"> ' +
+                                        '<a href="javascript:void(0)" ' +
+                                        'data-toggle="modal" data-target="#programModal" ' +
+                                        'data-ng-click="grid.appScope.selectProgram(row.entity)">{{row.entity.JourneyName}} ' +
+                                        '</a></div>'
                                 },
-                                {
-                                    name: 'Clone Program', cellToolTip: true, enableFiltering: false,
-                                    cellTemplate: '<div class="ui-grid-cell-contents" ng-model="row.entity">' +
-                                    '<button type="button" class="btn btn-primary btn-sm" ' +
-                                    'ng-click="grid.appScope.cloneInfo(row)" style="border-radius: 8%; margin-left: 3px;' +
-                                    'padding: 0px 5px 0px 5px">Clone</button></div>'
-                                },
-                                {name: 'Disabled', field: 'SettingValue.Disabled', enableFiltering: false}
+                                {name: 'Type', field: 'Type', cellTooltip: true},
+                                {name: 'Assigned To', field: 'AssignedTo', cellTooltip: true},
+                                {name: 'Status', field: 'Status'}
                             ]
                         };
                     self.programsGrid.enableVerticalScrollbar = false;
-
-                    self.programsGrid.onRegisterApi = function (gridApi) {
-                        //set gridApi on scope
-                        $scope.gridApi = gridApi;
-                        gridApi.selection.on.rowSelectionChanged($scope, self.settingsGridCallBack);
-                    };
+                    $scope.selectProgram = function (entity) {
+                        var listArray = [];
+                        $scope.selectedProgram = entity;
+                    }
 
                     self.settingsGrid.onRegisterApi = function (gridApi) {
                         //set gridApi on scope

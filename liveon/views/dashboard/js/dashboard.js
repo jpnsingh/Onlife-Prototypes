@@ -21,10 +21,12 @@
 
     $('.ha-not-now').click(function () {
         $('.next-recommendation.first').hide();
+
         $('.next-recommendation.second').show();
     });
     $('.remind-later').click(function () {
         $('.ha-wrapper').hide();
+        $('.points-btm').hide();
         $('.next-recommendation.second').show();
     });
     $('.remind-not-now').click(function () {
@@ -46,6 +48,7 @@
     $('.recommend-btn').click(function () {
         $('.next-recommendation.sixth').hide();
         $('.ha-wrapper').show();
+        $('.points-btm').show();
     });
     $('.more-info-app').click(function () {
         $('.next-recommendation.forth').hide();

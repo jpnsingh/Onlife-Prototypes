@@ -6720,6 +6720,9 @@ body.landing-page {
 .landing-page .carousel-caption {
   z-index: 10;
 }
+.thumbnail .caption {
+  text-align: center;
+}
 .landing-page .carousel .item {
   height: 470px;
   background-color: #777;
@@ -8241,4 +8244,52 @@ body.md-skin {
 .goal-progress.recommendations .slimScrollDiv, 
 .goal-progress.recommendations .box-body {
     height: 330px !important;
+}
+.call-action {
+    font-size: 2em;
+    text-align: center;
+    color: #717070;
+    cursor: pointer;
+}
+.action-buttons {
+    font-size: 2em;
+    padding: 0;
+    text-align: center;
+}
+.action-buttons i {
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    margin-top: -2px;
+}
+.action-buttons .edit {
+    color: #1ab394;
+}
+.action-buttons .delete-icon {
+    color: #ef4141;
+}
+.action-buttons .copy-icon {
+    color: #f3cf65;
+}
+.action-buttons i:hover {
+    opacity: 1;
+}
+#createRecommendationModal .modal-body {
+    padding: 10px;
+    max-height: 520px;
+    overflow-y: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.why-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #fbfbfb;
+}
+.btn-link {
+    padding: 0;
+    color: #2196F3;
 }
