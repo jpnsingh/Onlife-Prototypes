@@ -21,9 +21,9 @@
 
 </head>
 
-<body class="cbp-spmenu-push">
+<body class="cbp-spmenu-push" data-ng-app="olh-liveon-dashboard">
 
-    <div class="layout-wrapper">
+    <div class="layout-wrapper" data-ng-controller="DashboardController as dashboardCtrl">
 
         <header class="header">
             <div class="row">
@@ -46,20 +46,20 @@
                 <div class="col-sm-8">
                     <ul class="top-nav">
                         <li>
-                                <div class="row">
-                                    <div class="col-xs-4 bottom-right">
-                                        <div class="points-count-top text-center">
-                                            <div class="value">0</div>
-                                            <div class="label-txt">Points</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="points-count text-center">
-                                            <a href="../point-matrix" class="value">2000</a>
-                                            <div class="label-txt">Possible</div>
-                                        </div>
+                            <div class="row">
+                                <div class="col-xs-4 bottom-right">
+                                    <div class="points-count-top text-center">
+                                        <div class="value">0</div>
+                                        <div class="label-txt">Points</div>
                                     </div>
                                 </div>
+                                <div class="col-xs-8">
+                                    <div class="points-count text-center">
+                                        <a href="../point-matrix" class="value">2000</a>
+                                        <div class="label-txt">Possible</div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <a href="../family-friends" class="top-nav-icon">
@@ -124,117 +124,115 @@
                 </li>
             </ul>
         </nav><!-- Navigation Ends -->
-
-<!--         <section class="content-area">
-            <div class="col-sm-2">
-                <div class="health-steps">
-                    My Health Steps
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <section class="slider slide-display">
-                    <div class="flexslider carousel">
-                        <ul class="slides">
-                            <li class="item-list">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <span class="indicate icon-onlife_rounded_notepad"></span>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="label-details">
-                                            <h3>Assess Your Health</h3>
-                                            <p>Complete by 03/28/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-list">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <span class="indicate icon-onlife_rounded_notes"></span>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="label-details">
-                                            <h3>Biometric Screening</h3>
-                                            <p>Complete by 04/20/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-list">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <span class="indicate icon-onlife_rounded_coach"></span>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="label-details">
-                                            <h3>Contact Coach</h3>
-                                            <p>Complete by 04/25/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-list">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <span class="indicate icon-onlife_rounded_app"></span>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="label-details">
-                                            <h3>Download App</h3>
-                                            <p>Complete by 04/30/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-list">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <span class="indicate icon-onlife_challenge"></span>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="label-details">
-                                            <h3>Start a Challenge</h3>
-                                            <p>Complete by 05/10/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-list">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <span class="indicate icon-onlife_rounded_invite"></span>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <div class="label-details">
-                                            <h3>Invite Friends</h3>
-                                            <p>Complete by 05/20/2017</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-            <div class="col-sm-2">
-                <div class="row">
-                    <div class="col-xs-4 bottom-right">
-                        <div class="points-count text-center">
-                            <div class="value">0</div>
-                            <div class="label-txt">Points</div>
+        <!--         <section class="content-area">
+                    <div class="col-sm-2">
+                        <div class="health-steps">
+                            My Health Steps
                         </div>
                     </div>
-                    <div class="col-xs-8">
-                        <div class="points-count text-center">
-                            <a href="../point-matrix" class="value">2000</a>
-                            <div class="label-txt">Possible</div>
+                    <div class="col-sm-8">
+                        <section class="slider slide-display">
+                            <div class="flexslider carousel">
+                                <ul class="slides">
+                                    <li class="item-list">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <span class="indicate icon-onlife_rounded_notepad"></span>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="label-details">
+                                                    <h3>Assess Your Health</h3>
+                                                    <p>Complete by 03/28/2017</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-list">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <span class="indicate icon-onlife_rounded_notes"></span>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="label-details">
+                                                    <h3>Biometric Screening</h3>
+                                                    <p>Complete by 04/20/2017</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-list">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <span class="indicate icon-onlife_rounded_coach"></span>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="label-details">
+                                                    <h3>Contact Coach</h3>
+                                                    <p>Complete by 04/25/2017</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-list">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <span class="indicate icon-onlife_rounded_app"></span>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="label-details">
+                                                    <h3>Download App</h3>
+                                                    <p>Complete by 04/30/2017</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-list">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <span class="indicate icon-onlife_challenge"></span>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="label-details">
+                                                    <h3>Start a Challenge</h3>
+                                                    <p>Complete by 05/10/2017</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-list">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <span class="indicate icon-onlife_rounded_invite"></span>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="label-details">
+                                                    <h3>Invite Friends</h3>
+                                                    <p>Complete by 05/20/2017</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="row">
+                            <div class="col-xs-4 bottom-right">
+                                <div class="points-count text-center">
+                                    <div class="value">0</div>
+                                    <div class="label-txt">Points</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="points-count text-center">
+                                    <a href="../point-matrix" class="value">2000</a>
+                                    <div class="label-txt">Possible</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section> -->
-
+                </section> -->
         <!-- Tiles Area -->
         <section class="tiles-area">
             <div class="tiles-screen">
@@ -260,20 +258,14 @@
                             <div class="next-recommendation second none">
                                 <div class="health-assess-info remind-wrapper">
                                     <h3 class="header-tile">Remind Me</h3>
-                                    <div class="col-sm-7 col-sm-offset-5">
-                                        <div class="radio radio-primary first-item">
-                                            <input type="radio" id="aDay" value="option0" name="remindMe">
-                                            <label for="aDay">in a day</label>
-                                        </div>
-
-                                        <div class="radio radio-primary">
-                                            <input type="radio" id="aWeek" value="option1" name="remindMe">
-                                            <label for="aWeek">in a week</label>
-                                        </div>
-
-                                        <div class="radio radio-primary">
-                                            <input type="radio" id="aMonth" value="option2" name="remindMe">
-                                            <label for="aMonth">in a month</label>
+                                    <div class="col-sm-7 col-sm-offset-5 mt-40">
+                                        <div class="radio radio-primary" data-ng-repeat="option in dashboardCtrl.remindMeOptions">
+                                            <input type="radio"
+                                                   id="{{option.id}}"
+                                                   name="remindMe"
+                                                   data-ng-value="option"
+                                                   data-ng-model="dashboardCtrl.selectedRemindMeOption">
+                                            <label for="{{option.id}}">{{option.label}}</label>
                                         </div>
                                     </div>
                                     <div class="col-sm-7 col-sm-offset-5">
@@ -281,20 +273,26 @@
                                             <label class="control-label remind-ques">By the way, do you smoke ?</label>
                                         </div>
                                         <div class="single-break"></div>
-                                        <div class="radio radio-primary radio-inline">
-                                            <input type="radio" id="doSmoking" value="option3" name="smoking">
-                                            <label for="doSmoking">Yes</label>
+
+                                        <div class="radio radio-primary radio-inline"
+                                             data-ng-repeat="option in dashboardCtrl.yesNoOptions">
+                                            <input type="radio" id="{{option.id}}" 
+                                                   data-ng-value="option" 
+                                                   name="smoking">
+                                            <label for="{{option.id}}">{{option.label}}</label>
                                         </div>
-                                        <div class="radio radio-primary radio-inline">
-                                            <input type="radio" id="dontSmoke" value="option3" name="smoking">
-                                            <label for="dontSmoke">No</label>
-                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mt-40 text-center" data-ng-if="dashboardCtrl.selectedRemindMeOption">
+                                        <label class="control-label">You haven't started the Health Assessment. As it is mandatory we will remind you to complete Health Assessment <span class="text-bold">{{dashboardCtrl.selectedRemindMeOption.label | lowercase}}</span></label>
                                     </div>
                                 </div>
                                 <div class="description">
                                     <div class="row">
                                         <div class="col-sm-12 button-wrapper">
-                                            <button class="button button--small button--secondary remind-not-now">Submit</button>
+                                            <button class="button button--small button--default remind-not-now"
+                                                    data-ng-disabled="!dashboardCtrl.selectedRemindMeOption">
+                                                Submit
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -354,13 +352,13 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                                <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
-                                                    <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15" />
-                                                </a>
+                                            <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
+                                                <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15" />
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 col-sm-offset-5 text-center">
-                                          <img src="../../assets/images/tiles/Onlife_QR_Code.jpg" class="img-responsive qa-code" alt="QR Code" />
+                                        <img src="../../assets/images/tiles/Onlife_QR_Code.jpg" class="img-responsive qa-code" alt="QR Code" />
                                     </div>
                                     <div class="col-sm-12 text-center">
                                         <p>Scan QR code to download the App</p>
@@ -381,9 +379,10 @@
                             <div class="next-recommendation fifth none">
                                 <div class="health-assess-info">
                                     <h3 class="header-tile">Challenges program</h3>
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12 text-center">
+                                        <i class="icon-onlife_challenge ha-icon"></i>
                                         <p>
-                                            Challenges are now available to compliment your wellness journey. Enroll in one of our built in challenges or create one of your own! 
+                                            Challenges are now available to compliment your wellness journey. Enroll in one of our built in challenges or create one of your own!
                                         </p>
                                     </div>
                                 </div>
@@ -405,7 +404,7 @@
                                     <h3 class="header-tile">Recommendation</h3>
                                     <div class="col-sm-12">
                                         <p>
-                                            We encourage you to complete your Health Assesment as soon as possible. The information you provide personalizes your journey with focused content on the areas you want to work on. 
+                                            We encourage you to complete your Health Assesment as soon as possible. The information you provide personalizes your journey with focused content on the areas you want to work on.
                                         </p>
                                     </div>
                                 </div>
@@ -461,47 +460,11 @@
                                 </div>
                             </div>
 
-                            <div class="points-btm" >
+                            <div class="points-btm">
                                 250 <span class="pts-lbl">pts</span>
                             </div>
                         </figure>
                     </div>
-
-                    <div class="col-sm-3">
-                        <figure class="view view-first view-third-box">
-                            <img src="../../assets/images/tiles/Onlife_Mary_Mother.jpg" alt="Onlife Blood Pressure" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_mobile"></span>
-                                </div>
-                                <span class="text-white">Today: 9:42 am</span>
-                                <h2>Update from Shirley</h2>
-                            </div>
-                            <div class="mask">
-                                <p>"My knees are killing me"</p>
-                                <a href="#" class="button button--large button--default">Message Shirley</a>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-sm-3">
-                        <figure class="view view-first view-third-box">
-                            <img src="../../assets/images/tiles/Onlife_Arthritis.jpg" alt="Start Challenge" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_fitness"></span>
-                                </div>
-                                <h2>Understanding Arthritis</h2>
-                            </div>
-                            <div class="mask">
-                                <p>Osteoarthritis is the most common form of “wear-and-tear” arthritis.</p>
-                                <a href="#" class="button button--large button--default">Read More</a>
-                            </div>
-                            <div class="points-btm">
-                                10 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                    </div>
-
                     <div class="col-sm-3">
                         <figure class="view view-first view-third-box">
                             <img src="../../assets/images/tiles/Onlife_Coach.jpg" alt="Mary's Coach" class="img-responsive" />
@@ -522,80 +485,6 @@
                             </div>
                         </figure>
                     </div>
-
-                    <div class="col-sm-3">
-                        <figure class="view view-first view-third-box">
-                            <img src="../../assets/images/tiles/Onlife_Start_Challenge.jpg" alt="Start Challenge" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_challenge"></span>
-                                </div>
-                                <h2>Challenge Yourself!</h2>
-                            </div>
-                            <div class="mask">
-                                <p>We offer a number of fun and exciting challenges to keep you working toward your wellness goals. Challenge yourself.. </p>
-                                <a href="#" class="button button--large button--default">Enroll</a>
-                            </div>
-                            <div class="points-btm">
-                                100 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <figure class="view view-first view-second-box">
-                            <img src="../../assets/images/tiles/Onlife_Nashville_Cooking.jpg" alt="Onlife Mary Doctor" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_greens"></span>
-                                </div>
-                                <h2>Nashua Healthy Cooking Club!</h2>
-                            </div>
-                            <div class="mask">
-                                <p>Do your taste buds a flavor and meet up other folks in your area who are working on healthier food choices. Healthy food doesn’t have to be boring food. </p>
-                                <a href="#" class="button button--large button--default">Join</a>
-                            </div>
-                            <div class="points-btm">
-                                10 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-sm-6">
-                        <figure class="view view-first view-second-box">
-                            <img src="../../assets/images/tiles/Onlife_Family_Friends.jpg" alt="Family Friends" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_friends"></span>
-                                </div>
-                                <h2>Family and Friends Updates</h2>
-                            </div>
-                            <div class="mask">
-                                <p>Check out what’s going on with your friends and family members. Send a message of encouragement or give ‘em a virtual High Five.</p>
-                                <a href="#" class="button button--large button--default">View Updates</a>
-                            </div>
-                            <div class="points-btm">
-                                100 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-sm-3">
-                        <figure class="view view-first view-third-box">
-                            <img src="../../assets/images/tiles/Onlife_Connect_Device.jpg" alt="Connect Device" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_devices"></span>
-                                </div>
-                                <h2>Connect Your Device</h2>
-                            </div>
-                            <div class="mask">
-                                <p>Most of the top wearable fitness devices can be connected up to your wellness program for easy tracking. </p>
-                                <a href="#" class="button button--large button--default">Connect</a>
-                            </div>
-                            <div class="points-btm">
-                                100 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                    </div>
                     <div class="col-sm-3">
                         <figure class="view view-first view-third-box">
                             <img src="../../assets/images/tiles/Onlife_Connect_App.jpg" alt="Connect App" class="img-responsive" />
@@ -606,7 +495,7 @@
                                 <h2>Take Your Wellness With You</h2>
                             </div>
                             <div class="mask">
-                                <p>With AlwaysOn you can check your challenge status, update your trackers and see the fitness... </p>
+                                <p>With AlwaysOn&reg; you can check your challenge status, update your trackers and see the fitness... </p>
                                 <a href="#" class="button button--large button--default">Download</a>
                             </div>
                             <div class="points-btm">
@@ -632,51 +521,7 @@
                             </div>
                         </figure>
                         <article class="article">
-                            <p>Expand your connection by bringing your family & friends.  </p>
-                        </article>
-                    </div>
-                    <div class="col-sm-6">
-                        <figure class="view view-first view-second-box">
-                            <img src="../../assets/images/tiles/Onlife_Question_Day.jpg" alt="Onlife Mary Doctor" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_reports"></span>
-                                </div>
-                                <h2>Question of the day</h2>
-                            </div>
-                            <div class="mask">
-                                <p>How many alcoholic drinks did you consume last week (Monday-Sunday)?</p>
-                                <div class="btn-group">
-                                    <a href="#" class="button btn btn-primary">0</a>
-                                    <a href="#" class="button btn btn-primary">1-3</a>
-                                    <a href="#" class="button btn btn-primary">4-7</a>
-                                    <a href="#" class="button btn btn-primary">More than 7</a>
-                                </div>
-                            </div>
-                            <div class="points-btm">
-                                5 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-sm-3">
-                        <figure class="view view-first view-third-box">
-                            <img src="../../assets/images/tiles/Onlife_Stress_Management.jpg" alt="Stress Management" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_manage_stress"></span>
-                                </div>
-                                <h2>Reduce your stress</h2>
-                            </div>
-                            <div class="mask">
-                                <p>Yoga is considered a mind-body type of complementary and alternative medicine practice.</p>
-                                <a href="#" class="button button--large button--default">Read More</a>
-                            </div>
-                            <div class="points-btm">
-                                10 <span class="pts-lbl">pts</span>
-                            </div>
-                        </figure>
-                        <article class="article">
-                            <p>Yoga is considered a mind-body type of complementary and alternative medicine practice. Yoga brings together physical and mental disciplines to achieve peacefulness of body and mind.</p>
+                            <p>Expand your connection by bringing your family & friends. Your own fans will recommend you, what guarantees new fans better quality. </p>
                         </article>
                     </div>
                 </div>
@@ -823,11 +668,15 @@
     <script src="../../assets/js/jquery-1.11.3.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="../../js/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../../js/vendor/angular/angular.min.js"></script>
     <script src="../../assets/js/modernizr.custom.js"></script>
     <script src="../../assets/js/classie.js"></script>
     <script src="../../assets/js/jquery.flexslider.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="../../js/scripts.js"></script>
 
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.controller.js"></script>
+    <script src="js/dashboard.service.js"></script>
 </body>
 </html>

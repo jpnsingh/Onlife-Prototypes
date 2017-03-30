@@ -19,185 +19,191 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-onlife_rounded_stress:before {
+.icon-onlife_pregnancy:before {
   content: '\0041'; }
 
-.icon-onlife_rounded_app:before {
+.icon-onlife_baby_pregnancy:before {
   content: '\0042'; }
 
-.icon-onlife_rounded_connect:before {
+.icon-onlife_medilife:before {
   content: '\0043'; }
 
-.icon-onlife_rounded_invite:before {
+.icon-onlife_rounded_app:before {
   content: '\0044'; }
 
-.icon-onlife_rounded_tobacco:before {
+.icon-onlife_rounded_connect:before {
   content: '\0045'; }
 
-.icon-onlife_decrease_weight:before {
+.icon-onlife_rounded_invite:before {
   content: '\0046'; }
 
-.icon-onlife_devices:before {
+.icon-onlife_rounded_stress:before {
   content: '\0047'; }
 
-.icon-onlife_diet:before {
+.icon-onlife_rounded_tobacco:before {
   content: '\0048'; }
 
-.icon-onlife_dollars:before {
+.icon-onlife_decrease_weight:before {
   content: '\0049'; }
 
-.icon-onlife_financial:before {
+.icon-onlife_devices:before {
   content: '\004a'; }
 
-.icon-onlife_fitness:before {
+.icon-onlife_diet:before {
   content: '\004b'; }
 
-.icon-onlife_fitness_dumbell:before {
+.icon-onlife_dollars:before {
   content: '\004c'; }
 
-.icon-onlife_friends:before {
+.icon-onlife_financial:before {
   content: '\004d'; }
 
-.icon-onlife_goals:before {
+.icon-onlife_fitness:before {
   content: '\004e'; }
 
-.icon-onlife_greens:before {
+.icon-onlife_fitness_dumbell:before {
   content: '\004f'; }
 
-.icon-onlife_medilife:before {
+.icon-onlife_friends:before {
   content: '\0050'; }
 
-.icon-onlife_hdl:before {
+.icon-onlife_goals:before {
   content: '\0051'; }
 
-.icon-onlife_ldl:before {
+.icon-onlife_greens:before {
   content: '\0052'; }
 
-.icon-onlife_left_arrow:before {
+.icon-onlife_hdl:before {
   content: '\0053'; }
 
-.icon-onlife_location:before {
+.icon-onlife_ldl:before {
   content: '\0054'; }
 
-.icon-onlife_lungs:before {
+.icon-onlife_left_arrow:before {
   content: '\0055'; }
 
-.icon-onlife_manage_stress:before {
+.icon-onlife_location:before {
   content: '\0056'; }
 
-.icon-onlife_member:before {
+.icon-onlife_lungs:before {
   content: '\0057'; }
 
-.icon-onlife_messages:before {
+.icon-onlife_manage_stress:before {
   content: '\0058'; }
 
-.icon-onlife_mobile:before {
+.icon-onlife_member:before {
   content: '\0059'; }
 
-.icon-onlife_monitor:before {
+.icon-onlife_messages:before {
   content: '\005a'; }
 
-.icon-onlife_myhealth:before {
+.icon-onlife_mobile:before {
   content: '\0061'; }
 
-.icon-onlife_notepad:before {
+.icon-onlife_monitor:before {
   content: '\0062'; }
 
-.icon-onlife_notes:before {
+.icon-onlife_myhealth:before {
   content: '\0063'; }
 
-.icon-onlife_notification:before {
+.icon-onlife_notepad:before {
   content: '\0064'; }
 
-.icon-onlife_photo:before {
+.icon-onlife_notes:before {
   content: '\0065'; }
 
-.icon-onlife_physical_activity:before {
+.icon-onlife_notification:before {
   content: '\0066'; }
 
-.icon-onlife_plus:before {
+.icon-onlife_photo:before {
   content: '\0067'; }
 
-.icon-onlife_points:before {
+.icon-onlife_physical_activity:before {
   content: '\0068'; }
 
-.icon-onlife_quit_tobacco:before {
+.icon-onlife_plus:before {
   content: '\0069'; }
 
-.icon-onlife_reports:before {
+.icon-onlife_points:before {
   content: '\006a'; }
 
-.icon-onlife_resources:before {
+.icon-onlife_quit_tobacco:before {
   content: '\006b'; }
 
-.icon-onlife_right_arrow:before {
+.icon-onlife_reports:before {
   content: '\006c'; }
 
-.icon-onlife_rounded_coach:before {
+.icon-onlife_resources:before {
   content: '\006d'; }
 
-.icon-onlife_rounded_notepad:before {
+.icon-onlife_right_arrow:before {
   content: '\006e'; }
 
-.icon-onlife_rounded_notes:before {
+.icon-onlife_rounded_coach:before {
   content: '\006f'; }
 
-.icon-onlife_search:before {
+.icon-onlife_rounded_notepad:before {
   content: '\0070'; }
 
-.icon-onlife_smoker:before {
+.icon-onlife_rounded_notes:before {
   content: '\0071'; }
 
-.icon-onlife_tick_mark:before {
+.icon-onlife_search:before {
   content: '\0072'; }
 
-.icon-onlife_tracker:before {
+.icon-onlife_smoker:before {
   content: '\0073'; }
 
-.icon-onlife_trackers:before {
+.icon-onlife_tick_mark:before {
   content: '\0074'; }
 
-.icon-onlife_walk:before {
+.icon-onlife_tracker:before {
   content: '\0075'; }
 
-.icon-onlife_water:before {
+.icon-onlife_trackers:before {
   content: '\0076'; }
 
-.icon-onlife_weight:before {
+.icon-onlife_walk:before {
   content: '\0077'; }
 
-.icon-onlife_active:before {
+.icon-onlife_water:before {
   content: '\0078'; }
 
-.icon-onlife_bp:before {
+.icon-onlife_weight:before {
   content: '\0079'; }
 
-.icon-onlife_calorie:before {
+.icon-onlife_active:before {
   content: '\007a'; }
 
-.icon-onlife_challenge:before {
+.icon-onlife_bp:before {
   content: '\0030'; }
 
-.icon-onlife_chat:before {
+.icon-onlife_calorie:before {
   content: '\0031'; }
 
-.icon-onlife_cholesterol:before {
+.icon-onlife_challenge:before {
   content: '\0032'; }
 
-.icon-onlife_close:before {
+.icon-onlife_chat:before {
   content: '\0033'; }
 
-.icon-onlife_coach:before {
+.icon-onlife_cholesterol:before {
   content: '\0034'; }
 
-.icon-onlife_courses:before {
+.icon-onlife_close:before {
   content: '\0035'; }
 
-.icon-Onlife_Minutes:before {
+.icon-onlife_coach:before {
   content: '\0036'; }
 
-.icon-Onlife_Sleep:before {
+.icon-onlife_courses:before {
   content: '\0037'; }
+
+.icon-Onlife_Minutes:before {
+  content: '\0038'; }
+
+.icon-Onlife_Sleep:before {
+  content: '\0039'; }
 
 /* RESETS */
 html, body, div, span, applet, object, iframe,
@@ -260,6 +266,11 @@ input[type="checkbox"]:focus {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   border: 1px solid; }
+  .button[disabled="disabled"] {
+    background: #666666;
+    border: #444444; }
+    .button[disabled="disabled"]:hover {
+      background: #666666; }
   .button--large {
     font-size: 1.2em; }
   .button--small {
@@ -2367,26 +2378,22 @@ html[xmlns] .flexslider .slides {
     margin-top: -21px; }
 
 .points-count-top .value {
-    color: $dark_blue;
-    font-size: 2em;
-    font-weight: bold;
-  }
+  color: #00528a;
+  font-size: 2em;
+  font-weight: bold; }
 .points-count-top .label-txt {
-    font-size: 0.8em;
-    color: $light_gray;
-  } 
-}
-.points-count {
-  margin: 42px 0 0 0; }
-  .points-count .value {
-    color: #00528a;
-    font-size: 2em;
-    font-weight: bold; }
-    .points-count .value:hover {
-      text-decoration: none; }
-  .points-count .label-txt {
-    font-size: 0.8em;
-    color: #aaaaaa; }
+  font-size: 0.8em;
+  color: #aaaaaa; }
+
+.points-count .value {
+  color: #00528a;
+  font-size: 2em;
+  font-weight: bold; }
+  .points-count .value:hover {
+    text-decoration: none; }
+.points-count .label-txt {
+  font-size: 0.8em;
+  color: #aaaaaa; }
 
 .article {
   padding: 0.5em;
@@ -2428,6 +2435,9 @@ html[xmlns] .flexslider .slides {
     font-size: 1.3em; }
     .next-recommendation .health-assess-info .radio.first-item, .next-recommendation .health-assess-info .remind-ques.first-item {
       margin-top: 3em; }
+  .next-recommendation .ha-icon {
+    font-size: 3em;
+    color: #00528a; }
 
 .connect-device {
   font-size: 1.5em;

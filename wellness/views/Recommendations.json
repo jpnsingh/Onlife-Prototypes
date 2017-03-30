@@ -8,16 +8,16 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "health_assessment_icon.png",
-	"actions": [
-		{
-			"type": "Take HA",
-			"targets": [
-				{
-					"name": "Navigate to HA"
-				}
-			]
-		}
-	]
+    "actions": [
+      {
+        "type": "Take HA",
+        "targets": [
+          {
+            "name": "Navigate to HA"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Get your Labs done!",
@@ -28,16 +28,15 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "mobile_app.png",
-	"actions": [
-        {
-            "type": "Schedule",
-            "targets": [
-                {
-                    "name": "BMS Info Page"
-                }
-            ]
-
-        }
+    "actions": [
+      {
+        "type": "Schedule",
+        "targets": [
+          {
+            "name": "BMS Info Page"
+          }
+        ]
+      }
     ]
   },
   {
@@ -50,21 +49,22 @@
     "activeFrom": "new Date()",
     "icon": "meditation_icon.png",
     "actions": [
-        {
-            "type": "Set a Goal",
-            "targets": [
-                {
-                    "name": "Manage Stress"
-                }
-            ]
-        },{
-            "type": "Watch a Video",
-            "targets": [
-                {
-                    "name" : "https://contentstore.onlifehealth.com/videos/stress/list/001"
-                }
-            ]
-        }
+      {
+        "type": "Set a Goal",
+        "targets": [
+          {
+            "name": "Manage Stress"
+          }
+        ]
+      },
+      {
+        "type": "Watch a Video",
+        "targets": [
+          {
+            "name": "https://contentstore.onlifehealth.com/videos/stress/list/001"
+          }
+        ]
+      }
     ]
   },
   {
@@ -77,14 +77,14 @@
     "activeFrom": "new Date()",
     "icon": "health_assessment_icon.png",
     "actions": [
-        {
-            "type": "Read an Article",
-            "targets": [
-                {
-                    "name": "https://contentstore.onlifehealth.com/articles/tobacco/list/002"
-                }
-            ]
-        }
+      {
+        "type": "Read an Article",
+        "targets": [
+          {
+            "name": "https://contentstore.onlifehealth.com/articles/tobacco/list/002"
+          }
+        ]
+      }
     ]
   },
   {
@@ -97,14 +97,14 @@
     "activeFrom": "new Date()",
     "icon": "biometric_screen_icon.png",
     "actions": [
-        {
-            "type": "Track your Progress",
-            "targets": [
-                {
-                    "name": "Manage Stress"
-                }
-            ]
-        }
+      {
+        "type": "Track your Progress",
+        "targets": [
+          {
+            "name": "Manage Stress"
+          }
+        ]
+      }
     ]
   },
   {
@@ -117,15 +117,16 @@
     "activeFrom": "new Date()",
     "icon": "meditation_icon.png",
     "actions": [
-        {
-            "type": "Join a Challenge",
-            "targets": [
-                {
-                    "name": "Calm your Mind"
-                }
-            ]
-        }
-    ]  },
+      {
+        "type": "Join a Challenge",
+        "targets": [
+          {
+            "name": "Calm your Mind"
+          }
+        ]
+      }
+    ]
+  },
   {
     "title": "Kick the Butt!",
     "descriptionWhy": "Burn calories, not cigarettes. Exercise is one of the best ways for you to quit smoking. Quitting cigarettes might be the hardest thing to do in life, but at least you will have one. Quit today!",
@@ -135,23 +136,23 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "mobile_app.png",
-	"actions": [
-        {
-            "type": "Set a Goal",
-            "targets": [
-                {
-                    "name": "Quit Tobacco"
-                }
-            ]
-        },
-        {
-            "type": "Join a Challenge",
-            "targets": [
-                {
-                    "name": "10K a day"
-                }
-            ]
-        }
+    "actions": [
+      {
+        "type": "Set a Goal",
+        "targets": [
+          {
+            "name": "Quit Tobacco"
+          }
+        ]
+      },
+      {
+        "type": "Join a Challenge",
+        "targets": [
+          {
+            "name": "10K a day"
+          }
+        ]
+      }
     ]
   },
   {
@@ -163,7 +164,7 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "contact_coach_icon.png",
-	"actions": []
+    "actions": []
   },
   {
     "title": "Adieu Sodium!",
@@ -174,7 +175,7 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "meditation_icon.png",
-	"actions": []
+    "actions": []
   },
   {
     "title": "Rainbow Palate",
@@ -185,7 +186,7 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "meditation_icon.png",
-	"actions": []
+    "actions": []
   },
   {
     "title": "Always on the Go? Download our mobile app!",
@@ -196,7 +197,7 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "connect_device_icon.png",
-	"actions": []
+    "actions": []
   },
   {
     "title": "Invite your Friends and Family",
@@ -207,6 +208,6 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "invite_freinds_icon.png",
-	"actions": []
+    "actions": []
   }
 ]

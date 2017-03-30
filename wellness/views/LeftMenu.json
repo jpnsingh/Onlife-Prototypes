@@ -1,52 +1,52 @@
 {
-    "SettingMenuCollection": [
-        {
-            "DisplayName": "Points",
-            "ClassType": [
-                "PointsMatrix"
-            ],
-            "MenuIdentifier": "Points",
-            "Category": "Points"
-        },
-        {
-            "DisplayName": "Marketing Tiles",
-            "ClassType": [
-                "MarketingTiles"
-            ],
-            "MenuIdentifier": "MarketingTiles",
-            "Category": null
-        },
-        {
-            "DisplayName": "Announcements",
-            "ClassType": [
-                "Announcements"
-            ],
-            "MenuIdentifier": "Announcements",
-            "Category": null
-        },
-        {
-            "DisplayName": "Manage Incentives",
-            "ClassType": [
-                "Incentives"
-            ],
-            "MenuIdentifier": "Incentives",
-            "Category": null
-        },
-        {
-            "DisplayName": "Journeys and Triggers",
-            "ClassType": [
-                "Programs"
-            ],
-            "MenuIdentifier": "Programs",
-            "Category": null
-        },
-        {
-            "DisplayName": "Recommendations",
-            "ClassType": [
-                "Recommendations"
-            ],
-            "MenuIdentifier": "Recommendations",
-            "Category": null
-        }
-    ]
+  "SettingMenuCollection": [
+    {
+      "DisplayName": "Points",
+      "ClassType": [
+        "PointsMatrix"
+      ],
+      "MenuIdentifier": "Points",
+      "Category": "Points"
+    },
+    {
+      "DisplayName": "Marketing Tiles",
+      "ClassType": [
+        "MarketingTiles"
+      ],
+      "MenuIdentifier": "MarketingTiles",
+      "Category": null
+    },
+    {
+      "DisplayName": "Announcements",
+      "ClassType": [
+        "Announcements"
+      ],
+      "MenuIdentifier": "Announcements",
+      "Category": null
+    },
+    {
+      "DisplayName": "Manage Incentives",
+      "ClassType": [
+        "Incentives"
+      ],
+      "MenuIdentifier": "Incentives",
+      "Category": null
+    },
+    {
+      "DisplayName": "Journeys and Triggers",
+      "ClassType": [
+        "Programs"
+      ],
+      "MenuIdentifier": "Programs",
+      "Category": null
+    },
+    {
+      "DisplayName": "Recommendations",
+      "ClassType": [
+        "Recommendations"
+      ],
+      "MenuIdentifier": "Recommendations",
+      "Category": null
+    }
+  ]
 }

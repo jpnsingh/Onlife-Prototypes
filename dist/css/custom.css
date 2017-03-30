@@ -2290,3 +2290,69 @@ span.center {
     text-align: center;
     margin-bottom: 10px;
 }
+.profile-image-wrap {
+    position: relative;
+}
+.profile-info-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 15px 0 15px;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    color: #FFFFFF;
+}
+.profile-info-details p {
+    margin: 0;
+    color: #afc3ca;
+}
+.pro-status-msg {
+    margin: 0 -15px;
+    padding: 5px 15px;
+    background: rgb(76,76,76); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(43,43,43,1) 56%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(43,43,43,1) 56%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(43,43,43,1) 56%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+.points-btn {
+    background: #b86d36;
+    color: #FFFFFF;
+    width: 56px;
+    height: 56px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 15px;
+    padding: 11px 5px 5px 5px;
+}
+span.pts-label {
+    font-size: 0.7em;
+}
+.edit-icon {
+    background: #FFFFFF;
+    color: #097bba;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 1.3em;
+    line-height: 32px;
+    margin-top: 3px;
+}
+.profile-vip {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    background: #f9cc65;
+    border-radius: 4px;
+    padding: 4px 16px;
+    color: #7a3e1a;
+    text-align: center;
+    font-weight: bold;
+}
+

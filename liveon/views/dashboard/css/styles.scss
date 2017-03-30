@@ -38,7 +38,6 @@
 	}	
 }
 .points-count {
-	margin: 10px 0 0 0;
 	.value {
 		color: $dark_blue;
 		font-size: 2em;
@@ -98,6 +97,10 @@
 				margin-top: 3em;
 			}
 		}
+	}
+	.ha-icon {
+		font-size: 3em;
+		color: $dark_blue;
 	}
 }
 .connect-device {

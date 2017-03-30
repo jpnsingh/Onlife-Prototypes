@@ -1,1 +1,10 @@
-[{"Id":1033,"Value":"English (United States)"},{"Id":2058,"Value":"Español (México)"}]
+[
+  {
+    "Id": 1033,
+    "Value": "English (United States)"
+  },
+  {
+    "Id": 2058,
+    "Value": "Español (México)"
+  }
+]
