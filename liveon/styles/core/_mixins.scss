@@ -66,3 +66,76 @@
 	background-size: 200% 100%;
 	transition: all .25s ease-in;
 }
+
+//Margin Mixins
+@for $index from 0 through 50 {
+
+  $margin: if($index == 0, 0, #{$index}px);
+
+  .m-t-#{$index} {
+    margin-top: #{$margin} !important;
+  }
+
+  .m-r-#{$index} {
+    margin-right: #{$margin} !important;
+  }
+
+  .m-b-#{$index} {
+    margin-bottom: #{$margin} !important;
+  }
+
+  .m-l-#{$index} {
+    margin-left: #{$margin} !important;
+  }
+
+  .m-y-#{$index} {
+    margin-top: #{$margin} !important;
+    margin-bottom: #{$margin} !important;
+  }
+
+  .m-x-#{$index} {
+    margin-left: #{$margin} !important;
+    margin-right: #{$margin} !important;
+  }
+
+  .m-a-#{$index} {
+    margin: #{$margin} !important;
+  }
+
+}
+
+@for $index from 0 through 50 {
+
+  $padding: if($index == 0, 0, #{$index}px);
+
+  .p-t-#{$index} {
+	padding-top: #{$padding} !important;
+  }
+
+  .p-r-#{$index} {
+    padding-right: #{$padding} !important;
+  }
+
+  .p-b-#{$index} {
+    padding-bottom: #{$padding} !important;
+  }
+
+  .p-l-#{$index} {
+    padding-left: #{$padding} !important;
+  }
+
+  .p-y-#{$index} {
+    padding-top: #{$padding} !important;
+    padding-bottom: #{$padding} !important;
+  }
+
+  .p-x-#{$index} {
+    padding-left: #{$padding} !important;
+    padding-right: #{$padding} !important;
+  }
+
+  .p-a-#{$index} {
+    padding: #{$padding} !important;
+  }
+
+}

@@ -195,3 +195,21 @@
 		}
 	}
 }
+
+.goal-item-container {
+	.points-value {
+		background: rgb(232,84,36); /* Old browsers */
+		background: -moz-linear-gradient(left,  rgba(232,84,36,1) 0%, rgba(176,31,88,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(232,84,36,1) 0%,rgba(176,31,88,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(232,84,36,1) 0%,rgba(176,31,88,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		padding: 0.3em 0.5em;
+		display: inline-block;
+		color: $white;
+		.pts-label {
+			font-size: 0.7em;
+		}
+	}
+}
+
+
+
