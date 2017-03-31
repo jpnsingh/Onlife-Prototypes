@@ -1,0 +1,172 @@
+[
+  {
+    "key": "readArticle",
+    "targets": [
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/stress/list/001"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/stress/list/002"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/stress/list/003"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/001"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/002"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
+      }
+    ]
+  },
+  {
+    "key": "watchVideo",
+    "targets": [
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/stress/list/001"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/stress/list/002"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/stress/list/003"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/001"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/002"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/003"
+      }
+    ]
+  },
+  {
+    "key": "enrollInCourse",
+    "targets": [
+      {
+        "name": "https://contentstore.onlifehealth.com/courses/stress/001"
+      }
+    ]
+  },
+  {
+    "key": "joinChallenge",
+    "targets": [
+      {
+        "name": "Colorful Choices"
+      },
+      {
+        "name": "Banish the urge"
+      },
+      {
+        "name": "10K a day"
+      },
+      {
+        "name": "Hydrate!!"
+      },
+      {
+        "name": "Walk across Tennessee"
+      },
+      {
+        "name": "Calm your mind"
+      },
+      {
+        "name": "Spring in your Step"
+      }
+    ]
+  },
+  {
+    "key": "trackProgress",
+    "targets": [
+      {
+        "name": "Stress"
+      },
+      {
+        "name": "Tobacco"
+      },
+      {
+        "name": "Cholesterol"
+      },
+      {
+        "name": "Nutrition"
+      },
+      {
+        "name": "Physical Activity"
+      },
+      {
+        "name": "Weight"
+      },
+      {
+        "name": "Blood Pressure"
+      }
+    ]
+  },
+  {
+    "key": "setGoal",
+    "targets": [
+      {
+        "name": "Quit Tobacco"
+      },
+      {
+        "name": "Manage Stress"
+      },
+      {
+        "name": "Maintain Weight"
+      },
+      {
+        "name": "Improve Cholesterol"
+      },
+      {
+        "name": "Improve Dietary Habits"
+      },
+      {
+        "name": "Improve Fitness Level"
+      },
+      {
+        "name": "Improve Blood Pressure"
+      },
+      {
+        "name": "Decrease Weight"
+      },
+      {
+        "name": "Maintain Tobacco free Status"
+      }
+    ]
+  },
+  {
+    "key": "takeHA",
+    "targets": [
+      {
+        "name": "Navigate to HA"
+      }
+    ]
+  },
+  {
+    "key": "schedule",
+    "targets": [
+      {
+        "name": "BMS Info Page"
+      }
+    ]
+  },
+  {
+    "key": "inviteFamilyAndFriends",
+    "targets": [
+      {
+        "name": "Navigate to My Network"
+      }
+    ]
+  },
+  {
+    "key": "downloadApp",
+    "targets": [
+      {
+        "name": "Navigate to Mobile Registration on Portal"
+      }
+    ]
+  }
+]

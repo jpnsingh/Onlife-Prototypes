@@ -6,18 +6,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "health_assessment_icon.png",
-    "actions": [
-      {
-        "type": "Take HA",
-        "targets": [
-          {
-            "name": "Navigate to HA"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "takeHA",
+      "type": "Take HA"
+    },
+    "target": {
+      "key": "takeHA",
+      "name": "Navigate to HA"
+    }
   },
   {
     "title": "Get your Labs done!",
@@ -26,18 +26,18 @@
     "descriptionHow": "Call our affiliated clinic at: XXX-XXX-XXXX",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "mobile_app.png",
-    "actions": [
-      {
-        "type": "Schedule",
-        "targets": [
-          {
-            "name": "BMS Info Page"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "schedule",
+      "type": "Schedule"
+    },
+    "target": {
+      "key": "schedule",
+      "name": "BMS Info Page"
+    }
   },
   {
     "title": "Time to bid Stress goodbye!",
@@ -46,18 +46,18 @@
     "descriptionHow": "Set your stress goal. Watch a 5 min video on medidation  and Enroll in a Stress Management course",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "meditation_icon.png",
-    "actions": [
-      {
-        "type": "Set a Goal",
-        "targets": [
-          {
-            "name": "Manage Stress"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "readArticle",
+      "type": "Read an Article"
+    },
+    "target": {
+      "key": "readArticle",
+      "name": "https://contentstore.onlifehealth.com/articles/stress/list/001"
+    }
   },
   {
     "title": "Say bye to Tobacco!",
@@ -66,18 +66,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "health_assessment_icon.png",
-    "actions": [
-      {
-        "type": "Read an Article",
-        "targets": [
-          {
-            "name": "https://contentstore.onlifehealth.com/articles/tobacco/list/002"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "readArticle",
+      "type": "Read an Article"
+    },
+    "target": {
+      "key": "readArticle",
+      "name": "https://contentstore.onlifehealth.com/articles/tobacco/list/002"
+    }
   },
   {
     "title": "Track your Mood",
@@ -86,18 +86,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "biometric_screen_icon.png",
-    "actions": [
-      {
-        "type": "Track your Progress",
-        "targets": [
-          {
-            "name": "Manage Stress"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "trackProgress",
+      "type": "Track your Progress"
+    },
+    "target": {
+      "key": "trackProgress",
+      "name": "Manage Stress"
+    }
   },
   {
     "title": "Calm your Mind",
@@ -106,18 +106,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "meditation_icon.png",
-    "actions": [
-      {
-        "type": "Join a Challenge",
-        "targets": [
-          {
-            "name": "Calm your Mind"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "joinChallenge",
+      "type": "Join a Challenge"
+    },
+    "target": {
+      "key": "joinChallenge",
+      "name": "Calm your Mind"
+    }
   },
   {
     "title": "Kick the Butt!",
@@ -126,26 +126,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "mobile_app.png",
-    "actions": [
-      {
-        "type": "Set a Goal",
-        "targets": [
-          {
-            "name": "Quit Tobacco"
-          }
-        ]
-      },
-      {
-        "type": "Join a Challenge",
-        "targets": [
-          {
-            "name": "10K a day"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "setGoal",
+      "type": "Set a Goal"
+    },
+    "target": {
+      "key": "setGoal",
+      "name": "Quit Tobacco"
+    }
   },
   {
     "title": "Sweat is Fat Crying ;)",
@@ -154,18 +146,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "contact_coach_icon.png",
-    "actions": [
-      {
-        "type": "Set a Goal",
-        "targets": [
-          {
-            "name": "Improve Fitness Level"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "setGoal",
+      "type": "Set a Goal"
+    },
+    "target": {
+      "key": "setGoal",
+      "name": "Improve Fitness Level"
+    }
   },
   {
     "title": "Adieu Sodium!",
@@ -174,18 +166,18 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "meditation_icon.png",
-    "actions": [
-      {
-        "type": "Watch a Video",
-        "targets": [
-          {
-            "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/003"
-          }
-        ]
-      }
-    ]
+    "action": {
+      "key": "watchVideo",
+      "type": "Watch a Video"
+    },
+    "target": {
+      "key": "watchVideo",
+      "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/001"
+    }
   },
   {
     "title": "Rainbow Palate",
@@ -194,18 +186,19 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "meditation_icon.png",
-    "actions": [
-      {
-        "type": "Read an Article",
-        "targets": [
-          {
-            "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
-          }
-        ]
-      }
-    ]  },
+    "action": {
+      "key": "readArticle",
+      "type": "Read an Article"
+    },
+    "target": {
+      "key": "readArticle",
+      "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
+    }
+  },
   {
     "title": "Always on the Go? Download our mobile app!",
     "descriptionWhy": "With easy to access to all the features, you are able to keep tabs on your health as you move. Reach out to coaches or track your goals. AlwaysOn is there for you!",
@@ -213,9 +206,11 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "connect_device_icon.png",
-    "actions": []
+    "action": {}
   },
   {
     "title": "Invite your Friends and Family",
@@ -224,8 +219,10 @@
     "descriptionHow": "",
     "image": "img-23.jpg",
     "status": true,
-    "activeFrom": "new Date()",
+    "isRequired": false,
+    "activeFrom": "01/01/2017",
+    "dueDate": "03/31/2017",
     "icon": "invite_freinds_icon.png",
-    "actions": []
+    "action": {}
   }
 ]

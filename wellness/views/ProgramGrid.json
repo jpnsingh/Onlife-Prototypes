@@ -6,6 +6,7 @@
     "AssignedTo": "Group 1",
     "Status": "Active",
     "StatusBool": true,
+    "ActiveFrom": "01/01/2017",
     "Description": "Onboarding journey is applicable to all members who are newly enrolled. This Journey recommends a member to complete their health assessment and download our mobile app",
     "Recommendations": [
       {
@@ -23,6 +24,7 @@
     "AssignedTo": "HealthTrust",
     "Status": "Active",
     "StatusBool": true,
+    "ActiveFrom": "01/01/2017",
     "Description": "This Journey is designed for members who have a very stressful life and are in need for Stress management. This journey recommends a 5 min video on stress management, ask members to enroll in a course, join a challenge and recommends using a stress tracker",
     "Recommendations": [
       {
@@ -43,6 +45,7 @@
     "AssignedTo": "Group 2",
     "Status": "Active",
     "StatusBool": true,
+    "ActiveFrom": "01/01/2017",
     "Description": "This Journey is designed for members who are active smokers/tobacco users. This journey recommends to take a challenge and asks member to read an article",
     "Recommendations": [
       {
@@ -60,6 +63,7 @@
     "AssignedTo": "Group 2",
     "Status": "Active",
     "StatusBool": true,
+    "ActiveFrom": "01/01/2017",
     "Description": "This Journey is designed for members who are looking forward to balance their nutrition and manage weight. This journey recommends members to set a goal, watch a video on nutrition and Track member's blood pressure",
     "Recommendations": [
       {

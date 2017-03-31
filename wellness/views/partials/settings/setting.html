@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-sm-12" ng-hide="settingListCtrl.hidePrograms" ng-init="creatingJourney = false;">
-            
+
             <div data-ng-show="creatingJourney">
                 <div class="well">
                     <div class="row">
@@ -26,7 +26,8 @@
                             <h8>The trigger you select shall determine the point at which the journey will activate for the member.</h8>
                         </div>
                         <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal" ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Onboarding'; selectedProgram.Recommendations = []">
+                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
+                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Onboarding'; selectedProgram.Recommendations = []">
                                 <img src="../img/OnBoarding.jpg" alt="Weight Reduction image" style="width: 200px; height: 200px">
                                 <div class="caption">
                                     <h3>Onboarding</h3>
@@ -34,7 +35,8 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal" ng-click="selectedProgram = ''; selectedProgram.Trigger = 'HA Completed'; selectedProgram.Recommendations = []">
+                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
+                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'HA Completed'; selectedProgram.Recommendations = []">
                                 <img src="../img/HealthAssessment.jpg" alt="Stress Reduction image" style="width: 200px; height: 200px">
                                 <div class="caption">
                                     <h3>HA Completed</h3>
@@ -42,7 +44,8 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal" ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Biometric Completed'; selectedProgram.Recommendations = []">
+                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
+                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Biometric Completed'; selectedProgram.Recommendations = []">
                                 <img src="../img/BMS.PNG" alt="Stress Reduction image" style="width: 200px; height: 200px">
                                 <div class="caption">
                                     <h3>Biometric Completed</h3>
@@ -50,7 +53,8 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal" ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Re-Enrollment'; selectedProgram.Recommendations = []">
+                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
+                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Re-Enrollment'; selectedProgram.Recommendations = []">
                                 <img src="../img/reenroll.png" alt="Blood Pressure image" style="width: 200px; height: 200px">
                                 <div class="caption">
                                     <h3>Re-Enrollment</h3>
@@ -77,7 +81,8 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist" data-ng-show="settingMenuData.ClassType.length > 1">
             <li role="presentation" data-ng-class="tabIndex === 0 ? 'active' : ''" data-ng-repeat="(tabIndex, tabMenu) in  settingMenuData.ClassType">
-                <a href="#{{tabMenu}}" target="_self" aria-controls="home" role="tab" data-ng-click="settingListCtrl.getSettingData(tabMenu)" data-toggle="tab">{{tabMenu}}</a>
+                <a href="#{{tabMenu}}" target="_self" aria-controls="home" role="tab" data-ng-click="settingListCtrl.getSettingData(tabMenu)"
+                   data-toggle="tab">{{tabMenu}}</a>
             </li>
         </ul>
         <!-- Tab panes -->
@@ -102,12 +107,14 @@
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
                                 <h2 class="modal-title" id="programModalLabel">
                                     {{creatingJourney ? 'Create New Journey' : selectedProgram.JourneyName}}
                                 </h2>
-                                <br />
-                                <p>Step 2: Please provide journey details below. You can select recommendations by clicking on the Add Button. The recommendations will be sequenced in order that you have defined.</p>
+                                <br/>
+                                <p>Step 2: Please provide journey details below. You can select recommendations by clicking on the Add Button. The
+                                    recommendations will be sequenced in order that you have defined.</p>
                             </div>
                             <div class="modal-body">
                                 <div class="p-x-15">
@@ -118,7 +125,7 @@
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <label class="control-label">Journey name:</label>
-                                                        <input class="form-control" data-ng-model="selectedProgram.JourneyName" />
+                                                        <input class="form-control" data-ng-model="selectedProgram.JourneyName"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-8">
@@ -173,7 +180,7 @@
                                                     <div class="form-group">
                                                         <input class="form-control"
                                                                data-ng-disabled="true"
-                                                               data-ng-model="item.title" />
+                                                               data-ng-model="item.title"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-1 action-buttons">
@@ -189,13 +196,13 @@
                                                         <select class="form-control"
                                                                 ng-options="recommendation.title for recommendation in settingListCtrl.programRecommendations"
                                                                 ng-model="selectedProgramRecommendation">
-                                                            <option value="">--Select recommendation--</option>
+                                                            <option value="">-- Select recommendation--</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-1 action-buttons">
                                                     <button type="button"
-                                                            class="btn btn-primary" 
+                                                            class="btn btn-primary"
                                                             data-ng-disabled="!selectedProgramRecommendation"
                                                             data-ng-click=" selectedProgram.Recommendations.push(selectedProgramRecommendation)">
                                                         Add
@@ -203,9 +210,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <br />
+                                        <br/>
                                         <div class="col-sm-12">
-                                            <p>Note: If you do not find recommendations you are looking for, you can create a new one <button class="btn btn-link" data-ng-click="settingListCtrl.navigateToRecommendation();">here</button></p>
+                                            <p>Note: If you do not find recommendations you are looking for, you can create a new one
+                                                <button class="btn btn-link" data-ng-click="settingListCtrl.navigateToRecommendation();">here</button>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -214,23 +223,27 @@
                                 <span class="pull-left">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                 </span>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="creatingJourney = false">Save & Close</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="creatingJourney = false">Save & Close
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div role="tabpanel" id="Recommendations" data-ng-class="settingMenuData.ClassType[0] === 'Recommendations' ? 'tab-pane active' : 'tab-pane fade'">
+            <div role="tabpanel" id="Recommendations"
+                 data-ng-class="settingMenuData.ClassType[0] === 'Recommendations' ? 'tab-pane active' : 'tab-pane fade'">
                 <header class="col-sm-12">
-                    <p>Here is a list of various recommendation available for you to create a journey. These recommendations are predefined by Onlife and can be used to create a custom journeys. You may add new recommendations using the 'Add recommendation' button.</p>
+                    <p>Here is a list of various recommendation available for you to create a journey. These recommendations are predefined by Onlife
+                        and can be used to create a custom journeys. You may add new recommendations using the 'Add recommendation' button.</p>
                 </header>
                 <div class="col-sm-12">
-                <br/>
+                    <br/>
                     <div class="row">
                         <div class="col-sm-7">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area" data-ng-model="searchText">
+                                <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area"
+                                       data-ng-model="searchText">
                                 <span class="input-group-addon" id="search-area"><i class="fa fa-search"></i></span>
                             </div>
                         </div>
@@ -239,19 +252,8 @@
                                 <button class="btn btn-primary"
                                         type="button"
                                         data-toggle="modal"
-                                        data-target="#createRecommendationModal"
-                                        data-ng-click="settingListCtrl.creating = true; settingListCtrl.selectedRecommendation = 
-                                         {actions:[
-                                            {
-                                                type:'--Select action type--', 
-                                                'target': [ 
-                                                    {
-                                                        'name':'--Select action name--'
-                                                    } 
-                                                ]
-                                            }]
-                                        };
-                                        settingListCtrl.selectedAction = settingListCtrl.selectedRecommendation.actions[0];">
+                                        data-target="#recommendationModal"
+                                        data-ng-click="settingListCtrl.addRecommendation()">
                                     Add Recommendation
                                 </button>
                             </span>
@@ -276,11 +278,8 @@
                                             <h3 class="recommended-header">
                                                 <a href="javascript:void(0)"
                                                    data-toggle="modal"
-                                                   data-target="#createRecommendationModal"
-                                                   data-ng-click="settingListCtrl.creating = false; settingListCtrl.selectedRecommendation = recommendation;
-                                                   settingListCtrl.selectedAction = settingListCtrl.selectedRecommendation.actions[0];
-                                                   settingListCtrl.selectedTarget = 
-                                                   settingListCtrl.selectedAction.targets[0]">
+                                                   data-target="#recommendationModal"
+                                                   data-ng-click="settingListCtrl.editRecommendation(recommendation)">
                                                     {{recommendation.title}}
                                                 </a>
                                             </h3>
@@ -296,13 +295,15 @@
                 </div>
 
 
-                <div class="modal fade" id="createRecommendationModal" tabindex="-1" role="dialog" aria-labelledby="createRecommendationModalLabel">
+                <div class="modal fade" id="recommendationModal" tabindex="-1" role="dialog" aria-labelledby="createRecommendationModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
                                 <h3 class="modal-title" id="createRecommendationModalLabel">
-                                    {{settingListCtrl.creating ? 'Create new recommendation' : 'Recommendation: ' + settingListCtrl.selectedRecommendation.title}}
+                                    {{settingListCtrl.creating ? 'Create new recommendation' : 'Recommendation: ' +
+                                    settingListCtrl.selectedRecommendation.title}}
                                 </h3>
                             </div>
                             <div class="modal-body">
@@ -311,17 +312,20 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for="recommendationTitle" class="control-label required">Title</label>
-                                                <input type="text" class="form-control" id="recommendationTitle" data-ng-model="settingListCtrl.selectedRecommendation.title">
+                                                <input type="text" class="form-control" id="recommendationTitle"
+                                                       data-ng-model="settingListCtrl.selectedRecommendation.title">
                                             </div>
                                         </div>
-                                        <div class ="col-sm-12">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <div class="checkbox">
-                                                  <label class="checkbox-label"><input type="checkbox" value="">Mandatory</label>
-                                                </div>
+                                                <input type="checkbox"
+                                                       id="recommendationIsRequired"
+                                                       name="recommendationIsRequired"
+                                                       data-ng-model="settingListCtrl.selectedRecommendation.isRequired">
+                                                <label class="control-label" for="recommendationIsRequired">Mandatory</label>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 why-section">
+                                        <div class="col-sm-12 section-description">
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
@@ -355,23 +359,31 @@
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <div class="row">
-                                                            <label for="recommendationImage" class="control-label required col-xs-6">{{settingListCtrl.creating ? 'Select image:' : 'Image:'}}</label>
+                                                            <label for="recommendationImage" class="control-label required col-xs-6">{{settingListCtrl.creating
+                                                                ? 'Select image:' : 'Image:'}}</label>
                                                             <div class="col-xs-6 text-center">
                                                                 <img id="recommendationImage"
                                                                      data-ng-if="!settingListCtrl.creating" style="max-width: 40px;"
                                                                      data-ng-src="../public/styles/img/recommendations/image/{{settingListCtrl.selectedRecommendation.image}}">
-                                                                <input type="button" data-ng-if="settingListCtrl.creating" value="Select image" class="btn btn-primary">
+                                                                <input type="button"
+                                                                       class="btn btn-primary btn-block"
+                                                                       data-ng-if="settingListCtrl.creating"
+                                                                       value="Select image">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="row">
-                                                            <label for="recommendationIcon" class="control-label required col-xs-6">{{settingListCtrl.creating ? 'Select icon:' : 'Icon:'}}</label>
+                                                            <label for="recommendationIcon" class="control-label required col-xs-6">{{settingListCtrl.creating
+                                                                ? 'Select icon:' : 'Icon:'}}</label>
                                                             <div class="col-xs-6 text-center">
                                                                 <img id="recommendationIcon" style="max-width: 40px;"
                                                                      data-ng-if="!settingListCtrl.creating"
                                                                      data-ng-src="../public/styles/img/recommendations/icon/{{settingListCtrl.selectedRecommendation.icon}}">
-                                                                <input type="button" data-ng-if="settingListCtrl.creating" value="Select icon" class="btn btn-primary">
+                                                                <input type="button"
+                                                                       class="btn btn-primary btn-block"
+                                                                       data-ng-if="settingListCtrl.creating"
+                                                                       value="Select icon">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -379,8 +391,8 @@
                                                 <div class="col-sm-4">
                                                     <div class="row">
                                                         <div class="col-xs-4">
-                                                            <label class="control-label required">Status:</label>
                                                             <div class="form-group">
+                                                                <label class="control-label required">Status:</label>
                                                                 <div class="radio">
                                                                     <input type="radio" id="activeRadio" value="Active" checked=""
                                                                            data-ng-model="settingListCtrl.selectedRecommendation.status"
@@ -403,7 +415,8 @@
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <div class="form-group">
-                                                                <label for="recommendationActiveFrom" class="control-label required">Active from:</label>
+                                                                <label for="recommendationActiveFrom" class="control-label required">Active
+                                                                    from:</label>
                                                                 <input type="date"
                                                                        class="form-control"
                                                                        id="recommendationActiveFrom"
@@ -414,52 +427,42 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
-                                                        <label for="recommendationActiveFrom" class="control-label">Due date:</label>
+                                                        <label for="recommendationDueDate" class="control-label">Due date:</label>
                                                         <input type="date"
                                                                class="form-control"
-                                                               id="recommendationActiveFrom"
-                                                               data-ng-model="settingListCtrl.selectedRecommendation.activeFrom">
+                                                               id="recommendationDueDate"
+                                                               data-ng-model="settingListCtrl.selectedRecommendation.dueDate">
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12 mt-30">
-                                                    <h4>Actions</h4>
+                                                <div class="col-sm-12">
                                                     <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <table class="table table-striped table-bordered table-hover dataTables-example dataTable" aria-describedby="DataTables" role="grid">
-                                                                <thead>
-                                                                    <tr role="row">
-                                                                        <th width="44%" colspan="1" rowspan="1">Action type</th>
-                                                                        <th width="44%" colspan="1" rowspan="1">Action target</th>
-                                                                        <th width="12%" colspan="1" rowspan="1">Actions</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr class="gradeA odd" role="row">
-                                                                        <td class="sorting_1">
-                                                                            <select class="form-control"
-                                                                                    ng-options="action.type for action in settingListCtrl.actions track by action.type"
-                                                                                    ng-model="settingListCtrl.selectedAction"
-                                                                                    data-ng-change="settingListCtrl.changeAction(settingListCtrl.selectedAction)">
-                                                                                <option value="">--Select action name--</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td>
-                                                                            <select class="form-control"
-                                                                                    ng-options="target.name for target in settingListCtrl.selectedAction.targets"
-                                                                                    ng-model="settingListCtrl.selectedTarget">
-                                                                                <option value="">--Select action target--</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="recommendationAction">Action Type</label>
+                                                                <select class="form-control"
+                                                                        id="recommendationAction"
+                                                                        data-ng-options="action.type for action in settingListCtrl.actions track by action.type"
+                                                                        data-ng-model="settingListCtrl.selectedRecommendation.action"
+                                                                        data-ng-change="settingListCtrl.selectedRecommendation.target = action.targets[0];">
+                                                                    <option value="">-- Select action name --</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="recommendationTarget">Action Target</label>
+                                                                <select class="form-control"
+                                                                        id="recommendationTarget"
+                                                                        data-ng-options="target.name for target in settingListCtrl.actionTargets track by target.name"
+                                                                        data-ng-model="settingListCtrl.selectedRecommendation.target">
+                                                                    <option value="">-- Select action target --</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -474,17 +477,21 @@
                 </div>
 
             </div>
-            <div role="tabpanel" id="Announcements" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'Announcements' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="Announcements" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'Announcements' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
-                            <li role="presentation" data-ng-repeat="(index, announcementData ) in settingListCtrl.settingsAnnouncementData" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'saveannouncements',
+                            <li role="presentation" data-ng-repeat="(index, announcementData ) in settingListCtrl.settingsAnnouncementData"
+                                data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'saveannouncements',
                                 settingListCtrl.settingsAnnouncementData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#announcement{{index}}" data-ng-drag="true" target="_self" aria-controls="home" data-ng-drag-data="announcementData" role="tab" data-toggle="tab">{{announcementData.AnnouncementName}}</a>
+                                <a href="#announcement{{index}}" data-ng-drag="true" target="_self" aria-controls="home"
+                                   data-ng-drag-data="announcementData" role="tab" data-toggle="tab">{{announcementData.AnnouncementName}}</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" data-ng-repeat="(announcementIndex, announcement ) in settingListCtrl.settingsAnnouncementData" data-ng-class="announcementIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditAnnouncement(settingListCtrl.settingsAnnouncementData,
+                            <div role="tabpanel" data-ng-repeat="(announcementIndex, announcement ) in settingListCtrl.settingsAnnouncementData"
+                                 data-ng-class="announcementIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditAnnouncement(settingListCtrl.settingsAnnouncementData,
                                  announcementIndex, true)" id="announcement{{announcementIndex}}">
                                 <div class="panel-body">
                                     <div class="col-xs-12 col-sm-12">
@@ -536,14 +543,16 @@
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" id="PointsMatrix" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'PointsMatrix' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="PointsMatrix" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'PointsMatrix' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
                             <li role="presentation" data-ng-repeat="(index, pointMatrixData ) in settingListCtrl.pointMatrixData
                                  track by $index" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'savepointsmatrix',
                                 settingListCtrl.pointMatrixData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#point{{index}}" data-ng-drag="true" data-ng-drag-data="pointMatrixData" target="_self" aria-controls="home" role="tab" data-toggle="tab">
+                                <a href="#point{{index}}" data-ng-drag="true" data-ng-drag-data="pointMatrixData" target="_self" aria-controls="home"
+                                   role="tab" data-toggle="tab">
                                     {{pointMatrixData.ActionDisplayName}}
                                 </a>
                             </li>
@@ -652,14 +661,16 @@
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" id="Incentives" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'Incentives' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="Incentives" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'Incentives' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
                             <li role="presentation" data-ng-repeat="(index, pointMatrixData ) in settingListCtrl.manageIncentiveData
                                  track by $index" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'savepointsmatrix',
                                 settingListCtrl.pointMatrixData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#point{{index}}" data-ng-drag="true" data-ng-drag-data="pointMatrixData" target="_self" aria-controls="home" role="tab" data-toggle="tab">
+                                <a href="#point{{index}}" data-ng-drag="true" data-ng-drag-data="pointMatrixData" target="_self" aria-controls="home"
+                                   role="tab" data-toggle="tab">
                                     {{pointMatrixData.ActionDisplayName}}
                                 </a>
                             </li>
@@ -768,17 +779,21 @@
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" id="AuthenticationFields" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'AuthenticationFields' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="AuthenticationFields" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'AuthenticationFields' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
-                            <li role="presentation" data-ng-repeat="(index, authFieldData ) in settingListCtrl.authenticationFieldData" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'saveauthenticationfields',
+                            <li role="presentation" data-ng-repeat="(index, authFieldData ) in settingListCtrl.authenticationFieldData"
+                                data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'saveauthenticationfields',
                                 settingListCtrl.authenticationFieldData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#authField{{index}}" data-ng-drag="true" target="_self" aria-controls="home" data-ng-drag-data="authFieldData" role="tab" data-toggle="tab">{{authFieldData.DisplayFieldName}}</a>
+                                <a href="#authField{{index}}" data-ng-drag="true" target="_self" aria-controls="home"
+                                   data-ng-drag-data="authFieldData" role="tab" data-toggle="tab">{{authFieldData.DisplayFieldName}}</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" data-ng-repeat="(authIndex, authField ) in settingListCtrl.authenticationFieldData" data-ng-class="authIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditAuthField(settingListCtrl.authenticationFieldData,
+                            <div role="tabpanel" data-ng-repeat="(authIndex, authField ) in settingListCtrl.authenticationFieldData"
+                                 data-ng-class="authIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditAuthField(settingListCtrl.authenticationFieldData,
                                  authIndex, true)" id="authField{{authIndex}}">
                                 <div class="panel-body">
                                     <div class="col-xs-12 col-sm-12">
@@ -821,17 +836,21 @@
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" id="IntroScreen" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'IntroScreen' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="IntroScreen" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'IntroScreen' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
-                            <li role="presentation" data-ng-repeat="(index, introScreenData ) in settingListCtrl.introScreenData" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'saveintroscreens',
+                            <li role="presentation" data-ng-repeat="(index, introScreenData ) in settingListCtrl.introScreenData" data-ng-drop="true"
+                                ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'saveintroscreens',
                                 settingListCtrl.introScreenData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#intro{{index}}" data-ng-drag="true" data-ng-drag-data="introScreenData" target="_self" aria-controls="home" role="tab" data-toggle="tab">{{introScreenData.Name}}</a>
+                                <a href="#intro{{index}}" data-ng-drag="true" data-ng-drag-data="introScreenData" target="_self" aria-controls="home"
+                                   role="tab" data-toggle="tab">{{introScreenData.Name}}</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" data-ng-repeat="(introIndex, introScreen) in settingListCtrl.introScreenData" data-ng-class="introIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditIntroScreen(settingListCtrl.introScreenData,
+                            <div role="tabpanel" data-ng-repeat="(introIndex, introScreen) in settingListCtrl.introScreenData"
+                                 data-ng-class="introIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditIntroScreen(settingListCtrl.introScreenData,
                                  introIndex, true)" id="intro{{introIndex}}">
                                 <div class="panel-body">
                                     <div class="col-xs-12 col-sm-12">
@@ -893,17 +912,21 @@
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" id="MarketingTiles" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'MarketingTiles' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="MarketingTiles" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'MarketingTiles' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
-                            <li role="presentation" data-ng-repeat="(index, marketingTileData ) in settingListCtrl.marketingTileData" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'savemarketingtiles',
+                            <li role="presentation" data-ng-repeat="(index, marketingTileData ) in settingListCtrl.marketingTileData"
+                                data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'savemarketingtiles',
                                 settingListCtrl.marketingTileData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#marketing{{index}}" data-ng-drag="true" data-ng-drag-data="marketingTileData" target="_self" aria-controls="home" role="tab" data-toggle="tab">{{marketingTileData.Name}}</a>
+                                <a href="#marketing{{index}}" data-ng-drag="true" data-ng-drag-data="marketingTileData" target="_self"
+                                   aria-controls="home" role="tab" data-toggle="tab">{{marketingTileData.Name}}</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" data-ng-repeat="(tileIndex, marketingTile) in settingListCtrl.marketingTileData" data-ng-class="tileIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditMarketingTileScreen(
+                            <div role="tabpanel" data-ng-repeat="(tileIndex, marketingTile) in settingListCtrl.marketingTileData"
+                                 data-ng-class="tileIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditMarketingTileScreen(
                                  settingListCtrl.marketingTileData, tileIndex, true)" id="marketing{{tileIndex}}">
                                 <div class="panel-body">
                                     <div class="col-xs-12 col-sm-12">
@@ -984,17 +1007,21 @@
                     </div>
                 </div>
             </div>
-            <div role="tabpanel" id="MyCompany" class="animated fadeInDown ng-cloak" data-ng-class="settingMenuData.ClassType[0] === 'MyCompany' ? 'tab-pane active': 'tab-pane fade'">
+            <div role="tabpanel" id="MyCompany" class="animated fadeInDown ng-cloak"
+                 data-ng-class="settingMenuData.ClassType[0] === 'MyCompany' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
                     <div class="tabs-left">
                         <ul class="nav nav-tabs draglist" role="tablist">
-                            <li role="presentation" data-ng-repeat="(index, myCompanyData ) in settingListCtrl.myCompanyData" data-ng-drop="true" ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'savemycompany',
+                            <li role="presentation" data-ng-repeat="(index, myCompanyData ) in settingListCtrl.myCompanyData" data-ng-drop="true"
+                                ng-drop-success="settingListCtrl.onDropComplete(index, $data, 'savemycompany',
                                 settingListCtrl.myCompanyData)" data-ng-class="index === 0 ? 'active' : ''">
-                                <a href="#myCompany{{index}}" data-ng-drag="true" data-ng-drag-data="myCompanyData" target="_self" aria-controls="home" role="tab" data-toggle="tab">{{myCompanyData.Name}}</a>
+                                <a href="#myCompany{{index}}" data-ng-drag="true" data-ng-drag-data="myCompanyData" target="_self"
+                                   aria-controls="home" role="tab" data-toggle="tab">{{myCompanyData.Name}}</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" data-ng-repeat="(companyIndex, myCompany) in settingListCtrl.myCompanyData" data-ng-class="companyIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditMyCompanyScreen(
+                            <div role="tabpanel" data-ng-repeat="(companyIndex, myCompany) in settingListCtrl.myCompanyData"
+                                 data-ng-class="companyIndex === 0 ? 'tab-pane active' : 'tab-pane fade'" data-ng-click="settingListCtrl.createEditMyCompanyScreen(
                                  settingListCtrl.myCompanyData, companyIndex, true)" id="myCompany{{companyIndex}}">
                                 <div class="panel-body">
                                     <div class="col-xs-12 col-sm-12">

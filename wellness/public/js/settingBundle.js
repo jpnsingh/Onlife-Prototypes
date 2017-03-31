@@ -3396,17 +3396,6 @@
                                         self.constructSettingGrid(data, $scope.settingMenuData.ClassType[0]);
                                     });
 
-
-
-                                self.recommendationsApplicable = {
-                                    "Architect": [
-                                        "HealthTrust",
-                                        "Group 1",
-                                        "Group 2",
-                                        "Group 3"
-                                    ]
-                                };
-
                                 $http
                                     .get('Recommendations.json')
                                     .then(function (response) {
@@ -3438,31 +3427,26 @@
                             }
                         }
                     };
-                    self.navigateToRecommendation = function () {
-                       $('#programModal').modal('toggle');
 
-                            $location.path('/setting/recommendations');
-                            window.setTimeout(function() {
-                                window.location.reload();
-                            }, 100);
+                    self.navigateToRecommendation = function () {
+                        $('#programModal').modal('toggle');
+
+                        $location.path('/setting/recommendations');
+                        window.setTimeout(function () {
+                            window.location.reload();
+                        }, 100);
 
                     };
+
                     function setRecommendationsView() {
                         self.hidePrograms = true;
                         self.hideFilter = true;
-                        self.addAction = [];
-                        self.recommendationsApplicable = {
-                            "Architect": [
-                                "HealthTrust",
-                                "Group 1",
-                                "Group 2",
-                                "Group 3"
-                            ]
-                        };
 
-                        $scope.tableRow = [
-                            { id: 1 }
-                        ];
+                        $http
+                            .get('Recommendations.json')
+                            .then(function (response) {
+                                self.recommendations = response.data;
+                            });
 
                         $http
                             .get('RecommendationActions.json')
@@ -3470,29 +3454,33 @@
                                 self.actions = response.data;
                             });
 
-                        self.changeAction = function (selectedAction) {
-                            self.selectedTarget = selectedAction.targets;
-                        }
-
-                        self.addRecommnedationAction = function () {
-                            self.selectedRecommendation.actions.push({type: '', targets: []})
-                            var mock = {
-                                id: $scope.tableRow.length + 1
-                            };
-
-                            $scope.tableRow.push(mock)
-                        }
-
-                        self.removeThisRow = function (index) {
-                            self.selectedRecommendation.actions.splice(index, 1)
-                        }
-
                         $http
-                            .get('Recommendations.json')
+                            .get('RecommendationTargets.json')
                             .then(function (response) {
-                                self.recommendations = response.data;
+                                self.targets = response.data;
                             });
-             
+
+                        $scope.$watch('settingListCtrl.selectedRecommendation.action', function (newVal, oldVal) {
+                            if (newVal) {
+                                self.actionTargets = _.find(self.targets, {key: newVal.key}).targets;
+                                if (!self.selectedRecommendation.target && _.isEmpty(self.selectedRecommendation.target)) {
+                                    self.selectedRecommendation.target = self.actionTargets[0];
+                                }
+                            }
+                        }, true);
+
+                        self.addRecommendation = function () {
+                            self.creating = true;
+                            self.selectedRecommendation = {};
+                            self.selectedRecommendation.status = true;
+                            self.selectedRecommendation.activeFrom = new Date();
+                        };
+
+                        self.editRecommendation = function (recommendation) {
+                            self.creating = false;
+                            self.selectedRecommendation = recommendation;
+                            self.selectedRecommendation.activeFrom = new Date('01/01/2017');
+                        };
                     }
 
                     self.getSettingData = function (settingName) {
@@ -3766,21 +3754,23 @@
                                 {
                                     name: 'Journey Name', width: 300, field: 'JourneyName',
                                     cellTemplate: '<div class="ui-grid-cell-contents"> ' +
-                                        '<a href="javascript:void(0)" ' +
-                                        'data-toggle="modal" data-target="#programModal" ' +
-                                        'data-ng-click="grid.appScope.selectProgram(row.entity)">{{row.entity.JourneyName}} ' +
-                                        '</a></div>'
+                                    '<a href="javascript:void(0)" ' +
+                                    'data-toggle="modal" data-target="#programModal" ' +
+                                    'data-ng-click="grid.appScope.selectProgram(row.entity)">{{row.entity.JourneyName}} ' +
+                                    '</a></div>'
                                 },
                                 {name: 'Type', field: 'Type', cellTooltip: true},
                                 {name: 'Assigned To', field: 'AssignedTo', cellTooltip: true},
                                 {name: 'Status', field: 'Status'}
                             ]
                         };
+
                     self.programsGrid.enableVerticalScrollbar = false;
+
                     $scope.selectProgram = function (entity) {
-                        var listArray = [];
                         $scope.selectedProgram = entity;
-                    }
+                        $scope.selectedProgram.ActiveFrom = new Date('01/01/2017');
+                    };
 
                     self.settingsGrid.onRegisterApi = function (gridApi) {
                         //set gridApi on scope
