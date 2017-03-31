@@ -254,6 +254,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="due-date">
+                                Due Date: 21st April
+                            </div>
+
 
                             <div class="next-recommendation second none">
                                 <div class="health-assess-info remind-wrapper">
@@ -282,15 +286,14 @@
                                             <label for="{{option.id}}">{{option.label}}</label>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 mt-40 text-center" data-ng-if="dashboardCtrl.selectedRemindMeOption">
+                                    <!--<div class="col-sm-12 mt-40 text-center" data-ng-if="dashboardCtrl.selectedRemindMeOption">
                                         <label class="control-label">You haven't started the Health Assessment. As it is mandatory we will remind you to complete Health Assessment <span class="text-bold">{{dashboardCtrl.selectedRemindMeOption.label | lowercase}}</span></label>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <div class="description">
                                     <div class="row">
                                         <div class="col-sm-12 button-wrapper">
-                                            <button class="button button--small button--default remind-not-now"
-                                                    data-ng-disabled="!dashboardCtrl.selectedRemindMeOption">
+                                            <button class="button button--small button--default remind-not-now">
                                                 Submit
                                             </button>
                                         </div>
@@ -467,26 +470,6 @@
                     </div>
                     <div class="col-sm-3">
                         <figure class="view view-first view-third-box">
-                            <img src="../../assets/images/tiles/Onlife_Coach.jpg" alt="Mary's Coach" class="img-responsive" />
-                            <div class="description">
-                                <div class="col-sm-12 text-center">
-                                    <span class="tile-icon icon-onlife_coach"></span>
-                                </div>
-                                <h2>Reach out to a Coach</h2>
-                            </div>
-                            <div class="mask">
-                                <p>Working with a coach is another to way to use the power of a support system to help you realize your wellness goals. </p>
-                                <div class="col-sm-3 col-sm-offset-1">
-                                    <i class="icon-onlife_chat text-white chat-icon"></i>
-                                </div>
-                                <div class="col-sm-8 text-left">
-                                    <button class="button button--large button--default" data-toggle="modal" data-target="#schedule-appointment">Schedule</button>
-                                </div>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-sm-3">
-                        <figure class="view view-first view-third-box">
                             <img src="../../assets/images/tiles/Onlife_Connect_App.jpg" alt="Connect App" class="img-responsive" />
                             <div class="description">
                                 <div class="col-sm-12 text-center">
@@ -520,9 +503,9 @@
                                 50 <span class="pts-lbl">pts</span>
                             </div>
                         </figure>
-                        <article class="article">
+                        <!--<article class="article">
                             <p>Expand your connection by bringing your family & friends. Your own fans will recommend you, what guarantees new fans better quality. </p>
-                        </article>
+                        </article>-->
                     </div>
                 </div>
 

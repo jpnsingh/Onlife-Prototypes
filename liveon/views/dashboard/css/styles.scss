@@ -1,42 +1,7 @@
 
 @import "../../../styles/master";
 
-.health-steps {
-	position: relative;
-	background: $dark_blue;
-	margin: 39px 0 0 0;
-	padding: 1em;
-	text-align: center;
-	color: $white;
-	width: 80%;
-	&:after, &:before {
-		left: 100%;
-		top: 50%;
-		border: solid transparent;
-		content: " ";
-		height: 0;
-		width: 0;
-		position: absolute;
-		pointer-events: none;
-	}
-	&:after {
-		border-color: rgba(136, 183, 213, 0);
-		border-left-color: $dark_blue;
-		border-width: 21px;
-		margin-top: -21px;
-	}
-}
-.points-count-top {
-	.value {
-		color: $dark_blue;
-		font-size: 2em;
-		font-weight: bold;
-	}
-	.label-txt {
-		font-size: 0.8em;
-		color: $light_gray;
-	}	
-}
+
 .points-count {
 	.value {
 		color: $dark_blue;
@@ -51,62 +16,7 @@
 		color: $light_gray;
 	}
 }
-.article {
-	padding: 0.5em;
-	color: $dark_gray;
-	background: $white;
-	border-bottom: 4px solid $purple;
-	@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.25));
-	h3 {
-		color: $dark_gray;
-		font-weight: bold;
-		font-size: 1.2em;
-		margin: 0.5em 0;
-	}
-	p {
-		line-height: 22px;
-	}
-}
 
-.next-recommendation {
-	background: rgba(255, 255, 255, 0.8);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 2em;
-	text-align: left;
-	line-height: 22px;
-	.health-assess-info {
-		.header-tile {
-			font-size: 2em;
-			margin-bottom: 0.5em;
-			font-weight: bold;
-			color: $dark_blue;
-			text-align: center;
-		}
-		.question {
-			font-size: 1.3em;
-			font-weight: bold;
-			color: $dark_gray;
-		}
-		.radio, .remind-ques {
-			font-size: 1.3em;
-			&.first-item {
-				margin-top: 3em;
-			}
-		}
-	}
-	.ha-icon {
-		font-size: 3em;
-		color: $dark_blue;
-	}
-}
-.connect-device {
-    font-size: 1.5em;
-    margin: 15px 0;
-}
 .qa-code {
 	margin: 1em 0 0 0;
 }
