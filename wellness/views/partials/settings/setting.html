@@ -164,15 +164,6 @@
                                                                data-ng-model="selectedProgram.ActiveFrom">
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label for="recommendationActiveFrom" class="control-label">Applicable to</label>
-                                                        <select class="form-control"
-                                                            ng-options = "row for row in settingListCtrl.recommendationsApplicable['Architect']"
-                                                            ng-model="applicableTo">
-                                                        </select>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
@@ -223,7 +214,7 @@
                                 <span class="pull-left">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                 </span>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save & Close</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="creatingJourney = false">Save & Close</button>
                             </div>
                         </div>
                     </div>
@@ -234,8 +225,8 @@
                 <header class="col-sm-12">
                     <p>Here is a list of various recommendation available for you to create a journey. These recommendations are predefined by Onlife and can be used to create a custom journeys. You may add new recommendations using the 'Add recommendation' button.</p>
                 </header>
-
                 <div class="col-sm-12">
+                <br/>
                     <div class="row">
                         <div class="col-sm-7">
                             <div class="input-group">
@@ -249,7 +240,18 @@
                                         type="button"
                                         data-toggle="modal"
                                         data-target="#createRecommendationModal"
-                                        data-ng-click="settingListCtrl.creating = true; settingListCtrl.selectedRecommendation = {actions: []}">
+                                        data-ng-click="settingListCtrl.creating = true; settingListCtrl.selectedRecommendation = 
+                                         {actions:[
+                                            {
+                                                type:'--Select action type--', 
+                                                'target': [ 
+                                                    {
+                                                        'name':'--Select action name--'
+                                                    } 
+                                                ]
+                                            }]
+                                        };
+                                        settingListCtrl.selectedAction = settingListCtrl.selectedRecommendation.actions[0];">
                                     Add Recommendation
                                 </button>
                             </span>
@@ -275,7 +277,10 @@
                                                 <a href="javascript:void(0)"
                                                    data-toggle="modal"
                                                    data-target="#createRecommendationModal"
-                                                   data-ng-click="settingListCtrl.creating = false; settingListCtrl.selectedRecommendation = recommendation; settingListCtrl.addAction = [{type: '', targets: []}]">
+                                                   data-ng-click="settingListCtrl.creating = false; settingListCtrl.selectedRecommendation = recommendation;
+                                                   settingListCtrl.selectedAction = settingListCtrl.selectedRecommendation.actions[0];
+                                                   settingListCtrl.selectedTarget = 
+                                                   settingListCtrl.selectedAction.targets[0]">
                                                     {{recommendation.title}}
                                                 </a>
                                             </h3>
@@ -305,16 +310,22 @@
                                     <div class="p-x-15">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="recommendationTitle" class="control-label">Title</label>
+                                                <label for="recommendationTitle" class="control-label required">Title</label>
                                                 <input type="text" class="form-control" id="recommendationTitle" data-ng-model="settingListCtrl.selectedRecommendation.title">
                                             </div>
                                         </div>
-
+                                        <div class ="col-sm-12">
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                  <label class="checkbox-label"><input type="checkbox" value="">Mandatory</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-sm-12 why-section">
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
-                                                        <label for="recommendationDescriptionWhy" class="control-label">Why ?</label>
+                                                        <label for="recommendationDescriptionWhy" class="control-label required">Why ?</label>
                                                         <textarea class="form-control" rows="6"
                                                                   id="recommendationDescriptionWhy"
                                                                   data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhy"></textarea>
@@ -344,7 +355,7 @@
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <div class="row">
-                                                            <label for="recommendationImage" class="control-label col-xs-6">{{settingListCtrl.creating ? 'Select image:' : 'Image:'}}</label>
+                                                            <label for="recommendationImage" class="control-label required col-xs-6">{{settingListCtrl.creating ? 'Select image:' : 'Image:'}}</label>
                                                             <div class="col-xs-6 text-center">
                                                                 <img id="recommendationImage"
                                                                      data-ng-if="!settingListCtrl.creating" style="max-width: 40px;"
@@ -355,7 +366,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="row">
-                                                            <label for="recommendationIcon" class="control-label col-xs-6">{{settingListCtrl.creating ? 'Select icon:' : 'Icon:'}}</label>
+                                                            <label for="recommendationIcon" class="control-label required col-xs-6">{{settingListCtrl.creating ? 'Select icon:' : 'Icon:'}}</label>
                                                             <div class="col-xs-6 text-center">
                                                                 <img id="recommendationIcon" style="max-width: 40px;"
                                                                      data-ng-if="!settingListCtrl.creating"
@@ -368,7 +379,7 @@
                                                 <div class="col-sm-4">
                                                     <div class="row">
                                                         <div class="col-xs-4">
-                                                            <label class="control-label">Status:</label>
+                                                            <label class="control-label required">Status:</label>
                                                             <div class="form-group">
                                                                 <div class="radio">
                                                                     <input type="radio" id="activeRadio" value="Active" checked=""
@@ -392,7 +403,7 @@
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <div class="form-group">
-                                                                <label for="recommendationActiveFrom" class="control-label">Active from:</label>
+                                                                <label for="recommendationActiveFrom" class="control-label required">Active from:</label>
                                                                 <input type="date"
                                                                        class="form-control"
                                                                        id="recommendationActiveFrom"
@@ -403,10 +414,11 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
-                                                        <label for="recommendationActiveFrom" class="control-label">Applicable to:</label>
-                                                        <select class="form-control">
-                                                            <option ng-repeat="row in settingListCtrl.recommendationsApplicable['Architect']" value="{{row}}">{{row}}</option>
-                                                        </select>
+                                                        <label for="recommendationActiveFrom" class="control-label">Due date:</label>
+                                                        <input type="date"
+                                                               class="form-control"
+                                                               id="recommendationActiveFrom"
+                                                               data-ng-model="settingListCtrl.selectedRecommendation.activeFrom">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 mt-30">
@@ -422,46 +434,24 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr ng-repeat="recommendationAction in settingListCtrl.selectedRecommendation.actions" class="gradeA odd" role="row">
-                                                                    <td>
-                                                                        {{recommendationAction.type}}
-                                                                    </td>
-                                                                    <td>
-                                                                        {{recommendationAction.targets[0].name}}
-                                                                    </td>
-                                                                        <td class="call-action">
-                                                                            <i class="fa fa-trash" 
-                                                                               ng-click="settingListCtrl.removeThisRow($index)"></i>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="gradeA odd" ng-repeat="newAction in settingListCtrl.addAction" role="row">
+                                                                    <tr class="gradeA odd" role="row">
                                                                         <td class="sorting_1">
                                                                             <select class="form-control"
-                                                                                    ng-options="action.type for action in settingListCtrl.actions"
-                                                                                    ng-model="settingListCtrl.selectedAction[$index]"
-                                                                                    data-ng-change="settingListCtrl.changeAction(settingListCtrl.selectedAction, $index)">
-                                                                                <option value="">--Select action type--</option>
+                                                                                    ng-options="action.type for action in settingListCtrl.actions track by action.type"
+                                                                                    ng-model="settingListCtrl.selectedAction"
+                                                                                    data-ng-change="settingListCtrl.changeAction(settingListCtrl.selectedAction)">
+                                                                                <option value="">--Select action name--</option>
                                                                             </select>
                                                                         </td>
                                                                         <td>
                                                                             <select class="form-control"
-                                                                                    ng-options="target.name for target in settingListCtrl.selectedAction[$index].targets"
-                                                                                    ng-model="settingListCtrl.selectedTarget[$index]">
+                                                                                    ng-options="target.name for target in settingListCtrl.selectedAction.targets"
+                                                                                    ng-model="settingListCtrl.selectedTarget">
                                                                                 <option value="">--Select action target--</option>
                                                                             </select>
                                                                         </td>
-                                                                        <td class="call-action">
-                                                                            <i class="fa fa-trash" 
-                                                                               data-ng-hide="settingListCtrl.addAction.length === 1"
-                                                                               ng-click="settingListCtrl.removeThisRow($index)"></i>
-                                                                        </td>
                                                                     </tr>
                                                                 </tbody>
-                                                                <tfoot>
-                                                                    <tr>
-                                                                        <td colspan="3" class="text-right"><button class="btn btn-primary" type="button" ng-click="settingListCtrl.addRecommnedationAction()">Add</button></td>
-                                                                    </tr>
-                                                                </tfoot>
                                                             </table>
                                                         </div>
                                                     </div>

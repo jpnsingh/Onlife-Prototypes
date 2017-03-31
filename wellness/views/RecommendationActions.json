@@ -10,6 +10,9 @@
       },
       {
         "name": "https://contentstore.onlifehealth.com/articles/stress/list/003"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
       }
     ]
   },
@@ -24,6 +27,9 @@
       },
       {
         "name": "https://contentstore.onlifehealth.com/videos/stress/list/003"
+      },
+      {
+        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/003"
       }
     ]
   },
@@ -125,6 +131,14 @@
       {
         "name": "Navigate to HA"
       }
+    ]
+  },
+  {
+    "type": "Schedule",
+    "targets": [
+        {
+            "name": "BMS Info Page"
+        }
     ]
   },
   {

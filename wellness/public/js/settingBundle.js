@@ -2264,6 +2264,7 @@
              * @memberOf Hash
              * @param {string} key The key of the value to set.
              * @param {*} value The value to set.
+
              * @returns {Object} Returns the hash instance.
              */
             function hashSet(key, value) {
@@ -3354,8 +3355,8 @@
             ]
         ).controller('SettingListController',
             [
-                '$scope', '$http', 'settingService', '$location', 'primaryModal', 'settingSaveService', 'lookupService',
-                function ($scope, $http, settingService, $location, primaryModal, settingSaveService, lookupService) {
+                '$scope', '$http', 'settingService', '$location', 'primaryModal', 'settingSaveService', 'lookupService', '$state',
+                function ($scope, $http, settingService, $location, primaryModal, settingSaveService, lookupService, $state) {
                     var self = this;
                     self.lookupData = [];
                     self.pointMatrixData = [];
@@ -3374,6 +3375,7 @@
                             MyCompany: 'Complex',
                             Incentives: 'Complex',
                             Programs: 'General',
+                            Recommendations: 'General',
                             SettingNameValueCollection: 'General'
                         };
                         return settings[settingName];
@@ -3394,11 +3396,7 @@
                                         self.constructSettingGrid(data, $scope.settingMenuData.ClassType[0]);
                                     });
 
-                                self.navigateToRecommendation = function () {
-                                    $('#programModal').modal('toggle');
-                                    $location.path('/setting/recommendations');
-                                    window.location.reload();
-                                }
+
 
                                 self.recommendationsApplicable = {
                                     "Architect": [
@@ -3440,7 +3438,15 @@
                             }
                         }
                     };
+                    self.navigateToRecommendation = function () {
+                       $('#programModal').modal('toggle');
 
+                            $location.path('/setting/recommendations');
+                            window.setTimeout(function() {
+                                window.location.reload();
+                            }, 100);
+
+                    };
                     function setRecommendationsView() {
                         self.hidePrograms = true;
                         self.hideFilter = true;
@@ -3464,12 +3470,12 @@
                                 self.actions = response.data;
                             });
 
-                        self.changeAction = function (selectedAction, index) {
-                            self.selectedTarget[index] = selectedAction[index].targets;
+                        self.changeAction = function (selectedAction) {
+                            self.selectedTarget = selectedAction.targets;
                         }
 
                         self.addRecommnedationAction = function () {
-                            self.addAction.push({type: '', targets: []})
+                            self.selectedRecommendation.actions.push({type: '', targets: []})
                             var mock = {
                                 id: $scope.tableRow.length + 1
                             };
@@ -3478,7 +3484,7 @@
                         }
 
                         self.removeThisRow = function (index) {
-                            self.addAction.splice(index, 1)
+                            self.selectedRecommendation.actions.splice(index, 1)
                         }
 
                         $http
@@ -3491,7 +3497,6 @@
 
                     self.getSettingData = function (settingName) {
                         if (settingName === 'SettingNameValueCollection') {
-                            window.console.log('getSettingData');
                             self.getCurrentSettings();
                         }
                         else {
@@ -3505,9 +3510,7 @@
                     self.constructSettingGrid = function (data, settingName) {
                         self.hideFilter = ((settingName === 'SettingNameValueCollection') ||
                         (settingName === 'AuthenticationFields') || (settingName === 'Programs'));
-                        window.console.log('settingName', settingName);
                         self.hidePrograms = (settingName !== 'Programs');
-                        window.console.log('hidePrograms', self.hidePrograms);
                         self.showCurrentSetting = false;
                         var settings = {
                             PointsMatrix: function () {
@@ -3976,7 +3979,6 @@
                     self.menuClass = [];
                     $scope.isSelected = false;
                     $scope.group = {};
-
                     self.getSettingMenu = function () {
                         settingService.getSettingMenu().then(function (data) {
                             self.settingMenu = data.data.SettingMenuCollection;
@@ -3999,7 +4001,6 @@
                     self.viewSetting = function (settingMenu, index) {
                         self.menuClass = [];
                         self.menuClass[index] = 'active';
-                        window.console.log('settingMenu', settingMenu);
                         $scope.settingMenuData = settingMenu;
                         $location.path('/setting/' + settingMenu.MenuIdentifier.toLowerCase());
                     };
@@ -4030,7 +4031,6 @@
 
                     self.getGroupData();
                     var sss = $location.path();
-
                     if (sss === '/setting/announcements') {
                         var pp = {
                             "DisplayName": "Announcements",
@@ -4090,7 +4090,6 @@
                             "MenuIdentifier": "Programs",
                             "Category": "Programs"
                         }
-
                         self.viewSetting(thisNameIsClearlyMinimized, 4);
                     }
 

@@ -56,14 +56,6 @@
             "name": "Manage Stress"
           }
         ]
-      },
-      {
-        "type": "Watch a Video",
-        "targets": [
-          {
-            "name": "https://contentstore.onlifehealth.com/videos/stress/list/001"
-          }
-        ]
       }
     ]
   },
@@ -164,7 +156,16 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "contact_coach_icon.png",
-    "actions": []
+    "actions": [
+      {
+        "type": "Set a Goal",
+        "targets": [
+          {
+            "name": "Improve Fitness Level"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Adieu Sodium!",
@@ -175,7 +176,16 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "meditation_icon.png",
-    "actions": []
+    "actions": [
+      {
+        "type": "Watch a Video",
+        "targets": [
+          {
+            "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/003"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Rainbow Palate",
@@ -186,8 +196,16 @@
     "status": true,
     "activeFrom": "new Date()",
     "icon": "meditation_icon.png",
-    "actions": []
-  },
+    "actions": [
+      {
+        "type": "Read an Article",
+        "targets": [
+          {
+            "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
+          }
+        ]
+      }
+    ]  },
   {
     "title": "Always on the Go? Download our mobile app!",
     "descriptionWhy": "With easy to access to all the features, you are able to keep tabs on your health as you move. Reach out to coaches or track your goals. AlwaysOn is there for you!",
