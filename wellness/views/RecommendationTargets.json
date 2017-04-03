@@ -3,22 +3,22 @@
     "key": "readArticle",
     "targets": [
       {
-        "name": "https://contentstore.onlifehealth.com/articles/stress/list/001"
+        "name": "Stress | Meditation in under 5 minutes"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/articles/stress/list/002"
+        "name": "Stress | Succeed with Managing Stress"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/articles/stress/list/003"
+        "name": "Tobacco | Go Tobacco free"
+      },
+	  {
+        "name": "Tobacco | Living a Smoke Free Life"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/001"
+        "name": "Nutrition | Best dietary habits"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/002"
-      },
-      {
-        "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
+        "name": "Nutrition | Examine Food and Nutrition"
       }
     ]
   },
@@ -26,22 +26,22 @@
     "key": "watchVideo",
     "targets": [
       {
-        "name": "https://contentstore.onlifehealth.com/videos/stress/list/001"
+        "name": "Stress | Meditation – 6 minutes"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/videos/stress/list/002"
+        "name": "Stress | Science of Managing Stress – 8 minutes"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/videos/stress/list/003"
+        "name": "Tobacco | How to Quit Smoking For Good – 10 minutes"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/001"
+        "name": "Tobacco | Say bye to Tobacco – 15 minutes"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/002"
+        "name": "Nutrition | What to Eat! – 10 minutes"
       },
       {
-        "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/003"
+        "name": "Nutrition | Nutrition 101 – 13 minutes"
       }
     ]
   },

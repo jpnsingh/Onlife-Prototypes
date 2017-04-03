@@ -56,7 +56,7 @@
     },
     "target": {
       "key": "readArticle",
-      "name": "https://contentstore.onlifehealth.com/articles/stress/list/001"
+      "name": "Stress | Meditation in under 5 minutes"
     }
   },
   {
@@ -76,7 +76,7 @@
     },
     "target": {
       "key": "readArticle",
-      "name": "https://contentstore.onlifehealth.com/articles/tobacco/list/002"
+      "name": "Tobacco | Go Tobacco free"
     }
   },
   {
@@ -176,7 +176,7 @@
     },
     "target": {
       "key": "watchVideo",
-      "name": "https://contentstore.onlifehealth.com/videos/nutrition/list/001"
+      "name": "Nutrition | What to Eat! – 10 minutes"
     }
   },
   {
@@ -196,7 +196,7 @@
     },
     "target": {
       "key": "readArticle",
-      "name": "https://contentstore.onlifehealth.com/articles/nutrition/list/003"
+      "name": "Nutrition | Examine Food and Nutrition"
     }
   },
   {
