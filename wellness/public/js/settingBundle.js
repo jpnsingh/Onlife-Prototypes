@@ -3388,8 +3388,7 @@
                                 .then(function (data) {
                                     self.constructSettingGrid(data, $scope.settingMenuData.ClassType[0]);
                                 });
-                        }
-                        else {
+                        } else {
                             if ($scope.settingMenuData.MenuIdentifier === 'Programs') {
                                 settingService.getSettingData($scope.settingMenuData.ClassType[0], $scope.group.groupId)
                                     .then(function (data) {
@@ -3415,6 +3414,10 @@
                                     }
                                     return arr;
                                 }
+
+                            } else if ($scope.settingMenuData.MenuIdentifier === 'JourneyPriorities') {
+                                self.hidePrograms = true;
+                                self.hideFilter = true;
 
                             } else if ($scope.settingMenuData.MenuIdentifier === 'Recommendations') {
                                 setRecommendationsView();
@@ -4078,7 +4081,16 @@
                                 "Programs"
                             ],
                             "MenuIdentifier": "Programs",
-                            "Category": "Programs"
+                            "Category": "Programs",
+                            "SubMenu": [
+                                {
+                                    "DisplayName": "Journey Priorities",
+                                    "ClassType": [
+                                        "JourneyPriorities"
+                                    ],
+                                    "MenuIdentifier": "JourneyPriorities"
+                                }
+                            ]
                         }
                         self.viewSetting(thisNameIsClearlyMinimized, 4);
                     }

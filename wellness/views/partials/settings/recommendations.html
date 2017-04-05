@@ -1,0 +1,206 @@
+<header class="col-sm-12">
+    <p>
+        Here is a list of various recommendation available for you to create a journey. These recommendations are predefined by Onlife
+        and can be used to create a custom journeys. You may add new recommendations using the 'Add recommendation' button.
+    </p>
+</header>
+<div class="col-sm-12">
+    <br />
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area"
+                       data-ng-model="searchText">
+                <span class="input-group-addon" id="search-area"><i class="fa fa-search"></i></span>
+            </div>
+        </div>
+        <div class="col-sm-5 text-right">
+            <span>
+                <button class="btn btn-primary"
+                        type="button"
+                        data-toggle="modal"
+                        data-target="#recommendationModal"
+                        data-ng-click="settingListCtrl.addRecommendation()">
+                    Add Recommendation
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-12">
+    <div class="scroll-area">
+        <div class="recommended-content-wrap">
+            <div class="recommended-item" data-ng-repeat="recommendation in settingListCtrl.recommendations | filter:searchText">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <div class="recommended-icon">
+                            <img class="img-responsive"
+                                 data-ng-src="../public/styles/img/recommendations/icon/{{recommendation.icon}}"
+                                 alt="recommendationIcon">
+                        </div>
+                    </div>
+                    <div class="col-xs-11">
+                        <div class="recommended-content">
+                            <h3 class="recommended-header">
+                                <a href="javascript:void(0)"
+                                   data-toggle="modal"
+                                   data-target="#recommendationModal"
+                                   data-ng-click="settingListCtrl.editRecommendation(recommendation)">
+                                    {{recommendation.title}}
+                                </a>
+                            </h3>
+                            <p>
+                                {{recommendation.descriptionWhy}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="recommendationModal" tabindex="-1" role="dialog" aria-labelledby="createRecommendationModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="createRecommendationModalLabel">
+                    {{settingListCtrl.creating ? 'Create new recommendation' : 'Recommendation: ' +
+                    settingListCtrl.selectedRecommendation.title}}
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="p-x-15">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="recommendationTitle" class="control-label required">Title</label>
+                                <input type="text" class="form-control" id="recommendationTitle"
+                                       data-ng-model="settingListCtrl.selectedRecommendation.title">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 section-description">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="recommendationDescriptionWhy" class="control-label required">Why ?</label>
+                                        <textarea class="form-control" rows="6"
+                                                  id="recommendationDescriptionWhy"
+                                                  data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhy"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="recommendationDescriptionWhat" class="control-label">What ?</label>
+                                        <textarea class="form-control" rows="6"
+                                                  id="recommendationDescriptionWhat"
+                                                  data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhat"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="recommendationDescription" class="control-label">How ?</label>
+                                        <textarea class="form-control" rows="6"
+                                                  id="recommendationDescription"
+                                                  data-ng-model="settingListCtrl.selectedRecommendation.descriptionHow"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 mt-30">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="recommendationImage" class="control-label required col-xs-6">
+                                                {{settingListCtrl.creating
+                                                ? 'Select image:' : 'Image:'}}
+                                            </label>
+                                            <div class="col-xs-6 text-center">
+                                                <img id="recommendationImage"
+                                                     data-ng-if="!settingListCtrl.creating" style="max-width: 40px;"
+                                                     data-ng-src="../public/styles/img/recommendations/image/{{settingListCtrl.selectedRecommendation.image}}">
+                                                <input type="button"
+                                                       class="btn btn-primary btn-block"
+                                                       data-ng-if="settingListCtrl.creating"
+                                                       value="Select image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="recommendationIcon" class="control-label required col-xs-6">
+                                                {{settingListCtrl.creating
+                                                ? 'Select icon:' : 'Icon:'}}
+                                            </label>
+                                            <div class="col-xs-6 text-center">
+                                                <img id="recommendationIcon" style="max-width: 40px;"
+                                                     data-ng-if="!settingListCtrl.creating"
+                                                     data-ng-src="../public/styles/img/recommendations/icon/{{settingListCtrl.selectedRecommendation.icon}}">
+                                                <input type="button"
+                                                       class="btn btn-primary btn-block"
+                                                       data-ng-if="settingListCtrl.creating"
+                                                       value="Select icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="control-label required">Status:</label>
+                                        <select class="form-control">
+                                            <option value="active">Active</option>
+                                            <option value="InActive">In Active</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label" for="recommendationAction">Action Type</label>
+                                                <select class="form-control"
+                                                        id="recommendationAction"
+                                                        data-ng-options="action.type for action in settingListCtrl.actions track by action.type"
+                                                        data-ng-model="settingListCtrl.selectedRecommendation.action"
+                                                        data-ng-change="settingListCtrl.selectedRecommendation.target = action.targets[0];">
+                                                    <option value="">-- Select action name --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label" for="recommendationTarget">Action Target</label>
+                                                <select class="form-control"
+                                                        id="recommendationTarget"
+                                                        data-ng-options="target.name for target in settingListCtrl.actionTargets track by target.name"
+                                                        data-ng-model="settingListCtrl.selectedRecommendation.target">
+                                                    <option value="">-- Select action target --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-left">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </span>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save & Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,56 +15,6 @@
                 <label for="settingFilter">Current Settings</label>
             </div>
         </div>
-        <div class="col-sm-12" ng-hide="settingListCtrl.hidePrograms" ng-init="creatingJourney = false;">
-
-            <div data-ng-show="creatingJourney">
-                <div class="well">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h2>Create New Journey</h2>
-                            <h8>Select Journey Trigger</h8>
-                            <h8>The trigger you select shall determine the point at which the journey will activate for the member.</h8>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'New Enrollees'; selectedProgram.Recommendations = []">
-                                <img src="../img/OnBoarding.jpg" alt="Weight Reduction image" style="width: 200px; height: 200px">
-                                <div class="caption">
-                                    <h3>New Enrollees</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'HA Completed'; selectedProgram.Recommendations = []">
-                                <img src="../img/HealthAssessment.jpg" alt="Stress Reduction image" style="width: 200px; height: 200px">
-                                <div class="caption">
-                                    <h3>HA Completed</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Biometric Completed'; selectedProgram.Recommendations = []">
-                                <img src="../img/BMS.PNG" alt="Stress Reduction image" style="width: 200px; height: 200px">
-                                <div class="caption">
-                                    <h3>Biometric Completed (Future)</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group text-right">
-                <button class="btn"
-                        data-ng-class="{'btn-default' : creatingJourney, 'btn-primary': !creatingJourney}"
-                        type="button"
-                        data-ng-click="creatingJourney = !creatingJourney;">
-                    <span data-ng-if="!creatingJourney">Create Journey</span>
-                    <span data-ng-if="creatingJourney">Cancel</span>
-                </button>
-            </div>
-        </div>
     </div>
 
     <div class="tab-structure">
@@ -78,332 +28,40 @@
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
-            <div role="tabpanel" id="SettingNameValueCollection" data-ng-class="settingMenuData.ClassType[0] === 'SettingNameValueCollection' ? 'tab-pane active'
-                    : 'tab-pane fade'">
+            <div role="tabpanel"
+                 id="SettingNameValueCollection"
+                 data-ng-class="settingMenuData.ClassType[0] === 'SettingNameValueCollection' ? 'tab-pane active' : 'tab-pane fade'">
                 <div class="list-group" data-ng-show="settingListCtrl.settingsGrid.data.length > 0">
-                    <div ui-grid="settingListCtrl.settingsGrid" ui-grid-selection ui-grid-auto-resize class="myGrid" data-ng-cloak>
-
-                    </div>
+                    <div ui-grid="settingListCtrl.settingsGrid" 
+                         ui-grid-selection ui-grid-auto-resize class="myGrid" 
+                         data-ng-cloak></div>
                 </div>
             </div>
-            <div role="tabpanel" id="Programs" data-ng-class="settingMenuData.ClassType[0] === 'Programs' ? 'tab-pane active'
-                    : 'tab-pane fade'">
-                <div class="list-group" data-ng-if="!creatingJourney" data-ng-show="settingListCtrl.programsGrid.data.length > 0">
-                    <div ui-grid="settingListCtrl.programsGrid" ui-grid-selection ui-grid-auto-resize class="myGrid" data-ng-cloak>
-                    </div>
-                </div>
 
+            <div role="tabpanel"
+                 id="Programs"
+                 data-ng-class="settingMenuData.ClassType[0] === 'Programs' ? 'tab-pane active' : 'tab-pane fade'">
 
-                <div class="modal fade" id="programModal" tabindex="-1" role="dialog" aria-labelledby="programModalLabel">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h2 class="modal-title" id="programModalLabel">
-                                    {{creatingJourney ? 'Create New Journey' : selectedProgram.JourneyName}}
-                                </h2>
-                                <br/>
-                                <p>Please provide journey details below. You can select recommendations by clicking on the Add Button. The
-                                    recommendations will be sequenced in order that you have defined.</p>
-                            </div>
-                            <div class="modal-body">
-                                <div class="p-x-15">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <h3>Journey trigger: {{selectedProgram.Trigger}}</h3>
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label class="control-label">Journey name:</label>
-                                                        <input class="form-control" data-ng-model="selectedProgram.JourneyName"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <div class="form-group">
-                                                        <label class="control-label">Journey description:</label>
-                                                        <textarea class="form-control" rows="3">{{selectedProgram.Description}}
-                                                        </textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <label class="control-label">Status:</label>
-                                                    <div class="form-group">
-                                                        <select class="form-control">
-                                                            <option value="active">Active</option>
-                                                            <option value="inActive">In Active</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <label for="" class="control-label">Recommendations:</label>
-                                            <div class="row" data-ng-repeat="item in selectedProgram.Recommendations">
-                                                <div class="col-xs-8">
-                                                    <div class="form-group">
-                                                        <input class="form-control"
-                                                               data-ng-disabled="true"
-                                                               data-ng-model="item.title"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-1 action-buttons">
-                                                    <i class="fa fa-trash delete-icon m-t-20"
-                                                       ng-click="settingListCtrl.removeByAttr(selectedProgram.Recommendations, 'title', item.title)"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="col-xs-8">
-                                                    <div class="form-group">
-                                                        <select class="form-control"
-                                                                ng-options="recommendation.title for recommendation in settingListCtrl.programRecommendations"
-                                                                ng-model="selectedProgramRecommendation">
-                                                            <option value="">-- Select recommendation--</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-1 action-buttons">
-                                                    <button type="button"
-                                                            class="btn btn-primary"
-                                                            data-ng-disabled="!selectedProgramRecommendation"
-                                                            data-ng-click=" selectedProgram.Recommendations.push(selectedProgramRecommendation)">
-                                                        Add
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br/>
-                                        <div class="col-sm-12">
-                                            <p>Note: If you do not find recommendations you are looking for, you can create a new one
-                                                <button class="btn btn-link" data-ng-click="settingListCtrl.navigateToRecommendation();">here</button>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <span class="pull-left">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                </span>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="creatingJourney = false">Save & Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div data-ng-include="'partials/settings/programs.html'"></div>
 
             </div>
-            <div role="tabpanel" id="Recommendations"
+
+            <div role="tabpanel"
+                 id="JourneyPriorities"
+                 data-ng-class="settingMenuData.ClassType[0] === 'JourneyPriorities' ? 'tab-pane active' : 'tab-pane fade'">
+
+                <div data-ng-include="'partials/settings/journey.priorities.html'"></div>
+
+            </div>
+
+            <div role="tabpanel"
+                 id="Recommendations"
                  data-ng-class="settingMenuData.ClassType[0] === 'Recommendations' ? 'tab-pane active' : 'tab-pane fade'">
-                <header class="col-sm-12">
-                    <p>Here is a list of various recommendation available for you to create a journey. These recommendations are predefined by Onlife
-                        and can be used to create a custom journeys. You may add new recommendations using the 'Add recommendation' button.</p>
-                </header>
-                <div class="col-sm-12">
-                    <br/>
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-area"
-                                       data-ng-model="searchText">
-                                <span class="input-group-addon" id="search-area"><i class="fa fa-search"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-sm-5 text-right">
-                            <span>
-                                <button class="btn btn-primary"
-                                        type="button"
-                                        data-toggle="modal"
-                                        data-target="#recommendationModal"
-                                        data-ng-click="settingListCtrl.addRecommendation()">
-                                    Add Recommendation
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-12">
-                    <div class="scroll-area">
-                        <div class="recommended-content-wrap">
-                            <div class="recommended-item" data-ng-repeat="recommendation in settingListCtrl.recommendations | filter:searchText">
-                                <div class="row">
-                                    <div class="col-xs-1">
-                                        <div class="recommended-icon">
-                                            <img class="img-responsive"
-                                                 data-ng-src="../public/styles/img/recommendations/icon/{{recommendation.icon}}"
-                                                 alt="recommendationIcon">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-11">
-                                        <div class="recommended-content">
-                                            <h3 class="recommended-header">
-                                                <a href="javascript:void(0)"
-                                                   data-toggle="modal"
-                                                   data-target="#recommendationModal"
-                                                   data-ng-click="settingListCtrl.editRecommendation(recommendation)">
-                                                    {{recommendation.title}}
-                                                </a>
-                                            </h3>
-                                            <p>
-                                                {{recommendation.descriptionWhy}}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="modal fade" id="recommendationModal" tabindex="-1" role="dialog" aria-labelledby="createRecommendationModalLabel">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h3 class="modal-title" id="createRecommendationModalLabel">
-                                    {{settingListCtrl.creating ? 'Create new recommendation' : 'Recommendation: ' +
-                                    settingListCtrl.selectedRecommendation.title}}
-                                </h3>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="p-x-15">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="recommendationTitle" class="control-label required">Title</label>
-                                                <input type="text" class="form-control" id="recommendationTitle"
-                                                       data-ng-model="settingListCtrl.selectedRecommendation.title">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 section-description">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label for="recommendationDescriptionWhy" class="control-label required">Why ?</label>
-                                                        <textarea class="form-control" rows="6"
-                                                                  id="recommendationDescriptionWhy"
-                                                                  data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhy"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label for="recommendationDescriptionWhat" class="control-label">What ?</label>
-                                                        <textarea class="form-control" rows="6"
-                                                                  id="recommendationDescriptionWhat"
-                                                                  data-ng-model="settingListCtrl.selectedRecommendation.descriptionWhat"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label for="recommendationDescription" class="control-label">How ?</label>
-                                                        <textarea class="form-control" rows="6"
-                                                                  id="recommendationDescription"
-                                                                  data-ng-model="settingListCtrl.selectedRecommendation.descriptionHow"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-12 mt-30">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <label for="recommendationImage" class="control-label required col-xs-6">{{settingListCtrl.creating
-                                                                ? 'Select image:' : 'Image:'}}</label>
-                                                            <div class="col-xs-6 text-center">
-                                                                <img id="recommendationImage"
-                                                                     data-ng-if="!settingListCtrl.creating" style="max-width: 40px;"
-                                                                     data-ng-src="../public/styles/img/recommendations/image/{{settingListCtrl.selectedRecommendation.image}}">
-                                                                <input type="button"
-                                                                       class="btn btn-primary btn-block"
-                                                                       data-ng-if="settingListCtrl.creating"
-                                                                       value="Select image">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <label for="recommendationIcon" class="control-label required col-xs-6">{{settingListCtrl.creating
-                                                                ? 'Select icon:' : 'Icon:'}}</label>
-                                                            <div class="col-xs-6 text-center">
-                                                                <img id="recommendationIcon" style="max-width: 40px;"
-                                                                     data-ng-if="!settingListCtrl.creating"
-                                                                     data-ng-src="../public/styles/img/recommendations/icon/{{settingListCtrl.selectedRecommendation.icon}}">
-                                                                <input type="button"
-                                                                       class="btn btn-primary btn-block"
-                                                                       data-ng-if="settingListCtrl.creating"
-                                                                       value="Select icon">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label class="control-label required">Status:</label>
-                                                        <select class="form-control">
-                                                            <option value="active">Active</option>
-                                                            <option value="InActive">In Active</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="control-label" for="recommendationAction">Action Type</label>
-                                                                <select class="form-control"
-                                                                        id="recommendationAction"
-                                                                        data-ng-options="action.type for action in settingListCtrl.actions track by action.type"
-                                                                        data-ng-model="settingListCtrl.selectedRecommendation.action"
-                                                                        data-ng-change="settingListCtrl.selectedRecommendation.target = action.targets[0];">
-                                                                    <option value="">-- Select action name --</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <label class="control-label" for="recommendationTarget">Action Target</label>
-                                                                <select class="form-control"
-                                                                        id="recommendationTarget"
-                                                                        data-ng-options="target.name for target in settingListCtrl.actionTargets track by target.name"
-                                                                        data-ng-model="settingListCtrl.selectedRecommendation.target">
-                                                                    <option value="">-- Select action target --</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <span class="pull-left">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                </span>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save & Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div data-ng-include="'partials/settings/recommendations.html'"></div>
 
             </div>
+
             <div role="tabpanel" id="Announcements" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'Announcements' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
@@ -470,6 +128,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" id="PointsMatrix" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'PointsMatrix' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
@@ -588,6 +247,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" id="Incentives" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'Incentives' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
@@ -706,6 +366,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" id="AuthenticationFields" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'AuthenticationFields' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
@@ -763,6 +424,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" id="IntroScreen" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'IntroScreen' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
@@ -839,6 +501,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" id="MarketingTiles" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'MarketingTiles' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">
@@ -934,6 +597,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" id="MyCompany" class="animated fadeInDown ng-cloak"
                  data-ng-class="settingMenuData.ClassType[0] === 'MyCompany' ? 'tab-pane active': 'tab-pane fade'">
                 <div class="tabs-container push-top-small">

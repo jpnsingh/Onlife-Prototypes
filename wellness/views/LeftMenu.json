@@ -38,7 +38,16 @@
         "Programs"
       ],
       "MenuIdentifier": "Programs",
-      "Category": null
+      "Category": null,
+	  "SubMenu": [
+            {
+                "DisplayName": "Journey Priorities",
+				"ClassType": [
+					"JourneyPriorities"
+				 ],
+                "MenuIdentifier": "JourneyPriorities"
+            }
+        ]
     },
     {
       "DisplayName": "Recommendations",
