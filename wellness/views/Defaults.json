@@ -1,0 +1,129 @@
+{
+	"stress": [
+		{
+			"id": 1,
+			"value": "Stress Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Stress Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Stress Default 3"
+		}
+	],
+	"tobacco": [
+		{
+			"id": 1,
+			"value": "Tobacco Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Tobacco Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Tobacco Default 3"
+		}
+	],
+	"weight": [
+		{
+			"id": 1,
+			"value": "Weight Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Weight Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Weight Default 3"
+		}
+	],
+	"bp": [
+		{
+			"id": 1,
+			"value": "BP Default 1"
+		},
+		{
+			"id": 2,
+			"value": "BP Default 2"
+		},
+		{
+			"id": 3,
+			"value": "BP Default 3"
+		}
+	],
+	"cholesterol": [
+		{
+			"id": 1,
+			"value": "Cholesterol Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Cholesterol Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Cholesterol Default 3"
+		}
+	],
+	"diet": [
+		{
+			"id": 1,
+			"value": "Diet Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Diet Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Diet Default 3"
+		}
+	],
+	"fitness": [
+		{
+			"id": 1,
+			"value": "Fitness Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Fitness Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Fitness Default 3"
+		}
+	],
+	"tobaccoFree": [
+		{
+			"id": 1,
+			"value": "Tobacco Free Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Tobacco Free Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Tobacco Free Default 3"
+		}
+	],
+	"maintainWeight": [
+		{
+			"id": 1,
+			"value": "Maintain Weight Default 1"
+		},
+		{
+			"id": 2,
+			"value": "Maintain Weight Default 2"
+		},
+		{
+			"id": 3,
+			"value": "Maintain Weight Default 3"
+		}
+	]
+}
+  

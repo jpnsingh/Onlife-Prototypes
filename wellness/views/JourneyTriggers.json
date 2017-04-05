@@ -1,0 +1,452 @@
+[
+	{
+		"name": "HA Completed",
+		"description": "HA Completed Description",
+		"values": [
+			{
+				"key": "stress",
+				"title": "Manage Stress",
+				"segments": [
+					{
+						"id": 1,
+						"value": "Stress Segment 1"
+					}
+				],
+				"defaults": [
+					{
+						"id": 1,
+						"value": "Stress Default 1"
+					}
+				]
+			},
+			{
+				"key": "tobacco",
+				"title": "Quit Tobacco Use",
+				"segments": [
+					{
+						"id": 2,
+						"value": "Tobacco Segment 2"
+					}
+				],
+				"defaults": [
+					{
+						"id": 2,
+						"value": "Tobacco Default 2"
+					}
+				]
+			},
+			{
+				"key": "weight",
+				"title": "Decrease Weight",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Weight Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Weight Default 3"
+					}
+				]
+			},
+			{
+				"key": "bp",
+				"title": "Improve Blood Pressure",
+				"segments": [
+					{
+						"id": 3,
+						"value": "BP Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "BP Default 3"
+					}
+				]
+			},
+			{
+				"key": "cholesterol",
+				"title": "Improve Cholesterol",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Cholesterol Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Cholesterol Default 3"
+					}
+				]
+			},
+			{
+				"key": "diet",
+				"title": "Improve Dietary Habits",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Dietary Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Dietary Default 3"
+					}
+				]
+			},
+			{
+				"key": "fitness",
+				"title": "Improve Fitness Level",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Fitness Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Fitness Default 3"
+					}
+				]
+			},
+			{
+				"key": "tobaccoFree",
+				"title": "Maintain Tobacco Free Status",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Tobacco Free Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Tobacco Free Default 3"
+					}
+				]
+			},
+			{
+				"key": "maintainWeight",
+				"title": "Maintain Weight",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Maintain Weight Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Maintain Weight Default 3"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "New Erollees",
+		"description": "New Enrollees Description",
+		"values": [
+			{
+				"key": "stress",
+				"title": "Manage Stress",
+				"segments": [
+					{
+						"id": 2,
+						"value": "Stress Segment 2"
+					}
+				],
+				"defaults": [
+					{
+						"id": 2,
+						"value": "Stress Default 2"
+					}
+				]
+			},
+			{
+				"key": "tobacco",
+				"title": "Quit Tobacco Use",
+				"segments": [
+					{
+						"id": 2,
+						"value": "Tobacco Segment 2"
+					}
+				],
+				"defaults": [
+					{
+						"id": 2,
+						"value": "Tobacco Default 2"
+					}
+				]
+			},
+			{
+				"key": "weight",
+				"title": "Decrease Weight",
+				"segments": [
+					{
+						"id": 1,
+						"value": "Weight Segment 1"
+					}
+				],
+				"defaults": [
+					{
+						"id": 1,
+						"value": "Weight Default 1"
+					}
+				]
+			},
+			{
+				"key": "bp",
+				"title": "Improve Blood Pressure",
+				"segments": [
+					{
+						"id": 3,
+						"value": "BP Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "BP Default 3"
+					}
+				]
+			},
+			{
+				"key": "cholesterol",
+				"title": "Improve Cholesterol",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Cholesterol Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Cholesterol Default 3"
+					}
+				]
+			},
+			{
+				"key": "diet",
+				"title": "Improve Dietary Habits",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Dietary Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Dietary Default 3"
+					}
+				]
+			},
+			{
+				"key": "fitness",
+				"title": "Improve Fitness Level",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Fitness Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Fitness Default 3"
+					}
+				]
+			},
+			{
+				"key": "tobaccoFree",
+				"title": "Maintain Tobacco Free Status",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Tobacco Free Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Tobacco Free Default 3"
+					}
+				]
+			},
+			{
+				"key": "maintainWeight",
+				"title": "Maintain Weight",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Maintain Weight Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Maintain Weight Default 3"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Biometric Completed",
+		"description": "Biometric Completed Description",
+		"values": [
+			{
+				"key": "stress",
+				"title": "Manage Stress",
+				"segments": [
+					{
+						"id": 1,
+						"value": "Stress Segment 1"
+					}
+				],
+				"defaults": [
+					{
+						"id": 1,
+						"value": "Stress Default 1"
+					}
+				]
+			},
+			{
+				"key": "tobacco",
+				"title": "Quit Tobacco Use",
+				"segments": [
+					{
+						"id": 2,
+						"value": "Tobacco Segment 2"
+					}
+				],
+				"defaults": [
+					{
+						"id": 1,
+						"value": "Tobacco Default 1"
+					}
+				]
+			},
+			{
+				"key": "weight",
+				"title": "Decrease Weight",
+				"segments": [
+					{
+						"id": 2,
+						"value": "Weight Segment 2"
+					}
+				],
+				"defaults": [
+					{
+						"id": 1,
+						"value": "Weight Default 1"
+					}
+				]
+			},
+			{
+				"key": "bp",
+				"title": "Improve Blood Pressure",
+				"segments": [
+					{
+						"id": 3,
+						"value": "BP Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "BP Default 3"
+					}
+				]
+			},
+			{
+				"key": "cholesterol",
+				"title": "Improve Cholesterol",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Cholesterol Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Cholesterol Default 3"
+					}
+				]
+			},
+			{
+				"key": "diet",
+				"title": "Improve Dietary Habits",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Dietary Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Dietary Default 3"
+					}
+				]
+			},
+			{
+				"key": "fitness",
+				"title": "Improve Fitness Level",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Fitness Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Fitness Default 3"
+					}
+				]
+			},
+			{
+				"key": "tobaccoFree",
+				"title": "Maintain Tobacco Free Status",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Tobacco Free Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Tobacco Free Default 3"
+					}
+				]
+			},
+			{
+				"key": "maintainWeight",
+				"title": "Maintain Weight",
+				"segments": [
+					{
+						"id": 3,
+						"value": "Maintain Weight Segment 3"
+					}
+				],
+				"defaults": [
+					{
+						"id": 3,
+						"value": "Maintain Weight Default 3"
+					}
+				]
+			}
+		]
+	}
+]

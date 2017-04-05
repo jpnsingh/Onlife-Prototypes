@@ -3419,6 +3419,7 @@
                                 self.hidePrograms = true;
                                 self.hideFilter = true;
 
+                                setJourneyPrioritiesView();
                             } else if ($scope.settingMenuData.MenuIdentifier === 'Recommendations') {
                                 setRecommendationsView();
                             }
@@ -3441,6 +3442,26 @@
 
                     };
 
+                    function setJourneyPrioritiesView() {
+                        $http
+                            .get('JourneyTriggers.json')
+                            .then(function (response) {
+                                self.journeyTriggers = response.data;
+                            });
+
+                        $http
+                            .get('Segments.json')
+                            .then(function (response) {
+                                self.segments = response.data;
+                            });
+
+                        $http
+                            .get('Defaults.json')
+                            .then(function (response) {
+                                self.defaults = response.data;
+                            });
+                    }
+
                     function setRecommendationsView() {
                         self.hidePrograms = true;
                         self.hideFilter = true;
@@ -3462,7 +3483,22 @@
                             .then(function (response) {
                                 self.targets = response.data;
                             });
-
+                        $scope.groups = [
+                            {
+                                title: "Dynamic Group Header - 1",
+                                items: [
+                                    { "item-title": "item 1" },
+                                    { "item-title": "item 2" }
+                                ]
+                            },
+                            {
+                                title: "Dynamic Group Header - 2",
+                                items: [
+                                    { "item-title": "item 3" },
+                                    { "item-title": "item 4" }
+                                ]
+                            }
+                        ];
                         $scope.$watch('settingListCtrl.selectedRecommendation.action', function (newVal, oldVal) {
                             if (newVal) {
                                 self.actionTargets = _.find(self.targets, {key: newVal.key}).targets;
@@ -4109,6 +4145,7 @@
                     }
 
                 }
+
             ]
         );
     }, {

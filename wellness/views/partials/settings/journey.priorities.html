@@ -1,3 +1,61 @@
-<div class="">
-    Journey Priorities
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label">Select Trigger</label>
+                <select class="form-control"
+                        data-ng-options="trigger.name for trigger in settingListCtrl.journeyTriggers"
+                        data-ng-model="selectedTrigger">
+                    <option value="">--Select Trigger--</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <p>{{selectedTrigger.description}}</p>
+</div>
+<div class="col-sm-12">
+    <div class="accordion">
+        <ol>
+            <li data-ng-repeat="triggerValue in selectedTrigger.values">
+                <div class="accordion-heading">
+                    <a href="" data-ng-click="triggerValue.show = !triggerValue.show;">
+                        <i class="fa"
+                           data-ng-class="{'fa-caret-right': !triggerValue.show, 'fa-caret-down': triggerValue.show}"></i>
+                        {{triggerValue.title}}
+                    </a>
+                </div>
+                <div class="accordion-content" data-ng-show="triggerValue.show">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label class="control-label">Segment</label>
+                            <div class=""
+                                 data-ng-repeat="segment in triggerValue.segments">
+                                <input class="form-control"
+                                       type="text"
+                                       data-ng-disabled="true"
+                                       data-ng-model="segment.value" />
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <label class="control-label">Default</label>
+                            <div class="row">
+                                <div class="col-sm-10"
+                                     data-ng-repeat="default in triggerValue.defaults">
+
+                                    <input class="form-control"
+                                           type="text"
+                                           data-ng-disabled="true"
+                                           data-ng-model="default.value" />
+                                </div>
+                                <div class="col-sm-2">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
 </div>
