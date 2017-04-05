@@ -22,15 +22,15 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h2>Create New Journey</h2>
-                            <h8>Step 1: Select Journey Trigger</h8>
+                            <h8>Select Journey Trigger</h8>
                             <h8>The trigger you select shall determine the point at which the journey will activate for the member.</h8>
                         </div>
                         <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Onboarding'; selectedProgram.Recommendations = []">
+                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'New Enrollees'; selectedProgram.Recommendations = []">
                                 <img src="../img/OnBoarding.jpg" alt="Weight Reduction image" style="width: 200px; height: 200px">
                                 <div class="caption">
-                                    <h3>Onboarding</h3>
+                                    <h3>New Enrollees</h3>
                                 </div>
                             </div>
                         </div>
@@ -48,16 +48,7 @@
                                  ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Biometric Completed'; selectedProgram.Recommendations = []">
                                 <img src="../img/BMS.PNG" alt="Stress Reduction image" style="width: 200px; height: 200px">
                                 <div class="caption">
-                                    <h3>Biometric Completed</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6">
-                            <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                                 ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Re-Enrollment'; selectedProgram.Recommendations = []">
-                                <img src="../img/reenroll.png" alt="Blood Pressure image" style="width: 200px; height: 200px">
-                                <div class="caption">
-                                    <h3>Re-Enrollment</h3>
+                                    <h3>Biometric Completed (Future)</h3>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +104,7 @@
                                     {{creatingJourney ? 'Create New Journey' : selectedProgram.JourneyName}}
                                 </h2>
                                 <br/>
-                                <p>Step 2: Please provide journey details below. You can select recommendations by clicking on the Add Button. The
+                                <p>Please provide journey details below. You can select recommendations by clicking on the Add Button. The
                                     recommendations will be sequenced in order that you have defined.</p>
                             </div>
                             <div class="modal-body">
@@ -142,34 +133,13 @@
                                                 <div class="col-sm-3">
                                                     <label class="control-label">Status:</label>
                                                     <div class="form-group">
-                                                        <div class="radio">
-                                                            <input type="radio" id="porgramActive" value="Active"
-                                                                   data-ng-model="selectedProgram.StatusBool"
-                                                                   name="programStatus"
-                                                                   data-ng-value="true">
-                                                            <label for="porgramActive">
-                                                                Active
-                                                            </label>
-                                                        </div>
-                                                        <div class="radio">
-                                                            <input type="radio" id="porgramInactive" value="inActive"
-                                                                   name="programStatus"
-                                                                   data-ng-model="selectedProgram.StatusBool"
-                                                                   data-ng-value="false">
-                                                            <label for="porgramInactive">
-                                                                Inactive
-                                                            </label>
-                                                        </div>
+                                                        <select class="form-control">
+                                                            <option value="active">Active</option>
+                                                            <option value="inActive">In Active</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label for="programActiveFrom" class="control-label">Active from</label>
-                                                        <input type="date"
-                                                               class="form-control"
-                                                               id="programActiveFrom"
-                                                               data-ng-model="selectedProgram.ActiveFrom">
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -316,15 +286,6 @@
                                                        data-ng-model="settingListCtrl.selectedRecommendation.title">
                                             </div>
                                         </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <input type="checkbox"
-                                                       id="recommendationIsRequired"
-                                                       name="recommendationIsRequired"
-                                                       data-ng-model="settingListCtrl.selectedRecommendation.isRequired">
-                                                <label class="control-label" for="recommendationIsRequired">Mandatory</label>
-                                            </div>
-                                        </div>
                                         <div class="col-sm-12 section-description">
                                             <div class="row">
                                                 <div class="col-sm-4">
@@ -389,50 +350,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-xs-4">
-                                                            <div class="form-group">
-                                                                <label class="control-label required">Status:</label>
-                                                                <div class="radio">
-                                                                    <input type="radio" id="activeRadio" value="Active" checked=""
-                                                                           data-ng-model="settingListCtrl.selectedRecommendation.status"
-                                                                           name="recommendationStatus"
-                                                                           data-ng-value="true">
-                                                                    <label for="activeRadio">
-                                                                        Active
-                                                                    </label>
-                                                                </div>
-                                                                <div class="radio">
-                                                                    <input type="radio" id="inActiveRadio" value="inActive" checked=""
-                                                                           name="recommendationStatus"
-                                                                           data-ng-model="settingListCtrl.selectedRecommendation.status"
-                                                                           data-ng-value="false">
-                                                                    <label for="inActiveRadio">
-                                                                        Inactive
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-8">
-                                                            <div class="form-group">
-                                                                <label for="recommendationActiveFrom" class="control-label required">Active
-                                                                    from:</label>
-                                                                <input type="date"
-                                                                       class="form-control"
-                                                                       id="recommendationActiveFrom"
-                                                                       data-ng-model="settingListCtrl.selectedRecommendation.activeFrom">
-                                                            </div>
-                                                        </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label required">Status:</label>
+                                                        <select class="form-control">
+                                                            <option value="active">Active</option>
+                                                            <option value="InActive">In Active</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label for="recommendationDueDate" class="control-label">Due date:</label>
-                                                        <input type="date"
-                                                               class="form-control"
-                                                               id="recommendationDueDate"
-                                                               data-ng-model="settingListCtrl.selectedRecommendation.dueDate">
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="row">

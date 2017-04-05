@@ -49,8 +49,26 @@
     "key": "enrollInCourse",
     "targets": [
       {
-        "name": "https://contentstore.onlifehealth.com/courses/stress/001"
-      }
+        "name": "Managing Stress"
+      },
+	  {
+		"name": "Quit Tobacco"
+	  },
+	  {
+		"name": "Get Active"
+	  },
+	  {
+		"name": "Weight Management"
+	  },
+	  {
+		"name": "Preventive Health"
+	  },
+	  {
+		"name": "Blood Pressure"
+	  },
+	  {
+		"name": "Improving Nutrition"
+	  }
     ]
   },
   {
