@@ -4110,25 +4110,30 @@
                         self.viewSetting(kk, 3);
                     }
 
+                    var programMenu = {
+                        "DisplayName": "Journeys and Triggers",
+                        "ClassType": [
+                            "Programs"
+                        ],
+                        "MenuIdentifier": "Programs",
+                        "Category": "Programs",
+                        "SubMenu": [
+                            {
+                                "DisplayName": "Journey Priorities",
+                                "ClassType": [
+                                    "JourneyPriorities"
+                                ],
+                                "MenuIdentifier": "JourneyPriorities",
+                                "Index": 4.1
+                            }
+                        ]
+                    }
                     if (sss === '/setting/programs') {
-                        var thisNameIsClearlyMinimized = {
-                            "DisplayName": "Journeys and Triggers",
-                            "ClassType": [
-                                "Programs"
-                            ],
-                            "MenuIdentifier": "Programs",
-                            "Category": "Programs",
-                            "SubMenu": [
-                                {
-                                    "DisplayName": "Journey Priorities",
-                                    "ClassType": [
-                                        "JourneyPriorities"
-                                    ],
-                                    "MenuIdentifier": "JourneyPriorities"
-                                }
-                            ]
-                        }
-                        self.viewSetting(thisNameIsClearlyMinimized, 4);
+                        self.viewSetting(programMenu, 4);
+                    }
+
+                    if (sss === '/setting/journeypriorities') {
+                        self.viewSetting(programMenu.SubMenu[0], 4.1);
                     }
 
                     if (sss === '/setting/recommendations') {
