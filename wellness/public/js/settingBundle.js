@@ -3447,6 +3447,7 @@
                             .get('JourneyTriggers.json')
                             .then(function (response) {
                                 self.journeyTriggers = response.data;
+                                $scope.selectedTrigger = self.journeyTriggers[0];
                             });
 
                         $http
