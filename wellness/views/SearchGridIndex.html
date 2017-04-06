@@ -67,16 +67,16 @@
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level collapse in">
-                            <li data-ng-class="groupCtrl.menuClass[subMenuIndex]" 
-                                data-ng-repeat="(subMenuIndex, subMenu) in groupCtrl.settingMenu">
+                            <li data-ng-repeat="(subMenuIndex, subMenu) in groupCtrl.settingMenu"
+                                data-ng-class="groupCtrl.menuClass[subMenuIndex]">
                                 <a data-ng-click="groupCtrl.viewSetting(subMenu, subMenuIndex)">
                                     {{subMenu.DisplayName}}
                                     <span data-ng-if="subMenu.SubMenu" class="fa arrow"></span>
                                 </a>
                                 <ul class="nav nav-third-level collapse in">
-                                    <li data-ng-class="groupCtrl.menuClass[$index]"
-                                        data-ng-repeat="item in subMenu.SubMenu">
-                                        <a data-ng-click="groupCtrl.viewSetting(item, subMenuIndex)">
+                                    <li data-ng-repeat="item in subMenu.SubMenu"
+                                        data-ng-class="groupCtrl.subMenuClass[$index+1]">
+                                        <a data-ng-click="groupCtrl.viewSetting(item, subMenuIndex, $index+1)">
                                             {{item.DisplayName}}
                                         </a>
                                     </li>

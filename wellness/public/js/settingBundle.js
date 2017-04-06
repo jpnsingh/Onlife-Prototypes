@@ -3487,15 +3487,15 @@
                             {
                                 title: "Dynamic Group Header - 1",
                                 items: [
-                                    { "item-title": "item 1" },
-                                    { "item-title": "item 2" }
+                                    {"item-title": "item 1"},
+                                    {"item-title": "item 2"}
                                 ]
                             },
                             {
                                 title: "Dynamic Group Header - 2",
                                 items: [
-                                    { "item-title": "item 3" },
-                                    { "item-title": "item 4" }
+                                    {"item-title": "item 3"},
+                                    {"item-title": "item 4"}
                                 ]
                             }
                         ];
@@ -4027,10 +4027,17 @@
                         });
                     };
 
-                    self.viewSetting = function (settingMenu, index) {
+                    self.viewSetting = function (settingMenu, index, subIndex) {
                         self.menuClass = [];
                         self.menuClass[index] = 'active';
+
+                        if (subIndex) {
+                            self.subMenuClass = [];
+                            self.subMenuClass[subIndex] = 'active';
+                        }
+
                         $scope.settingMenuData = settingMenu;
+
                         $location.path('/setting/' + settingMenu.MenuIdentifier.toLowerCase());
                     };
 
@@ -4059,8 +4066,10 @@
                     });
 
                     self.getGroupData();
-                    var sss = $location.path();
-                    if (sss === '/setting/announcements') {
+
+                    var locationPath = $location.path();
+
+                    if (locationPath === '/setting/announcements') {
                         var pp = {
                             "DisplayName": "Announcements",
                             "ClassType": [
@@ -4072,7 +4081,7 @@
                         self.viewSetting(pp, 2);
                     }
 
-                    if (sss === '/setting/marketingtiles') {
+                    if (locationPath === '/setting/marketingtiles') {
                         var dd = {
                             "DisplayName": "Marketing Tiles",
                             "ClassType": [
@@ -4080,11 +4089,11 @@
                             ],
                             "MenuIdentifier": "MarketingTiles",
                             "Category": null
-                        }
+                        };
                         self.viewSetting(dd, 1);
                     }
 
-                    if (sss === '/setting/points') {
+                    if (locationPath === '/setting/points') {
                         var ff = {
                             "DisplayName": "Points",
                             "ClassType": [
@@ -4092,22 +4101,21 @@
                             ],
                             "MenuIdentifier": "Points",
                             "Category": "Points"
-                        }
-
+                        };
                         self.viewSetting(ff, 0);
                     }
 
-                    if (sss === '/setting/incentives') {
-                        var kk = {
+                    if (locationPath === '/setting/incentives') {
+                        var incentivesMenu = {
                             "DisplayName": "Manage Incentives",
                             "ClassType": [
                                 "Incentives"
                             ],
                             "MenuIdentifier": "Incentives",
                             "Category": "Incentives"
-                        }
+                        };
 
-                        self.viewSetting(kk, 3);
+                        self.viewSetting(incentivesMenu, 3);
                     }
 
                     var programMenu = {
@@ -4123,21 +4131,21 @@
                                 "ClassType": [
                                     "JourneyPriorities"
                                 ],
-                                "MenuIdentifier": "JourneyPriorities",
-                                "Index": 4.1
+                                "MenuIdentifier": "JourneyPriorities"
                             }
                         ]
-                    }
-                    if (sss === '/setting/programs') {
+                    };
+
+                    if (locationPath === '/setting/programs') {
                         self.viewSetting(programMenu, 4);
                     }
 
-                    if (sss === '/setting/journeypriorities') {
-                        self.viewSetting(programMenu.SubMenu[0], 4.1);
+                    if (locationPath === '/setting/journeypriorities') {
+                        self.viewSetting(programMenu.SubMenu[0], 4, 1);
                     }
 
-                    if (sss === '/setting/recommendations') {
-                        var recommendations = {
+                    if (locationPath === '/setting/recommendations') {
+                        var recommendationsMenu = {
                             "DisplayName": "Recommendations Library",
                             "ClassType": [
                                 "Recommendations"
@@ -4146,7 +4154,7 @@
                             "Category": "Recommendations"
                         };
 
-                        self.viewSetting(recommendations, 5);
+                        self.viewSetting(recommendationsMenu, 5);
                     }
 
                 }
