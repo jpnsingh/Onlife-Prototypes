@@ -1,0 +1,85 @@
+
+@import "../../../styles/master";
+
+.view-header {
+	background: $purple;
+	padding: 1em 0;
+	.main-heading {
+		color: $white;
+		font-size: 2em;
+	}
+}
+.content-area {
+	padding: 2em 0;
+	.blue-header {
+		color: $dark_blue;
+		font-size: 1.6em;
+		margin: 0.5em 0;
+	}
+	.anchor-links {
+		span {
+			padding: 0 15px;
+			a {
+				color: $dark_gray;
+				text-transform: uppercase;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.fitness {
+			border-right: 1px solid $dark_gray;
+		}
+	}
+}
+.device-tile {
+	margin: 20px 0 0 0;
+    padding: 15px;
+    border: 1px solid $light_gray;
+	border-radius: 15px;
+	min-height: 300px;
+	@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.1));
+	.connect-btn-holder {
+		padding: .5em;
+		background: $light_white;
+		margin: 10px -15px;
+		.rounded-button {
+			background: $orange_button;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			color: $white;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 0;
+			display: inline-block;
+			vertical-align: middle;
+			.connection-btn {
+				font-size: 2em;
+				font-weight: bold;
+				top: -5px;
+			}
+		}
+	}
+	.description {
+		text-align: center;
+		line-height: 18px;
+		overflow: hidden;
+		&.line-clamp {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+	}
+	.more-less {
+		padding: 10px;
+		text-align: center;
+		color: $orange_button;
+		p {
+			cursor: pointer;
+		}
+	}
+	&:hover {
+		@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.25));
+	}
+}

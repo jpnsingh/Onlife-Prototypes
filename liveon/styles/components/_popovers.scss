@@ -1,6 +1,9 @@
 .popover {
 	max-width: inherit;
 	width: 350px;
+	.pop-heading {
+		font-size: 1.2em;
+	}
 	.question {
 		font-weight: bold;
 		margin: 0.8em 0 0.4em 0;

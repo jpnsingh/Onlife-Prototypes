@@ -37,10 +37,12 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div class="col-xs-9">
+                        <div class="col-xs-9 trim-left">
                             <div class="logo">
-                                <a href="../dashboard/index.html">
-                                    <img src="../../assets/images/onlife-logo.png" alt="onlife logo" class="img-responsive" />
+                                <a href="../dashboard">
+                                    <img src="../../assets/images/Onlife_HealthTrust.png" 
+                                         alt="HealthTrust logo" 
+                                         class="img-responsive" />
                                 </a>
                             </div>
                         </div>
@@ -49,13 +51,18 @@
                 <div class="col-sm-8">
                     <ul class="top-nav">
                         <li>
+                            <a href="../connect-device" class="top-nav-icon">
+                                <span class="icon-onlife_devices"></span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="../family-friends" class="top-nav-icon">
                                 <span class="icon-onlife_friends"></span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="top-nav-icon">
-                                <span class="icon-onlife_notification"></span>
+                                <span class="icon-onlife_messages"></span>
                                 <span class="notification-count">1</span>
                             </a>
                         </li>
@@ -65,9 +72,6 @@
                             </a>
                             <div class="dropdown-menu">
                                 <ul>
-                                    <li>
-                                        <a class="dropdown-item" href="../view-profile">View Profile</a>
-                                    </li>
                                     <li>
                                         <a class="dropdown-item" href="../dashboard">First Login</a>
                                     </li>
@@ -89,25 +93,52 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <ul>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_points"></span> <span class="menu-label">My Points</span></a>
+                    <a href="../view-profile">
+                        <span class="menu-icon ico-onlife_avatar"></span>
+                        <span class="menu-label">My Profile</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_devices"></span> <span class="menu-label">Devices</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_points"></span>
+                        <span class="menu-label">My Points</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_goals"></span> <span class="menu-label">Goals</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_devices"></span>
+                        <span class="menu-label">Devices</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_courses"></span> <span class="menu-label">Courses</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_goals"></span>
+                        <span class="menu-label">Goals</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_trackers"></span> <span class="menu-label">Trackers</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_courses"></span>
+                        <span class="menu-label">Courses</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_financial"></span> <span class="menu-label">Financial</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_trackers"></span>
+                        <span class="menu-label">Trackers</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_reports"></span> <span class="menu-label">Reports</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_financial"></span>
+                        <span class="menu-label">Financial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_reports"></span>
+                        <span class="menu-label">Reports</span>
+                    </a>
                 </li>
             </ul>
         </nav><!-- Navigation Ends -->
@@ -232,251 +263,249 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="scrollable-area">
-                            <div class="nano">
-                                <div class="goals-container nano-content">
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_notepad"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Health Assessment</h4>
-                                                    <p class="message">
-                                                        It is a comprehensive questionnaire that aims to capture specifics of various aspects of your health such as your BMI, physical activity, tobacco status, lifestyle and diet, social and emotional health and your medical history.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 100%">
-                                                            <div class="progress-shadow"></div>
-                                                        </div>
-                                                    </div>
-                                                    <p>12/03/2017 <span class="pull-right">100%</span></p>
-                                                </div>
+                            <div class="goals-container">
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_notepad"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_notes"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Biometric Screening</h4>
-                                                    <p class="message">
-                                                        Schedule a biometric screening at your nearest location.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 0%">
-                                                            <div class="progress-shadow"></div>
-                                                        </div>
-                                                    </div>
-                                                    <p>13/03/2017 <span class="pull-right">0%</span></p>
-                                                </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Health Assessment</h4>
+                                                <p class="message">
+                                                    It is a comprehensive questionnaire that aims to capture specifics of various aspects of your health such as your BMI, physical activity, tobacco status, lifestyle and diet, social and emotional health and your medical history.
+                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_coach"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Kick the Butt!</h4>
-                                                    <p class="message">
-                                                        Burn calories, not cigarettes.  Exercise is one of the best ways for you to quit smoking
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 50%">
-                                                            <div class="progress-shadow"></div>
-                                                        </div>
-                                                    </div>
-                                                    <p>21/03/2017 <span class="pull-right">50%</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_coach"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Contact a Coach</h4>
-                                                    <p class="message">
-                                                        Reach out to coach
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-1 text-center">
-                                                <div class="slide-display">
-                                                    <h4 class="hidden-item">placeholder</h4>
-                                                    <p>Completed</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate completed icon-onlife_active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_connect"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Connect a Device</h4>
-                                                    <p class="message">
-                                                        Connect a fitness device for even more ways to be active and reach your wellness goals.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-1 text-center">
-                                                <div class="progress-wrap">
-                                                    <h3>Connected</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_app"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Download the AlwaysOn&reg; App</h4>
-                                                    <p class="message">
-                                                        AlwaysOn&reg; wellness app lets your smartphone connect with your plan, improve health, and stay inspired anytime, anywhere.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <a href="https://itunes.apple.com/us/app/alwayson-wellness/id927685764?mt=8" target="_blank">
-                                                                    <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15">
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
-                                                                    <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15">
-                                                                </a>
-                                                            </div>
-                                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 100%">
+                                                        <div class="progress-shadow"></div>
                                                     </div>
                                                 </div>
+                                                <p>12/03/2017 <span class="pull-right">100%</span></p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_invite"></i>
-                                                </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_notes"></i>
                                             </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Invite Friends</h4>
-                                                    <p class="message">
-                                                        Expand your connection by bringing your family and friends also get rewarded for every new connection
-                                                    </p>
-                                                </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Biometric Screening</h4>
+                                                <p class="message">
+                                                    Schedule a biometric screening at your nearest location.
+                                                </p>
                                             </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="form-group">
-                                                        <button class="button button--small button--default">Invite</button>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 0%">
+                                                        <div class="progress-shadow"></div>
                                                     </div>
                                                 </div>
+                                                <p>13/03/2017 <span class="pull-right">0%</span></p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_tobacco"></i>
-                                                </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_coach"></i>
                                             </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Tobacco Cessation Self Directed Course</h4>
-                                                    <p class="message">
-                                                        Quitting tobacco consumption one step at a time!
-                                                    </p>
-                                                </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Kick the Butt!</h4>
+                                                <p class="message">
+                                                    Burn calories, not cigarettes.  Exercise is one of the best ways for you to quit smoking
+                                                </p>
                                             </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width: 30%">
-                                                            <div class="progress-shadow"></div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 50%">
+                                                        <div class="progress-shadow"></div>
+                                                    </div>
+                                                </div>
+                                                <p>21/03/2017 <span class="pull-right">50%</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_coach"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Contact a Coach</h4>
+                                                <p class="message">
+                                                    Reach out to coach
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 text-center">
+                                            <div class="slide-display">
+                                                <h4 class="hidden-item">placeholder</h4>
+                                                <p>Completed</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate completed icon-onlife_active"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_connect"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Connect a Device</h4>
+                                                <p class="message">
+                                                    Connect a fitness device for even more ways to be active and reach your wellness goals.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 text-center">
+                                            <div class="progress-wrap">
+                                                <h3>Connected</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_app"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Download the AlwaysOn&reg; App</h4>
+                                                <p class="message">
+                                                    AlwaysOn&reg; wellness app lets your smartphone connect with your plan, improve health, and stay inspired anytime, anywhere.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <a href="https://itunes.apple.com/us/app/alwayson-wellness/id927685764?mt=8" target="_blank">
+                                                                <img src="../../assets/images/tiles/app_store.png" alt="" class="img-responsive app-store mt-15">
+                                                            </a>
                                                         </div>
                                                     </div>
-                                                    <p>21/03/2017 <span class="pull-right">30%</span></p>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <a href="https://play.google.com/store/apps/details?id=com.onlife.alwayson&hl=en" target="_blank">
+                                                                <img src="../../assets/images/tiles/google_play.png" alt="" class="img-responsive app-store mt-15">
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="goal-item">
-                                        <div class="row">
-                                            <div class="col-sm-1 text-center">
-                                                <div class="item-icon slide-display">
-                                                    <i class="indicate icon-onlife_rounded_stress"></i>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_invite"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Invite Friends</h4>
+                                                <p class="message">
+                                                    Expand your connection by bringing your family and friends also get rewarded for every new connection
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="form-group">
+                                                    <button class="button button--small button--default">Invite</button>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-8">
-                                                <div class="goal-item-container">
-                                                    <h4>Five Minutes Meditation</h4>
-                                                    <p class="message">
-                                                        Meditation brings together physical and mental disciplines to achieve peacefulness of body and mind, helping you relax and manage stress and anxiety.
-                                                    </p>
-                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_tobacco"></i>
                                             </div>
-                                            <div class="col-sm-3">
-                                                <div class="progress-wrap">
-                                                    <div class="progress">
-                                                        <div class="progress-bar" style="width:60%">
-                                                            <div class="progress-shadow"></div>
-                                                        </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Tobacco Cessation Self Directed Course</h4>
+                                                <p class="message">
+                                                    Quitting tobacco consumption one step at a time!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 30%">
+                                                        <div class="progress-shadow"></div>
                                                     </div>
-                                                    <p>26/03/2017 <span class="pull-right">60%</span></p>
                                                 </div>
+                                                <p>21/03/2017 <span class="pull-right">30%</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 text-center">
+                                            <div class="item-icon slide-display">
+                                                <i class="indicate icon-onlife_rounded_stress"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="goal-item-container">
+                                                <h4>Five Minutes Meditation</h4>
+                                                <p class="message">
+                                                    Meditation brings together physical and mental disciplines to achieve peacefulness of body and mind, helping you relax and manage stress and anxiety.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="progress-wrap">
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width:60%">
+                                                        <div class="progress-shadow"></div>
+                                                    </div>
+                                                </div>
+                                                <p>26/03/2017 <span class="pull-right">60%</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -789,7 +818,7 @@
                 <div class="col-sm-2 col-sm-offset-1">
                     <h3>We're Here to Help</h3>
                     <p class="contact-text">Contact Us</p>
-                    <p class="contact-number">1-800-123-4567</p>
+                    <p class="contact-number">877-709-0201</p>
                 </div>
                 <div class="col-sm-9">
                     <nav class="footer-nav">
@@ -803,8 +832,7 @@
                         </ul>
                     </nav>
                     <div class="copyrights">
-                        <p>&copy; 1998-2015 BlueCross BlueShield of Tennessee, Inc</p>
-                        <p>An Independent Licensee of the BlueCross BlueShield Association</p>
+                        <p>&copy; 2017 Onlife Health, Inc. All rights reserved.</p>
                     </div>
                 </div>
             </div>

@@ -19,6 +19,16 @@
         }
     });
 
+    $('.call-coach').popover({
+        placement: 'top',
+        trigger: 'hover',
+        html: true,
+        content: function () {
+            return $('.call-a-coach').html();
+        }
+    });
+
+
     $('.ha-not-now').click(function () {
         $('.next-recommendation.first').hide();
         $('.next-recommendation.second').show();

@@ -36,10 +36,12 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div class="col-xs-9">
+                        <div class="col-xs-9 trim-left">
                             <div class="logo">
-                                <a href="../dashboard/index.html">
-                                    <img src="../../assets/images/onlife-logo.png" alt="onlife logo" class="img-responsive" />
+                                <a href="../dashboard">
+                                    <img src="../../assets/images/Onlife_HealthTrust.png"
+                                         alt="HealthTrust logo"
+                                         class="img-responsive" />
                                 </a>
                             </div>
                         </div>
@@ -48,20 +50,9 @@
                 <div class="col-sm-8">
                     <ul class="top-nav">
                         <li>
-                            <div class="row">
-                                <div class="col-xs-4 bottom-right">
-                                    <div class="points-count-top text-center">
-                                        <div class="value">0</div>
-                                        <div class="label-txt">Points</div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-8">
-                                    <div class="points-count text-center">
-                                        <a href="../point-matrix" class="value">2000</a>
-                                        <div class="label-txt">Possible</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <a href="../connect-device" class="top-nav-icon">
+                                <span class="icon-onlife_devices"></span>
+                            </a>
                         </li>
                         <li>
                             <a href="../family-friends" class="top-nav-icon">
@@ -70,7 +61,7 @@
                         </li>
                         <li>
                             <a href="#" class="top-nav-icon">
-                                <span class="icon-onlife_notification"></span>
+                                <span class="icon-onlife_messages"></span>
                                 <span class="notification-count">1</span>
                             </a>
                         </li>
@@ -80,9 +71,6 @@
                             </a>
                             <div class="dropdown-menu">
                                 <ul>
-                                    <li>
-                                        <a class="dropdown-item" href="../view-profile">View Profile</a>
-                                    </li>
                                     <li>
                                         <a class="dropdown-item" href="../dashboard">First Login</a>
                                     </li>
@@ -104,137 +92,173 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <ul>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_points"></span> <span class="menu-label">My Points</span></a>
+                    <a href="../view-profile">
+                        <span class="menu-icon ico-onlife_avatar"></span>
+                        <span class="menu-label">My Profile</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_devices"></span> <span class="menu-label">Devices</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_points"></span>
+                        <span class="menu-label">My Points</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_goals"></span> <span class="menu-label">Goals</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_devices"></span>
+                        <span class="menu-label">Devices</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_courses"></span> <span class="menu-label">Courses</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_goals"></span>
+                        <span class="menu-label">Goals</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_trackers"></span> <span class="menu-label">Trackers</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_courses"></span>
+                        <span class="menu-label">Courses</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_financial"></span> <span class="menu-label">Financial</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_trackers"></span>
+                        <span class="menu-label">Trackers</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><span class="menu-icon icon-onlife_reports"></span> <span class="menu-label">Reports</span></a>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_financial"></span>
+                        <span class="menu-label">Financial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_reports"></span>
+                        <span class="menu-label">Reports</span>
+                    </a>
                 </li>
             </ul>
         </nav><!-- Navigation Ends -->
-        <!--         <section class="content-area">
-                    <div class="col-sm-2">
-                        <div class="health-steps">
-                            My Health Steps
+        <section class="content-area white-bg">
+            <div class="col-sm-2">
+                <div class="health-steps">
+                    My Journey Overview
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <section class="slider slide-display">
+                    <div class="flexslider carousel">
+                        <ul class="slides">
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center small-pop">
+                                        <span class="indicate mandatory icon-onlife_rounded_notepad">
+                                            <i class="fa fa-asterisk mandate-icon"
+                                               title="Required Action"
+                                               aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Assess Your Health</h3>
+                                            <p>Complete by 04/21/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate mandatory icon-onlife_rounded_notes">
+                                            <i class="fa fa-asterisk mandate-icon" 
+                                               title="Required Action" 
+                                               aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Biometric Screening</h3>
+                                            <p>Complete by 05/21/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_coach"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Contact Coach</h3>
+                                            <p>Complete by 04/25/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_app"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Download App</h3>
+                                            <p>Complete by 04/30/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_challenge"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Start a Challenge</h3>
+                                            <p>Complete by 05/10/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-list">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <span class="indicate icon-onlife_rounded_invite"></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="label-details">
+                                            <h3>Invite Friends</h3>
+                                            <p>Complete by 05/20/2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-xs-5 bottom-right">
+                        <div class="points-count text-center pull-right">
+                            <a href="../point-matrix" class="value">0</a>
+                            <div class="label-txt">Points</div>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <section class="slider slide-display">
-                            <div class="flexslider carousel">
-                                <ul class="slides">
-                                    <li class="item-list">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_rounded_notepad"></span>
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="label-details">
-                                                    <h3>Assess Your Health</h3>
-                                                    <p>Complete by 03/28/2017</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item-list">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_rounded_notes"></span>
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="label-details">
-                                                    <h3>Biometric Screening</h3>
-                                                    <p>Complete by 04/20/2017</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item-list">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_rounded_coach"></span>
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="label-details">
-                                                    <h3>Contact Coach</h3>
-                                                    <p>Complete by 04/25/2017</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item-list">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_rounded_app"></span>
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="label-details">
-                                                    <h3>Download App</h3>
-                                                    <p>Complete by 04/30/2017</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item-list">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_challenge"></span>
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="label-details">
-                                                    <h3>Start a Challenge</h3>
-                                                    <p>Complete by 05/10/2017</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item-list">
-                                        <div class="row">
-                                            <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_rounded_invite"></span>
-                                            </div>
-                                            <div class="col-xs-8">
-                                                <div class="label-details">
-                                                    <h3>Invite Friends</h3>
-                                                    <p>Complete by 05/20/2017</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="row">
-                            <div class="col-xs-4 bottom-right">
-                                <div class="points-count text-center">
-                                    <div class="value">0</div>
-                                    <div class="label-txt">Points</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-8">
-                                <div class="points-count text-center">
-                                    <a href="../point-matrix" class="value">2000</a>
-                                    <div class="label-txt">Possible</div>
-                                </div>
-                            </div>
+                    <div class="col-xs-7 trim-left">
+                        <div class="points-count text-center">
+                            <a href="../point-matrix" class="value">2000</a>
+                            <div class="label-txt">Possible</div>
                         </div>
                     </div>
-                </section> -->
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </section>
         <!-- Tiles Area -->
         <section class="tiles-area">
             <div class="tiles-screen">
@@ -246,26 +270,35 @@
                                 <div class="description">
                                     <div class="col-sm-9 text-center">
                                         <span class="tile-icon icon-onlife_notepad"></span>
-                                        <h2>Complete Your Health Assessment Today <i class="fa fa-info-circle health-assessment" aria-hidden="true" data-toggle="popover"></i></h2>
-
+                                        <h2>Complete Your Health Assessment Today 
+                                        <i class="fa fa-info-circle health-assessment" 
+                                           aria-hidden="true" 
+                                           data-toggle="popover"></i></h2>
                                     </div>
                                     <div class="col-sm-3 text-center">
-                                        <a href="#" class="button button--large button--block text-center button--default button-go">Go</a>
+                                        <a href="javascript:void(0)" 
+                                           data-toggle="modal" 
+                                           data-target="#haModel" 
+                                           class="button button--large button--block text-center button--default button-go">Go</a>
                                         <br />
                                         <button class="button button--small button--secondary remind-later">Not Now</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="due-date">
-                                Due Date: 21st April
+                                <div>
+                                    <span class="text-bold">Action Required</span>
+                                    <br />
+                                    Due Date: 21st April
+                                </div>
                             </div>
-
 
                             <div class="next-recommendation second none">
                                 <div class="health-assess-info remind-wrapper">
                                     <h3 class="header-tile">Remind Me</h3>
                                     <div class="col-sm-7 col-sm-offset-5 mt-40">
-                                        <div class="radio radio-primary" data-ng-repeat="option in dashboardCtrl.remindMeOptions">
+                                        <div class="radio radio-primary" 
+                                             data-ng-repeat="option in dashboardCtrl.remindMeOptions">
                                             <input type="radio"
                                                    id="{{option.id}}"
                                                    name="remindMe"
@@ -282,15 +315,12 @@
 
                                         <div class="radio radio-primary radio-inline"
                                              data-ng-repeat="option in dashboardCtrl.yesNoOptions">
-                                            <input type="radio" id="{{option.id}}" 
-                                                   data-ng-value="option" 
+                                            <input type="radio" id="{{option.id}}"
+                                                   data-ng-value="option"
                                                    name="smoking">
                                             <label for="{{option.id}}">{{option.label}}</label>
                                         </div>
                                     </div>
-                                    <!--<div class="col-sm-12 mt-40 text-center" data-ng-if="dashboardCtrl.selectedRemindMeOption">
-                                        <label class="control-label">You haven't started the Health Assessment. As it is mandatory we will remind you to complete Health Assessment <span class="text-bold">{{dashboardCtrl.selectedRemindMeOption.label | lowercase}}</span></label>
-                                    </div>-->
                                 </div>
                                 <div class="description">
                                     <div class="row">
@@ -315,26 +345,48 @@
                                             You can connect your wearable devices to our system and we will provide you with insights and recommendations on your daily activities.
                                         </p>
                                         <div class="form-group text-center">
-                                            <button class="button button--default">Connect</button>
+                                            <a href="../connect-device" class="button button--default">Connect</a>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group text-center slide-display">
                                             <span class="indicate icon-onlife_mobile"></span>
-                                            <h3 class="connect-device">Call a Coach</h3>
+                                            <h3 class="connect-device">Consult with a Coach</h3>
                                         </div>
                                         <p>
-                                            You can also get in touch with a coach who will help you in your journey to a happy and healthy life!
+                                            Your personal health coach is just a call away. Reach out now and find out how you and your coach can create a plan for your journey to a healthier and happier you. 
                                         </p>
                                         <div class="form-group text-center">
-                                            <button class="button button--default">Call</button>
+                                            <button class="button button--default consult-btn">Consult</button>
+                                        </div>
+                                        <div class="row none ways-contact">
+                                            <div class="col-sm-4 col-sm-offset-2 small-pop text-center">
+                                                <a href="#">
+                                                    <i class="ico-onlife_phone_receiver connect-coach call-coach"
+                                                       aria-hidden="true"
+                                                       data-toggle="popover"></i>
+                                                </a>
+                                            </div>
+                                            <div class="call-a-coach none">
+                                                1-877-709-0201 <br />(Mon-Fri 7AM to 9PM CST)
+                                            </div>
+                                            <div class="col-sm-4 small-pop text-center">
+                                                <a href="javascript:void(0);" class="chat-box-btn">
+                                                    <i class="icon-onlife_chat connect-coach"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="description">
                                     <div class="row">
                                         <div class="col-sm-12 button-wrapper">
-                                            <button class="button button--small button--secondary device-not-now" role="button">Not Now</button>
+                                            <span class="left">
+                                                <button class="button button--small button--secondary device-not-now"
+                                                        role="button">
+                                                    Not Now
+                                                </button>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -370,36 +422,39 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <div class="button-wrapper">
-                                        <div class="row">
-                                            <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 button-wrapper">
+                                            <span class="left">
                                                 <button class="button button--small button--secondary app-btn">Not Now</button>
                                                 <button class="button button--small button--secondary more-info-app">Tell me more</button>
-                                            </div>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="next-recommendation fifth none">
+                                <img src="../../assets/images/tiles/Onlife_Challenges.jpg"
+                                     alt="Start Challenge"
+                                     class="img-responsive recommend-image">
+                                <div class="overlay-img"></div>
                                 <div class="health-assess-info">
-                                    <h3 class="header-tile">Challenges program</h3>
+                                    <h3 class="header-tile">Challenge Yourself to be the best version of YOU!</h3>
                                     <div class="col-sm-12 text-center">
                                         <i class="icon-onlife_challenge ha-icon"></i>
                                         <p>
-                                            Challenges are now available to compliment your wellness journey. Enroll in one of our built in challenges or create one of your own!
+                                            Join one of our Challenge programs today. Earn points and see how far you can climb the leader board or create your own and challenge your Friends and Family. 
                                         </p>
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <div class="button-wrapper">
-                                        <div class="row">
-                                            <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 button-wrapper">
+                                            <span class="left">
                                                 <button class="button button--small button--secondary cp-btn">Not Now</button>
                                                 <button class="button button--small button--secondary more-info-challenge">Tell me more</button>
-
-                                                <button class="button button--large text-center button--default lets-go">Register</button>
-                                            </div>
+                                            </span>
+                                            <button class="button button--large text-center button--default lets-go">Register</button>
                                         </div>
                                     </div>
                                 </div>
@@ -414,13 +469,13 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <div class="button-wrapper">
-                                        <div class="row">
-                                            <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 button-wrapper">
+                                            <span class="left">
                                                 <button class="button button--small button--secondary recommend-btn">OK</button>
                                                 <button class="button button--small button--secondary more-info">Talk to a coach</button>
-                                                <button class="button button--large text-center button--default lets-go">Articles</button>
-                                            </div>
+                                            </span>
+                                            <button class="button button--large text-center button--default lets-go">Articles</button>
                                         </div>
                                     </div>
                                 </div>
@@ -436,11 +491,11 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <div class="button-wrapper">
-                                        <div class="row">
-                                            <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 button-wrapper">
+                                            <span class="left">
                                                 <button class="button button--small button--secondary back-to-app">Back</button>
-                                            </div>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -455,19 +510,19 @@
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <div class="button-wrapper">
-                                        <div class="row">
-                                            <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 button-wrapper">
+                                            <span class="left">
                                                 <button class="button button--small button--secondary back-to-challenges">Back</button>
-                                            </div>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="points-btm">
+                            <a href="../point-matrix" class="points-btm">
                                 100 <span class="pts-lbl">pts</span>
-                            </div>
+                            </a>
                         </figure>
                     </div>
                     <div class="col-sm-3">
@@ -477,15 +532,16 @@
                                 <div class="col-sm-12 text-center">
                                     <span class="tile-icon icon-onlife_mobile"></span>
                                 </div>
-                                <h2>Take Your Wellness With You</h2>
+                                <h2>Download AlwaysOn&reg; mobile app</h2>
                             </div>
                             <div class="mask">
                                 <p>With AlwaysOn&reg; you can check your challenge status, update your trackers and see the fitness... </p>
+                                <br />
                                 <a href="#" class="button button--large button--default">Download</a>
                             </div>
-                            <div class="points-btm">
+                            <a href="../point-matrix" class="points-btm">
                                 100 <span class="pts-lbl">pts</span>
-                            </div>
+                            </a>
                         </figure>
                     </div>
                     <div class="col-sm-3">
@@ -499,11 +555,12 @@
                             </div>
                             <div class="mask">
                                 <p>Expand your connection by bringing your family & friends  </p>
+                                <br />
                                 <a href="#" class="button button--large button--default">Invite</a>
                             </div>
-                            <div class="points-btm">
+                            <a href="../point-matrix" class="points-btm">
                                 50 <span class="pts-lbl">pts</span>
-                            </div>
+                            </a>
                         </figure>
                         <!--<article class="article">
                             <p>Expand your connection by bringing your family & friends. Your own fans will recommend you, what guarantees new fans better quality. </p>
@@ -516,12 +573,12 @@
 
         <footer class="footer">
             <div class="row">
-                <div class="col-sm-2 col-sm-offset-1">
+                <div class="col-sm-2 col-sm-offset-1 border-right">
                     <h3>We're Here to Help</h3>
                     <p class="contact-text">Contact Us</p>
-                    <p class="contact-number">1-800-123-4567</p>
+                    <p class="contact-number">877-709-0201</p>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-6">
                     <nav class="footer-nav">
                         <ul>
                             <li><a href="">Dashboard</a></li>
@@ -533,8 +590,12 @@
                         </ul>
                     </nav>
                     <div class="copyrights">
-                        <p>&copy; 1998-2015 BlueCross BlueShield of Tennessee, Inc</p>
-                        <p>An Independent Licensee of the BlueCross BlueShield Association</p>
+                        <p>&copy; 2017 Onlife Health, Inc. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="secondary-logo">
+                        <img src="../../assets/images/Onlife_HealthTrust_Secondary_200x75.png" alt="Secondary Logo" class="img-responsive" />
                     </div>
                 </div>
             </div>
@@ -542,6 +603,217 @@
 
     </div>
 
+    <!-- HA Modal -->
+    <div class="modal fade ha-model" id="haModel" tabindex="-1" role="dialog" aria-labelledby="haModelLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="haModelLabel">Health Assessment</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">Considering your age, how would you describe your overall physical health?</label>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="excellent" name="rating" value="">
+                                            <label for="excellent">Excellent</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="good" name="rating" value="">
+                                            <label for="good">Good</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="fair" name="rating" value="">
+                                            <label for="fair">Fair</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="poor" name="rating" value="">
+                                            <label for="poor">Poor</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">How would you describe your eating habits?</label>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="healthy" name="eating" value="">
+                                            <label for="healthy">Healthy and well-balanced</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="improvement" name="eating" value="">
+                                            <label for="improvement">Need some improvement</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="lotImprove" name="eating" value="">
+                                            <label for="lotImprove">Need lots of improvement</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="notSure" name="eating" value="">
+                                            <label for="notSure">Not sure </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">How would you describe your cigarette smoking habits?</label>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="neverSmoked" name="smoking" value="">
+                                            <label for="neverSmoked">Never smoked</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="usedSmoke" name="smoking" value="">
+                                            <label for="usedSmoke">Used to smoke</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="stillSmoke" name="smoking" value="">
+                                            <label for="stillSmoke">Still smoke now</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">Moderate Activities</label>
+                                        <p>Outside of your job, how much time do you spend in a typical week participating in moderate activities that raise your heart rate for at least 10 minutes and make you break a sweat, but still allow you to carry on a conversation?</p>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="moderateHours">Hours:</label>
+                                                <input type="number" class="form-control" id="moderateHours">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="moderateMinutes">Minutes:</label>
+                                                <input type="number" class="form-control" id="moderateMinutes">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">Vigorous Activities</label>
+                                        <p>Outside of your job, how much time do you spend in a typical week participating in vigorous activities that cause rapid breathing and a substantial increase in your heart rate?</p>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="vigorousHours">Hours:</label>
+                                                <input type="number" class="form-control" id="vigorousHours">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="vigorousMinutes">Minutes:</label>
+                                                <input type="number" class="form-control" id="vigorousMinutes">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">In the past year, how much effect has stress had on your life?</label>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="barely" name="stressLife" value="">
+                                            <label for="barely">Barely any or none</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="aLittle" name="stressLife" value="">
+                                            <label for="aLittle">A little bit</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="someStress" name="stressLife" value="">
+                                            <label for="someStress">Some</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="quiteBit" name="stressLife" value="">
+                                            <label for="quiteBit">Quite a bit</label>
+                                        </div>
+                                        <div class="radio radio-primary ans">
+                                            <input type="radio" id="aLot" name="stressLife" value="">
+                                            <label for="aLot">A lot</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">What is your height without shoes?</label>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="feetHeight">Feet:</label>
+                                                <input type="number" class="form-control" id="feetHeight">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="feetInch">Inches:</label>
+                                                <input type="number" class="form-control" id="feetInch">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">What is your weight (without clothes)?</label>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="weightNumber">Pounds:</label>
+                                                <input type="number" class="form-control" id="weightNumber">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">What is your blood pressure?</label>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="weightNumber">Systolic BP:</label>
+                                                <input type="number" class="form-control" id="weightNumber">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="weightNumber">Diastolic BP:</label>
+                                                <input type="number" class="form-control" id="weightNumber">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="radio radio-primary trim-left">
+                                                    <input type="radio" id="dontKnowBP" name="stressLife" value="">
+                                                    <label for="dontKnowBP">I don't know the numbers</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label class="control-label ques">What is your TOTAL cholesterol?</label>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label for="totalCholesterol">Total cholesterol:</label>
+                                                <input type="number" class="form-control" id="totalCholesterol">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="radio radio-primary trim-left">
+                                                    <input type="radio" id="dontKnowCholesterol" name="cholesterol" value="">
+                                                    <label for="dontKnowCholesterol">I don't know the number</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ol>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-sm-4">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <a role="button" href="#" class="button button--large button--secondary" data-dismiss="modal">Close</a>
+                        <a role="button" href="../snapshot-report" class="button button--large text-center button--default">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Schedule Appointment -->
     <div class="modal fade" id="schedule-appointment" tabindex="-1" role="dialog" aria-labelledby="scheduleAppointmentLabel">
@@ -627,6 +899,7 @@
     </div>
     <div class="content-ha none">
         <div class="health-assess-info">
+            <h3 class="pop-heading">Complete your Health Assessment today and discover how small actions can add years to your life!</h3>
             <h4 class="question">What is Health Assessment (HA)?</h4>
             <p class="answer">It is a comprehensive questionnaire that aims to capture specifics of various aspects of your health such as your BMI, physical activity, tobacco status, lifestyle and diet, social and emotional health and your medical history.</p>
             <h4 class="question">Why should I take the Health Assessment?</h4>
@@ -649,6 +922,48 @@
         </div>
     </div>
 
+    <div class="chat-window">
+        <div class="chat-header">
+            Coach Wayne 
+            <span class="pull-right">
+                <i class="icon-onlife_close close-chat"></i>
+            </span>
+        </div>
+        <div class="chat-discussion">
+            <div class="chat-message left">
+                <img class="message-avatar" src="../../assets/images/Onlife_coach_wayne.jpg" alt="">
+                <div class="message">
+                    <a class="message-author" href="#"> Coach Wayne </a>
+                    <span class="message-date"> 04/07/2017 - 18:39:23 </span>
+                    <span class="message-content">
+                        Hi Mary!<br />
+                        I am Wayne Smith, your personal health coach.
+                    </span>
+                </div>
+            </div>
+            <div class="chat-message right">
+                <img class="message-avatar" src="../../assets/images/Onlife_Mary_Dp.png" alt="">
+                <div class="message">
+                    <a class="message-author" href="#"> Mary </a>
+                    <span class="message-date">  04/07/2017 - 19:12:36 </span>
+                    <span class="message-content">
+                        Hello Wayne
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-send">
+            <div class="col-sm-12">
+                <div class="input-group">
+                    <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Jquery Version -->
     <script src="../../assets/js/jquery-1.11.3.js"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -663,5 +978,6 @@
     <script src="js/app.js"></script>
     <script src="js/dashboard.controller.js"></script>
     <script src="js/dashboard.service.js"></script>
+   
 </body>
 </html>

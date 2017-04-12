@@ -20,6 +20,9 @@
 .hidden-item {
 	visibility: hidden;
 }
+.border-right {
+	border-right: 1px solid #CCCCCC;
+}
 .tiles-area {
 	padding: 1.5em 6.5em;
 	background: $light_white;
@@ -87,6 +90,11 @@
 			right: 0;
 			min-width: 100px;
 			padding: 0.5em;
+			opacity: 0.8;
+			&:hover {
+				text-decoration: none;
+				opacity: 1;
+			}
 			.pts-lbl {
 				text-transform: uppercase;
 				font-size: 0.6em;
@@ -289,6 +297,16 @@
 		&.completed {
 			color: $medium_gray;
 		}
+		&.mandatory {
+			position: relative;
+			.mandate-icon {
+				position: absolute;
+				top: 17px;
+				right: -12px;
+				font-size: 0.33em;
+				color: #b9436c;
+			}
+		}
 	}
 	.label-details {
 		h3 {
@@ -400,8 +418,8 @@
 .health-steps {
 	position: relative;
 	background: $dark_blue;
-	margin: 39px 0 0 0;
-	padding: 1em;
+	margin: 39px 0 0 -15px;
+	padding: 1em 0.8em;
 	text-align: center;
 	color: $white;
 	width: 80%;
@@ -420,6 +438,24 @@
 		border-left-color: $dark_blue;
 		border-width: 21px;
 		margin-top: -21px;
+	}
+}
+
+.points-count {
+	margin: 38px 0 0 0;
+	.value {
+		color: $dark_blue;
+		font-size: 2em;
+		font-weight: bold;
+		opacity: 0.8;
+		&:hover {
+			text-decoration: none;
+			opacity: 1;
+		}
+	}
+	.label-txt {
+		font-size: 0.8em;
+		color: $light_gray;
 	}
 }
 .points-count-top {
@@ -443,7 +479,24 @@
 	padding: 2em;
 	text-align: left;
 	line-height: 22px;
+	> img.recommend-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.overlay-img {
+		background: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 2em;
+		text-align: left;
+		line-height: 22px;
+	}
 	.health-assess-info {
+		position: relative;
 		.header-tile {
 			font-size: 2em;
 			margin-bottom: 0.5em;
@@ -557,7 +610,9 @@
 		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_sail_approx', endcolorstr='$color_french_pass_approx',gradienttype=0 );
 	}
 }
-
+.blue-text {
+    color: $portal_blue;
+}
 .due-date {
     position: absolute;
     top: 0;
@@ -565,7 +620,163 @@
     padding: 10px 20px;
     background: #FFEB3B;
     color: #7b7b7b;
+	.fa {
+		font-size: 2em;
+		color: #b32256;
+	}
 }
+.secondary-logo {
+	border-left: 1px solid #CCC;
+}
+.small-pop {
+	.connect-coach {
+		font-size: 3em;
+		color: #0cc0de;
+	}
+}
+
+//Tab Structure
+.tab-view {
+	.nav-tabs {
+		background: $tab_gray;
+		border: 0;
+		padding: 0 2em;
+		li {
+			margin-right: 18px;
+			a {
+				border-bottom: 4px solid transparent;
+				color: #545759;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 10px 52px;
+			}
+
+			&.active {
+				a {
+					background: none;
+					border: 0;
+					border-bottom: 4px solid #3acae2;
+				}
+			}
+		}
+	}
+}
+//Interested Areas
+.interest-areas {
+	h4 {
+		font-size: 1.4em;
+		border-bottom: 3px solid #CCC;
+		padding: 0.5em 0;
+		.heading-icon {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+	}
+	p {
+		line-height: 28px;
+	}
+	.first-section {
+		border-bottom-color: $purple;
+		.heading-icon {
+			color: $purple;
+		}
+	}
+	.second-section {
+		border-bottom-color: $light_orange;
+		.heading-icon {
+			color: $light_orange;
+		}
+	}
+	.third-section {
+		border-bottom-color: $magenta;
+		.heading-icon {
+			color: $magenta;
+		}
+	}
+}
+//Chat Window
+.chat-window {
+	position: fixed;
+	width: 420px;
+	background: $white;
+	right: 0;
+	bottom: -100%;
+	height: 410px;
+	z-index: 999;
+	@include box-shadow(0, 6px, 6px, 0px, rgba(0, 0, 0, 0.5));
+	.chat-header {
+		padding: 15px;
+		background: $white;
+		height: 50px;
+		color: #23527c;
+		.close-chat {
+			cursor: pointer;
+		}
+	}
+	.chat-discussion {
+		background: #eee;
+		padding: 15px;
+		height: 300px;
+		overflow-y: auto;
+		.chat-message {
+			padding: 10px 20px;
+			.message-avatar {
+				height: 48px;
+				width: 48px;
+				border: 1px solid #e7eaec;
+				border-radius: 4px;
+				margin-top: 1px;
+			}
+			.message-date {
+				font-size: 10px;
+				color: #888888;
+			}
+			&.left {
+				.message-date {
+					float: right;
+				}
+				.message-avatar {
+					float: left;
+					margin-right: 10px;
+				}
+				.message {
+					text-align: left;
+					margin-left: 55px;
+				}
+			}
+			&.right {
+				.message-date {
+					float: left;
+				}
+				.message-avatar {
+					float: right;
+					margin-left: 10px;
+				}
+				.message {
+					text-align: right;
+					margin-right: 55px;
+				}
+			}
+			.message {
+				background-color: $white;
+				border: 1px solid #e7eaec;
+				text-align: left;
+				display: block;
+				padding: 10px 20px;
+				position: relative;
+				border-radius: 4px;
+				.message-content {
+					display: block;
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+	.chat-send {
+		padding: 15px 10px;
+	}
+}
+
 
 //Keyframes 
 @-webkit-keyframes sk-cubeGridScaleDelay {

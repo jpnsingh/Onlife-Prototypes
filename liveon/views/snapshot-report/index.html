@@ -1,0 +1,556 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LiveOn Redesign</title>
+
+    <meta name="description" content="">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="../../assets/vendors/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../assets/vendors/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Only Dashboard -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Optional theme -->
+    <link href="../../assets/vendors/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="../../js/vendor/notification/modernizr.custom.js"></script>
+
+</head>
+
+<body class="cbp-spmenu-push">
+
+    <div class="layout-wrapper">
+
+        <header class="header">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="hamburger" id="showMenus">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-9 trim-left">
+                            <div class="logo">
+                                <a href="../second-login">
+                                    <img src="../../assets/images/Onlife_HealthTrust.png" 
+                                         alt="HealthTrust logo" 
+                                         class="img-responsive" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <ul class="top-nav">
+                        <li>
+                            <a href="../connect-device" class="top-nav-icon">
+                                <span class="icon-onlife_devices"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../family-friends" class="top-nav-icon">
+                                <span class="icon-onlife_friends"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="top-nav-icon">
+                                <span class="icon-onlife_messages"></span>
+                                <span class="notification-count">1</span>
+                            </a>
+                        </li>
+                        <li class="login-candet">
+                            <a class="dropdown-toggle user-login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../../assets/images/Onlife_Mary_Dp.png" alt="" class="img-responsive" />
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>
+                                        <a class="dropdown-item" href="../dashboard">First Login</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../second-login">Completed HA</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Log out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+        <!-- Navigation Starts -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <ul>
+                <li>
+                    <a href="../view-profile">
+                        <span class="menu-icon ico-onlife_avatar"></span>
+                        <span class="menu-label">My Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_points"></span>
+                        <span class="menu-label">My Points</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_devices"></span>
+                        <span class="menu-label">Devices</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_goals"></span>
+                        <span class="menu-label">Goals</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_courses"></span>
+                        <span class="menu-label">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_trackers"></span>
+                        <span class="menu-label">Trackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_financial"></span>
+                        <span class="menu-label">Financial</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon icon-onlife_reports"></span>
+                        <span class="menu-label">Reports</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!-- Navigation Ends -->
+
+
+        <section class="content-area white-bg">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="health-steps">
+                        My Journey Overview
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <section class="slider slide-display">
+                        <div class="flexslider carousel">
+                            <ul class="slides">
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate completed mandatory icon-onlife_active">
+                                                <i class="fa fa-asterisk mandate-icon" title="Mandatory" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Assess Your Health</h3>
+                                                <p>Completed Today</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate mandatory icon-onlife_rounded_notes">
+                                                <i class="fa fa-asterisk mandate-icon" title="Mandatory" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Biometric Screening</h3>
+                                                <p>Complete by 05/21/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_rounded_coach"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Contact Coach</h3>
+                                                <p>Complete by 04/25/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_rounded_app"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Download App</h3>
+                                                <p>Complete by 04/30/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_challenge"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Start a Challenge</h3>
+                                                <p>Complete by 05/10/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-list">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <span class="indicate icon-onlife_rounded_invite"></span>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="label-details">
+                                                <h3>Invite Friends</h3>
+                                                <p>Complete by 05/20/2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-xs-5 bottom-right">
+                            <div class="points-count text-center pull-right">
+                                <a href="../point-matrix" class="value">0</a>
+                                <div class="label-txt">Points</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-7 trim-left">
+                            <div class="points-count text-center">
+                                <a href="../point-matrix" class="value">2000</a>
+                                <div class="label-txt">Possible</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+
+        <section class="tiles-area white-bg">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="banner-area">
+                        <img src="../../assets/images/banner/Onlife_Snapshot_Report.jpg" alt="Snapshot Report" class="img-responsive" />
+                    </div>
+                    <div class="view-header">
+                        <div class="container">
+                            <h1 class="main-heading">Snapshot Report</h1>
+                        </div>
+                    </div>
+                    <div class="tab-view">
+                        <ul class="nav nav-tabs">
+                            <li>
+                                <a href="#deviceVitals" data-toggle="tab">Device/Vitals</a>
+                            </li>
+                            <li class="active">
+                                <a href="#snapshot" data-toggle="tab">Snapshot</a>
+                            </li>
+                            <li>
+                                <a href="#healthGuide" data-toggle="tab">Health Guide</a>
+                            </li>
+                            <li>
+                                <a href="#interests" data-toggle="tab">Interests</a>
+                            </li>
+                            <li>
+                                <a href="#recommendations" data-toggle="tab">Recommendations</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane" id="deviceVitals">
+                                <div class="content-tab">
+                                    <p>Device/Vitals</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane activities active" id="snapshot">
+                                <div class="content-area">
+                                    <div class="col-sm-12">
+                                        <div class="points-wrapper">
+                                            <h2 class="blue-header">View Health Assessment Results</h2>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="result-block good">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_diet"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">Diet</h3>
+                                                                <p class="status">Good</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block excellent">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_ldl"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">LDL</h3>
+                                                                <p class="status">Excellent</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block excellent">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_hdl"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">HDL</h3>
+                                                                <p class="status">Excellent</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block poor">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_medilife"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">Stress</h3>
+                                                                <p class="status">Poor</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block fair">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_medilife"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">Weight BMI</h3>
+                                                                <p class="status">Fair</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block good">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_bp"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">Blood Pressure</h3>
+                                                                <p class="status">Good</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block poor-o">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_quit_tobacco"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">Tobacco Use</h3>
+                                                                <p class="status">Poor</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="result-block fair">
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-xs-offset-4">
+                                                            <div class="block-logo">
+                                                                <i class="icon-onlife_physical_activity"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="block-desc text-center">
+                                                                <h3 class="block-header">Physical Activity</h3>
+                                                                <p class="status">Fair</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <div class="points-wrapper">
+                                                    <h2 class="blue-header">Onlife's Healthy Living Guide </h2>
+                                                </div>
+                                                <div class="goals-container white-bg interest-areas">
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <h4 class="first-section">Keep up <i class="icon-onlife_active pull-right heading-icon"></i></h4>
+                                                            <p>Five minutes meditation</p>
+                                                            <p>Track smoking</p>
+                                                            <p>Exercise regime</p>
+                                                            <p>Engaging family members</p>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <h4 class="second-section">Watch and Improve <i class="icon-onlife_active pull-right heading-icon"></i></h4>
+                                                            <p>Increase amount of sleep to 7.5 hours</p>
+                                                            <p>
+                                                                Increase intake of fruits and vegetables
+                                                            </p>
+                                                            <p>
+                                                                Stay away from second hand smoke
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <h4 class="third-section">Change behavior now <i class="icon-onlife_active pull-right heading-icon"></i></h4>
+                                                            <p>Reduce cigarette consumption to 7 or less a week</p>
+                                                            <p>Reduce red meat intake</p>
+                                                            <p>Increase intake of fruits and vegetables</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane history" id="healthGuide">
+                                <div class="content-tab">
+                                    <p>Health Guide</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane achievements" id="interests">
+                                <div class="content-tab">
+                                    <p>Interests</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="recommendations">
+                                <div class="content-tab">
+                                    <p>Recommendations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-1">
+                    <h3>We're Here to Help</h3>
+                    <p class="contact-text">Contact Us</p>
+                    <p class="contact-number">877-709-0201</p>
+                </div>
+                <div class="col-sm-9">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="">Dashboard</a></li>
+                            <li><a href="">Trackers</a></li>
+                            <li><a href="">MyHealth</a></li>
+                            <li><a href="">Certificates</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
+                    </nav>
+                    <div class="copyrights">
+                        <p>&copy; 2017 Onlife Health, Inc. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <div style="overflow: hidden; opacity: 0; width: 0px; height:0px;"><img src="../../assets/images/Onlife_Tracy_User.jpg" /></div>
+
+    <div class="loading-overlay">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+
+    <!-- Jquery Version -->
+    <script src="../../assets/js/jquery-1.11.3.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../../js/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../../assets/js/classie.js"></script>
+    <script src="../../assets/js/jquery.flexslider.js"></script>
+    <script src="../../js/vendor/notification/classie.js"></script>
+    <script src="../../js/vendor/notification/notificationFx.js"></script>
+    <script src="../../js/scripts.js"></script>
+    
+</body>
+</html>

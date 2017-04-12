@@ -1,0 +1,178 @@
+[
+	{
+		"key": "apple",
+		"name": "Apple Health Partners",
+		"logo": {
+			"src": "../../assets/images/Onlife_Apple_Health.png"
+		},
+		"description": "Connect the Apple Health app to our AlwaysOn&reg; mobile app for even more ways to be active and reach your wellness goals. Once you've downloaded and registered the AlwaysOn app, you'll be able to connect the Health app and start sharing your activity data with AlwaysOn. The Health app is only available in iOS 8 and later. Click <a href='/BioDevices/FAQ/'> HERE</a> to learn more about the Health app, and if you don't already have the AlwaysOn app, click below to download it from the App Store.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "adidas",
+		"name": "adidas miCoach",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/adidas-micoach-icon.png"
+		},
+		"description": "miCoach is your personal coach. Choose training plans or create your own. Track your workout progress, get coaching feedback, and see improvements.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "fitbit",
+		"name": "Fitbit",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/fitbit-icon.png"
+		},
+		"description": "Fitbit offers wearable devices to help you lead a healthier, more active life. The Fitbit family motivates you to stay active, live better and reach your goals. Let's make fitness a fun, achievable part of everyday life. Our products track your health and fitness, then sync wirelessly to offer insight and encouragement whether you're online or on the go. So get ready to go farther.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "garmin",
+		"name": "Garmin Connect",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/garmin-connect.png"
+		},
+		"description": "Garmin designs, manufactures and markets GPS navigation, communication and sonar products. Garmin Connect presents your data in clear and easy to understand evaluation. Over the coming months we'll provide even more tools to help you optimize your training. See what's in store for you when you upload your workout data to Garmin Connect. From uploads, to analysis, to exploring millions of activities worldwide, there's something here for you at Garmin Connect.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "iHealth",
+		"name": "iHealth",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/ihealth-icon.png"
+		},
+		"description": "iHealth designs innovative, mobile personal healthcare products for everyone. iHealth is dedicated to helping people lead healthier lives. Our goal is to make it as easy as possible for individuals of all ages to take a more active role in managing their health. We do this by designing and manufacturing innovative, consumer-friendly, mobile personal healthcare products that connect to the cloud.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "jawbone",
+		"name": "Jawbone UP",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/jawbone_up-icon.png"
+		},
+		"description": "UP is a wristband and app that tracks how you sleep, move and eat. UP was designed to fit seamlessly in people's lives. Real life. It's a thoughtful combination of engineering and design, custom-made for how we live. UP is both flexible and strong. Sometimes UP needs to slide smoothly under sleeves or bend to accommodate an active lifestyle. Other times it has to be strong enough to stand up to a snowball fight without a problem (or more likely, a few thousand showers). Day and night, UP is right there with you.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "fitness",
+		"name": "Life Fitness",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/lifefitness-icon.png"
+		},
+		"description": "Life Fitness is a global leader in providing fitness equipment. Helping people live healthier lives is what we do, and the devotion to that goal starts with our employees. Life Fitness is the global leader of the fitness industry. Our commercial, professional and home fitness products have a reputation for being durable, reliable and on the cutting edge of both technology and design. We're proud of our nearly five decades of experience and our history as a fitness industry pioneer, but there's more to it than that.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "mayfitness",
+		"name": "MapMyFitness",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/mapmyfitness-icon-ua.png"
+		},
+		"description": "Your workout, your device, anywhere, anytime. MapMyFitness is a fitness tracking application that enables you to use the built-in GPS of your mobile device to track all of your fitness activities on an interactive map.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "microsoft",
+		"name": "Microsoft",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/microsoft-icon.png"
+		},
+		"description": "Microsoft Band makes it easier to reach your fitness goals. Microsoft Band makes it easier to reach your fitness goals. You can track your daily physical activity and review your stats with a glance at your wrist. Just like a personal trainer, Microsoft Band guides you to improved wellness by constantly learning about you, your current fitness level, and your future needs. Get the most out of Microsoft Band with the Microsoft Health app and a full-featured web dashboard. Via your phone, the app lets you track progress toward fitness goals with easy-to-understand charts. And the web dashboard provides insights, unique to you, in your favorite browser. The more you use your Microsoft Band, the more valuable these insights will become.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "wearables",
+		"name": "Misfit Wearables",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/misfitwearables-icon.png"
+		},
+		"description": "Misfit is an elegant personal activity tracker that works with the Shine app. We provide goods and services to enable communities to flourish. We create opportunities for people to express their innate capacity for creativity and productivity in meaningful ways.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "movesapp",
+		"name": "Moves App",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/movesapp-icon.png"
+		},
+		"description": "Moves App is an activity diary of your life. Moves automatically records any walking, cycling and running you do. The app is always on, so there's no need to start and stop it. Just keep your phone in your pocket or your bag. Note: Your iPhone should be with you when authorizing this app.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "runkeeper",
+		"name": "Runkeeper",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/healthgraph-icon.png"
+		},
+		"description": "The Runkeeper app is a personal trainer in your pocket. Runkeeper makes tracking your workouts fun, social, and easy to understand so that you can improve the quality of your fitness.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "strava",
+		"name": "Strava",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/strava-icon.png"
+		},
+		"description": "Strava is a complete system to track all your runs, rides and crosstraining. Today, Strava lets athletes all over the world experience social fitness-sharing, comparing and competing with each other's personal fitness data via mobile and online apps. Currently focused on the needs of avid cyclists and runners, Strava lets you track your rides and runs via your iPhone, Android or dedicated GPS device to analyze and quantify your performance. Strava makes fitness a social experience, providing motivation and camaraderie even if you're exercising alone.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "suunto",
+		"name": "Suunto",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/suunto-logo.png"
+		},
+		"description": "Suunto offers a collection of sports watches to track your fitness activities. It doesn't matter why you're moving. Climbing a mountain, racing to the finish line, or just out for the pure pleasure of it, Suunto gives you the freedom to focus on your goal. The Suunto Connected Family, along with the Movescount App, offers you the ultimate package for planning, following your progress, ensuring optimal recovery and sharing your sports moments.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "armour",
+		"name": "Under Armour Record",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/under_armour-icon-ua.png"
+		},
+		"description": "UA Record is the dashboard for your 24/7 activity, sleep, and workouts. Track, analyze, and share your fitness activity with the world's first social network for athletes and fitness enthusiasts. With Under Armour Connected Fitness, you can use the same login for all Under Armour apps including UA Record, MapMyFitness, MapMyRun, MapMyRide, MapMyWalk and MapMyHike.",
+		"connect": {
+			"url": ""
+		}
+	},
+	{
+		"key": "withings",
+		"name": "Withings",
+		"logo": {
+			"src": "https://app.validic.com/assets/appicons/withings-icon.png"
+		},
+		"description": "Withings creates smart products and apps to take care of yourself and your loved ones. By extending the capabilities of an object through network resources, Withings provides access to infinite computing and storage facilities at no extra cost, turning objects into smart connected devices. Since 2009, Withings has extended those benefits to a wide range of lifestyle-friendly devices. By using mobile phones and computers as bridges and opening up its platform to the well-being ecosystem, Withings now works seamlessly with over 60 partner apps and devices, providing users with a whole new dimension to their day-to-day life.",
+		"connect": {
+			"url": ""
+		}
+	}
+]

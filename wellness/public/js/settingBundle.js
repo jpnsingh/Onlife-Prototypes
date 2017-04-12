@@ -3447,7 +3447,6 @@
                             .get('JourneyTriggers.json')
                             .then(function (response) {
                                 self.journeyTriggers = response.data;
-                                $scope.selectedTrigger = self.journeyTriggers[0];
                             });
 
                         $http
@@ -3488,15 +3487,15 @@
                             {
                                 title: "Dynamic Group Header - 1",
                                 items: [
-                                    {"item-title": "item 1"},
-                                    {"item-title": "item 2"}
+                                    { "item-title": "item 1" },
+                                    { "item-title": "item 2" }
                                 ]
                             },
                             {
                                 title: "Dynamic Group Header - 2",
                                 items: [
-                                    {"item-title": "item 3"},
-                                    {"item-title": "item 4"}
+                                    { "item-title": "item 3" },
+                                    { "item-title": "item 4" }
                                 ]
                             }
                         ];
@@ -4028,17 +4027,10 @@
                         });
                     };
 
-                    self.viewSetting = function (settingMenu, index, subIndex) {
+                    self.viewSetting = function (settingMenu, index) {
                         self.menuClass = [];
                         self.menuClass[index] = 'active';
-
-                        if (subIndex) {
-                            self.subMenuClass = [];
-                            self.subMenuClass[subIndex] = 'active';
-                        }
-
                         $scope.settingMenuData = settingMenu;
-
                         $location.path('/setting/' + settingMenu.MenuIdentifier.toLowerCase());
                     };
 
@@ -4067,10 +4059,8 @@
                     });
 
                     self.getGroupData();
-
-                    var locationPath = $location.path();
-
-                    if (locationPath === '/setting/announcements') {
+                    var sss = $location.path();
+                    if (sss === '/setting/announcements') {
                         var pp = {
                             "DisplayName": "Announcements",
                             "ClassType": [
@@ -4082,7 +4072,7 @@
                         self.viewSetting(pp, 2);
                     }
 
-                    if (locationPath === '/setting/marketingtiles') {
+                    if (sss === '/setting/marketingtiles') {
                         var dd = {
                             "DisplayName": "Marketing Tiles",
                             "ClassType": [
@@ -4090,11 +4080,11 @@
                             ],
                             "MenuIdentifier": "MarketingTiles",
                             "Category": null
-                        };
+                        }
                         self.viewSetting(dd, 1);
                     }
 
-                    if (locationPath === '/setting/points') {
+                    if (sss === '/setting/points') {
                         var ff = {
                             "DisplayName": "Points",
                             "ClassType": [
@@ -4102,21 +4092,22 @@
                             ],
                             "MenuIdentifier": "Points",
                             "Category": "Points"
-                        };
+                        }
+
                         self.viewSetting(ff, 0);
                     }
 
-                    if (locationPath === '/setting/incentives') {
-                        var incentivesMenu = {
+                    if (sss === '/setting/incentives') {
+                        var kk = {
                             "DisplayName": "Manage Incentives",
                             "ClassType": [
                                 "Incentives"
                             ],
                             "MenuIdentifier": "Incentives",
                             "Category": "Incentives"
-                        };
+                        }
 
-                        self.viewSetting(incentivesMenu, 3);
+                        self.viewSetting(kk, 3);
                     }
 
                     var programMenu = {
@@ -4132,21 +4123,21 @@
                                 "ClassType": [
                                     "JourneyPriorities"
                                 ],
-                                "MenuIdentifier": "JourneyPriorities"
+                                "MenuIdentifier": "JourneyPriorities",
+                                "Index": 4.1
                             }
                         ]
-                    };
-
-                    if (locationPath === '/setting/programs') {
+                    }
+                    if (sss === '/setting/programs') {
                         self.viewSetting(programMenu, 4);
                     }
 
-                    if (locationPath === '/setting/journeypriorities') {
-                        self.viewSetting(programMenu.SubMenu[0], 4, 1);
+                    if (sss === '/setting/journeypriorities') {
+                        self.viewSetting(programMenu.SubMenu[0], 4.1);
                     }
 
-                    if (locationPath === '/setting/recommendations') {
-                        var recommendationsMenu = {
+                    if (sss === '/setting/recommendations') {
+                        var recommendations = {
                             "DisplayName": "Recommendations Library",
                             "ClassType": [
                                 "Recommendations"
@@ -4155,7 +4146,7 @@
                             "Category": "Recommendations"
                         };
 
-                        self.viewSetting(recommendationsMenu, 5);
+                        self.viewSetting(recommendations, 5);
                     }
 
                 }

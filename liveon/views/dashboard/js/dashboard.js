@@ -19,6 +19,15 @@
         }
     });
 
+    $('.call-coach').popover({
+        placement: 'top',
+        trigger: 'hover',
+        html: true,
+        content: function () {
+            return $('.call-a-coach').html();
+        }
+    });
+
     $('.ha-not-now').click(function () {
         $('.next-recommendation.first').hide();
 
@@ -71,23 +80,17 @@
 
 $(window).on('load', function (e) {
     windowResize();
+    slideWidth();
 });
 $(window).on('resize', function (e) {
     windowResize();
+    slideWidth();
 });
 
 function windowResize() {
     $('.view-second-box, .view-third-box').css('height', ($('.most-big-box').height() / 2) - (29 / 2));
 }
 
-$(window).load(function () {
-    $('.flexslider').flexslider({
-        animation: "slide",
-        animationLoop: false,
-        itemWidth: 298,
-        itemMargin: 0,
-        controlNav: false,
-        animationLoop: true,
-        minItems: 3
-    });
-});
+function slideWidth() {
+    $('.flexslider .slides li').css('width', ($('.slide-display').width() / 3));
+}

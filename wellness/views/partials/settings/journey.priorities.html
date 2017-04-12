@@ -2,17 +2,16 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="trigger" class="control-label">Select Trigger</label>
+                <label class="control-label">Select Trigger</label>
                 <select class="form-control"
-                        id="trigger"
                         data-ng-options="trigger.name for trigger in settingListCtrl.journeyTriggers"
                         data-ng-model="selectedTrigger">
-                    <option value="">-- Select Trigger --</option>
+                    <option value="">--Select Trigger--</option>
                 </select>
             </div>
         </div>
     </div>
-    <p data-ng-bind="selectedTrigger.description"></p>
+    <p>{{selectedTrigger.description}}</p>
 </div>
 <div class="col-sm-12">
     <div class="accordion">
@@ -21,13 +20,11 @@
                 <div class="accordion-heading">
                     <a href="" data-ng-click="triggerValue.show = !triggerValue.show;">
                         <i class="fa"
-                           data-ng-class="triggerValue.show ? 'fa-caret-down': 'fa-caret-right'"></i>
+                           data-ng-class="{'fa-caret-right': !triggerValue.show, 'fa-caret-down': triggerValue.show}"></i>
                         {{triggerValue.title}}
                     </a>
                 </div>
-                <div data-ng-show="triggerValue.show"
-                     class="accordion-content"
-                     data-ng-class="triggerValue.show ? 'animated fadeInLeft' : ''">
+                <div class="accordion-content" data-ng-show="triggerValue.show">
                     <div class="row">
                         <div class="col-sm-5">
                             <label class="control-label">Segment</label>
@@ -36,7 +33,7 @@
                                 <input class="form-control"
                                        type="text"
                                        data-ng-disabled="true"
-                                       data-ng-model="segment.value"/>
+                                       data-ng-model="segment.value" />
                             </div>
                         </div>
                         <div class="col-sm-7">
@@ -48,7 +45,7 @@
                                     <input class="form-control"
                                            type="text"
                                            data-ng-disabled="true"
-                                           data-ng-model="default.value"/>
+                                           data-ng-model="default.value" />
                                 </div>
                                 <div class="col-sm-2">
 

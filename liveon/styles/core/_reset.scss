@@ -22,16 +22,100 @@
     font-weight: normal;
     font-style: normal;
 }
-[class*='icon-']:before{
-    display: inline-block;
-    font-family: 'OnlifeFont';
-    font-style: normal;
+@font-face {
+    font-family: 'Onlife_icon_set';
+    src: url('../../../styles/core/fonts/onlife-font/Onlife_icon_set.eot');
+    src: url('../../../styles/core/fonts/onlife-font/Onlife_icon_set.eot?#iefix') format('embedded-opentype'),
+         url('../../../styles/core/fonts/onlife-font/Onlife_icon_set.woff') format('woff'),
+         url('../../../styles/core/fonts/onlife-font/Onlife_icon_set.ttf') format('truetype'),
+         url('../../../styles/core/fonts/onlife-font/Onlife_icon_set.svg#Onlife_icon_set') format('svg');
     font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    font-style: normal;
 }
 
+[class*='ico-']:before, 
+[class*='icon-']:before {
+	display: inline-block;
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+[class*='ico-']:before{
+   font-family: 'Onlife_icon_set';
+}
+[class*='icon-']:before{
+	font-family: 'OnlifeFont';
+}
+//First Set
+.ico-onlife_blood_glucose:before{content:'\0041';}
+.ico-onlife_camera:before{content:'\0042';}
+.ico-onlife_checkmark_circle:before{content:'\0043';}
+.ico-onlife_decrease_weight_1:before{content:'\0044';}
+.ico-onlife_document:before{content:'\0045';}
+.ico-onlife_eBook:before{content:'\0046';}
+.ico-onlife_edit:before{content:'\0047';}
+.ico-onlife_evening:before{content:'\0048';}
+.ico-onlife_exercise_diary:before{content:'\0049';}
+.ico-onlife_face_1:before{content:'\004a';}
+.ico-onlife_face_2:before{content:'\004b';}
+.ico-onlife_face_3:before{content:'\004c';}
+.ico-onlife_face_4:before{content:'\004d';}
+.ico-onlife_face_5:before{content:'\004e';}
+.ico-onlife_fb_circle:before{content:'\004f';}
+.ico-onlife_fb_filled:before{content:'\0050';}
+.ico-onlife_food_diary:before{content:'\0051';}
+.ico-onlife_gamification:before{content:'\0052';}
+.ico-onlife_hamburger_menu:before{content:'\0053';}
+.ico-onlife_help:before{content:'\0054';}
+.ico-onlife_home:before{content:'\0055';}
+.ico-onlife_home_filled:before{content:'\0056';}
+.ico-onlife_HTML_document:before{content:'\0057';}
+.ico-onlife_lab_results:before{content:'\0058';}
+.ico-onlife_linkedIn:before{content:'\0059';}
+.ico-onlife_linkedIn_circle:before{content:'\005a';}
+.ico-onlife_logout:before{content:'\0061';}
+.ico-onlife_message:before{content:'\0062';}
+.ico-onlife_message_icon:before{content:'\0063';}
+.ico-onlife_miles:before{content:'\0064';}
+.ico-onlife_minutes_icon:before{content:'\0065';}
+.ico-onlife_mobile_range:before{content:'\0066';}
+.ico-onlife_more:before{content:'\0067';}
+.ico-onlife_morning:before{content:'\0068';}
+.ico-onlife_my_company:before{content:'\0069';}
+.ico-onlife_navigate_down:before{content:'\006a';}
+.ico-onlife_navigate_left:before{content:'\006b';}
+.ico-onlife_navigate_right:before{content:'\006c';}
+.ico-onlife_navigate_up:before{content:'\006d';}
+.ico-onlife_PDF:before{content:'\006e';}
+.ico-onlife_people:before{content:'\006f';}
+.ico-onlife_phone_receiver:before{content:'\0070';}
+.ico-onlife_pointer:before{content:'\0071';}
+.ico-onlife_portal:before{content:'\0072';}
+.ico-onlife_quit_smoking:before{content:'\0073';}
+.ico-onlife_reports_icon:before{content:'\0074';}
+.ico-onlife_search_icon:before{content:'\0075';}
+.ico-onlife_sms:before{content:'\0076';}
+.ico-onlife_spreadsheet:before{content:'\0077';}
+.ico-onlife_star:before{content:'\0078';}
+.ico-onlife_symptom_checker:before{content:'\0079';}
+.ico-onlife_twitter_circle:before{content:'\007a';}
+.ico-onlife_twitter_filled:before{content:'\0030';}
+.ico-onlife_vimeo:before{content:'\0031';}
+.ico-onlife_vimeo_circle:before{content:'\0032';}
+.ico-onlife_wallet:before{content:'\0033';}
+.ico-onlife_word_document:before{content:'\0034';}
+.ico-onlife_youtube:before{content:'\0035';}
+.ico-onlife_youtube_circle:before{content:'\0036';}
+.ico-onlife_afternoon:before{content:'\0037';}
+.ico-onlife_articles:before{content:'\0038';}
+.ico-onlife_assessments:before{content:'\0039';}
+.ico-onlife_avatar:before{content:'\0021';}
+.ico-onlife_concierge:before{content:'\0022';}
+.ico-onlife_fitness_center:before{content:'\0023';}
+.ico-onlife_friends_family:before{content:'\0024';}
+//Second set
 .icon-onlife_pregnancy:before{content:'\0041';}
 .icon-onlife_baby_pregnancy:before{content:'\0042';}
 .icon-onlife_medilife:before{content:'\0043';}

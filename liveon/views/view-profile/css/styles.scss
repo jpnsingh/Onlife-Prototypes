@@ -125,8 +125,6 @@
 		.progress-bar {
 			animation-duration: 3s;
 			animation-name: width;
-			background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
-			background-size: 24em 0.25em;
 			height: 20px;
 			position: relative;
 		}
@@ -163,39 +161,6 @@
 	background: $light_gray;
 }
 
-.interest-areas {
-	h4 {
-		font-size: 1.4em;
-		border-bottom: 3px solid #CCC;
-		padding: 0.5em 0;
-		.heading-icon {
-			font-weight: bold;
-			font-size: 1.2em;
-		}
-	}
-	p {
-		line-height: 28px;
-	}
-	.first-section {
-		border-bottom-color: $purple;
-		.heading-icon {
-			color: $purple;
-		}
-	}
-	.second-section {
-		border-bottom-color: $light_orange;
-		.heading-icon {
-			color: $light_orange;
-		}
-	}
-	.third-section {
-		border-bottom-color: $magenta;
-		.heading-icon {
-			color: $magenta;
-		}
-	}
-}
-
 .goal-item-container {
 	.points-value {
 		background: rgb(232,84,36); /* Old browsers */
@@ -205,6 +170,7 @@
 		padding: 0.3em 0.5em;
 		display: inline-block;
 		color: $white;
+		float: right;
 		.pts-label {
 			font-size: 0.7em;
 		}

@@ -32,3 +32,50 @@
 		}
 	}
 }
+.ha-model {
+	.modal-header {
+		background: #275d8c;
+	}	
+	ol {
+		list-style: decimal;
+		font-size: 2em;
+		margin-left: 1.5em;
+		color: #275d8c;
+		li {
+			padding: 20px;
+			border-bottom: 1px solid #CCCCCC;
+			&:nth-child(even) {
+				background: #f3f3f3;
+			}
+			.ques {
+				font-size: 0.7em;
+				margin-bottom: 10px;
+				color: #275d8c;
+			}
+			.ans {
+				font-size: 0.6em;
+				color: #6a97b3;
+			}
+			p {
+				font-size: 0.55em;
+				margin-bottom: 15px;
+			}
+			form {
+				label {
+					font-size: 0.6em;
+				}
+			}
+		}
+	}
+	.modal-body {
+		max-height: 510px;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+	.modal-footer {
+		.progress {
+			margin: 14px 0 0 0;
+			height: 10px;
+		}
+	}
+}

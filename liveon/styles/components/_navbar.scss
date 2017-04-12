@@ -69,8 +69,8 @@
 	position: relative;
 	z-index: 10; // sidebar should be less than header z-index
 	.logo {
-		max-width: 140px;
-		margin: 5px;
+		max-width: 200px;
+		margin: 5px 0;
 		display: inline-block;
 	}
 	.top-nav {

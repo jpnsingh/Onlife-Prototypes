@@ -1,22 +1,8 @@
 
 @import "../../../styles/master";
 
-
-.points-count {
-	.value {
-		color: $dark_blue;
-		font-size: 2em;
-		font-weight: bold;
-		&:hover {
-			text-decoration: none;
-		}
-	}
-	.label-txt {
-		font-size: 0.8em;
-		color: $light_gray;
-	}
-}
-
 .qa-code {
 	margin: 1em 0 0 0;
 }
+
+

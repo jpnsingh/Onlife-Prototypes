@@ -1,26 +1,2 @@
 
 @import "../../../styles/master";
-
-.points-count-top {
-	.value {
-		color: $dark_blue;
-		font-size: 2em;
-		font-weight: bold;
-	}
-	.label-txt {
-		font-size: 0.8em;
-		color: $light_gray;
-	}	
-}
-.points-count {
-	margin: 10px 0 0 0;
-	.value {
-		color: $dark_blue;
-		font-size: 2em;
-		font-weight: bold;
-	}
-	.label-txt {
-		font-size: 0.8em;
-		color: $light_gray;
-	}
-}

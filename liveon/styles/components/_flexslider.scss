@@ -1,9 +1,11 @@
 /* ====================================================================================================================
  * RESETS
  * ====================================================================================================================*/
-.flex-container a:hover,
-.flex-slider a:hover {
-  outline: none;
+.flex-container,
+.flex-slider {
+	a:hover {
+	  outline: none;
+	}
 }
 .slides,
 .slides > li,
@@ -19,26 +21,7 @@
 /* ====================================================================================================================
  * BASE STYLES
  * ====================================================================================================================*/
-.flexslider {
-  margin: 0;
-  padding: 0;
-}
-.flexslider .slides > li {
-  display: none;
-  -webkit-backface-visibility: hidden;
-}
-.flexslider .slides img {
-  width: 100%;
-  display: block;
-}
-.flexslider .slides:after {
-  content: "\0020";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
+ 
 html[xmlns] .flexslider .slides {
   display: block;
 }
@@ -48,13 +31,33 @@ html[xmlns] .flexslider .slides {
 .no-js .flexslider .slides > li:first-child {
   display: block;
 }
-/* ====================================================================================================================
- * DEFAULT THEME
- * ====================================================================================================================*/
+.flexslider {
+	margin: 0;
+	padding: 0;
+	.slides {
+		&:after {
+		  content: "\0020";
+		  display: block;
+		  clear: both;
+		  visibility: hidden;
+		  line-height: 0;
+		  height: 0;
+		}
+		> li {
+		  display: none;
+		  -webkit-backface-visibility: hidden;
+		  img {
+			  width: 100%;
+			  display: block;
+			}
+		}
+	}
+}
+
 .flexslider {
 	margin: 25px 0 15px 0;
-	background: #ffffff;
-	border: 4px solid #ffffff;
+	background: #FFFFFF;
+	border: 4px solid #FFFFFF;
 	position: relative;
 	zoom: 1;
 	-webkit-border-radius: 4px;
@@ -81,11 +84,15 @@ html[xmlns] .flexslider .slides {
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }
-.loading .flex-viewport {
-	max-height: 300px;
+.loading {
+	.flex-viewport {
+		max-height: 300px;
+	}
 }
-.carousel li {
-	margin-right: 5px;
+.carousel {
+	li {
+		margin-right: 5px;
+	}
 }
 .flex-direction-nav {
 	*height: 0;
@@ -132,9 +139,6 @@ html[xmlns] .flexslider .slides {
 		z-index: -1;
 	}
 }
-
-
-
 
 .flex-pauseplay {
 	a {
@@ -198,51 +202,59 @@ html[xmlns] .flexslider .slides {
 		}
 	}
 }
-.flex-control-paging li a.flex-active {
-	background: #000;
-	background: rgba(0, 0, 0, 0.9);
-	cursor: default;
+.flex-control-paging {
+	li {
+		a.flex-active {
+			background: #000;
+			background: rgba(0, 0, 0, 0.9);
+			cursor: default;
+		}
+	}
 }
 .flex-control-thumbs {
 	margin: 5px 0 0;
 	position: static;
 	overflow: hidden;
-}
-.flex-control-thumbs li {
-	width: 25%;
-	float: left;
-	margin: 0;
-}
-.flex-control-thumbs img {
-	width: 100%;
-	height: auto;
-	display: block;
-	opacity: .7;
-	cursor: pointer;
-	-moz-user-select: none;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-.flex-control-thumbs img:hover {
-	opacity: 1;
-}
-.flex-control-thumbs .flex-active {
-	opacity: 1;
-	cursor: default;
+	li {
+		width: 25%;
+		float: left;
+		margin: 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		opacity: .7;
+		cursor: pointer;
+		-moz-user-select: none;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flex-active {
+		opacity: 1;
+		cursor: default;
+	}
 }
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
 @media screen and (max-width: 860px) {
-	.flex-direction-nav .flex-prev {
-		opacity: 1;
-		left: 10px;
+	.flex-direction-nav {
+		.flex-prev {
+			opacity: 1;
+			left: 10px;
+		}
 	}
-	.flex-direction-nav .flex-next {
-		opacity: 1;
-		right: 10px;
+	.flex-direction-nav {
+		.flex-next {
+			opacity: 1;
+			right: 10px;
+		}
 	}
 }

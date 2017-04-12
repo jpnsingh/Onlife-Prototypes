@@ -1,0 +1,167 @@
+
+@import "../../../styles/master";
+
+.view-header {
+	background: $purple;
+	padding: 1em 0;
+	.main-heading {
+		color: $white;
+		font-size: 2em;
+	}
+}
+.content-area {
+	padding: 2em 0;
+	.blue-header {
+		color: $dark_blue;
+		font-size: 1.6em;
+		margin: 0.5em 0;
+	}
+	
+}
+.diagnostic-logo {
+	padding: 15px;
+}
+.biometric-diagnostic {
+	.nav-tabs {
+		background: #f3f3f3;
+		border-top: 1px solid $border_gray;
+		border-left: 1px solid $border_gray;
+		border-right: 1px solid $border_gray;
+		border-bottom: 0;
+		border-radius: 0;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		@include box-shadow(1px, -6px, 5px, 0px, rgba(0, 0, 0, 0.15));
+		> li {
+			z-index: 1;
+			> a {
+				text-transform: uppercase;
+				border-right: 1px solid $border_gray;
+				color: #6a6a6a;
+				font-weight: bold;
+			}
+			&.active {
+				> a {
+					background: #dfdfdf;
+					border-radius: 0;
+					color: #04376d;
+					margin-right: 0;
+					border: 0;
+					&:hover, &:focus {
+						background: #dfdfdf;
+					}
+					&:after, &:before {
+						top: 100%;
+						left: 50%;
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+					}
+					&:after {
+						border-color: rgba(136, 183, 213, 0);
+						border-top-color: #dfdfdf;
+						border-width: 10px;
+						margin-left: -10px;
+					}
+					&:before {
+						border-color: rgba(194, 225, 245, 0);
+						border-top-color: $border_gray;
+						border-width: 12px;
+						margin-left: -12px;
+					}
+				}
+			}
+		}
+	}
+	.tab-main-header, .tab-sub-header {
+		color: $white;
+	}
+	.tab-main-header {
+		margin: 1em 0 0 0;
+		font-size: 2em;
+	}
+	.tab-sub-header {
+		color: $white;
+		font-size: 1.4em;
+	}
+}
+.banner-area {
+	position: relative;
+	.events-wrapper, .events-header {
+		position: absolute;
+		width: 100%;
+		left:0;
+	}
+	.events-wrapper {
+		bottom: 0;
+	}
+	.events-header {
+		top: 0;
+	}
+}
+.event-block {
+    background: $white;
+    padding: 3em 1em 3em 1em;
+	border: 1px solid $border_gray;
+	@include box-shadow(1px, -6px, 5px, 0px, rgba(0, 0, 0, 0.2));
+	.fa {
+		font-size: 2em;
+	}
+	h3 {
+		color: #04376d;
+		font-size: 1.5em;
+		margin-bottom: 9px;
+	}
+	&:after, &:before {
+		top: 99%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: $white;
+		border-width: 40px;
+		margin-left: -40px;
+	}
+	&:before {
+		border-color: rgba(194, 225, 245, 0);
+		border-top-color: $border_gray;
+		border-width: 41px;
+		margin-left: -41px;
+	}
+	.button {
+		margin: 15px 0 0 0;
+	}
+	p {
+		font-size: 0.8em;
+	}
+}
+.event-details {
+	background: #dddddd;
+	padding-top: 4em;
+	.event-table-wrapper {
+		background: #d9d9d9;
+		table {
+			td {
+				font-size: 0.9em;
+				font-weight: normal;
+				text-align: center;
+				border: 1px solid #b9b9b9;
+				&:first-child {
+					text-align: left;
+				}
+				&.heading {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

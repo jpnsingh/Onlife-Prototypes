@@ -36,10 +36,12 @@
                             <span></span>
                         </div>
                     </div>
-                    <div class="col-xs-9">
+                    <div class="col-xs-9 trim-left">
                         <div class="logo">
-                            <a href="../dashboard/index.html">
-                                <img src="../../assets/images/onlife-logo.png" alt="onlife logo" class="img-responsive" />
+                            <a href="../dashboard">
+                                <img src="../../assets/images/Onlife_HealthTrust.png" 
+                                     alt="HealthTrust logo" 
+                                     class="img-responsive" />
                             </a>
                         </div>
                     </div>
@@ -48,20 +50,9 @@
             <div class="col-sm-8">
                 <ul class="top-nav">
                     <li>
-                        <div class="row">
-                            <div class="col-xs-4 bottom-right">
-                                <div class="points-count-top text-center">
-                                    <div class="value">150</div>
-                                    <div class="label-txt">Points</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-8">
-                                <div class="points-count-top text-center">
-                                    <a href="../point-matrix" class="value">2000</a>
-                                    <div class="label-txt">Possible</div>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="../connect-device" class="top-nav-icon">
+                            <span class="icon-onlife_devices"></span>
+                        </a>
                     </li>
                     <li>
                         <a href="../family-friends" class="top-nav-icon">
@@ -70,7 +61,7 @@
                     </li>
                     <li>
                         <a href="#" class="top-nav-icon">
-                            <span class="icon-onlife_notification"></span>
+                            <span class="icon-onlife_messages"></span>
                             <span class="notification-count">1</span>
                         </a>
                     </li>
@@ -80,9 +71,6 @@
                         </a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li>
-                                    <a class="dropdown-item" href="../view-profile">View Profile</a>
-                                </li>
                                 <li>
                                     <a class="dropdown-item" href="../dashboard">First Login</a>
                                 </li>
@@ -104,33 +92,60 @@
     <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
         <ul>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_points"></span> <span class="menu-label">My Points</span></a>
+                <a href="../view-profile">
+                    <span class="menu-icon ico-onlife_avatar"></span>
+                    <span class="menu-label">My Profile</span>
+                </a>
             </li>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_devices"></span> <span class="menu-label">Devices</span></a>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_points"></span>
+                    <span class="menu-label">My Points</span>
+                </a>
             </li>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_goals"></span> <span class="menu-label">Goals</span></a>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_devices"></span>
+                    <span class="menu-label">Devices</span>
+                </a>
             </li>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_courses"></span> <span class="menu-label">Courses</span></a>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_goals"></span>
+                    <span class="menu-label">Goals</span>
+                </a>
             </li>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_trackers"></span> <span class="menu-label">Trackers</span></a>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_courses"></span>
+                    <span class="menu-label">Courses</span>
+                </a>
             </li>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_financial"></span> <span class="menu-label">Financial</span></a>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_trackers"></span>
+                    <span class="menu-label">Trackers</span>
+                </a>
             </li>
             <li>
-                <a href="#"><span class="menu-icon icon-onlife_reports"></span> <span class="menu-label">Reports</span></a>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_financial"></span>
+                    <span class="menu-label">Financial</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="menu-icon icon-onlife_reports"></span>
+                    <span class="menu-label">Reports</span>
+                </a>
             </li>
         </ul>
     </nav><!-- Navigation Ends -->
-    <!--         <section class="content-area">
+          <section class="content-area">
                 <div class="row">
                     <div class="col-sm-2">
-    <!--                     <div class="health-steps">
-                            My Health Steps
+                      <div class="health-steps">
+                            My Journey Overview
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -145,7 +160,7 @@
                                             <div class="col-xs-8">
                                                 <div class="label-details">
                                                     <h3>Assess Your Health</h3>
-                                                    <p>Completed on 03/28/2017</p>
+                                                    <p>Completed on 04/30/2017</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,12 +168,14 @@
                                     <li class="item-list">
                                         <div class="row">
                                             <div class="col-xs-4 text-center">
-                                                <span class="indicate icon-onlife_rounded_notes"></span>
+                                                <span class="indicate mandatory icon-onlife_rounded_notes">
+                                                    <i class="fa fa-asterisk mandate-icon" title="Mandatory" aria-hidden="true"></i>
+                                                </span>
                                             </div>
                                             <div class="col-xs-8">
                                                 <div class="label-details">
                                                     <h3>Biometric Screening</h3>
-                                                    <p>Complete by 04/20/2017</p>
+                                                    <p>Complete by 05/21/2017</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -221,13 +238,13 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="row">
-                            <div class="col-xs-4 bottom-right">
-                                <div class="points-count text-center">
-                                    <div class="value">250</div>
+                            <div class="col-xs-5 bottom-right">
+                                <div class="points-count text-center pull-right">
+                                    <a href="../point-matrix" class="value">0</a>
                                     <div class="label-txt">Points</div>
                                 </div>
                             </div>
-                            <div class="col-xs-8">
+                            <div class="col-xs-7 trim-left">
                                 <div class="points-count text-center">
                                     <a href="../point-matrix" class="value">2000</a>
                                     <div class="label-txt">Possible</div>
@@ -236,7 +253,7 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section> 
     <!-- Tiles Area -->
     <section class="tiles-area">
         <div class="tiles-screen">
@@ -251,7 +268,7 @@
                                     <h2>Schedule a Biometric Screening <i class="fa fa-info-circle health-assessment" aria-hidden="true" data-toggle="popover"></i></h2>
                                 </div>
                                 <div class="col-sm-3 text-center">
-                                    <a href="#" class="button button--large button--block text-center button--schedule button-go">SCHEDULE</a>
+                                    <a href="../biometric-schedule" class="button button--large button--block text-center button--default button-go">Schedule</a>
                                     <br />
                                     <button class="button button--small button--secondary remind-later">Not Now</button>
                                 </div>
@@ -263,7 +280,10 @@
                             </div>
                         </div>
                         <div class="due-date">
-                            Due Date: 21st May
+                            <div>
+                                <span class="text-bold">Action Required</span> <br />
+                                Due Date: 21st May
+                            </div>
                         </div>
                         <div class="next-recommendation second none">
                             <div class="health-assess-info remind-wrapper">
@@ -288,7 +308,7 @@
                             <div class="description">
                                 <div class="row">
                                     <div class="col-sm-12 button-wrapper">
-                                        <button class="button button--small button--secondary remind-not-now">Submit</button>
+                                        <button class="button button--small button--default remind-not-now">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -306,26 +326,44 @@
                                         You can connect your wearable devices to our system and we will provide you with insights and recommendations on your daily activities.
                                     </p>
                                     <div class="form-group text-center">
-                                        <button class="button button--default">Connect</button>
+                                        <a href="../connect-device" class="button button--default">Connect</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group text-center slide-display">
                                         <span class="indicate icon-onlife_mobile"></span>
-                                        <h3 class="connect-device">Call a Coach</h3>
+                                        <h3 class="connect-device">Consult with a Coach</h3>
                                     </div>
                                     <p>
-                                        You can also get in touch with a coach who will help you in your journey to a happy and healthy life!
+                                        Your personal health coach is just a call away. Reach out now and find out how you and your coach can create a plan for your journey to a healthier and happier you. 
                                     </p>
                                     <div class="form-group text-center">
-                                        <button class="button button--default">Call</button>
+                                        <button class="button button--default consult-btn">Consult</button>
+                                    </div>
+                                    <div class="row none ways-contact">
+                                        <div class="col-sm-4 col-sm-offset-2 small-pop text-center">
+                                            <a href="#">
+                                                <i class="ico-onlife_phone_receiver connect-coach call-coach"
+                                                   data-toggle="popover"></i>
+                                            </a>
+                                        </div>
+                                        <div class="call-a-coach none">
+                                            1-877-709-0201 <br />(Mon-Fri 7AM to 9PM CST)
+                                        </div>
+                                        <div class="col-sm-4 small-pop text-center">
+                                            <a href="javascript:void(0);">
+                                                <i class="icon-onlife_chat connect-coach chat-box-btn"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="description">
                                 <div class="row">
                                     <div class="col-sm-12 button-wrapper">
-                                        <button class="button button--small button--secondary device-not-now" role="button">Not Now</button>
+                                        <span class="left">
+                                            <button class="button button--small button--secondary device-not-now" role="button">Not Now</button>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -361,12 +399,12 @@
                                 </div>
                             </div>
                             <div class="description">
-                                <div class="button-wrapper">
-                                    <div class="row">
-                                        <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 button-wrapper">
+                                        <span class="left">
                                             <button class="button button--small button--secondary app-btn">Not Now</button>
                                             <button class="button button--small button--secondary more-info-app">Tell me more</button>
-                                        </div>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -383,14 +421,13 @@
                                 </div>
                             </div>
                             <div class="description">
-                                <div class="button-wrapper">
-                                    <div class="row">
-                                        <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 button-wrapper">
+                                        <span class="left">
                                             <button class="button button--small button--secondary cp-btn">Not Now</button>
                                             <button class="button button--small button--secondary more-info-challenge">Tell me more</button>
-
-                                            <button class="button button--large text-center button--default lets-go">Register</button>
-                                        </div>
+                                        </span>
+                                        <button class="button button--large text-center button--default lets-go">Register</button>
                                     </div>
                                 </div>
                             </div>
@@ -405,13 +442,13 @@
                                 </div>
                             </div>
                             <div class="description">
-                                <div class="button-wrapper">
-                                    <div class="row">
-                                        <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 button-wrapper">
+                                        <span class="left">
                                             <button class="button button--small button--secondary recommend-btn">OK</button>
                                             <button class="button button--small button--secondary more-info">Talk to a coach</button>
-                                            <button class="button button--large text-center button--default lets-go">Articles</button>
-                                        </div>
+                                        </span>
+                                        <button class="button button--large text-center button--default lets-go">Articles</button>
                                     </div>
                                 </div>
                             </div>
@@ -427,11 +464,11 @@
                                 </div>
                             </div>
                             <div class="description">
-                                <div class="button-wrapper">
-                                    <div class="row">
-                                        <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 button-wrapper">
+                                        <span class="left">
                                             <button class="button button--small button--secondary back-to-app">Back</button>
-                                        </div>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -446,18 +483,18 @@
                                 </div>
                             </div>
                             <div class="description">
-                                <div class="button-wrapper">
-                                    <div class="row">
-                                        <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 button-wrapper">
+                                        <span class="left">
                                             <button class="button button--small button--secondary back-to-challenges">Back</button>
-                                        </div>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="points-btm">
-                             75 <span class="pts-lbl">pts</span>
-                        </div>
+                        <a href="../point-matrix" class="points-btm">
+                            75 <span class="pts-lbl">pts</span>
+                        </a>
                     </figure>
                 </div>
 
@@ -473,6 +510,7 @@
                         </div>
                         <div class="mask">
                             <p>"My knees are killing me"</p>
+                            <br />
                             <a href="#" class="button button--large button--default">Message Shirley</a>
                         </div>
                     </figure>
@@ -488,6 +526,7 @@
                         </div>
                         <div class="mask">
                             <p>"No cigarettes for 21 days!"</p>
+                            <br />
                             <a href="#" class="button button--large button--default">Congratulate</a>
                         </div>
                     </figure>
@@ -511,9 +550,9 @@
                                 <button class="button button--large button--default" data-toggle="modal" data-target="#schedule-appointment">Schedule</button>
                             </div>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             50 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                 </div>
 
@@ -530,9 +569,9 @@
                             <p>We offer a number of fun and exciting challenges to keep you working toward your wellness goals. Challenge yourself.. </p>
                             <a href="#" class="button button--large button--default">Enroll</a>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             5 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                 </div>
 
@@ -550,9 +589,9 @@
                             <br />
                             <a href="#" class="button button--large button--default">Read Article</a>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             10 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                 </div>
                 <div class="col-sm-6">
@@ -566,6 +605,7 @@
                         </div>
                         <div class="mask">
                             <p>Check out what’s going on with your friends and family members. Send a message of encouragement or give ‘em a virtual High Five.</p>
+                            <br />
                             <a href="#" class="button button--large button--default">View Updates</a>
                         </div>
                     </figure>
@@ -581,11 +621,12 @@
                         </div>
                         <div class="mask">
                             <p>Osteoarthritis is the most common form of “wear-and-tear” arthritis.</p>
+                            <br />
                             <a href="#" class="button button--large button--default">Read More</a>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             10 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                 </div>
                 <div class="col-sm-3">
@@ -601,9 +642,9 @@
                             <p>Getting a healthy start on pregnancy can do a lot to ensure that have a smooth nine months ahead.</p>
                             <a href="#" class="button button--large button--default">Read More</a>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             10 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                 </div>
                 <div class="col-sm-3">
@@ -617,11 +658,12 @@
                         </div>
                         <div class="mask">
                             <p>Expand your connection by bringing your family & friends  </p>
+                            <br />
                             <a href="#" class="button button--large button--default">Invite</a>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             50 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                     <article class="article">
                         <p>Expand your connection by bringing your family & friends. Your own fans will recommend you, what guarantees new fans better quality. </p>
@@ -645,9 +687,9 @@
                                 <a href="#" class="button btn btn-primary">More than 7</a>
                             </div>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             5 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                 </div>
                 <div class="col-sm-3">
@@ -661,11 +703,12 @@
                         </div>
                         <div class="mask">
                             <p>Yoga is considered a mind-body type of complementary and alternative medicine practice.</p>
+                            <br />
                             <a href="#" class="button button--large button--default">Read More</a>
                         </div>
-                        <div class="points-btm">
+                        <a href="../point-matrix" class="points-btm">
                             10 <span class="pts-lbl">pts</span>
-                        </div>
+                        </a>
                     </figure>
                     <article class="article">
                         <p>Yoga is considered a mind-body type of complementary and alternative medicine practice. Yoga brings together physical and mental disciplines to achieve peacefulness of body and mind.</p>
@@ -681,7 +724,7 @@
             <div class="col-sm-2 col-sm-offset-1">
                 <h3>We're Here to Help</h3>
                 <p class="contact-text">Contact Us</p>
-                <p class="contact-number">1-800-123-4567</p>
+                <p class="contact-number">877-709-0201</p>
             </div>
             <div class="col-sm-9">
                 <nav class="footer-nav">
@@ -695,8 +738,7 @@
                     </ul>
                 </nav>
                 <div class="copyrights">
-                    <p>&copy; 1998-2015 BlueCross BlueShield of Tennessee, Inc</p>
-                    <p>An Independent Licensee of the BlueCross BlueShield Association</p>
+                    <p>&copy; 2017 Onlife Health, Inc. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -799,6 +841,48 @@
             <div class="sk-cube sk-cube7"></div>
             <div class="sk-cube sk-cube8"></div>
             <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+
+    <div class="chat-window">
+        <div class="chat-header">
+            Coach Wayne
+            <span class="pull-right">
+                <i class="icon-onlife_close close-chat"></i>
+            </span>
+        </div>
+        <div class="chat-discussion">
+            <div class="chat-message left">
+                <img class="message-avatar" src="../../assets/images/Onlife_coach_wayne.jpg" alt="">
+                <div class="message">
+                    <a class="message-author" href="#"> Coach Wayne </a>
+                    <span class="message-date"> 04/07/2017 - 18:39:23 </span>
+                    <span class="message-content">
+                        Hi Mary!<br />
+                        I am Wayne Smith, your personal health coach.
+                    </span>
+                </div>
+            </div>
+            <div class="chat-message right">
+                <img class="message-avatar" src="../../assets/images/Onlife_Mary_Dp.png" alt="">
+                <div class="message">
+                    <a class="message-author" href="#"> Mary </a>
+                    <span class="message-date">  04/07/2017 - 19:12:36 </span>
+                    <span class="message-content">
+                        Hello Wayne
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-send">
+            <div class="col-sm-12">
+                <div class="input-group">
+                    <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 

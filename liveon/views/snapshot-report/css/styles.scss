@@ -1,0 +1,67 @@
+
+@import "../../../styles/master";
+
+.view-header {
+	background: $purple;
+	padding: 1em 0;
+	.main-heading {
+		color: $white;
+		font-size: 2em;
+	}
+}
+.content-area {
+	.blue-header {
+		color: $dark_blue;
+		font-size: 1.6em;
+		margin: 1.5em 0;
+	}
+	.points-wrapper {
+		p {
+			line-height: 20px;
+			font-size: 1.2em;
+			color: #545759;
+		}
+	}
+}
+
+.result-block {
+	padding: 2em 1em 1em 1em;
+	border-radius: 6px;
+	margin-bottom: 15px;
+	color: $white;
+	@include box-shadow(0, 0, 6px, 3px, rgba(0, 0, 0, 0.15));
+	&:hover {
+		@include box-shadow(0, 0, 6px, 3px, rgba(0, 0, 0, 0.30));	
+	}
+	&.good {
+		background: #225e3a;
+	}
+	&.excellent {
+		background: #01518c;
+	}
+	&.fair {
+		background: #eb5322;
+	}
+	&.poor {
+		background: #af2058;
+	}
+	&.poor-o {
+		background: #fffeff;
+		border: 1px solid #792346;
+		.block-desc, .block-logo {
+			color: #792346;
+		}
+	}
+	.block-logo {
+		font-size: 4.5em;
+	}
+	.block-desc{
+		.block-header {
+			margin: 1em 0 0.5em 0;
+			font-size: 1.5em;
+		}
+		.status{
+			margin-bottom: 1em;
+		}
+	}
+}
