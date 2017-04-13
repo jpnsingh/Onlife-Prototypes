@@ -74,9 +74,9 @@
                                     <span data-ng-if="subMenu.SubMenu" class="fa arrow"></span>
                                 </a>
                                 <ul class="nav nav-third-level collapse in">
-                                    <li data-ng-class="groupCtrl.menuClass[$index]"
+                                    <li data-ng-class="groupCtrl.subMenuClass[$index + 1]"
                                         data-ng-repeat="item in subMenu.SubMenu">
-                                        <a data-ng-click="groupCtrl.viewSetting(item, subMenuIndex)">
+                                        <a data-ng-click="groupCtrl.viewSetting(item, subMenuIndex, $index + 1)">
                                             {{item.DisplayName}}
                                         </a>
                                     </li>

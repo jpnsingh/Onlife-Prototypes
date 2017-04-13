@@ -23,6 +23,9 @@
 .border-right {
 	border-right: 1px solid #CCCCCC;
 }
+.purple-color {
+	color: $purple;
+}
 .tiles-area {
 	padding: 1.5em 6.5em;
 	background: $light_white;
@@ -207,6 +210,9 @@
 	.chat-icon {
 		font-size: 2.6em;
 		color: $purple;
+	}
+	.button {
+		display: inline-block;
 	}
 	.button, .chat-icon {
 	   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";

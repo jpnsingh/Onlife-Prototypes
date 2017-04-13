@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div data-ng-if="creatingJourney">
+<div data-ng-show="creatingJourney">
     <div class="well">
         <div class="row">
             <div class="col-sm-12">
@@ -23,7 +23,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                     ng-click="selectedProgram = ''; selectedProgram.Trigger = 'New Enrollees'; selectedProgram.Recommendations = []">
+                     data-ng-click="createNewJourney('New Enrollees');">
                     <img src="../img/OnBoarding.jpg" alt="Weight Reduction image" style="width: 200px; height: 200px">
                     <div class="caption">
                         <h3>New Enrollees</h3>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                     ng-click="selectedProgram = ''; selectedProgram.Trigger = 'HA Completed'; selectedProgram.Recommendations = []">
+                     data-ng-click="createNewJourney('HA Completed');">
                     <img src="../img/HealthAssessment.jpg" alt="Stress Reduction image" style="width: 200px; height: 200px">
                     <div class="caption">
                         <h3>HA Completed</h3>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6">
                 <div class="thumbnail" data-toggle="modal" data-target="#programModal"
-                     ng-click="selectedProgram = ''; selectedProgram.Trigger = 'Biometric Completed'; selectedProgram.Recommendations = []">
+                     data-ng-click="createNewJourney('Biometric Completed');">
                     <img src="../img/BMS.PNG" alt="Stress Reduction image" style="width: 200px; height: 200px">
                     <div class="caption">
                         <h3>Biometric Completed (Future)</h3>

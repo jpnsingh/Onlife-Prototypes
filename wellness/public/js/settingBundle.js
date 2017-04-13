@@ -3414,6 +3414,12 @@
                                     }
                                     return arr;
                                 }
+                                $scope.createNewJourney = function (trigger) {
+                                    $scope.selectedProgram = {
+                                        Trigger: trigger,
+                                        Recommendations: []
+                                    };
+                                }
 
                             } else if ($scope.settingMenuData.MenuIdentifier === 'JourneyPriorities') {
                                 self.hidePrograms = true;
@@ -3447,6 +3453,7 @@
                             .get('JourneyTriggers.json')
                             .then(function (response) {
                                 self.journeyTriggers = response.data;
+                                $scope.selectedTrigger = self.journeyTriggers[0];
                             });
 
                         $http
@@ -3460,6 +3467,19 @@
                             .then(function (response) {
                                 self.defaults = response.data;
                             });
+                        
+                        $scope.addSegmentAndDefault = function (triggerValue, selectedSegment, selectedDefault) {
+                            if (_.some(triggerValue.segments, selectedSegment) || _.some(triggerValue.defaults, selectedDefault))
+                                return;
+                            
+                            triggerValue.segments.push(selectedSegment);
+                            triggerValue.defaults.push(selectedDefault);
+                        }
+
+                        $scope.removeSegmentAndDefault = function (triggerValue, index) {
+                            triggerValue.segments.splice(index, 1);
+                            triggerValue.defaults.splice(index, 1);
+                        }
                     }
 
                     function setRecommendationsView() {
@@ -4027,9 +4047,13 @@
                         });
                     };
 
-                    self.viewSetting = function (settingMenu, index) {
+                    self.viewSetting = function (settingMenu, index, subIndex) {
                         self.menuClass = [];
                         self.menuClass[index] = 'active';
+                        self.subMenuClass = [];
+                        if (subIndex) {
+                            self.subMenuClass[subIndex] = 'active';
+                        }
                         $scope.settingMenuData = settingMenu;
                         $location.path('/setting/' + settingMenu.MenuIdentifier.toLowerCase());
                     };
@@ -4123,8 +4147,7 @@
                                 "ClassType": [
                                     "JourneyPriorities"
                                 ],
-                                "MenuIdentifier": "JourneyPriorities",
-                                "Index": 4.1
+                                "MenuIdentifier": "JourneyPriorities"
                             }
                         ]
                     }
@@ -4133,7 +4156,7 @@
                     }
 
                     if (sss === '/setting/journeypriorities') {
-                        self.viewSetting(programMenu.SubMenu[0], 4.1);
+                        self.viewSetting(programMenu.SubMenu[0], 4, 1);
                     }
 
                     if (sss === '/setting/recommendations') {

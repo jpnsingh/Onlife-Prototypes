@@ -1,0 +1,154 @@
+
+@import "../../../styles/master";
+
+.view-header {
+	background: $purple;
+	padding: 1em 0;
+	.main-heading {
+		color: $white;
+		font-size: 2em;
+	}
+}
+.content-area {
+	padding: 2em 0;
+	.blue-header {
+		color: $dark_blue;
+		font-size: 2em;
+		margin: 1em 0;
+	}
+	.points-wrapper {
+		p {
+			line-height: 20px;
+			font-size: 1.2em;
+			color: #545759;
+		}
+	}
+}
+
+.challenges {
+	.flexslider {
+		margin: 0 0 30px 0;
+	}
+	.flex-control-nav {
+		bottom: -25px;
+	}
+	.challenges-banner {
+		position: relative;
+		&:after {
+		  content: "";
+		  display: block;
+		  position: absolute; /* could also be absolute */ 
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  width: 100%;
+		  z-index: 2;
+		  background-color: rgba(0,0,0,0.5);
+		}
+	}
+}
+.points-btm {
+	background: rgb(232,84,36); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(232,84,36,1) 0%, rgba(176,31,88,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(232,84,36,1) 0%,rgba(176,31,88,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(232,84,36,1) 0%,rgba(176,31,88,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	color: $white;
+	font-size: 1.5em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100px;
+	padding: 0.5em;
+	opacity: 0.8;
+	z-index: 3;
+	&:hover {
+		text-decoration: none;
+		opacity: 1;
+	}
+	.pts-lbl {
+		text-transform: uppercase;
+		font-size: 0.6em;
+	}
+}
+
+.challenge-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	padding: 2em;
+	text-align: center;
+	z-index: 8;
+	color: $white;
+	.challenge-content {
+		.small-header {
+			font-size: 1.3em;
+			margin: 1em 0;
+		}
+		.main-head {
+			font-size: 3em;
+			margin: 0;
+			font-weight: normal;
+		}
+		.medium-size-header {
+			font-size: 2em;
+			margin: 0.3em 0;
+		}
+	}
+	.bottom-content {
+		background: rgba(255, 255, 255, 0.91);
+		padding: 1.5em;
+		border-radius: 6px;
+		margin-top: 4em;
+		text-align: left;
+		color: $medium_gray;
+		line-height: 16px;
+	}
+}
+.tile-block {
+	@include box-shadow(0, 0, 6px, 1px, rgba(0, 0, 0, 0.3));
+	background: $white;
+	margin-bottom: 2em;
+	&:hover {
+		@include box-shadow(0, 0, 6px, 1px, rgba(0, 0, 0, 0.5));
+	}
+	.tile-description {
+		padding: 2em;
+		.tile-main-header {
+			color: $dark_blue;
+			font-size: 2em;
+			margin: 0 0 0.5em 0;
+		}
+		.tile-sub-header {
+			color: $light_blue;
+			font-size: 1.3em;
+			margin: 0 0 0.5em 0;
+		}
+		p {
+			line-height: 18px;
+		}
+	}
+	.join-challenge-wrapper {
+		position: relative;
+		.join-challenge {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -88px;
+			margin-top: -18px;
+			z-index: 3;
+		}
+		&:after {
+		  content: "";
+		  display: block;
+		  position: absolute; /* could also be absolute */ 
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  width: 100%;
+		  z-index: 2;
+		  background-color: rgba(0,0,0,0.3);
+		}
+	}
+}

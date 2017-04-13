@@ -5198,93 +5198,126 @@ html[xmlns] .flexslider .slides {
   padding: 2em 0; }
   .content-area .blue-header {
     color: #00528a;
-    font-size: 1.6em;
-    margin: 0.5em 0; }
+    font-size: 2em;
+    margin: 1em 0; }
   .content-area .points-wrapper p {
     line-height: 20px;
     font-size: 1.2em;
     color: #545759; }
 
-.panel-box {
-  background: #FFFFFF;
-  min-height: 275px;
-  margin-bottom: 1.5em;
-  -webkit-box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.1); }
-  .panel-box .block-tile {
-    min-height: 275px;
-    padding: 4.6em 1em;
-    color: #FFFFFF; }
-    .panel-box .block-tile .block-icon {
-      font-size: 5em; }
-    .panel-box .block-tile h2 {
-      font-size: 1.5em;
-      font-weight: 600; }
-  .panel-box .points-section {
-    padding: 1em 1em 2em 1em;
-    border-bottom: 1px solid #ececec;
-    margin-bottom: 2em;
-    line-height: 30px;
-    color: #00528a; }
-    .panel-box .points-section .point-value {
-      font-size: 3.5em;
-      margin: 1em 0 0.1em 0; }
-    .panel-box .points-section .point-label {
-      font-size: 1.2em; }
-  .panel-box .values-month {
-    color: #00528a;
-    line-height: 26px;
-    font-size: 1.2em; }
-  .panel-box .tile-content {
-    padding: 2.5em;
-    min-height: 275px;
-    border-left: 1px solid #ececec;
+.challenges .flexslider {
+  margin: 0 0 30px 0; }
+.challenges .flex-control-nav {
+  bottom: -25px; }
+.challenges .challenges-banner {
+  position: relative; }
+  .challenges .challenges-banner:after {
+    content: "";
+    display: block;
+    position: absolute;
+    /* could also be absolute */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.points-btm {
+  background: #e85424;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #e85424 0%, #b01f58 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #e85424 0%, #b01f58 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #e85424 0%, #b01f58 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: #FFFFFF;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100px;
+  padding: 0.5em;
+  opacity: 0.8;
+  z-index: 3; }
+  .points-btm:hover {
+    text-decoration: none;
+    opacity: 1; }
+  .points-btm .pts-lbl {
+    text-transform: uppercase;
+    font-size: 0.6em; }
+
+.challenge-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+  z-index: 8;
+  color: #FFFFFF; }
+  .challenge-wrapper .challenge-content .small-header {
     font-size: 1.3em;
-    line-height: 23px;
+    margin: 1em 0; }
+  .challenge-wrapper .challenge-content .main-head {
+    font-size: 3em;
+    margin: 0;
+    font-weight: normal; }
+  .challenge-wrapper .challenge-content .medium-size-header {
+    font-size: 2em;
+    margin: 0.3em 0; }
+  .challenge-wrapper .bottom-content {
+    background: rgba(255, 255, 255, 0.91);
+    padding: 1.5em;
+    border-radius: 6px;
+    margin-top: 4em;
+    text-align: left;
+    color: #666666;
+    line-height: 16px; }
+
+.tile-block {
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+  background: #FFFFFF;
+  margin-bottom: 2em; }
+  .tile-block:hover {
+    -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5); }
+  .tile-block .tile-description {
+    padding: 2em; }
+    .tile-block .tile-description .tile-main-header {
+      color: #00528a;
+      font-size: 2em;
+      margin: 0 0 0.5em 0; }
+    .tile-block .tile-description .tile-sub-header {
+      color: #0cc0de;
+      font-size: 1.3em;
+      margin: 0 0 0.5em 0; }
+    .tile-block .tile-description p {
+      line-height: 18px; }
+  .tile-block .join-challenge-wrapper {
     position: relative; }
-    .panel-box .tile-content .tile-button {
-      border-radius: 0;
-      color: #FFFFFF; }
-    .panel-box .tile-content .tile-footer {
+    .tile-block .join-challenge-wrapper .join-challenge {
       position: absolute;
-      bottom: 30px;
-      right: 60px; }
-  .panel-box.blue-box .block-tile, .panel-box.blue-box .tile-button {
-    background: #00528a;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #00528a 50%, #0cc0de);
-    background-position: 100% 0;
-    background-size: 200% 100%;
-    transition: all .25s ease-in; }
-  .panel-box.orange-box .block-tile, .panel-box.orange-box .tile-button {
-    background: #e85424;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #e85424 50%, #e88362);
-    background-position: 100% 0;
-    background-size: 200% 100%;
-    transition: all .25s ease-in; }
-  .panel-box.green-box .block-tile, .panel-box.green-box .tile-button {
-    background: #215e39;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #215e39 50%, #4f966b);
-    background-position: 100% 0;
-    background-size: 200% 100%;
-    transition: all .25s ease-in; }
-  .panel-box.purple-box .block-tile, .panel-box.purple-box .tile-button {
-    background: #682566;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #682566 50%, #824180);
-    background-position: 100% 0;
-    background-size: 200% 100%;
-    transition: all .25s ease-in; }
-  .panel-box.magenta-box .block-tile, .panel-box.magenta-box .tile-button {
-    background: #b01f58;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #b01f58 50%, #bd4273);
-    background-position: 100% 0;
-    background-size: 200% 100%;
-    transition: all .25s ease-in; }
-  .panel-box:hover {
-    -webkit-box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.25); }
-    .panel-box:hover.blue-box .block-tile, .panel-box:hover.blue-box .tile-button, .panel-box:hover.orange-box .block-tile, .panel-box:hover.orange-box .tile-button, .panel-box:hover.green-box .block-tile, .panel-box:hover.green-box .tile-button, .panel-box:hover.purple-box .block-tile, .panel-box:hover.purple-box .tile-button, .panel-box:hover.magenta-box .block-tile, .panel-box:hover.magenta-box .tile-button {
-      background-position: 0 0; }
+      top: 50%;
+      left: 50%;
+      margin-left: -88px;
+      margin-top: -18px;
+      z-index: 3; }
+    .tile-block .join-challenge-wrapper:after {
+      content: "";
+      display: block;
+      position: absolute;
+      /* could also be absolute */
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=styles.css.map */

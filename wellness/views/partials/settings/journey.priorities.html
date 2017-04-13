@@ -30,27 +30,63 @@
                             <label class="control-label">Segment</label>
                             <div class=""
                                  data-ng-repeat="segment in triggerValue.segments">
-                                <input class="form-control"
-                                       type="text"
-                                       data-ng-disabled="true"
-                                       data-ng-model="segment.value" />
+                                <div class="form-group">
+                                    <input class="form-control"
+                                           type="text"
+                                           data-ng-disabled="true"
+                                           data-ng-model="segment.value" />
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-7">
                             <label class="control-label">Default</label>
+                            <div class="row" data-ng-repeat="default in triggerValue.defaults">
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input class="form-control"
+                                               type="text"
+                                               data-ng-disabled="true"
+                                               data-ng-model="default.value" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 text-right action-buttons">
+                                    <i class="fa fa-trash delete-icon m-t-20"
+                                       data-ng-hide="triggerValue.defaults.length===1"
+                                       data-ng-click="removeSegmentAndDefault(triggerValue, $index);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-10"
-                                     data-ng-repeat="default in triggerValue.defaults">
-
-                                    <input class="form-control"
-                                           type="text"
-                                           data-ng-disabled="true"
-                                           data-ng-model="default.value" />
+                                <div class="col-sm-5">
+                                    <label class="control-label">Segment</label>
+                                    <div>
+                                        <select class="form-control"
+                                                data-ng-options="segment.value for segment in settingListCtrl.segments[triggerValue.key] track by segment.id"
+                                                data-ng-model="selectedSegment">
+                                            <option value="">-- Select Segment --</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-sm-2">
-
+                                <div class="col-sm-7">
+                                    <label class="control-label">Default</label>
+                                    <div class="row">
+                                        <div class="col-sm-10">
+                                            <select class="form-control"
+                                                    data-ng-options="default.value for default in settingListCtrl.defaults[triggerValue.key] track by default.id"
+                                                    data-ng-model="selectedDefault">
+                                                <option value="">-- Select Default --</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-2 text-right">
+                                            <button type="button" class="btn btn-primary"
+                                                    data-ng-disabled="!selectedDefault || !selectedSegment"
+                                                    data-ng-click="addSegmentAndDefault(triggerValue, selectedSegment, selectedDefault);selectedDefault='';selectedSegment=''">
+                                                Add
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
